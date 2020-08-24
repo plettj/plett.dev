@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+	</head>
+	<style>
+		.parent {
+			position: absolute;
+			top: 100px;
+			left: 100px;
+			width: 200px;
+			height: 200px;
+			transform-origin: bottom;
+			transform: rotate(30deg);
+			background-color: rgb(80, 80, 250);
+		}
+		.child {
+			display: inline-block;
+			transform: rotate(-30deg);
+			background-color: rgba(250, 80, 80, 0.4);
+		}
+	</style>
+	<body>
+		<div class="parent">
+			<span class="child">This is the child element. The aim is to have the div that holds this text to be rotated at a certain angle, and the text to not ony stay horizontal, but <strong>reach only to the boundary of the parent element.</strong></span>
+		</div>
+	</body>
+</html>
