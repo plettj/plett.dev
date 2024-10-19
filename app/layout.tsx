@@ -14,6 +14,9 @@ const fontSans = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "plett.dev",
   description: "Josiah Plett's personal website",
+  icons: {
+    icon: `/icons/favicon.ico`,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -23,8 +26,8 @@ export const metadata: Metadata = {
     description: "Josiah Plett's personal website",
     images: [
       {
-        url: `${BASE_URL}/static/assets/opengraph-image.png`,
-        alt: "Jiffy the Dino",
+        url: `${BASE_URL}/icons/favicon.png`,
+        alt: "J logo",
       },
     ],
   },
@@ -37,9 +40,11 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn(fontSans.variable)} suppressHydrationWarning>
-      <body className="flex flex-col h-screen overflow-hidden bg-background font-sans antialiased">
+      <body className="flex flex-col h-screen items-center overflow-hidden bg-background font-sans antialiased">
         <TopLoader />
-        {children}
+        <main className="h-full w-full sm:w-[60ch] lg:w-[80ch] p-8 overflow-y-auto">
+          {children}
+        </main>
       </body>
     </html>
   );
