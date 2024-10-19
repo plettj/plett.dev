@@ -3,7 +3,7 @@ set dotenv-filename := ".env.local"
 
 # Install Shadcn component
 shad +component_name:
-  pnpm dlx shadcn-ui@latest add {{component_name}}
+  pnpm dlx shadcn@latest add {{component_name}}
 
 # Development
 dev:
