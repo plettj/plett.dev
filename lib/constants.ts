@@ -19,6 +19,5 @@ export const URL_TITLES_FROM_HREF: { [key: string]: string } = {
   [URL_PHOTOGRAPHY]: "Photography",
   [URL_MEDIA]: "Media",
   [URL_MISC]: "Miscellaneous",
-  [URL_LISTS]: "Lists",
   [URL_CV]: "Resume",
 };

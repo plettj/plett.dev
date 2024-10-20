@@ -1,11 +1,8 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-
 export const metadata = {
-  title: "Josiah Plett",
+  title: "Photography",
 };
 
-export default async function Home() {
+export default async function Photography() {
   return (
     <div className="flex flex-col gap-2 px-8 overflow-y-auto scrollbar">
       <p className="text-balance">
@@ -14,9 +11,6 @@ export default async function Home() {
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat.
       </p>
-      <Button asChild className="w-64 my-2">
-        <Link href="/games">games</Link>
-      </Button>
     </div>
   );
 }
