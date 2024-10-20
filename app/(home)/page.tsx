@@ -12,7 +12,7 @@ export default async function Home() {
         for making things people love. I&apos;m currently pursuing a Bachelor of
         Computer Science at the University of Waterloo.
       </p>
-      <p className="text-balance">
+      <p>
         Find my games at{" "}
         <InlineLink href="https://plett.fun/" external>
           plett.fun
@@ -20,12 +20,14 @@ export default async function Home() {
         , or writing <InlineLink href="/writing">here</InlineLink>.
       </p>
       <p>
-        Find my work experience on my <InlineLink href="/cv">CV</InlineLink> or{" "}
+        Find my work experience on my <InlineLink href="/cv">CV</InlineLink> or
+        on{" "}
         <InlineLink href="https://www.linkedin.com/in/josiahplett/" external>
           LinkedIn
         </InlineLink>
         .
       </p>
+      <p>Item list coming soon.</p>
     </div>
   );
 }
