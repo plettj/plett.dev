@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import InlineLink from "@/components/InlineLink";
 
 export const metadata = {
   title: "Josiah Plett",
@@ -7,17 +6,25 @@ export const metadata = {
 
 export default async function Home() {
   return (
-    <div className="flex flex-col gap-2">
-      <h1>plett.dev</h1>
-      <p className="text-balance">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+    <div className="flex flex-col gap-4 px-8">
+      <p>
+        I&apos;m Josiah Plett, a software developer and designer with a passion
+        for making things people love. I&apos;m currently pursuing a Bachelor of
+        Computer Science at the University of Waterloo.
       </p>
-      <Button asChild className="w-64 my-2">
-        <Link href="/games">games</Link>
-      </Button>
+      <p className="text-balance">
+        Find my games at{" "}
+        <InlineLink href="https://plett.fun/">plett.fun</InlineLink>, or writing{" "}
+        <InlineLink href="/writing">here</InlineLink>.
+      </p>
+      <p>
+        See my professional experience on my{" "}
+        <InlineLink href="/cv">CV</InlineLink> or{" "}
+        <InlineLink href="https://www.linkedin.com/in/josiahplett/">
+          LinkedIn
+        </InlineLink>
+        .
+      </p>
     </div>
   );
 }

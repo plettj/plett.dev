@@ -39,12 +39,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
-      url: "https://plett.dev/lists",
-      lastModified: "2024-10-20",
-      changeFrequency: "monthly",
-      priority: 0.3,
-    },
-    {
       url: "https://plett.dev/cv",
       lastModified: "2024-10-20",
       changeFrequency: "yearly",
