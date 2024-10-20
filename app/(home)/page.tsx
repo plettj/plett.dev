@@ -1,4 +1,5 @@
 import InlineLink from "@/components/InlineLink";
+import ContentBlock from "@/components/layouts/ContentBlock";
 
 export const metadata = {
   title: "Josiah Plett",
@@ -27,7 +28,12 @@ export default async function Home() {
         </InlineLink>
         .
       </p>
-      <p>Item list coming soon.</p>
+      <ContentBlock title="Startups" subtitle="2024-Present">
+        Some text content in the block.
+      </ContentBlock>
+      <ContentBlock title="Game dev" subtitle="2013-Present">
+        Some text content in the block.
+      </ContentBlock>
     </div>
   );
 }

@@ -22,7 +22,7 @@ export default function Navigation() {
       <NavButton href={"/photography"} active={pathname === "/photography"}>
         Photography
       </NavButton>
-      <div className="flex-1"></div>
+      <div className="flex-1" />
       <ThemeToggle />
     </nav>
   );
