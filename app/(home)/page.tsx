@@ -1,6 +1,6 @@
 import InlineLink from "@/components/InlineLink";
-import ContentBlock from "@/components/layouts/ContentBlock";
-import { professionalItems } from "./content";
+import { hobbyItems, professionalItems } from "./content";
+import Title from "@/components/Title";
 import { ContentList } from "@/components/layouts/ContentList";
 
 export const metadata = {
@@ -11,33 +11,23 @@ export default async function Home() {
   return (
     <div className="flex flex-col gap-4 px-8">
       <p>
-        I&apos;m Josiah Plett, a software developer and designer with a passion
-        for making things people love. I&apos;m currently pursuing a Bachelor of
-        Computer Science at the University of Waterloo.
+        I&apos;m Josiah Plett, a software developer and entrepreneur with a
+        passion for making things people love. I&apos;m currently pursuing a
+        Bachelor of Computer Science at the University of Waterloo.
       </p>
       <p>
-        Find my games at{" "}
+        I enjoy many things, including{" "}
         <InlineLink href="https://plett.fun/" external>
-          plett.fun
+          game development
         </InlineLink>
-        , or writing <InlineLink href="/writing">here</InlineLink>.
+        , <InlineLink href="/writing">writing</InlineLink>, and{" "}
+        <InlineLink href="/photography">photography</InlineLink>. Below is a
+        list of more of these things.
       </p>
-      <p>
-        Find my work experience on my <InlineLink href="/cv">CV</InlineLink> or
-        on{" "}
-        <InlineLink href="https://www.linkedin.com/in/josiahplett/" external>
-          LinkedIn
-        </InlineLink>
-        .
-      </p>
-      <ContentBlock title="Startups" subtitle="2024-">
-        Some text content in the block.
-      </ContentBlock>
-      <ContentBlock title="Game dev" subtitle="2013-">
-        Some text content in the block.
-      </ContentBlock>
-      <hr />
+      <Title>Professional</Title>
       <ContentList items={professionalItems} />
+      <Title>Hobby</Title>
+      <ContentList items={hobbyItems} />
     </div>
   );
 }

@@ -43,7 +43,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn(fontSans.variable)} suppressHydrationWarning>
-      <body className="flex flex-col h-screen items-center overflow-x-hidden overflow-y-auto scrollbar bg-background font-sans antialiased transition-colors">
+      <body className="flex flex-col h-screen items-center overflow-x-hidden scrollbar bg-background font-sans antialiased transition-colors">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -51,7 +51,7 @@ export default async function RootLayout({
           enableSystem
         >
           <TopLoader />
-          <main className="h-full md:w-[80ch] flex flex-col text-sm">
+          <main className="h-full max-w-[80ch] w-full flex flex-col text-sm">
             <Navigation />
             {children}
             <Footer />
