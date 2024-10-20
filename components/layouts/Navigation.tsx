@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import NavButton from "../NavButton";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 
-export default function TopNavigation() {
+export default function Navigation() {
   const pathname = usePathname();
 
   return (
@@ -12,7 +12,7 @@ export default function TopNavigation() {
       <NavButton href={"/"} active={pathname === "/"}>
         Home
       </NavButton>
-      <NavButton href={"https://plett.fun"}>
+      <NavButton href={"https://plett.fun"} external>
         Games <ExternalLinkIcon />
       </NavButton>
       <NavButton href={"/writing"} active={pathname.includes("/writing")}>

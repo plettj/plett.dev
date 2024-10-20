@@ -5,19 +5,24 @@ import { cn } from "@/lib/utils";
 export default function InlineLink({
   children,
   href,
+  external = false,
 }: Readonly<{
   children: React.ReactNode;
   href: string;
+  external?: boolean;
 }>) {
   return (
     <Button
       asChild
-      className={cn(
-        "p-0 h-6 -my-1 text-foreground font-semibold text-stone-500 dark:text-stone-400"
-      )}
+      className={cn("p-0 h-6 -my-1 text-muted-foreground font-semibold")}
       variant="link"
     >
-      <Link href={href}>{children}</Link>
+      <Link
+        href={href}
+        {...(external ? { rel: "noopener noreferrer", target: "_blank" } : {})}
+      >
+        {children}
+      </Link>
     </Button>
   );
 }

@@ -6,21 +6,28 @@ export default function NavButton({
   children,
   href,
   active = false,
+  external = false,
 }: Readonly<{
   children: React.ReactNode;
   href: string;
   active?: boolean;
+  external?: boolean;
 }>) {
   return (
     <Button
       asChild
       className={cn(
         "px-2 text-foreground font-semibold",
-        !active && "text-stone-500 dark:text-stone-400"
+        !active && "text-muted-foreground"
       )}
       variant="link"
     >
-      <Link href={href}>{children}</Link>
+      <Link
+        href={href}
+        {...(external ? { rel: "noopener noreferrer", target: "_blank" } : {})}
+      >
+        {children}
+      </Link>
     </Button>
   );
 }

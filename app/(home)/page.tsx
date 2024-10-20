@@ -14,13 +14,14 @@ export default async function Home() {
       </p>
       <p className="text-balance">
         Find my games at{" "}
-        <InlineLink href="https://plett.fun/">plett.fun</InlineLink>, or writing{" "}
-        <InlineLink href="/writing">here</InlineLink>.
+        <InlineLink href="https://plett.fun/" external>
+          plett.fun
+        </InlineLink>
+        , or writing <InlineLink href="/writing">here</InlineLink>.
       </p>
       <p>
-        See my professional experience on my{" "}
-        <InlineLink href="/cv">CV</InlineLink> or{" "}
-        <InlineLink href="https://www.linkedin.com/in/josiahplett/">
+        Find my work experience on my <InlineLink href="/cv">CV</InlineLink> or{" "}
+        <InlineLink href="https://www.linkedin.com/in/josiahplett/" external>
           LinkedIn
         </InlineLink>
         .
