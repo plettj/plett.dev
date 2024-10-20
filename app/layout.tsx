@@ -4,6 +4,7 @@ import { type Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import TopNavigation from "@/components/layouts/TopNavigation";
 
 const fontSans = JetBrains_Mono({
   subsets: ["latin"],
@@ -42,7 +43,8 @@ export default async function RootLayout({
     <html lang="en" className={cn(fontSans.variable)} suppressHydrationWarning>
       <body className="flex flex-col h-screen items-center overflow-hidden bg-background font-sans antialiased">
         <TopLoader />
-        <main className="h-full w-full sm:w-[60ch] lg:w-[80ch] p-8 overflow-y-auto">
+        <main className="h-full sm:w-[60ch] lg:w-[80ch] py-8 overflow-y-auto flex flex-col gap-2">
+          <TopNavigation />
           {children}
         </main>
       </body>
