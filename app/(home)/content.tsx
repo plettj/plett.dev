@@ -35,7 +35,7 @@ const professionalItems: ContentListItem[] = [
     year: "2013",
     children: (
       <p>
-        You can find some of the 30+ games I've made since age 10 on{" "}
+        You can find some of the 30+ games I&apos;ve made since age 10 on{" "}
         <InlineLink href="https://plett.fun/" external>
           plett.fun
         </InlineLink>
@@ -150,7 +150,7 @@ const professionalItems: ContentListItem[] = [
     children: (
       <p>
         I&apos;ve been a volunteer note-taker in 13 university classes. I also
-        ran my city's{" "}
+        ran my city&apos;s{" "}
         <InlineLink href="https://www.colwoodbadminton.ca/" external>
           badminton club
         </InlineLink>{" "}
@@ -238,7 +238,7 @@ const hobbyItems: ContentListItem[] = [
     children: (
       <p>
         Six months after learning the rules, I qualifed for Canadian nationals.
-        I'm also the{" "}
+        I&apos;m also the{" "}
         <InlineLink href="https://lichess.org/swiss/jqpPbyIp" external>
           2021 Victoria Chess Challenge
         </InlineLink>{" "}
@@ -260,8 +260,8 @@ const hobbyItems: ContentListItem[] = [
     year: "2009",
     children: (
       <p>
-        I've solved a Rubik's cube in 7.46 seconds, and currently hold 3
-        official{" "}
+        I&apos;ve solved a Rubik&apos;s cube in 7.46 seconds, and currently hold
+        3 official{" "}
         <InlineLink
           href="https://www.youtube.com/playlist?list=PLTU_pBLoLfLL_X5FpFCAsvjvgqg0-yD5k"
           external
@@ -308,7 +308,8 @@ const hobbyItems: ContentListItem[] = [
         <InlineLink href="https://a.co/d/cLkKD5w" external>
           two
         </InlineLink>{" "}
-        master-level books, I've spent over a decade folding top-level models.
+        master-level books, I&apos;ve spent over a decade folding top-level
+        models.
       </p>
     ),
   },
@@ -354,7 +355,7 @@ const hobbyItems: ContentListItem[] = [
         >
           Youtube
         </InlineLink>
-        . I&apos;ve also sang in UW's{" "}
+        . I&apos;ve also sang in UW&apos;s{" "}
         <InlineLink href="https://uwaterloo.ca/music/university-choir" external>
           University Choir
         </InlineLink>
