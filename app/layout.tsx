@@ -4,7 +4,8 @@ import { type Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import TopNavigation from "@/components/layouts/TopNavigation";
+import Navigation from "@/components/layouts/Navigation";
+import Footer from "@/components/layouts/Footer";
 
 const fontSans = JetBrains_Mono({
   subsets: ["latin"],
@@ -44,8 +45,9 @@ export default async function RootLayout({
       <body className="flex flex-col h-screen items-center overflow-y-auto scrollbar bg-background font-sans antialiased">
         <TopLoader />
         <main className="h-full sm:w-[60ch] lg:w-[80ch] flex flex-col text-sm">
-          <TopNavigation />
+          <Navigation />
           {children}
+          <Footer />
         </main>
       </body>
     </html>
