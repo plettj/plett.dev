@@ -41,9 +41,9 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn(fontSans.variable)} suppressHydrationWarning>
-      <body className="flex flex-col h-screen items-center overflow-hidden bg-background font-sans antialiased">
+      <body className="flex flex-col h-screen items-center overflow-y-auto scrollbar bg-background font-sans antialiased">
         <TopLoader />
-        <main className="h-full sm:w-[60ch] lg:w-[80ch] py-8 overflow-hidden flex flex-col gap-2">
+        <main className="h-full sm:w-[60ch] lg:w-[80ch] flex flex-col text-sm">
           <TopNavigation />
           {children}
         </main>

@@ -4,27 +4,27 @@
 
 @layer utilities {
   .scrollbar::-webkit-scrollbar {
-    width: 8px;
+    width: 14px;
   }
 
   .scrollbar::-webkit-scrollbar-track {
     background: #f2f2f2;
     .dark & {
-      background: #171717;
+      background: #151617;
     }
   }
 
   .scrollbar::-webkit-scrollbar-thumb {
-    background: #e2e4e6;
+    background: #d8dadc;
     .dark & {
       background: #363636;
     }
   }
 
   .scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #d4d6d8;
+    background: #c2c4c6;
     .dark & {
-      background: #454545;
+      background: #454749;
     }
   }
 }

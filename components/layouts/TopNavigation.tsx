@@ -2,23 +2,25 @@
 
 import { usePathname } from "next/navigation";
 import NavButton from "../NavButton";
-import { URL_TITLES_FROM_HREF } from "@/lib/constants";
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
 
 export default function TopNavigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex justify-between gap-2 px-8 py-2">
-      <section className="flex items-center">
-        <h1 className="font-bold">{URL_TITLES_FROM_HREF[pathname] ?? "404"}</h1>
-      </section>
-      <section className="gap-2">
-        {Object.keys(URL_TITLES_FROM_HREF).map((href, i) => (
-          <NavButton key={i} href={href} active={pathname === href}>
-            {URL_TITLES_FROM_HREF[href]}
-          </NavButton>
-        ))}
-      </section>
+    <nav className="flex gap-2 px-6 my-10">
+      <NavButton href={"/"} active={pathname === "/"}>
+        Home
+      </NavButton>
+      <NavButton href={"https://plett.fun"}>
+        Games <ExternalLinkIcon />
+      </NavButton>
+      <NavButton href={"/writing"} active={pathname.includes("/writing")}>
+        Writing
+      </NavButton>
+      <NavButton href={"/photography"} active={pathname === "/photography"}>
+        Photography
+      </NavButton>
     </nav>
   );
 }
