@@ -10,7 +10,7 @@ export default function TopNavigation() {
   return (
     <nav className="flex justify-between gap-2 px-8 py-2">
       <section className="flex items-center">
-        <h1 className="font-bold">{URL_TITLES_FROM_HREF[pathname]}</h1>
+        <h1 className="font-bold">{URL_TITLES_FROM_HREF[pathname] ?? "404"}</h1>
       </section>
       <section className="gap-2">
         {Object.keys(URL_TITLES_FROM_HREF).map((href, i) => (
