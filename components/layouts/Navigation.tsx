@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import NavButton from "../NavButton";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
+import { ThemeToggle } from "../ThemeToggle";
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -21,6 +22,8 @@ export default function Navigation() {
       <NavButton href={"/photography"} active={pathname === "/photography"}>
         Photography
       </NavButton>
+      <div className="flex-1" />
+      <ThemeToggle />
     </nav>
   );
 }

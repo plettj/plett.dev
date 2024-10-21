@@ -6,6 +6,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navigation from "@/components/layouts/Navigation";
 import Footer from "@/components/layouts/Footer";
+import { ThemeProvider } from "next-themes";
 
 const fontSans = JetBrains_Mono({
   subsets: ["latin"],
@@ -42,13 +43,20 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn(fontSans.variable)} suppressHydrationWarning>
-      <body className="flex flex-col h-screen items-center overflow-y-auto scrollbar bg-background font-sans antialiased">
-        <TopLoader />
-        <main className="h-full sm:w-[60ch] lg:w-[80ch] flex flex-col text-sm">
-          <Navigation />
-          {children}
-          <Footer />
-        </main>
+      <body className="flex flex-col h-screen items-center overflow-x-hidden scrollbar bg-background font-sans antialiased transition-colors">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          storageKey="theme"
+          enableSystem
+        >
+          <TopLoader />
+          <main className="h-full max-w-[80ch] w-full flex flex-col text-sm">
+            <Navigation />
+            {children}
+            <Footer />
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );
