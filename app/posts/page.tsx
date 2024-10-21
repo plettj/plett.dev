@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Writing",
+  title: "Writing | Josiah Plett",
 };
 
 export default async function Writing() {

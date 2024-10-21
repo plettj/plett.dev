@@ -42,18 +42,22 @@ export function generateMetadata({ params }: Params): Metadata {
     return notFound();
   }
 
-  const title = `${post.title} | Josiah Plett`;
+  const title = `${post.title}`;
 
   return {
     title,
     description: post.preview,
+    generator: "Next.js",
+    keywords: post.tags,
     authors: author,
+    creator: "Josiah Plett",
     openGraph: {
       type: "article",
       title,
       description: post.preview,
-      siteName: "Josiah Plett's Writing",
-      // images: [{ url: post.ogImage.url }],
+      siteName: "Josiah Plett",
+      ...(post.ogImage && { image: [{ url: post.ogImage }] }),
+      locale: "en_CA",
     },
   };
 }

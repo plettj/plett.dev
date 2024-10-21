@@ -3,6 +3,8 @@ title: "A Very Long Post Title That Just Keeps On Taking Up Valuable Space"
 subtitle: "A post about how my new blog post thing has been created"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 date: "2024-10-21"
+tags:
+  ["blog", "writing", "testing", "tags", "as", "comma", "delimited", "strings"]
 ---
 
 #### Smallest title

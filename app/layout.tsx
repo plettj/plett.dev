@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import Navigation from "@/components/layouts/Navigation";
 import Footer from "@/components/layouts/Footer";
 import { ThemeProvider } from "next-themes";
+import { author } from "@/lib/posts/constants";
 
 const fontSans = JetBrains_Mono({
   subsets: ["latin"],
@@ -15,14 +16,45 @@ const fontSans = JetBrains_Mono({
 
 // OPG compliant metadata (https://ogp.me/)
 export const metadata: Metadata = {
-  title: "plett.dev",
-  description: "Josiah Plett's personal website",
+  title: "Josiah Plett",
+  description:
+    "Come explore my professional interests, hobbies, writing, and photography.",
+  generator: "Next.js",
+  keywords: [
+    "Entrepreneur",
+    "University of Waterloo",
+    "Game Development",
+    "Writing",
+    "Photography",
+    "Blog",
+    "Startup",
+    "Software Developer",
+    "Design",
+    "Speedcubing",
+    "Piano",
+  ],
+  authors: author,
+  creator: "Josiah Plett",
+  verification: {
+    google: process.env.COMMON_VERIFICATION_GOOGLE /* ?? "uuid" */,
+    yahoo: process.env.COMMON_VERIFICATION_YAHOO,
+    yandex: process.env.COMMON_VERIFICATION_YANDEX,
+    me: process.env.COMMON_VERIFICATION_ME,
+  },
+  formatDetection: {
+    telephone: false,
+    date: false,
+    email: true,
+    url: true,
+    address: false,
+  },
+  archives: "https://old.plett.dev/",
   icons: {
     icon: `/icons/favicon.ico`,
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_CA",
     url: BASE_URL,
     siteName: "plett.dev",
     title: "Josiah Plett",
@@ -34,6 +66,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  // manifest: JSON_MANIFEST // TODO: Add a manifest to support my site being downloaded as a PWA
 };
 
 export default async function RootLayout({
