@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .disable-blur {
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: bicubic;
+  }
+}
+
 @layer utilities {
   .scrollbar::-webkit-scrollbar {
     width: 14px;

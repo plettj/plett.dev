@@ -4,7 +4,7 @@ export const BASE_URL =
     : "http://localhost:3000";
 
 export const URL_HOME = "/";
+export const URL_ABOUT = "/about";
 export const URL_WRITING = "/posts";
 export const URL_PHOTOGRAPHY = "/photography";
-export const URL_MEDIA = "/media";
 export const URL_CV = "/cv";

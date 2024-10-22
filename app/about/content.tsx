@@ -256,7 +256,7 @@ const hobbyItems: ContentListItem[] = [
   },
   {
     title: "Speedcubing",
-    subtitle: "3 Guinness World Records",
+    subtitle: "3 World Records",
     year: "2009",
     children: (
       <p>

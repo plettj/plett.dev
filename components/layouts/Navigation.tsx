@@ -4,7 +4,12 @@ import { usePathname } from "next/navigation";
 import NavButton from "../NavButton";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import { ThemeToggle } from "../ThemeToggle";
-import { URL_HOME, URL_PHOTOGRAPHY, URL_WRITING } from "@/lib/constants";
+import {
+  URL_ABOUT,
+  URL_HOME,
+  URL_PHOTOGRAPHY,
+  URL_WRITING,
+} from "@/lib/constants";
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -12,7 +17,13 @@ export default function Navigation() {
   return (
     <nav className="flex gap-2 px-6 my-10">
       <NavButton href={URL_HOME} active={pathname === URL_HOME}>
-        Home
+        {/* <div className="relative w-4 h-4">
+          <Image src="/icons/favicon.ico" alt="Home" fill />
+        </div> */}
+        J
+      </NavButton>
+      <NavButton href={URL_ABOUT} active={pathname === URL_ABOUT}>
+        About
       </NavButton>
       <NavButton href={"https://plett.fun"} external>
         Games <ExternalLinkIcon />

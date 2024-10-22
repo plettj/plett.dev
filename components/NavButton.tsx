@@ -7,18 +7,21 @@ export default function NavButton({
   href,
   active = false,
   external = false,
+  className,
 }: Readonly<{
   children: React.ReactNode;
   href: string;
   active?: boolean;
   external?: boolean;
+  className?: string;
 }>) {
   return (
     <Button
       asChild
       className={cn(
         "px-2 text-foreground font-semibold",
-        !active && "text-muted-foreground"
+        !active && "text-muted-foreground",
+        className
       )}
       variant="link"
     >
