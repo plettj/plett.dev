@@ -17,15 +17,12 @@ export default function Navigation() {
   return (
     <nav className="flex gap-2 px-6 my-10">
       <NavButton href={URL_HOME} active={pathname === URL_HOME}>
-        {/* <div className="relative w-4 h-4">
-          <Image src="/icons/favicon.ico" alt="Home" fill />
-        </div> */}
         J
       </NavButton>
       <NavButton href={URL_ABOUT} active={pathname === URL_ABOUT}>
         About
       </NavButton>
-      <NavButton href={"https://plett.fun"} external>
+      <NavButton href={"https://plett.fun"} className="hidden sm:flex" external>
         Games <ExternalLinkIcon />
       </NavButton>
       <NavButton href={URL_WRITING} active={pathname.includes(URL_WRITING)}>

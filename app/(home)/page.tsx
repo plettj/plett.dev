@@ -43,13 +43,6 @@ export default async function Home() {
           <InlineLink href={URL_ABOUT}>about me</InlineLink> page.
         </li>
       </ul>
-      {/* <Image
-        src="/images/home/Socratica_Symposium_Presentation_Compressed.jpg"
-        alt="Josiah on stage in front of a live 1000-person audience"
-        priority
-        width={1824}
-        height={538}
-      /> */}
     </div>
   );
 }

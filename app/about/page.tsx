@@ -3,10 +3,10 @@ import Title from "@/components/Title";
 import { ContentList } from "@/components/layouts/ContentList";
 
 export const metadata = {
-  title: "Josiah Plett",
+  title: "About | Josiah Plett",
 };
 
-export default async function Home() {
+export default async function About() {
   return (
     <div className="flex flex-col gap-4 px-8">
       <p className="mb-1">I enjoy many things.</p>
