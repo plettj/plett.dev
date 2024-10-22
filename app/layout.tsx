@@ -4,8 +4,6 @@ import { type Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import Navigation from "@/components/layouts/Navigation";
-import Footer from "@/components/layouts/Footer";
 import { ThemeProvider } from "next-themes";
 import { author } from "@/lib/posts/constants";
 
@@ -81,11 +79,7 @@ export default async function RootLayout({
           enableSystem
         >
           <TopLoader />
-          <main className="h-full max-w-[80ch] w-full flex flex-col text-sm">
-            <Navigation />
-            {children}
-            <Footer />
-          </main>
+          {children}
         </ThemeProvider>
       </body>
     </html>
