@@ -49,9 +49,6 @@ export const metadata: Metadata = {
     address: false,
   },
   archives: "https://old.plett.dev/",
-  icons: {
-    icon: `/icons/favicon.ico`,
-  },
   openGraph: {
     type: "website",
     locale: "en_CA",

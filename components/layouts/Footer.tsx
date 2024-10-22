@@ -13,7 +13,7 @@ export default async function Footer() {
             LinkedIn
           </NavButton>
         </div>
-        <p className="text-muted-foreground font-light mx-2">
+        <p className="text-muted-foreground font-thin mx-2">
           Copyright {new Date().getFullYear()} © Josiah Plett
         </p>
       </section>

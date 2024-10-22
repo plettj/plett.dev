@@ -17,7 +17,17 @@ export default async function Home() {
       <ul className="ml-6 list-disc [&>li]:mt-2">
         <li>
           A <span className="font-semibold">recruiter?</span> See my{" "}
-          <InlineLink href={URL_CV}>CV</InlineLink>,{" "}
+          <InlineLink href={URL_CV} className="hidden md:inline-block">
+            CV
+          </InlineLink>
+          <InlineLink
+            href="/cv/Josiah_Plett_CV_2024.pdf"
+            className="inline-block md:hidden"
+            external
+          >
+            CV
+          </InlineLink>
+          ,{" "}
           <InlineLink href="https://www.linkedin.com/in/josiahplett/" external>
             LinkedIn
           </InlineLink>
