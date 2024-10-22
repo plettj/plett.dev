@@ -1,5 +1,6 @@
 import InlineLink from "@/components/InlineLink";
 import { ContentListItem } from "@/components/layouts/ContentList";
+import Soccer from "@/components/Soccer";
 
 const professionalItems: ContentListItem[] = [
   {
@@ -25,7 +26,7 @@ const professionalItems: ContentListItem[] = [
         >
           two
         </InlineLink>{" "}
-        competitions and learned a ton.
+        competitions and learned a ton; I&apos;ll be back again soon.
       </p>
     ),
   },
@@ -83,7 +84,13 @@ const professionalItems: ContentListItem[] = [
         <InlineLink href="https://github.com/plettj/hagnusmiemann" external>
           C++ chess engine
         </InlineLink>{" "}
-        ranked in the top 200 engines worldwide. Currently building a{" "}
+        ranked in the top 200 engines worldwide. I also designed{" "}
+        <InlineLink href="https://github.com/Notoh/UnboxTheGoose" external>
+          this
+        </InlineLink>{" "}
+        Rubik&apos;s cube-solving robot and its custom engine.
+        {/* Currently
+        building a{" "}
         <InlineLink href="https://en.wikipedia.org/wiki/Go_(game)" external>
           Go
         </InlineLink>{" "}
@@ -94,7 +101,7 @@ const professionalItems: ContentListItem[] = [
         >
           Go
         </InlineLink>
-        .
+        .*/}
       </p>
     ),
   },
@@ -124,22 +131,22 @@ const professionalItems: ContentListItem[] = [
         <InlineLink href="https://www.instagram.com/p/C5WDMB_ged7/" external>
           Symposium
         </InlineLink>
-        , taught{" "}
+        and taught{" "}
         <InlineLink href="https://github.com/zrwaite/se101-spaceship" external>
           this
         </InlineLink>{" "}
-        University of Waterloo course, spoke in UW&apos;s{" "}
+        University of Waterloo course. I&apos;ve also spoken at UW&apos;s{" "}
         <InlineLink
           href="https://uwaterloo.ca/math-innovation/student-entrepreneurship/entrepreneurship-and-impact-series"
           external
         >
           Math Innovation
         </InlineLink>{" "}
-        series, spoke at a large{" "}
+        series, a large{" "}
         <InlineLink href="https://uwaterloo.ca/grebel/" external>
           Conrad Grebel
         </InlineLink>{" "}
-        event, and more.
+        event, 8 middle schools, and more.
       </p>
     ),
   },
@@ -149,8 +156,8 @@ const professionalItems: ContentListItem[] = [
     year: "2016",
     children: (
       <p>
-        I&apos;ve been a volunteer note-taker in 13 university classes. I also
-        ran my city&apos;s{" "}
+        I&apos;ve been a formal note-taker for 13 university classes. I also ran
+        my city&apos;s{" "}
         <InlineLink href="https://www.colwoodbadminton.ca/" external>
           badminton club
         </InlineLink>{" "}
@@ -197,8 +204,8 @@ const hobbyItems: ContentListItem[] = [
     year: "2018",
     children: (
       <p>
-        <InlineLink href="/photography">Here</InlineLink> is my amateur
-        photography portfolio, on this site.
+        This site holds my amateur photography portfolio,{" "}
+        <InlineLink href="/photography">here</InlineLink>.
       </p>
     ),
   },
@@ -223,11 +230,7 @@ const hobbyItems: ContentListItem[] = [
         >
           top spot
         </InlineLink>{" "}
-        on{" "}
-        <InlineLink href="https://www.reddit.com/r/math/" external>
-          r/Math
-        </InlineLink>{" "}
-        for a week.
+        on r/Math for a week.
       </p>
     ),
   },
@@ -256,7 +259,7 @@ const hobbyItems: ContentListItem[] = [
   },
   {
     title: "Speedcubing",
-    subtitle: "3 Guinness World Records",
+    subtitle: "3 world records",
     year: "2009",
     children: (
       <p>
@@ -327,16 +330,16 @@ const hobbyItems: ContentListItem[] = [
         <InlineLink href="https://monkeytype.com/" external>
           Monkeytype
         </InlineLink>{" "}
-        is where I practice both.{" "}
+        is where I train both. Profile links:{" "}
         <InlineLink
           href="https://monkeytype.com/profile/Colemak_Mod-DH"
           external
         >
-          Colemak Profile
+          Colemak
         </InlineLink>
         ,{" "}
         <InlineLink href="https://monkeytype.com/profile/plettj" external>
-          Qwerty Profile
+          Qwerty
         </InlineLink>
         .
       </p>
@@ -359,7 +362,11 @@ const hobbyItems: ContentListItem[] = [
         <InlineLink href="https://uwaterloo.ca/music/university-choir" external>
           University Choir
         </InlineLink>
-        , and played trumpet for 4 years.
+        , and played Trumpet 1 for{" "}
+        <InlineLink href="https://en.wikipedia.org/wiki/Last_Post" external>
+          The Last Post
+        </InlineLink>{" "}
+        at a Remembrance Day ceremony.
       </p>
     ),
   },
@@ -369,9 +376,9 @@ const hobbyItems: ContentListItem[] = [
     year: "2017",
     children: (
       <p>
-        These days I run, climb, play squash, and work out, but I used to play
-        badminton, soccer, and compete in triathlons. I own a slackline, and
-        love a good ski trip.
+        These days I run, climb, play squash, and work out. I used to play{" "}
+        <Soccer />, badminton, and do triathlons. I still own a slackline and
+        love to ski.
       </p>
     ),
   },
