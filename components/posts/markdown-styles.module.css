@@ -16,7 +16,7 @@
 }
 
 .markdown code {
-  @apply inline-block rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono font-medium;
+  @apply inline-block rounded bg-muted px-[0.3rem] py-[1px] -my-[1px] font-mono font-medium;
 }
 
 .markdown pre code {
