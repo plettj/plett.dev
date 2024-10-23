@@ -1,22 +1,52 @@
 .markdown {
-  @apply text-lg leading-relaxed;
+  @apply text-sm leading-relaxed;
 }
 
 .markdown p,
+.markdown a,
 .markdown ul,
 .markdown ol,
+.markdown pre,
 .markdown blockquote {
-  @apply my-6 text-sm;
+  @apply my-6;
+}
+
+.markdown pre {
+  @apply p-4 bg-muted rounded-lg w-full overflow-x-auto;
+}
+
+.markdown code {
+  @apply inline-block rounded bg-muted px-[0.3rem] py-[1px] -my-[1px] font-mono font-medium;
+}
+
+.markdown pre code {
+  @apply block bg-none p-0 font-normal;
+}
+
+.markdown ul {
+  @apply ml-6 list-disc;
+}
+
+.markdown ol {
+  @apply ml-6 list-decimal;
+}
+
+.markdown blockquote {
+  @apply border-l-[3px] pl-4 italic text-muted-foreground;
+}
+
+.markdown a {
+  @apply font-semibold text-muted-foreground hover:underline;
 }
 
 .markdown h2 {
-  @apply text-2xl font-thin mt-12 mb-4 leading-snug;
+  @apply text-2xl font-semibold mt-12 pb-1 mb-3 leading-snug border-b tracking-tight;
 }
 
 .markdown h3 {
-  @apply text-xl font-light mt-8 mb-4 leading-snug;
+  @apply text-xl font-semibold mt-8 mb-4 leading-snug;
 }
 
 .markdown h4 {
-  @apply text-sm font-semibold mt-8 mb-4 leading-snug;
+  @apply text-sm font-semibold mt-6 mb-4 leading-snug;
 }

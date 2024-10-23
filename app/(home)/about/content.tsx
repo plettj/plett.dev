@@ -156,7 +156,7 @@ const professionalItems: ContentListItem[] = [
     year: "2016",
     children: (
       <p>
-        I&apos;ve been a formal note-taker for 13 university classes. I also ran
+        I&apos;ve been a formal note-taker for 11 university classes. I also ran
         my city&apos;s{" "}
         <InlineLink href="https://www.colwoodbadminton.ca/" external>
           badminton club

@@ -2,6 +2,7 @@
 .env*
 
 # art files
+/art/
 *.aseprite
 
 # dependencies

@@ -6,15 +6,20 @@ export default function InlineLink({
   children,
   href,
   external = false,
+  className,
 }: Readonly<{
   children: React.ReactNode;
   href: string;
   external?: boolean;
+  className?: string;
 }>) {
   return (
     <Button
       asChild
-      className={cn("p-0 h-6 -my-1 text-muted-foreground font-semibold")}
+      className={cn(
+        "p-0 h-6 -my-1 text-muted-foreground font-semibold",
+        className
+      )}
       variant="link"
     >
       <Link
