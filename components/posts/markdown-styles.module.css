@@ -6,8 +6,21 @@
 .markdown a,
 .markdown ul,
 .markdown ol,
+.markdown pre,
 .markdown blockquote {
   @apply my-6;
+}
+
+.markdown pre {
+  @apply p-4 bg-muted rounded-lg w-full overflow-x-auto;
+}
+
+.markdown code {
+  @apply inline-block rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono font-medium;
+}
+
+.markdown pre code {
+  @apply block bg-none p-0 font-normal;
 }
 
 .markdown ul {

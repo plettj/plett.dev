@@ -8,6 +8,7 @@ import { Code } from "@/components/ui/code";
 import Navigation from "@/components/layouts/Navigation";
 import { URL_WRITING } from "@/lib/constants";
 import NavButton from "@/components/NavButton";
+import PostFooter from "@/components/posts/PostFooter";
 
 type Params = {
   params: {
@@ -44,6 +45,7 @@ export default async function Post({ params }: Params) {
         date={post.date}
       />
       <PostBody content={content} />
+      <PostFooter />
     </article>
   );
 }
