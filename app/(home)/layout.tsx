@@ -1,5 +1,6 @@
 import Navigation from "@/components/layouts/Navigation";
 import Footer from "@/components/layouts/Footer";
+import Container from "@/components/layouts/Container";
 
 export default async function HomeLayout({
   children,
@@ -7,10 +8,10 @@ export default async function HomeLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="h-full max-w-[80ch] w-full flex flex-col text-sm">
+    <Container>
       <Navigation />
       {children}
       <Footer />
-    </main>
+    </Container>
   );
 }

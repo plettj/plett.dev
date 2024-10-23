@@ -6,10 +6,7 @@ import PostHeader from "@/components/posts/PostHeader";
 import { PostBody } from "@/components/posts/PostBody";
 import { Code } from "@/components/ui/code";
 import Navigation from "@/components/layouts/Navigation";
-import { URL_WRITING } from "@/lib/constants";
-import NavButton from "@/components/NavButton";
 import PostFooter from "@/components/posts/PostFooter";
-import { ArrowLeftIcon } from "@radix-ui/react-icons";
 
 type Params = {
   params: {
@@ -22,17 +19,13 @@ export default async function Post({ params }: Params) {
 
   if (!post) {
     return (
-      <>
+      <div className="w-full">
         <Navigation />
-        <div className="px-8">
-          <p>
-            Post <Code>{params.slug[0]}</Code> not found.
-          </p>
-          <NavButton href={URL_WRITING} className="block pl-0 mt-6">
-            <ArrowLeftIcon /> Home
-          </NavButton>
-        </div>
-      </>
+        <p>
+          Post <Code>{params.slug[0]}</Code> not found.
+        </p>
+        <PostFooter />
+      </div>
     );
   }
 
@@ -43,7 +36,7 @@ export default async function Post({ params }: Params) {
   const nextPost = currentIndex > 0 ? posts[currentIndex - 1] : undefined;
 
   return (
-    <article className="px-8 mt-8">
+    <article className="mt-8 sm:mt-4">
       <PostHeader
         title={post.title}
         coverImage={post.coverImage}

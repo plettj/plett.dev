@@ -330,18 +330,29 @@ const hobbyItems: ContentListItem[] = [
         <InlineLink href="https://monkeytype.com/" external>
           Monkeytype
         </InlineLink>{" "}
-        is where I train both. Profile links:{" "}
+        is where I train both:{" "}
         <InlineLink
           href="https://monkeytype.com/profile/Colemak_Mod-DH"
           external
         >
-          Colemak
+          Colemak profile
         </InlineLink>
         ,{" "}
         <InlineLink href="https://monkeytype.com/profile/plettj" external>
-          Qwerty
+          Qwerty profile
         </InlineLink>
-        .
+        . I also built{" "}
+        <InlineLink href="/images/home/Custom_Keyboard.jpg" external>
+          this
+        </InlineLink>{" "}
+        keyboard with{" "}
+        <InlineLink
+          href="https://cannonkeys.com/products/gateron-pro-north-pole-linear-switch"
+          external
+        >
+          these
+        </InlineLink>{" "}
+        switches.
       </p>
     ),
   },

@@ -12,7 +12,7 @@ export default async function Writing() {
   let currentYear = new Date().getFullYear() + 1;
 
   return (
-    <div className="flex flex-col gap-4 px-8">
+    <div className="flex flex-col gap-4">
       {posts.map((post) => {
         const postYear = new Date(post.date).getFullYear();
         const showYear = postYear !== currentYear;

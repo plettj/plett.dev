@@ -15,7 +15,7 @@ export default function PostHeader({
 }) {
   return (
     <>
-      <h1 className="text-2xl font-semibold mt-8 mr-20 leading-snug text-balance tracking-tight">
+      <h1 className="text-2xl font-semibold mt-8 mr-12 leading-snug text-balance tracking-tight">
         {title}
       </h1>
       <div className="flex justify-between items-center pt-2 pb-4 border-b">

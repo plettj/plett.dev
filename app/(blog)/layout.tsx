@@ -1,3 +1,4 @@
+import Container from "@/components/layouts/Container";
 import Footer from "@/components/layouts/Footer";
 
 export default async function PostLayout({
@@ -6,9 +7,9 @@ export default async function PostLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="h-full max-w-[80ch] w-full flex flex-col text-sm">
+    <Container>
       {children}
       <Footer />
-    </main>
+    </Container>
   );
 }

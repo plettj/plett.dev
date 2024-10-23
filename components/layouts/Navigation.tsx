@@ -15,7 +15,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex gap-2 px-6 my-10">
+    <nav className="flex gap-2 -mx-2 my-10">
       <NavButton href={URL_HOME} active={pathname === URL_HOME}>
         J
       </NavButton>

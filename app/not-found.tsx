@@ -10,7 +10,7 @@ export default function NotFound() {
   const pathname = usePathname();
 
   return (
-    <div className="w-full h-full p-8 flex items-center justify-center text-center">
+    <div className="w-full h-full py-8 flex items-center justify-center text-center">
       <div>
         <span className="bg-gradient-to-b from-foreground to-transparent bg-clip-text text-[10rem] font-extrabold leading-none text-transparent">
           404

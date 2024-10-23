@@ -3,9 +3,9 @@ import NavButton from "../NavButton";
 export default async function Footer() {
   return (
     <footer className="flex flex-col w-full mt-12">
-      <hr className="border-balance mx-8" />
-      <section className="flex flex-col sm:flex-row gap-2 justify-between items-center w-full px-6 my-10">
-        <div className="flex gap-2">
+      <hr className="border-balance" />
+      <section className="flex flex-col sm:flex-row gap-2 justify-between items-center w-full my-10">
+        <nav className="flex gap-2 -ml-2">
           <NavButton href="https://github.com/plettj" external>
             GitHub
           </NavButton>
@@ -15,8 +15,8 @@ export default async function Footer() {
           <NavButton href="https://old.plett.dev" className="hidden sm:flex">
             Old site
           </NavButton>
-        </div>
-        <p className="text-muted-foreground font-thin mx-2">
+        </nav>
+        <p className="text-muted-foreground font-thin">
           Copyright {new Date().getFullYear()} © Josiah Plett
         </p>
       </section>

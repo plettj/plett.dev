@@ -15,6 +15,23 @@
   @apply p-4 bg-muted rounded-lg w-full overflow-x-auto;
 }
 
+.markdown pre::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+.markdown pre::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.markdown pre::-webkit-scrollbar-thumb {
+  @apply rounded-lg;
+  background: hsla(var(--muted-foreground) / 0.25);
+}
+
+.markdown pre::-webkit-scrollbar-thumb:hover {
+  background: hsla(var(--muted-foreground) / 0.5);
+}
+
 .markdown code {
   @apply inline-block rounded bg-muted px-[0.3rem] py-[1px] -my-[1px] font-mono font-medium;
 }

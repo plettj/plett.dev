@@ -7,7 +7,7 @@ export const metadata = {
 
 export default async function Home() {
   return (
-    <div className="flex flex-col gap-4 px-8">
+    <div className="flex flex-col gap-4">
       <p>
         I&apos;m Josiah Plett, a software developer, designer, and entrepreneur.
         I&apos;m currently pursuing a Bachelor of Computer Science at the

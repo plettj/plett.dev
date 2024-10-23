@@ -6,7 +6,7 @@ export const metadata = {
 
 export default async function Photography() {
   return (
-    <div className="flex flex-col gap-4 px-8">
+    <div className="flex flex-col gap-4">
       <p>
         See my{" "}
         <InlineLink href="https://old.plett.dev/More/photography" external>
