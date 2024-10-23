@@ -12,6 +12,9 @@ export default async function Footer() {
           <NavButton href="https://www.linkedin.com/in/josiahplett/" external>
             LinkedIn
           </NavButton>
+          <NavButton href="https://old.plett.dev" className="hidden sm:flex">
+            Old site
+          </NavButton>
         </div>
         <p className="text-muted-foreground font-thin mx-2">
           Copyright {new Date().getFullYear()} © Josiah Plett
