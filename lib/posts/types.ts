@@ -11,7 +11,7 @@ export type Post = {
   tags: string[];
   /** UNSURE WHAT THIS IS FOR! */
   toPreview?: boolean;
-  /** Original publish date of the post */
+  /** Original publish date of the post, in UTC format */
   date: string;
   /** Full markdown-formatted content of the post */
   content: string;

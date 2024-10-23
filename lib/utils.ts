@@ -16,3 +16,13 @@ export function saysSoccer() {
 
   return false;
 }
+
+export function formatDate(utcDate: string) {
+  const date = new Date(utcDate);
+
+  return date.toLocaleDateString("en-CA", {
+    month: "short",
+    day: "2-digit",
+    year: "numeric",
+  });
+}

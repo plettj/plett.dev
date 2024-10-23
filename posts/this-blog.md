@@ -2,7 +2,7 @@
 title: "How I Made This Blog Site"
 subtitle: "From scratch in just a day"
 excerpt: "..."
-date: "Oct 23 2024"
+date: "2024-10-23T00:54:22Z"
 tags:
   ["blog", "writing", "testing", "tags", "as", "comma", "delimited", "strings"]
 ---

@@ -16,7 +16,8 @@ export default async function Home() {
       <p className="mt-2">Are you...</p>
       <ul className="ml-6 list-disc [&>li]:mt-2">
         <li>
-          A <span className="font-semibold">recruiter?</span> See my{" "}
+          A <span className="font-semibold dark:font-bold">recruiter?</span> See
+          my{" "}
           <InlineLink href={URL_CV} className="hidden md:inline-block">
             CV
           </InlineLink>
@@ -38,15 +39,16 @@ export default async function Home() {
           .
         </li>
         <li>
-          A <span className="font-semibold">gamer?</span> Find my games on{" "}
+          A <span className="font-semibold dark:font-bold">gamer?</span> Find my
+          games on{" "}
           <InlineLink href="https://plett.fun/" external>
             plett.fun
           </InlineLink>
           .
         </li>
         <li>
-          A <span className="font-semibold">reader?</span> Check out{" "}
-          <InlineLink href={URL_WRITING}>my writing</InlineLink>.
+          A <span className="font-semibold dark:font-bold">reader?</span> Check
+          out <InlineLink href={URL_WRITING}>my writing</InlineLink>.
         </li>
         <li>
           Just exploring? Start with my{" "}

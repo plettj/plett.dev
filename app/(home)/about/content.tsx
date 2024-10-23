@@ -193,7 +193,7 @@ const hobbyItems: ContentListItem[] = [
         <InlineLink href="https://mathnews.uwaterloo.ca/" external>
           mathNEWS
         </InlineLink>
-        , some of which I publish on this site,{" "}
+        , and sometimes publish on this site,{" "}
         <InlineLink href="/writing">here</InlineLink>.
       </p>
     ),
@@ -204,7 +204,7 @@ const hobbyItems: ContentListItem[] = [
     year: "2018",
     children: (
       <p>
-        This site holds my amateur photography portfolio,{" "}
+        You can find my amateur photography portfolio{" "}
         <InlineLink href="/photography">here</InlineLink>.
       </p>
     ),

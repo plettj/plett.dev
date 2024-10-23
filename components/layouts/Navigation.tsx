@@ -22,13 +22,17 @@ export default function Navigation() {
       <NavButton href={URL_ABOUT} active={pathname === URL_ABOUT}>
         About
       </NavButton>
-      <NavButton href={"https://plett.fun"} className="hidden sm:flex" external>
+      <NavButton href={"https://plett.fun"} external>
         Games <ExternalLinkIcon />
       </NavButton>
       <NavButton href={URL_WRITING} active={pathname.includes(URL_WRITING)}>
         Writing
       </NavButton>
-      <NavButton href={URL_PHOTOGRAPHY} active={pathname === URL_PHOTOGRAPHY}>
+      <NavButton
+        href={URL_PHOTOGRAPHY}
+        active={pathname === URL_PHOTOGRAPHY}
+        className="hidden sm:flex"
+      >
         Photography
       </NavButton>
       <div className="flex-1" />

@@ -9,6 +9,7 @@ import Navigation from "@/components/layouts/Navigation";
 import { URL_WRITING } from "@/lib/constants";
 import NavButton from "@/components/NavButton";
 import PostFooter from "@/components/posts/PostFooter";
+import { ArrowLeftIcon } from "@radix-ui/react-icons";
 
 type Params = {
   params: {
@@ -27,8 +28,8 @@ export default async function Post({ params }: Params) {
           <p>
             Post <Code>{params.slug[0]}</Code> not found.
           </p>
-          <NavButton href={URL_WRITING} className="block px-0 mt-6">
-            Back
+          <NavButton href={URL_WRITING} className="block pl-0 mt-6">
+            <ArrowLeftIcon /> Home
           </NavButton>
         </div>
       </>
@@ -36,6 +37,10 @@ export default async function Post({ params }: Params) {
   }
 
   const content = await markdownToHtml(post.content);
+
+  const posts = getAllPosts();
+  const currentIndex = posts.findIndex((p) => p.slug === post.slug);
+  const nextPost = currentIndex > 0 ? posts[currentIndex - 1] : undefined;
 
   return (
     <article className="px-8 mt-8">
@@ -45,7 +50,7 @@ export default async function Post({ params }: Params) {
         date={post.date}
       />
       <PostBody content={content} />
-      <PostFooter />
+      <PostFooter nextPost={nextPost} />
     </article>
   );
 }
