@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   ],
   authors: author,
   creator: "Josiah Plett",
+  icons: {
+    icon: `${BASE_URL}/icons/favicon32.png`,
+  },
   verification: {
     google: process.env.COMMON_VERIFICATION_GOOGLE /* ?? "uuid" */,
     yahoo: process.env.COMMON_VERIFICATION_YAHOO,
@@ -56,7 +59,7 @@ export const metadata: Metadata = {
     description: "Josiah Plett's personal website",
     images: [
       {
-        url: `${BASE_URL}/icons/favicon.png`,
+        url: `${BASE_URL}/icons/favicon32.png`,
         alt: "J logo",
       },
     ],

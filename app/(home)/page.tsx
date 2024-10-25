@@ -12,6 +12,8 @@ export default async function Home() {
         I&apos;m Josiah Plett, a software developer, designer, and entrepreneur.
         I&apos;m currently pursuing a Bachelor of Computer Science at the
         University of Waterloo, and looking for my 6th co-op job for Fall 2025.
+        <br />
+        <br />J<br />
       </p>
       <p className="mt-2">Are you...</p>
       <ul className="ml-6 list-disc [&>li]:mt-2">
