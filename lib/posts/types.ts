@@ -19,6 +19,10 @@ export type Post = {
   coverImage?: string;
   /** File location of an image for OpenGraph previews */
   ogImage?: string;
+  /** Latitude of location for GeoRSS */
+  lat?: number;
+  /** Longitude of location for GeoRSS */
+  long?: number;
 };
 
 export type Author = {

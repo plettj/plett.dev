@@ -4,12 +4,25 @@ subtitle: "From scratch in just a day"
 excerpt: "..."
 date: "2024-10-23T00:54:22Z"
 tags:
-  ["blog", "writing", "testing", "tags", "as", "comma", "delimited", "strings"]
+  [
+    "writing",
+    "personal",
+    "blog",
+    "software",
+    "next.js",
+    "tailwind",
+    "static",
+    "ssg",
+    "productivity",
+    "seo",
+    "web development",
+    "web dev",
+  ]
+lat: "55.7934747"
+long: "12.5250258"
 ---
 
-### First, what can this site do?
-
-This site creates statically generated and search engine optimized posts out of plain [markdown](https://www.markdownguide.org/getting-started/) files, displays them nicely, and provides a way to [view them all](/posts).
+This site creates statically generated and search engine optimized posts out of [markdown](https://www.markdownguide.org/getting-started/) files, displays them nicely, and provides a way to [view them all](/posts).
 
 Everything from the title to the URL slug to the text content is all part of one markdown file.
 
@@ -64,6 +77,10 @@ export default function PostBody({ content }: { content: string }) {
 
 ### Is that it?
 
-Yup! If you'd like to take a closer look at the code, feel free to explore the files [here on github](https://github.com/plettj/plett.dev). I skipped over a few things in this post, but the code is quite clean so you should have no trouble navigating it.
+Yup! If you'd like to take a closer look at the code, feel free to explore the files [here on github](https://github.com/plettj/plett.dev). The code is quite clean so you should have no trouble navigating it.
+
+---
+
+While this post does provide the basics to get you up and running, I did skip over a number of web essentials. Be sure to take a look at [RSS feeds](https://www.rssboard.org/rss-specification#whatIsRss), [sitemaps](https://www.sitemaps.org/protocol.html), [robots](https://developers.google.com/search/docs/crawling-indexing/robots/intro), and [manifests](https://developer.mozilla.org/en-US/docs/Web/Manifest) if you want to do everything right.
 
 Thanks for reading my first blog post!

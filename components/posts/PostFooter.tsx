@@ -4,20 +4,23 @@ import { Post } from "@/lib/posts/types";
 import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 
 export default function PostFooter({ nextPost }: { nextPost?: Post }) {
-  if (!nextPost) {
-    return (
-      <NavButton href={URL_WRITING} className="pl-0 mt-2 -mb-1">
-        <ArrowLeftIcon /> Back to Writing
-      </NavButton>
-    );
-  }
-
   return (
-    <NavButton
-      href={`${URL_WRITING}/${nextPost.slug}`}
-      className="pl-0 mt-2 -mb-1"
-    >
-      {nextPost.title} <ArrowRightIcon />
-    </NavButton>
+    <div className="flex justify-between items-center w-full">
+      {nextPost ? (
+        <NavButton
+          href={`${URL_WRITING}/${nextPost.slug}`}
+          className="pl-0 mt-2 -mb-1"
+        >
+          {nextPost.title} <ArrowRightIcon />
+        </NavButton>
+      ) : (
+        <NavButton href={URL_WRITING} className="pl-0 mt-2 -mb-1">
+          <ArrowLeftIcon /> Back to Writing
+        </NavButton>
+      )}
+      <NavButton href="/feed.xml" className="pr-0 mt-2 -mb-1 font-thin">
+        RSS
+      </NavButton>
+    </div>
   );
 }
