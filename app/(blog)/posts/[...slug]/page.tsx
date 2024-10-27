@@ -3,10 +3,11 @@ import markdownToHtml from "@/lib/posts/markdownToHtml";
 import { getAllPosts, getPostBySlugSafely } from "@/lib/posts/api";
 import { author } from "@/lib/posts/constants";
 import PostHeader from "@/components/posts/PostHeader";
-import { PostBody } from "@/components/posts/PostBody";
+import PostBody from "@/components/posts/PostBody";
 import { Code } from "@/components/ui/code";
 import Navigation from "@/components/layouts/Navigation";
 import PostFooter from "@/components/posts/PostFooter";
+import { URL_WRITING } from "@/lib/constants";
 
 type Params = {
   params: {
@@ -52,7 +53,9 @@ export function generateMetadata({ params }: Params): Metadata {
   const post = getPostBySlugSafely(params.slug[0]);
 
   if (!post) {
-    return {};
+    return {
+      title: "Post 404",
+    };
   }
 
   const title = `${post.title}`;
@@ -60,8 +63,10 @@ export function generateMetadata({ params }: Params): Metadata {
   return {
     title,
     description: post.preview,
-    generator: "Next.js",
     keywords: post.tags,
+    alternates: {
+      canonical: `${URL_WRITING}/${post.slug}`,
+    },
     authors: author,
     creator: "Josiah Plett",
     openGraph: {

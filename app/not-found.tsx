@@ -19,13 +19,13 @@ export default function NotFound() {
           The page you&apos;re looking for either doesn&apos;t exist or has been
           moved.
         </p>
-        <Button asChild>
-          <Link href={`https://old.plett.dev${pathname}`}>
-            Try the old site
-          </Link>
-        </Button>
         <div className="mt-8 flex justify-center gap-2">
-          <BackButton variant="outline" />
+          <BackButton variant="ghost" />
+          <Button variant="outline" asChild>
+            <Link href={`https://old.plett.dev${pathname}`}>
+              Try my old site
+            </Link>
+          </Button>
           <Button variant="ghost" asChild>
             <Link href={URL_HOME}>Back to Home</Link>
           </Button>

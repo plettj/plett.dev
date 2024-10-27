@@ -53,7 +53,7 @@
 }
 
 .markdown a {
-  @apply font-semibold text-muted-foreground hover:underline;
+  @apply font-semibold text-muted-foreground decoration-dotted underline sm:decoration-solid sm:no-underline hover:underline;
 }
 
 .markdown h2 {

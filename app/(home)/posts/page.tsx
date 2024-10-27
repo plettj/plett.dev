@@ -3,7 +3,7 @@ import { getAllPosts } from "@/lib/posts/api";
 import { cn } from "@/lib/utils";
 
 export const metadata = {
-  title: "Writing | Josiah Plett",
+  title: "Writing",
 };
 
 export default async function Writing() {

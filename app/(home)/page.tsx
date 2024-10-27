@@ -1,10 +1,6 @@
 import InlineLink from "@/components/InlineLink";
 import { URL_ABOUT, URL_CV, URL_WRITING } from "@/lib/constants";
 
-export const metadata = {
-  title: "Josiah Plett",
-};
-
 export default async function Home() {
   return (
     <div className="flex flex-col gap-4">
@@ -18,6 +14,7 @@ export default async function Home() {
         <li>
           A <span className="font-semibold dark:font-bold">recruiter?</span> See
           my{" "}
+          {/* Open in a new tab on mobile, and within my website on desktop */}
           <InlineLink href={URL_CV} className="hidden md:inline-block">
             CV
           </InlineLink>

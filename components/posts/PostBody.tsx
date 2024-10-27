@@ -1,6 +1,6 @@
 import markdownStyles from "./markdown-styles.module.css";
 
-export function PostBody({ content }: { content: string }) {
+export default function PostBody({ content }: { content: string }) {
   return (
     <div className="w-full">
       <div

@@ -28,11 +28,9 @@ export function ContentList({
     >
       {items.map((item, index) => (
         <AccordionItem key={index} value={`item-${index}`}>
-          <AccordionTrigger className="py-2">
-            <div className="flex justify-between w-full">
-              <h1 className="text-1xl font-semibold">{item.title}</h1>
-              <h2 className="text-sm text-muted-foreground">{item.subtitle}</h2>
-            </div>
+          <AccordionTrigger className="py-2 w-full decoration-muted-foreground">
+            <p className="font-semibold">{item.title}</p>
+            <p className="text-muted-foreground">{item.subtitle}</p>
           </AccordionTrigger>
           <AccordionContent>{item.children}</AccordionContent>
         </AccordionItem>

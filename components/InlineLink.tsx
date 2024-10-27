@@ -17,7 +17,7 @@ export default function InlineLink({
     <Button
       asChild
       className={cn(
-        "p-0 h-6 -my-1 text-muted-foreground font-semibold",
+        "p-0 h-6 -my-1 text-muted-foreground font-semibold decoration-dotted underline sm:decoration-solid sm:no-underline hover:underline",
         className
       )}
       variant="link"
