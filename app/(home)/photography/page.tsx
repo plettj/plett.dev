@@ -1,7 +1,7 @@
 import InlineLink from "@/components/InlineLink";
 
 export const metadata = {
-  title: "Photography | Josiah Plett",
+  title: "Photography",
 };
 
 export default async function Photography() {

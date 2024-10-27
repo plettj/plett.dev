@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .disable-blur {
-    image-rendering: optimize-contrast;
-    -ms-interpolation-mode: bicubic;
-  }
-}
-
 @layer utilities {
   .scrollbar::-webkit-scrollbar {
     width: 10px;
@@ -95,6 +88,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground underline-offset-4 text-sm;
   }
 }

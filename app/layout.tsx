@@ -14,9 +14,12 @@ const fontSans = JetBrains_Mono({
 
 // OPG compliant metadata (https://ogp.me/)
 export const metadata: Metadata = {
-  title: "Josiah Plett",
+  title: {
+    template: "%s | Josiah Plett",
+    default: "Josiah Plett",
+  },
   description:
-    "Come explore my professional interests, hobbies, writing, and photography.",
+    "A website housing my online presence. This includes my professional interests, hobbies, writing, photography, games, and other such things.",
   generator: "Next.js",
   keywords: [
     "Entrepreneur",
@@ -26,6 +29,7 @@ export const metadata: Metadata = {
     "Photography",
     "Blog",
     "Startup",
+    "Professional",
     "Software Developer",
     "Design",
     "Speedcubing",
@@ -33,9 +37,12 @@ export const metadata: Metadata = {
   ],
   authors: author,
   creator: "Josiah Plett",
-  icons: {
-    icon: `${BASE_URL}/icons/favicon32.png`,
-  },
+  referrer: "strict-origin-when-cross-origin", // Default
+  icons: [
+    { url: `${BASE_URL}/icons/favicon32.png`, sizes: "32x32" },
+    { url: `${BASE_URL}/icons/favicon256.png`, sizes: "256x256" },
+  ],
+  metadataBase: new URL(BASE_URL),
   verification: {
     google: process.env.COMMON_VERIFICATION_GOOGLE /* ?? "uuid" */,
     yahoo: process.env.COMMON_VERIFICATION_YAHOO,
@@ -64,7 +71,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  // manifest: JSON_MANIFEST // TODO: Add a manifest to support my site being downloaded as a PWA
 };
 
 export default async function RootLayout({

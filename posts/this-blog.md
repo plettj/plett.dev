@@ -52,7 +52,7 @@ The last technical aspect of my static blog generation is styling the interface.
 ```
 import markdownStyles from "./markdown-styles.module.css";
 
-export function PostBody({ content }: { content: string }) {
+export default function PostBody({ content }: { content: string }) {
   return (
     <article
       className={markdownStyles["markdown"]}

@@ -1,6 +1,6 @@
 import NavButton from "../NavButton";
 
-export default async function Footer() {
+export default function Footer() {
   return (
     <footer className="flex flex-col w-full mt-12">
       <hr className="border-balance" />
