@@ -12,8 +12,8 @@ export default async function middleware(
 ) {
   const response = NextResponse.next();
 
-  // const ip = request.headers.get("x-forwarded-for") || request.ip || "unknown";
-  const ip = request.ip ?? "unknown";
+  const forwarded = request.headers.get("x-forwarded-for");
+  const ip = forwarded ? forwarded.split(/, /)[0] : request.ip ?? "unknown";
 
   await incrViews(ip, context, ["global_views"]);
 
