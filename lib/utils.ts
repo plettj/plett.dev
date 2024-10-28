@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import ipaddr from "ipaddr.js";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -43,6 +44,24 @@ export function addOrdinalSuffix(i: number): string {
   return i + "th";
 }
 
-export function inProd() {
-  return process.env.NODE_ENV === "production";
+/**
+ * Helper function for grouping public IP addresses.
+ */
+export function processIp(ip: string): string {
+  const parsedIp = ipaddr.parse(ip);
+
+  if (parsedIp.range() !== "private") {
+    const [a, b] =
+      parsedIp.kind() === "ipv4"
+        ? (parsedIp as ipaddr.IPv4).octets
+        : (parsedIp as ipaddr.IPv6).parts;
+    ip = `${a}.${b}`;
+  }
+
+  return ip;
+}
+
+export function isProd(): boolean {
+  // return process.env.NODE_ENV === "production";
+  return true;
 }

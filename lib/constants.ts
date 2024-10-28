@@ -1,6 +1,6 @@
-import { inProd } from "./utils";
+import { isProd } from "./utils";
 
-export const BASE_URL = inProd()
+export const BASE_URL = isProd()
   ? "https://plett.dev"
   : "http://localhost:3000";
 
@@ -13,4 +13,5 @@ export const URL_OLD_SITE = "https://old.plett.dev";
 
 export const COPYRIGHT_STRING = `Copyright ${new Date().getFullYear()} © Josiah Plett`;
 
-export const FALLBACK_TOTAL_VISITORS = 37; // NOTE: Old website had 1080 views as of 2024-10-28.
+export const VISITOR_EXPIRATION = 60 * 60 * 24;
+export const FALLBACK_TOTAL_VISITORS = 79; // NOTE: Old website had 1080 views as of 2024-10-28.

@@ -1,25 +1,9 @@
 import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
 import { incrViews } from "./actions/middleware/views";
-
-// TODO: Improve my matcher.
+import { processIp } from "./lib/utils";
 
 export const config = {
-  matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.png (favicon file)
-     */
-    {
-      source: "/((?!api|_next/static|_next/image|favicon.png).*)",
-      missing: [
-        { type: "header", key: "next-router-prefetch" },
-        { type: "header", key: "purpose", value: "prefetch" },
-      ],
-    },
-  ],
+  matcher: ["/", "/about", "/posts/:path*"],
 };
 
 export default async function middleware(
@@ -28,7 +12,13 @@ export default async function middleware(
 ) {
   const response = NextResponse.next();
 
-  incrViews(request.ip ?? "unknown", context, ["global_views"]);
+  const forwardedIp = request.headers.get("x-forwarded-for");
+  const rawIp = forwardedIp
+    ? forwardedIp.split(/, /)[0]
+    : request.ip ?? "unknown";
+  const ip = processIp(rawIp);
+
+  await incrViews(ip, context, ["global_views"]);
 
   return response;
 }
