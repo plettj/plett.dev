@@ -1,6 +1,6 @@
-import { inProd } from "./utils";
+import { isProd } from "./utils";
 
-export const BASE_URL = inProd()
+export const BASE_URL = isProd()
   ? "https://plett.dev"
   : "http://localhost:3000";
 

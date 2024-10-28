@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
 import redis from "@/lib/redis";
 import { FALLBACK_TOTAL_VISITORS } from "@/lib/constants";
-import { inProd } from "@/lib/utils";
+import { isProd } from "@/lib/utils";
 
 export async function GET() {
-  if (!inProd()) {
+  if (!isProd()) {
+    console.log("Skipping view increment in development mode.");
     return NextResponse.json({ globalViews: FALLBACK_TOTAL_VISITORS });
   }
 

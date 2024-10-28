@@ -1,4 +1,4 @@
-import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { incrViews } from "./actions/middleware/views";
 
 // TODO: Improve my matcher.
@@ -22,13 +22,12 @@ export const config = {
   ],
 };
 
-export default async function middleware(
-  request: NextRequest,
-  context: NextFetchEvent
-) {
+export default async function middleware(request: NextRequest) {
   const response = NextResponse.next();
 
-  incrViews(request.ip ?? "unknown", context, ["global_views"]);
+  console.log(request.body, request.ip);
+
+  incrViews(request.ip ?? "unknown", ["global_views"]);
 
   return response;
 }

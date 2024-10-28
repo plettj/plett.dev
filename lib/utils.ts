@@ -43,6 +43,7 @@ export function addOrdinalSuffix(i: number): string {
   return i + "th";
 }
 
-export function inProd() {
-  return process.env.NODE_ENV === "production";
+export function isProd() {
+  // return process.env.NODE_ENV === "production";
+  return true;
 }
