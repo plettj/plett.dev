@@ -15,6 +15,10 @@ export async function incrViews(ip: string, categories: string[]) {
     return false;
   }
 
+  console.log("Attempting to get total global views...");
+  const totalVisits = await redis.get("global_views");
+  console.log(`Total global views: ${totalVisits}`);
+
   const visits = await redis.incr(ip);
 
   console.log(`Total visits from IP "${ip}": ${visits}`);
@@ -36,8 +40,7 @@ export async function incrViews(ip: string, categories: string[]) {
     }
   } catch (error) {
     console.error("Failed to update global page views:", error);
-    // return NextResponse.json({ error: "Failed to update data", status: 500 });
-    return NextResponse.error();
+    return NextResponse.json({ error: "Failed to update data", status: 500 });
   }
 
   return updated;
