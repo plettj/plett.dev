@@ -7,20 +7,18 @@ import { NextFetchEvent } from "next/server";
 /**
  * Middleware to increment the views from a given IP address.
  *
- * @returns {boolean} Whether the views were incremented.
+ * @returns {Promise<boolean>} Whether the views were incremented.
  */
 export async function incrViews(
   ip: string,
   context: NextFetchEvent,
   categories: string[]
-) {
+): Promise<boolean> {
   if (!isProd()) {
     return false;
   }
 
   const visits = await redis.incr(ip);
-
-  console.log(`Total visits from IP "${ip}": ${visits}`);
 
   if (visits > 1) {
     return false;
@@ -39,7 +37,7 @@ export async function incrViews(
           updated = true;
         }
       } catch (error) {
-        console.error("Failed to increment categories:", error);
+        console.error("Failed to increment:", error);
       }
     })()
   );
