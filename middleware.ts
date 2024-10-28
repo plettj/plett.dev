@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
 import { incrViews } from "./actions/middleware/views";
 
 // TODO: Improve my matcher.
@@ -6,14 +6,15 @@ export const config = {
   matcher: ["/about/:path*", "/posts/:path*"],
 };
 
-export default async function middleware(request: NextRequest) {
+export default async function middleware(
+  request: NextRequest,
+  context: NextFetchEvent
+) {
   const response = NextResponse.next();
 
   const ip = request.headers.get("x-forwarded-for") || request.ip || "unknown";
 
-  console.log("Middleware running on IP: ", ip);
-
-  await incrViews(ip, ["global_views"]);
+  await incrViews(ip, context, ["global_views"]);
 
   return response;
 }

@@ -13,4 +13,4 @@ export const URL_OLD_SITE = "https://old.plett.dev";
 
 export const COPYRIGHT_STRING = `Copyright ${new Date().getFullYear()} © Josiah Plett`;
 
-export const FALLBACK_TOTAL_VISITORS = 37; // NOTE: Old website had 1080 views as of 2024-10-28.
+export const FALLBACK_TOTAL_VISITORS = 47; // NOTE: Old website had 1080 views as of 2024-10-28.
