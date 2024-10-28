@@ -16,6 +16,8 @@ export async function incrViews(ip: string, categories: string[]) {
 
   const visits = await redis.incr(ip);
 
+  console.log(`Total visits from IP "${ip}": ${visits}`);
+
   if (visits > 1) {
     console.log(`Skipping view increment for IP "${ip}" (already visited).`);
     return false;

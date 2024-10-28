@@ -25,8 +25,6 @@ export const config = {
 export default async function middleware(request: NextRequest) {
   const response = NextResponse.next();
 
-  console.log(request.body, request.ip);
-
   incrViews(request.ip ?? "unknown", ["global_views"]);
 
   return response;
