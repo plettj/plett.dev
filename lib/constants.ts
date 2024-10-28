@@ -1,7 +1,8 @@
-export const BASE_URL =
-  process.env.NODE_ENV === "production"
-    ? "https://plett.dev"
-    : "http://localhost:3000";
+import { inProd } from "./utils";
+
+export const BASE_URL = inProd()
+  ? "https://plett.dev"
+  : "http://localhost:3000";
 
 export const URL_HOME = "/";
 export const URL_ABOUT = "/about";
@@ -10,3 +11,5 @@ export const URL_PHOTOGRAPHY = "/photography";
 export const URL_CV = "/cv";
 
 export const COPYRIGHT_STRING = `Copyright ${new Date().getFullYear()} © Josiah Plett`;
+
+export const FALLBACK_TOTAL_VISITORS = 1080;

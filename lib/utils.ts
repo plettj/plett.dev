@@ -26,3 +26,23 @@ export function formatDate(utcDate: string) {
     year: "numeric",
   });
 }
+
+export function addOrdinalSuffix(i: number): string {
+  const ones = i % 10;
+  const tens = i % 100;
+
+  if (ones === 1 && tens !== 11) {
+    return i + "st";
+  }
+  if (ones === 2 && tens !== 12) {
+    return i + "nd";
+  }
+  if (ones === 3 && tens !== 13) {
+    return i + "rd";
+  }
+  return i + "th";
+}
+
+export function inProd() {
+  return process.env.NODE_ENV !== "development"; // FIXME: Should become === "production" in the future.
+}
