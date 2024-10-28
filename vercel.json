@@ -1,3 +1,17 @@
 {
-  "rewrites": [{ "source": "/feed.xml(.*)", "destination": "/feed.xml" }]
+  "rewrites": [
+    { "source": "/feed.xml(.*)", "destination": "/feed.xml" },
+    {
+      "source": "/images/:path*",
+      "destination": "/images/:path*"
+    },
+    {
+      "source": "/icons/:path*",
+      "destination": "/icons/:path*"
+    },
+    {
+      "source": "/cv/:path*",
+      "destination": "/cv/:path*"
+    }
+  ]
 }

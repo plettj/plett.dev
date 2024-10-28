@@ -44,5 +44,5 @@ export function addOrdinalSuffix(i: number): string {
 }
 
 export function inProd() {
-  return process.env.NODE_ENV !== "development"; // FIXME: Should become === "production" in the future.
+  return process.env.NODE_ENV === "production";
 }

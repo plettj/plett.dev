@@ -12,4 +12,4 @@ export const URL_CV = "/cv";
 
 export const COPYRIGHT_STRING = `Copyright ${new Date().getFullYear()} © Josiah Plett`;
 
-export const FALLBACK_TOTAL_VISITORS = 1080;
+export const FALLBACK_TOTAL_VISITORS = 37; // NOTE: Old website had 1080 views as of 2024-10-28.
