@@ -1,7 +1,6 @@
 import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
 import { incrViews } from "./actions/middleware/views";
 
-// TODO: Add redirects from malformed urls to old.plett.dev.
 // TODO: Improve my matcher.
 
 export const config = {

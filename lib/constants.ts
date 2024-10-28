@@ -9,6 +9,7 @@ export const URL_ABOUT = "/about";
 export const URL_WRITING = "/posts";
 export const URL_PHOTOGRAPHY = "/photography";
 export const URL_CV = "/cv";
+export const URL_OLD_SITE = "https://old.plett.dev";
 
 export const COPYRIGHT_STRING = `Copyright ${new Date().getFullYear()} © Josiah Plett`;
 

@@ -22,7 +22,7 @@ export default async function Post({ params }: Params) {
     return (
       <div className="w-full">
         <Navigation />
-        <p>
+        <p className="mb-6">
           Post <Code>{params.slug[0]}</Code> not found.
         </p>
         <PostFooter />
