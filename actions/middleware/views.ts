@@ -2,6 +2,7 @@
 
 import redis from "@/lib/redis";
 import { isProd } from "@/lib/utils";
+import { NextResponse } from "next/server";
 
 /**
  * Middleware to increment the views from a given IP address.
@@ -35,6 +36,8 @@ export async function incrViews(ip: string, categories: string[]) {
     }
   } catch (error) {
     console.error("Failed to update global page views:", error);
+    // return NextResponse.json({ error: "Failed to update data", status: 500 });
+    return NextResponse.error();
   }
 
   return updated;
