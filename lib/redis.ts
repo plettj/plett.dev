@@ -1,6 +1,7 @@
 import { Redis } from "@upstash/redis";
 import { isProd } from "./utils";
 
+// NOTE: This singleton is not necessary, but it's good practice.
 const redisSingleton = () => {
   return new Redis({
     url: process.env.UPSTASH_REDIS_REST_URL!,
