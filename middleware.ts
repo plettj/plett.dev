@@ -13,7 +13,7 @@ export default async function middleware(request: NextRequest) {
 
   console.log("Middleware running on IP: ", ip);
 
-  incrViews(ip, ["global_views"]);
+  await incrViews(ip, ["global_views"]);
 
   return response;
 }

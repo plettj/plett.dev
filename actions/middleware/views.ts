@@ -43,5 +43,20 @@ export async function incrViews(ip: string, categories: string[]) {
     return NextResponse.json({ error: "Failed to update data", status: 500 });
   }
 
+  /*
+  context.waitUntil(
+    (async () => {
+      try {
+        for (const category of categories) {
+          await redis.incr(category);
+          updated = true;
+        }
+      } catch (error) {
+        console.error("Failed to update global page views:", error);
+      }
+    })()
+  );
+  */
+
   return updated;
 }
