@@ -1,4 +1,5 @@
 import InlineLink from "@/components/InlineLink";
+import { URL_OLD_SITE } from "@/lib/constants";
 
 export const metadata = {
   title: "Photography",
@@ -9,7 +10,7 @@ export default async function Photography() {
     <div className="flex flex-col gap-4">
       <p>
         See my{" "}
-        <InlineLink href="https://old.plett.dev/More/photography" external>
+        <InlineLink href={`${URL_OLD_SITE}/More/photography`} external>
           old portfolio
         </InlineLink>
         . This new portfolio is coming soon.

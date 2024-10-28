@@ -130,7 +130,7 @@ const professionalItems: ContentListItem[] = [
         </InlineLink>{" "}
         <InlineLink href="https://www.instagram.com/p/C5WDMB_ged7/" external>
           Symposium
-        </InlineLink>
+        </InlineLink>{" "}
         and taught{" "}
         <InlineLink href="https://github.com/zrwaite/se101-spaceship" external>
           this
@@ -312,7 +312,11 @@ const hobbyItems: ContentListItem[] = [
           two
         </InlineLink>{" "}
         master-level books, I&apos;ve spent over a decade folding top-level
-        models.
+        models such as{" "}
+        <InlineLink href="/images/home/Origami_Titan_Beetle.jpg" external>
+          this
+        </InlineLink>{" "}
+        titan beetle.
       </p>
     ),
   },

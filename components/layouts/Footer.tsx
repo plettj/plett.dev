@@ -1,4 +1,4 @@
-import { COPYRIGHT_STRING } from "@/lib/constants";
+import { COPYRIGHT_STRING, URL_OLD_SITE } from "@/lib/constants";
 import NavButton from "../NavButton";
 
 export default function Footer() {
@@ -13,7 +13,7 @@ export default function Footer() {
           <NavButton href="https://www.linkedin.com/in/josiahplett/" external>
             LinkedIn
           </NavButton>
-          <NavButton href="https://old.plett.dev" className="hidden sm:flex">
+          <NavButton href={URL_OLD_SITE} className="hidden sm:flex">
             Old site
           </NavButton>
         </nav>
