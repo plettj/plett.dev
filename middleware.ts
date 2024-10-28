@@ -2,9 +2,8 @@ import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
 import { incrViews } from "./actions/middleware/views";
 import { processIp } from "./lib/utils";
 
-// TODO: Improve my matcher.
 export const config = {
-  matcher: ["/about/:path*", "/posts/:path*"],
+  matcher: ["/", "/about", "/posts/:path*"],
 };
 
 export default async function middleware(
