@@ -5,7 +5,6 @@ import { isProd } from "@/lib/utils";
 
 export async function GET() {
   if (!isProd()) {
-    console.log("Skipping view increment in development mode.");
     return NextResponse.json({ globalViews: FALLBACK_TOTAL_VISITORS });
   }
 
