@@ -9,21 +9,10 @@ This repo holds the code to my personal website at [plett.dev](https://plett.dev
 - Styling: [shadcn/ui](https://ui.shadcn.com/) with [Tailwind CSS](https://tailwindcss.com)
 - Database: [Redis](https://redis.io/) with [Upstash](https://upstash.com/)
 
-### Usage as a template
-
-Make sure you have Node.js v18.12+ and [pnpm](https://pnpm.io/installation) installed.
-
-```bash
-git clone https://github.com/plettj/plett.dev.git
-cd plett.dev
-pnpm install
-pnpm run delete
-pnpm dev
-```
-
 ### License
 
-1. You are free to use this code as inspiration.
-2. Crediting the author is appreciated.
+1. Feel free to use this repository as inspiration.
+2. Please don't copy the code directly.
+3. Crediting the author is appreciated.
 
-Please remove all my personal information before you start by running `pnpm run delete`.
+If you are cloning this repository, please remove all my personal information before you deploy.
