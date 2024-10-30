@@ -65,6 +65,9 @@ importers:
       rss:
         specifier: ^1.2.2
         version: 1.2.2
+      soccer-football:
+        specifier: ^1.0.2
+        version: 1.0.2
       tailwind-merge:
         specifier: ^2.5.4
         version: 2.5.4
@@ -1919,6 +1922,9 @@ packages:
   signal-exit@4.1.0:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
+
+  soccer-football@1.0.2:
+    resolution: {integrity: sha512-7eFWusVAMJwyX4InDHNTQQIWjg5NjFj4opO4sHrBOyOCKMZvolUnuPYFdk0QMRywvAmzSa1g6jmUwDV9H5jluQ==}
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -4296,6 +4302,8 @@ snapshots:
       object-inspect: 1.13.2
 
   signal-exit@4.1.0: {}
+
+  soccer-football@1.0.2: {}
 
   source-map-js@1.2.1: {}
 
