@@ -3,6 +3,8 @@
 import redis from "@/lib/redis";
 import { isProd } from "@/lib/utils";
 import { NextFetchEvent } from "next/server";
+import { headers } from "next/headers";
+import { BASE_URL } from "@/lib/constants";
 
 /**
  * Middleware to increment the views from a given IP address.
@@ -14,7 +16,10 @@ export async function incrViews(
   context: NextFetchEvent,
   categories: string[]
 ): Promise<boolean> {
-  if (!isProd()) {
+  const headersList = headers();
+  const host = headersList.get("host");
+
+  if (!isProd() || !host || !BASE_URL.includes(host)) {
     return false;
   }
 
