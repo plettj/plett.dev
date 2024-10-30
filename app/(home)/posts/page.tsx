@@ -23,14 +23,14 @@ export default async function Writing() {
             key={post.slug}
             className={cn("flex justify-center", showYear && "border-t pt-4")}
           >
-            <div className="w-1/6">
+            <div className="w-[16%] min-w-12">
               {showYear && (
                 <h2 className="font-semibold text-muted-foreground">
                   {postYear}
                 </h2>
               )}
             </div>
-            <div className={cn("w-5/6", !showYear && "border-t pt-4")}>
+            <div className={cn("w-[84%]", !showYear && "border-t pt-4")}>
               <PostPreview post={post} />
             </div>
           </div>

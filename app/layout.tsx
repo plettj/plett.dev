@@ -1,5 +1,5 @@
 import TopLoader from "@/components/layouts/TopLoader";
-import { BASE_URL, URL_OLD_SITE } from "@/lib/constants";
+import { BASE_URL, URL_MY_OLD_SITE } from "@/lib/constants";
 import { type Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     url: true,
     address: false,
   },
-  archives: URL_OLD_SITE,
+  archives: URL_MY_OLD_SITE,
   openGraph: {
     type: "website",
     locale: "en_CA",

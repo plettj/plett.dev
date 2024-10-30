@@ -1,4 +1,9 @@
-import { COPYRIGHT_STRING, URL_OLD_SITE } from "@/lib/constants";
+import {
+  COPYRIGHT_STRING,
+  URL_MY_GITHUB,
+  URL_MY_LINKEDIN,
+  URL_MY_OLD_SITE,
+} from "@/lib/constants";
 import NavButton from "../NavButton";
 
 export default function Footer() {
@@ -7,13 +12,13 @@ export default function Footer() {
       <hr />
       <section className="flex flex-col sm:flex-row gap-2 justify-between items-center w-full my-10">
         <nav className="flex gap-2 -ml-2">
-          <NavButton href="https://github.com/plettj" external>
+          <NavButton href={URL_MY_GITHUB} external>
             GitHub
           </NavButton>
-          <NavButton href="https://www.linkedin.com/in/josiahplett/" external>
+          <NavButton href={URL_MY_LINKEDIN} external>
             LinkedIn
           </NavButton>
-          <NavButton href={URL_OLD_SITE} className="hidden sm:flex">
+          <NavButton href={URL_MY_OLD_SITE} className="hidden sm:flex">
             Old site
           </NavButton>
         </nav>
