@@ -81,6 +81,6 @@ Yup! If you'd like to take a closer look at the code, feel free to explore the f
 
 ---
 
-While this post does provide the basics to get you up and running, I did skip over a number of web essentials. Be sure to take a look at [RSS feeds](https://www.rssboard.org/rss-specification#whatIsRss), [sitemaps](https://www.sitemaps.org/protocol.html), [robots](https://developers.google.com/search/docs/crawling-indexing/robots/intro), and [manifests](https://developer.mozilla.org/en-US/docs/Web/Manifest) if you want to do everything right.
+While this post does provide the basics to get you up and running, I did skip over a number of web essentials. Be sure to take a look at [RSS feeds](https://www.rssboard.org/rss-specification#whatIsRss), [sitemaps](https://www.sitemaps.org/protocol.html), [robots](https://developers.google.com/search/docs/crawling-indexing/robots/intro), and [manifests](https://developer.mozilla.org/en-US/docs/Web/Manifest), if you want to do everything right. Heck, you could even make a [humans.txt](https://humanstxt.org/) like [me](/humans.txt) and [Google](https://www.google.com/humans.txt) while you're busy checking every box.
 
 Thanks for reading my first blog post!

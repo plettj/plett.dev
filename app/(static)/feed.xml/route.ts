@@ -1,4 +1,4 @@
-import { BASE_URL, COPYRIGHT_STRING, URL_WRITING } from "@/lib/constants";
+import { BASE_URL, COPYRIGHT_STRING, PATH_WRITING } from "@/lib/constants";
 import { getAllPosts } from "@/lib/posts/api";
 import { author } from "@/lib/posts/constants";
 import RSS from "rss";
@@ -25,7 +25,7 @@ export async function GET() {
       feed.item({
         title: post.title,
         description: post.preview,
-        url: `${BASE_URL}${URL_WRITING}/${post.slug}`,
+        url: `${BASE_URL}${PATH_WRITING}/${post.slug}`,
         categories: post.tags,
         author: author.name,
         date: post.date,
