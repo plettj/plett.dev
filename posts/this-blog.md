@@ -1,6 +1,5 @@
 ---
 title: "How I Made This Blog Site"
-subtitle: "From scratch in just a day"
 excerpt: "..."
 date: "2024-10-23T00:54:22Z"
 tags:
