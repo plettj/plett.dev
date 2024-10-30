@@ -393,8 +393,13 @@ const hobbyItems: ContentListItem[] = [
     children: (
       <p>
         These days I run, climb, play squash, and work out. I used to play{" "}
-        <Soccer />, badminton, and do triathlons. I own a slackline and love to
-        ski.
+        <InlineLink
+          href="https://www.npmjs.com/package/soccer-football"
+          external
+        >
+          <Soccer />
+        </InlineLink>
+        , badminton, and do triathlons. I own a slackline and love to ski.
       </p>
     ),
   },

@@ -1,13 +1,13 @@
-import { saysSoccer } from "@/lib/utils";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip";
+import { isSoccer } from "soccer-football";
 
 export default function Soccer() {
-  const soccer = saysSoccer();
+  const soccer = isSoccer(); // Localization utility from a public npm package I made: https://www.npmjs.com/package/soccer-football
 
   return (
     <TooltipProvider delayDuration={0}>

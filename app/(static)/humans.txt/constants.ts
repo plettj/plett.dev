@@ -22,7 +22,10 @@ const myHumansTxt: HumansTxtContent = {
     Software: "Next.js, Vercel, Tailwind, shadcn/ui, Upstash",
   },
   THANKS: [
-    { Name: "River Stanley", Website: "https://some-molasses.github.io/" },
+    {
+      Name: "River Stanley",
+      Website: "https://www.linkedin.com/in/river-stanley/",
+    },
     {
       Name: "Justin Zwart",
       LinkedIn: "https://www.linkedin.com/in/justin-zwart-08916322b/",
