@@ -10,7 +10,11 @@ export default function BackButton({
 }) {
   const router = useRouter();
 
-  const hasHistory = window.history?.length && window.history.length > 1;
+  const hasHistory =
+    (typeof window !== "undefined" &&
+      window.history?.length &&
+      window.history.length > 1) ||
+    typeof window === "undefined";
 
   if (!hasHistory) {
     return null;
