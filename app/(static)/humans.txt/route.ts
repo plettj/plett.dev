@@ -9,15 +9,13 @@ function formatHumansTxt(content: HumansTxtContent): string {
     if (Array.isArray(sectionValue)) {
       sectionValue.forEach((item) => {
         for (const [key, value] of Object.entries(item)) {
-          sections.push(
-            `${key.replaceAll("_", " ").toUpperCase()}: ${value}\n`
-          );
+          sections.push(`${key.replaceAll("_", " ")}: ${value}\n`);
         }
         sections.push("\n");
       });
     } else if (typeof sectionValue === "object" && sectionValue !== null) {
       for (const [key, value] of Object.entries(sectionValue)) {
-        sections.push(`${key.replaceAll("_", " ").toUpperCase()}: ${value}\n`);
+        sections.push(`${key.replaceAll("_", " ")}: ${value}\n`);
       }
       sections.push("\n");
     } else if (typeof sectionValue === "string") {
