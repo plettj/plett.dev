@@ -1,6 +1,7 @@
 import InlineLink from "@/components/InlineLink";
 import { ContentListItem } from "@/components/layouts/ContentList";
 import Soccer from "@/components/Soccer";
+import { PATH_PHOTOGRAPHY, PATH_WRITING } from "@/lib/constants";
 
 const professionalItems: ContentListItem[] = [
   {
@@ -142,7 +143,7 @@ const professionalItems: ContentListItem[] = [
         >
           Math Innovation
         </InlineLink>{" "}
-        series, a large{" "}
+        series, a{" "}
         <InlineLink href="https://uwaterloo.ca/grebel/" external>
           Conrad Grebel
         </InlineLink>{" "}
@@ -194,7 +195,7 @@ const hobbyItems: ContentListItem[] = [
           mathNEWS
         </InlineLink>
         , and sometimes publish on this site,{" "}
-        <InlineLink href="/writing">here</InlineLink>.
+        <InlineLink href={PATH_WRITING}>here</InlineLink>.
       </p>
     ),
   },
@@ -205,7 +206,7 @@ const hobbyItems: ContentListItem[] = [
     children: (
       <p>
         You can find my amateur photography portfolio{" "}
-        <InlineLink href="/photography">here</InlineLink>.
+        <InlineLink href={PATH_PHOTOGRAPHY}>here</InlineLink>.
       </p>
     ),
   },
@@ -392,8 +393,8 @@ const hobbyItems: ContentListItem[] = [
     children: (
       <p>
         These days I run, climb, play squash, and work out. I used to play{" "}
-        <Soccer />, badminton, and do triathlons. I still own a slackline and
-        love to ski.
+        <Soccer />, badminton, and do triathlons. I own a slackline and love to
+        ski.
       </p>
     ),
   },

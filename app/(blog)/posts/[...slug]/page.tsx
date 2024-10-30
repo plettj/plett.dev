@@ -7,7 +7,7 @@ import PostBody from "@/components/posts/PostBody";
 import { Code } from "@/components/ui/code";
 import Navigation from "@/components/layouts/Navigation";
 import PostFooter from "@/components/posts/PostFooter";
-import { URL_WRITING } from "@/lib/constants";
+import { PATH_WRITING } from "@/lib/constants";
 
 type Params = {
   params: {
@@ -65,7 +65,7 @@ export function generateMetadata({ params }: Params): Metadata {
     description: post.preview,
     keywords: post.tags,
     alternates: {
-      canonical: `${URL_WRITING}/${post.slug}`,
+      canonical: `${PATH_WRITING}/${post.slug}`,
     },
     authors: author,
     creator: "Josiah Plett",

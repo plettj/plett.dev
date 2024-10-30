@@ -61,7 +61,16 @@ export function processIp(ip: string): string {
   return ip;
 }
 
+/**
+ * Formats a Javascript date object to the format "YYYY/MM/DD".
+ */
+export function formatDateAbbr(date: Date) {
+  const offset = date.getTimezoneOffset();
+  date = new Date(date.getTime() - offset * 60 * 1000);
+  const formatted = date.toISOString().split("T")[0].replaceAll("-", "/");
+  return formatted;
+}
+
 export function isProd(): boolean {
-  // return process.env.NODE_ENV === "production";
-  return true;
+  return process.env.NODE_ENV === "production";
 }

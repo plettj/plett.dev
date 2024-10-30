@@ -3,7 +3,7 @@
 import BackButton from "@/components/BackButton";
 import InlineLink from "@/components/InlineLink";
 import { Button } from "@/components/ui/button";
-import { URL_HOME, URL_OLD_SITE } from "@/lib/constants";
+import { PATH_HOME, URL_MY_OLD_SITE } from "@/lib/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -18,13 +18,15 @@ export default function NotFound() {
       <p className="mt-4 mb-8">
         The page you&apos;re looking for either doesn&apos;t exist, was moved,
         or is from{" "}
-        <InlineLink href={`${URL_OLD_SITE}${pathname}`}>my old site</InlineLink>
+        <InlineLink href={`${URL_MY_OLD_SITE}${pathname}`}>
+          my old site
+        </InlineLink>
         .
       </p>
       <div className="flex justify-center gap-2">
         <BackButton variant="ghost" />
         <Button variant="ghost" asChild>
-          <Link href={URL_HOME}>Back to Home</Link>
+          <Link href={PATH_HOME}>Back to Home</Link>
         </Button>
       </div>
     </div>

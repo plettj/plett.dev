@@ -1,5 +1,12 @@
 import InlineLink from "@/components/InlineLink";
-import { URL_ABOUT, URL_CV, URL_WRITING } from "@/lib/constants";
+import {
+  PATH_ABOUT,
+  PATH_CV,
+  PATH_CV_STATIC,
+  URL_MY_GITHUB,
+  URL_MY_LINKEDIN,
+  PATH_WRITING,
+} from "@/lib/constants";
 
 export default async function Home() {
   return (
@@ -15,22 +22,22 @@ export default async function Home() {
           A <span className="font-semibold dark:font-bold">recruiter?</span> See
           my{" "}
           {/* Open in a new tab on mobile, and within my website on desktop */}
-          <InlineLink href={URL_CV} className="hidden md:inline-block">
+          <InlineLink href={PATH_CV} className="hidden md:inline-block">
             CV
           </InlineLink>
           <InlineLink
-            href="/cv/Josiah_Plett_CV_2024.pdf"
+            href={PATH_CV_STATIC}
             className="inline-block md:hidden"
             external
           >
             CV
           </InlineLink>
           ,{" "}
-          <InlineLink href="https://www.linkedin.com/in/josiahplett/" external>
+          <InlineLink href={URL_MY_LINKEDIN} external>
             LinkedIn
           </InlineLink>
           , or{" "}
-          <InlineLink href="https://github.com/plettj" external>
+          <InlineLink href={URL_MY_GITHUB} external>
             GitHub
           </InlineLink>
           .
@@ -45,11 +52,11 @@ export default async function Home() {
         </li>
         <li>
           A <span className="font-semibold dark:font-bold">reader?</span> Check
-          out <InlineLink href={URL_WRITING}>my writing</InlineLink>.
+          out <InlineLink href={PATH_WRITING}>my writing</InlineLink>.
         </li>
         <li>
           Just exploring? Start with my{" "}
-          <InlineLink href={URL_ABOUT}>about me</InlineLink> page.
+          <InlineLink href={PATH_ABOUT}>about me</InlineLink> page.
         </li>
       </ul>
     </div>

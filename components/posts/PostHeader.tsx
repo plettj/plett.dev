@@ -1,6 +1,6 @@
 import Image from "next/image";
 import NavButton from "../NavButton";
-import { URL_WRITING } from "@/lib/constants";
+import { PATH_WRITING } from "@/lib/constants";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import { formatDate } from "@/lib/utils";
 
@@ -20,7 +20,7 @@ export default function PostHeader({
       </h1>
       <div className="flex justify-between items-center pt-2 pb-4 border-b">
         <p>{formatDate(date)}</p>
-        <NavButton href={URL_WRITING} className="pr-0">
+        <NavButton href={PATH_WRITING} className="pr-0">
           <ArrowLeftIcon /> Home
         </NavButton>
       </div>

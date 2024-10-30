@@ -5,10 +5,10 @@ import NavButton from "../NavButton";
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import { ThemeToggle } from "../ThemeToggle";
 import {
-  URL_ABOUT,
-  URL_HOME,
-  URL_PHOTOGRAPHY,
-  URL_WRITING,
+  PATH_ABOUT,
+  PATH_HOME,
+  PATH_PHOTOGRAPHY,
+  PATH_WRITING,
 } from "@/lib/constants";
 
 export default function Navigation() {
@@ -16,21 +16,21 @@ export default function Navigation() {
 
   return (
     <nav className="flex gap-2 -mx-2 my-10">
-      <NavButton href={URL_HOME} active={pathname === URL_HOME}>
+      <NavButton href={PATH_HOME} active={pathname === PATH_HOME}>
         J
       </NavButton>
-      <NavButton href={URL_ABOUT} active={pathname === URL_ABOUT}>
+      <NavButton href={PATH_ABOUT} active={pathname === PATH_ABOUT}>
         About
       </NavButton>
       <NavButton href={"https://plett.fun"} external>
         Games <ExternalLinkIcon />
       </NavButton>
-      <NavButton href={URL_WRITING} active={pathname.includes(URL_WRITING)}>
+      <NavButton href={PATH_WRITING} active={pathname.includes(PATH_WRITING)}>
         Writing
       </NavButton>
       <NavButton
-        href={URL_PHOTOGRAPHY}
-        active={pathname === URL_PHOTOGRAPHY}
+        href={PATH_PHOTOGRAPHY}
+        active={pathname === PATH_PHOTOGRAPHY}
         className="hidden sm:flex"
       >
         Photography
