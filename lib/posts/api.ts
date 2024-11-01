@@ -5,8 +5,24 @@ import { Post } from "./types";
 
 const postsDirectory = join(process.cwd(), "posts");
 
+function filterSlugs(slugs: string[], tags?: string[]): string[] {
+  return slugs.filter((slug) => {
+    const post = getPostBySlug(slug);
+
+    if (slug.toUpperCase().startsWith("DRAFT-")) {
+      return false; // Draft posts
+    } else if (tags && !tags.every((tag) => post.tags.includes(tag))) {
+      return false; // Unmatching tags
+    }
+
+    return true;
+  });
+}
+
 export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory);
+  const allSlugs: string[] = fs.readdirSync(postsDirectory);
+
+  return filterSlugs(allSlugs);
 }
 
 /**
@@ -17,6 +33,11 @@ export function getPostSlugs() {
  */
 export function getPostBySlug(slug: string): Post {
   const realSlug = slug.replace(/\.md$/, "");
+
+  if (filterSlugs([realSlug]).length < 1) {
+    throw new Error(`No post corresponds to the given slug: ${slug}.`);
+  }
+
   const fullPath = join(postsDirectory, `${realSlug}.md`);
 
   let fileContents;
