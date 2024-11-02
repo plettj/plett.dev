@@ -1,46 +1,91 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 import { InView } from "react-intersection-observer";
 import { MasonryImage } from "./layouts/MasonryLayout";
+import { cn } from "@/lib/utils";
 
 export default function Photo({
   image,
+  loadMethod = "border",
   priority = false,
 }: {
   image: MasonryImage;
+  loadMethod?: "border" | "blur";
   priority: boolean;
 }) {
-  const [hasLoaded, setHasLoaded] = useState(false);
+  switch (loadMethod) {
+    case "border":
+      return (
+        <InView rootMargin="100px" threshold={0}>
+          {({ inView, ref }) => (
+            <div
+              ref={ref}
+              className={cn(
+                "border-[1px] relative transition-colors duration-500 w-full",
+                inView && "border-transparent"
+              )}
+              style={{
+                aspectRatio: `${image.size[0]}/${image.size[1]}`, // Tailwind `aspect-[${num}]` fails.
+              }}
+            >
+              <div
+                className={cn(
+                  "group transition-opacity duration-500",
+                  inView ? "opacity-100" : "opacity-0"
+                )}
+              >
+                <PhotoContent
+                  image={image}
+                  priority={priority}
+                  inView={inView}
+                />
+              </div>
+            </div>
+          )}
+        </InView>
+      );
+    case "blur":
+      return <PhotoContent image={image} priority={priority} inView />;
+  }
+}
 
+/**
+ * Supporter component for `Photo` that holds the actual image and its overlaid text.
+ */
+function PhotoContent({
+  image,
+  priority,
+  inView,
+}: {
+  image: MasonryImage;
+  priority: boolean;
+  inView: boolean;
+}) {
   return (
-    <InView rootMargin="100px" threshold={0}>
-      {({ inView, ref }) => (
-        <div
-          ref={ref}
-          className={`relative group transition-opacity duration-500 ${
-            inView && hasLoaded ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <Image
-            src={image.src}
-            alt={image.alt}
-            title={`${image.location} | ${image.year}`}
-            width={image.size[0]}
-            height={image.size[1]}
-            priority={priority}
-            draggable={false}
-            blurDataURL={image.blurDataURL}
-            placeholder="blur"
-            onLoad={() => setHasLoaded(true)}
-          />
-          <div className="absolute left-0 bottom-0 right-0 flex justify-between text-white font-semibold p-1.5 pr-2 transform transition-all duration-200 opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0">
-            <p className="font-thin">{image.year}</p>
-            <p>{image.location}</p>
-          </div>
-        </div>
-      )}
-    </InView>
+    <>
+      <Image
+        src={image.src}
+        alt={image.alt}
+        title={`${image.location} | ${image.year}`}
+        width={image.size[0]}
+        height={image.size[1]}
+        priority={priority}
+        draggable={false}
+        loading={priority ? "eager" : "lazy"}
+        className="pointer-events-none" // Prevent tooltips on hover.
+        placeholder="blur" // Never visible; see `root/scripts/generateBlurData/README.md`.
+        blurDataURL={image.blurDataURL} // Never visible; see `root/scripts/generateBlurData/README.md`.
+      />
+      <div
+        className={cn(
+          "absolute left-0 bottom-0 right-0 flex justify-between text-white font-semibold p-1.5 pr-2 transform transition-all duration-200 opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0",
+          !inView && "hidden"
+        )}
+      >
+        <p className="font-thin">{image.year}</p>
+        <p>{image.location}</p>
+      </div>
+    </>
   );
 }
