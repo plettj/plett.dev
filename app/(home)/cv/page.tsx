@@ -1,11 +1,19 @@
 import InlineLink from "@/components/InlineLink";
-import { PATH_CV_STATIC } from "@/lib/constants";
+import { BASE_URL, PATH_CV, PATH_CV_STATIC } from "@/lib/constants";
+import { getOGData } from "@/lib/utils";
+import { Metadata } from "next/types";
 
-export const metadata = {
-  title: "Resume",
+export const metadata: Metadata = {
+  title: "CV",
+  description: "My generic technical CV - 2024",
+  openGraph: getOGData({
+    title: "CV",
+    description: "My generic technical CV - 2024",
+    url: `${BASE_URL}${PATH_CV}`,
+  }),
 };
 
-export default async function Resume() {
+export default async function CV() {
   return (
     <div className="flex flex-col gap-4">
       <p>

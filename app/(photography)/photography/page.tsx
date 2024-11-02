@@ -1,11 +1,19 @@
 import InlineLink from "@/components/InlineLink";
 import MasonryLayout from "@/components/layouts/MasonryLayout";
-import { URL_MY_OLD_SITE } from "@/lib/constants";
+import { BASE_URL, PATH_PHOTOGRAPHY, URL_MY_OLD_SITE } from "@/lib/constants";
 import { photos } from "./content";
 import PhotographyContainer from "@/components/layouts/PhotographyContainer";
+import { getOGData } from "@/lib/utils";
+import { Metadata } from "next/types";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Photography",
+  description: "My amateur photography portfolio.",
+  openGraph: getOGData({
+    title: "Photography",
+    description: "My amateur photography portfolio.",
+    url: `${BASE_URL}${PATH_PHOTOGRAPHY}`,
+  }),
 };
 
 export default async function Photography() {

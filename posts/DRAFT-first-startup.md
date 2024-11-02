@@ -1,7 +1,7 @@
 ---
 title: "Startup thoughts"
 subtitle: "..."
-excerpt: "..."
+preview: "OPG preview"
 date: "..."
 tags: ["writing"]
 lat: "..."

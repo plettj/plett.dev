@@ -1,13 +1,14 @@
-import { Metadata } from "next";
+import { Metadata } from "next/types";
 import markdownToHtml from "@/lib/posts/markdownToHtml";
 import { getAllPosts, getPostBySlugSafely } from "@/lib/posts/api";
-import { author } from "@/lib/posts/constants";
+import { AUTHOR } from "@/lib/posts/constants";
 import PostHeader from "@/components/posts/PostHeader";
 import PostBody from "@/components/posts/PostBody";
 import { Code } from "@/components/ui/code";
 import Navigation from "@/components/layouts/Navigation";
 import PostFooter from "@/components/posts/PostFooter";
-import { PATH_WRITING } from "@/lib/constants";
+import { BASE_URL, PATH_WRITING } from "@/lib/constants";
+import { getOGData } from "@/lib/utils";
 
 type Params = {
   params: {
@@ -56,6 +57,12 @@ export function generateMetadata({ params }: Params): Metadata {
   if (!post) {
     return {
       title: "Post 404",
+      description: "Post not found",
+      openGraph: getOGData({
+        title: "Post 404",
+        description: "Post not found",
+        url: `${BASE_URL}${PATH_WRITING}/${params.slug[0]}`,
+      }),
     };
   }
 
@@ -68,16 +75,20 @@ export function generateMetadata({ params }: Params): Metadata {
     alternates: {
       canonical: `${PATH_WRITING}/${post.slug}`,
     },
-    authors: author,
+    authors: AUTHOR,
     creator: "Josiah Plett",
-    openGraph: {
+    openGraph: getOGData({
       type: "article",
       title,
       description: post.preview,
-      siteName: "Josiah Plett",
-      ...(post.ogImage && { image: [{ url: post.ogImage }] }),
-      locale: "en_CA",
-    },
+      url: `${BASE_URL}${PATH_WRITING}/${post.slug}`,
+      ...(post.ogImage && {
+        previewImage: {
+          url: post.ogImage,
+          alt: post.subtitle ?? "Post display image",
+        },
+      }),
+    }),
   };
 }
 

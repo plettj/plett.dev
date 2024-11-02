@@ -19,4 +19,8 @@ export const URL_MY_GITHUB = "https://github.com/plettj";
 export const COPYRIGHT_STRING = `Copyright ${new Date().getFullYear()} © Josiah Plett`;
 
 export const VISITOR_EXPIRATION = 60 * 60 * 24;
-export const FALLBACK_TOTAL_VISITORS = 133; // NOTE: Old website had 1080 views as of 2024-10-28.
+export const FALLBACK_TOTAL_VISITORS = 242; // NOTE: Old website had 1080 views as of 2024-10-28.
+
+export const META_TITLE_HOME = "Josiah Plett";
+export const META_DESCRIPTION_HOME =
+  "My personal website, covering my professional interests, hobbies, games, writing, and photography.";
