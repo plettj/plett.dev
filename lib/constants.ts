@@ -24,3 +24,7 @@ export const FALLBACK_TOTAL_VISITORS = 242; // NOTE: Old website had 1080 views 
 export const META_TITLE_HOME = "Josiah Plett";
 export const META_DESCRIPTION_HOME =
   "My personal website, covering my professional interests, hobbies, games, writing, and photography.";
+
+export const THEME_BACKGROUND = "#FFFFFF";
+export const THEME_LIGHT_PRIMARY = "#1C1917";
+export const THEME_DARK_PRIMARY = "#FAFAF9";

@@ -4,8 +4,10 @@ import {
   URL_MY_OLD_SITE,
   META_DESCRIPTION_HOME,
   META_TITLE_HOME,
+  THEME_LIGHT_PRIMARY,
+  THEME_DARK_PRIMARY,
 } from "@/lib/constants";
-import { Metadata } from "next/types";
+import { Metadata, Viewport } from "next/types";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { cn, getOGData } from "@/lib/utils";
@@ -65,6 +67,14 @@ export const metadata: Metadata = {
     description: META_DESCRIPTION_HOME,
     url: BASE_URL,
   }),
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: THEME_LIGHT_PRIMARY },
+    { media: "(prefers-color-scheme: dark)", color: THEME_DARK_PRIMARY },
+  ],
+  colorScheme: "light dark",
 };
 
 export default async function RootLayout({

@@ -24,6 +24,8 @@ export function getOGData({
     images: [
       previewImage || {
         url: `${BASE_URL}/icons/favicon32.png`,
+        width: 32,
+        height: 32,
         alt: "J logo",
       },
     ],
