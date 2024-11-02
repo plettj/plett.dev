@@ -1,7 +1,8 @@
 "use client";
-import Image from "next/image";
+
 import { useMemo } from "react";
 import { useMeasure } from "react-use";
+import Photo from "../Photo";
 
 export type MasonryImage = {
   src: string;
@@ -53,14 +54,7 @@ export default function MasonryLayout({
           <div key={index} className="flex flex-col gap-3 w-full">
             {column.map((image) => {
               return (
-                <Image
-                  key={image.src}
-                  src={image.src}
-                  alt={image.alt}
-                  title={image.description}
-                  width={image.size[0]}
-                  height={image.size[1]}
-                />
+                <Photo key={image.src} image={image} priority={index === 0} />
               );
             })}
           </div>

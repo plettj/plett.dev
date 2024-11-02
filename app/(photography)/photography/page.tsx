@@ -18,8 +18,8 @@ export default async function Photography() {
         My old photography portfolio can still be found{" "}
         <InlineLink href={`${URL_MY_OLD_SITE}/More/photography`} external>
           here
-        </InlineLink>{" "}
-        on my old site.
+        </InlineLink>
+        .
       </p>
     </div>
   );
