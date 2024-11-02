@@ -35,7 +35,7 @@ export default function MasonryLayout({
     const columnHeights: number[] = Array(columns)
       .fill(0)
       .map((_, index) => {
-        return Math.abs(index * 2 + 1 - columns) / 2;
+        return Math.abs(index * 2 + 1 - columns) * 0.75;
       });
 
     images.forEach((image) => {
