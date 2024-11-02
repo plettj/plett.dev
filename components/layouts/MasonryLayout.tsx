@@ -10,6 +10,7 @@ export type MasonryImage = {
   location: string;
   year: string;
   size: [number, number];
+  blurDataURL: string;
 };
 
 type MasonryLayoutProps = {
