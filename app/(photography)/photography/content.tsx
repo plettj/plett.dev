@@ -139,10 +139,10 @@ const photos: MasonryImage[] = [
     size: [1280, 715],
   },
   {
-    src: `${PATH_PHOTOGRAPHY_IMAGES}/Malmo_Chameleon.jpg`,
-    alt: "A chameleon looks us in the eye at the Malmö Natural History Museum",
-    description: "Malmö - 2024",
-    size: [1280, 685],
+    src: `${PATH_PHOTOGRAPHY_IMAGES}/New_Zealand_Hobbit_Hills.jpg`,
+    alt: "A dragon lantern stands over the original Hobbit Hills in New Zealand",
+    description: "New Zealand - 2018",
+    size: [1280, 1280],
   },
   {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Malmo_Intercity_Tree.jpg`,
@@ -241,10 +241,10 @@ const photos: MasonryImage[] = [
     size: [4032, 2268],
   },
   {
-    src: `${PATH_PHOTOGRAPHY_IMAGES}/New_Zealand_Hobbit_Hills.jpg`,
-    alt: "A dragon lantern stands over the original Hobbit Hills in New Zealand",
-    description: "New Zealand - 2018",
-    size: [1280, 1280],
+    src: `${PATH_PHOTOGRAPHY_IMAGES}/Malmo_Chameleon.jpg`,
+    alt: "A chameleon looks us in the eye at the Malmö Natural History Museum",
+    description: "Malmö - 2024",
+    size: [1280, 685],
   },
   {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Victoria_Skytop_Macro.jpg`,
