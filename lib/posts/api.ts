@@ -5,17 +5,9 @@ import { Post } from "./types";
 
 const postsDirectory = join(process.cwd(), "posts");
 
-function filterSlugs(slugs: string[], tags?: string[]): string[] {
+function filterSlugs(slugs: string[]): string[] {
   return slugs.filter((slug) => {
-    const post = getPostBySlug(slug);
-
-    if (slug.toUpperCase().startsWith("DRAFT-")) {
-      return false; // Draft posts
-    } else if (tags && !tags.every((tag) => post.tags.includes(tag))) {
-      return false; // Unmatching tags
-    }
-
-    return true;
+    return !slug.toUpperCase().startsWith("DRAFT-");
   });
 }
 

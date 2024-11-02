@@ -8,6 +8,7 @@ export const PATH_HOME = "/";
 export const PATH_ABOUT = "/about";
 export const PATH_WRITING = "/posts";
 export const PATH_PHOTOGRAPHY = "/photography";
+export const PATH_PHOTOGRAPHY_IMAGES = "/images/photography";
 export const PATH_CV = "/cv";
 export const PATH_CV_STATIC = "/cv/Josiah_Plett_CV_2024.pdf";
 
