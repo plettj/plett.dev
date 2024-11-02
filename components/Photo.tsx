@@ -26,15 +26,22 @@ export default function Photo({
             <Image
               src={image.src}
               alt={image.alt}
-              title={image.description}
+              title={image.location}
               width={image.size[0]}
               height={image.size[1]}
               priority={priority}
-              onLoadingComplete={() => setHasLoaded(true)}
+              draggable={false}
+              onLoad={() => setHasLoaded(true)}
+              className="pointer-events-none"
             />
           )}
-          <div className="absolute bottom-0 right-0 text-white text-right font-semibold text-sm p-1.5 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-            {image.description}
+          <div
+            className={
+              "absolute left-0 bottom-0 right-0 flex justify-between text-white font-semibold p-1.5 pr-2 transform transition-all duration-200 opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0"
+            }
+          >
+            <p className="font-thin">{image.year}</p>
+            <p>{image.location}</p>
           </div>
         </div>
       )}

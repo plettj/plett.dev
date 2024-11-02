@@ -7,7 +7,8 @@ import Photo from "../Photo";
 export type MasonryImage = {
   src: string;
   alt: string;
-  description: string;
+  location: string;
+  year: string;
   size: [number, number];
 };
 
@@ -49,13 +50,11 @@ export default function MasonryLayout({
 
   return (
     <div ref={ref} className="w-full flex gap-3">
-      {columnImages.map((column, index) => {
+      {columnImages.map((column, i) => {
         return (
-          <div key={index} className="flex flex-col gap-3 w-full">
-            {column.map((image) => {
-              return (
-                <Photo key={image.src} image={image} priority={index === 0} />
-              );
+          <div key={i} className="flex flex-col gap-3 w-full">
+            {column.map((image, j) => {
+              return <Photo key={image.src} image={image} priority={j === 0} />;
             })}
           </div>
         );
