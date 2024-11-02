@@ -3,5 +3,5 @@ export default function PhotographyContainer({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="w-screen">{children}</div>;
+  return <div className="w-full pb-8">{children}</div>;
 }

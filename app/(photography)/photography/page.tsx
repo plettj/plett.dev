@@ -14,7 +14,7 @@ export default async function Photography() {
       <PhotographyContainer>
         <MasonryLayout images={photos} />
       </PhotographyContainer>
-      <p>
+      <p className="w-full max-w-[80ch] mx-auto">
         My old photography portfolio can still be found{" "}
         <InlineLink href={`${URL_MY_OLD_SITE}/More/photography`} external>
           here

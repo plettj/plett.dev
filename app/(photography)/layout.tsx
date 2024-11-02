@@ -1,9 +1,9 @@
 import Container from "@/components/layouts/Container";
 
-export default async function HomeLayout({
+export default async function PostLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <Container>{children}</Container>;
+  return <Container fullWidth>{children}</Container>;
 }
