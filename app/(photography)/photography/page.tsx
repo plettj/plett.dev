@@ -1,4 +1,4 @@
-import { BASE_URL, PATH_PHOTOGRAPHY, URL_MY_OLD_SITE } from "@/lib/constants";
+import { BASE_URL, PATH_PHOTOGRAPHY } from "@/lib/constants";
 import { getOGData } from "@/lib/utils";
 import { Metadata } from "next/types";
 import PhotographyContent from "@/components/layouts/PhotographyContent";
