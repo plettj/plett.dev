@@ -8,6 +8,7 @@ export const PATH_HOME = "/";
 export const PATH_ABOUT = "/about";
 export const PATH_WRITING = "/posts";
 export const PATH_PHOTOGRAPHY = "/photography";
+export const PATH_PHOTOGRAPHY_IMAGES = "/images/photography";
 export const PATH_CV = "/cv";
 export const PATH_CV_STATIC = "/cv/Josiah_Plett_CV_2024.pdf";
 
@@ -18,4 +19,12 @@ export const URL_MY_GITHUB = "https://github.com/plettj";
 export const COPYRIGHT_STRING = `Copyright ${new Date().getFullYear()} © Josiah Plett`;
 
 export const VISITOR_EXPIRATION = 60 * 60 * 24;
-export const FALLBACK_TOTAL_VISITORS = 133; // NOTE: Old website had 1080 views as of 2024-10-28.
+export const FALLBACK_TOTAL_VISITORS = 242; // NOTE: Old website had 1080 views as of 2024-10-28.
+
+export const META_TITLE_HOME = "Josiah Plett";
+export const META_DESCRIPTION_HOME =
+  "My personal website, covering my professional interests, hobbies, games, writing, and photography.";
+
+export const THEME_BACKGROUND = "#FFFFFF";
+export const THEME_LIGHT_PRIMARY = "#1C1917";
+export const THEME_DARK_PRIMARY = "#FAFAF9";

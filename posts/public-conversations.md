@@ -1,7 +1,7 @@
 ---
 title: "Monasticism, Prostitution, Astrophysics, & Brain Cancer"
 subtitle: "Interesting conversations in public places"
-excerpt: "..."
+preview: "Interesting conversations in public places"
 date: "2023-11-14T03:35:22Z"
 tags:
   [

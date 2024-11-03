@@ -1,6 +1,6 @@
 ---
 title: "How I Made This Blog Site"
-excerpt: "..."
+preview: "A custom statically generated blog site tutorial for Next.js"
 date: "2024-10-23T00:54:22Z"
 tags:
   [

@@ -1,9 +1,19 @@
 import PostPreview from "@/components/posts/PostPreview";
+import { BASE_URL, PATH_WRITING } from "@/lib/constants";
 import { getAllPosts } from "@/lib/posts/api";
-import { cn } from "@/lib/utils";
+import { cn, getOGData } from "@/lib/utils";
+import { Metadata } from "next/types";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Writing",
+  description:
+    "My published writing, which currently includes technical and opinion pieces.",
+  openGraph: getOGData({
+    title: "Writing",
+    description:
+      "My published writing, which currently includes technical and opinion pieces.",
+    url: `${BASE_URL}${PATH_WRITING}`,
+  }),
 };
 
 export default async function Writing() {
