@@ -1,9 +1,35 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import ipaddr from "ipaddr.js";
+import { OGData } from "./types";
+import { BASE_URL, META_TITLE_HOME } from "./constants";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
+}
+
+export function getOGData({
+  type,
+  url,
+  title,
+  description,
+  previewImage,
+}: OGData) {
+  return {
+    type: type || "website",
+    siteName: "plett.dev",
+    title: title !== META_TITLE_HOME ? `${title} | ${META_TITLE_HOME}` : title,
+    description,
+    url,
+    images: [
+      previewImage || {
+        url: `${BASE_URL}/icons/favicon32.png`,
+        width: 32,
+        height: 32,
+        alt: "J logo",
+      },
+    ],
+  };
 }
 
 export function formatDate(utcDate: string) {

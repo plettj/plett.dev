@@ -1,25 +1,30 @@
 import TopLoader from "@/components/layouts/TopLoader";
-import { BASE_URL, URL_MY_OLD_SITE } from "@/lib/constants";
-import { type Metadata } from "next";
+import {
+  BASE_URL,
+  URL_MY_OLD_SITE,
+  META_DESCRIPTION_HOME,
+  META_TITLE_HOME,
+  THEME_LIGHT_PRIMARY,
+  THEME_DARK_PRIMARY,
+} from "@/lib/constants";
+import { Metadata, Viewport } from "next/types";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
+import { cn, getOGData } from "@/lib/utils";
 import { ThemeProvider } from "next-themes";
-import { author } from "@/lib/posts/constants";
+import { AUTHOR } from "@/lib/posts/constants";
 
 const fontSans = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
-// OPG compliant metadata (https://ogp.me/)
 export const metadata: Metadata = {
   title: {
-    template: "%s | Josiah Plett",
-    default: "Josiah Plett",
+    default: META_TITLE_HOME,
+    template: `%s | ${META_TITLE_HOME}`,
   },
-  description:
-    "A website housing my online presence. This includes my professional interests, hobbies, writing, photography, games, and other such things.",
+  description: META_DESCRIPTION_HOME,
   generator: "Next.js",
   keywords: [
     "Entrepreneur",
@@ -35,7 +40,7 @@ export const metadata: Metadata = {
     "Speedcubing",
     "Piano",
   ],
-  authors: author,
+  authors: AUTHOR,
   creator: "Josiah Plett",
   referrer: "strict-origin-when-cross-origin", // Default
   icons: [
@@ -44,7 +49,7 @@ export const metadata: Metadata = {
   ],
   metadataBase: new URL(BASE_URL),
   verification: {
-    google: process.env.COMMON_VERIFICATION_GOOGLE /* ?? "uuid" */,
+    google: process.env.COMMON_VERIFICATION_GOOGLE,
     yahoo: process.env.COMMON_VERIFICATION_YAHOO,
     yandex: process.env.COMMON_VERIFICATION_YANDEX,
     me: process.env.COMMON_VERIFICATION_ME,
@@ -57,20 +62,19 @@ export const metadata: Metadata = {
     address: false,
   },
   archives: URL_MY_OLD_SITE,
-  openGraph: {
-    type: "website",
-    locale: "en_CA",
+  openGraph: getOGData({
+    title: META_TITLE_HOME,
+    description: META_DESCRIPTION_HOME,
     url: BASE_URL,
-    siteName: "plett.dev",
-    title: "Josiah Plett",
-    description: "Josiah Plett's personal website",
-    images: [
-      {
-        url: `${BASE_URL}/icons/favicon32.png`,
-        alt: "J logo",
-      },
-    ],
-  },
+  }),
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: THEME_LIGHT_PRIMARY },
+    { media: "(prefers-color-scheme: dark)", color: THEME_DARK_PRIMARY },
+  ],
+  colorScheme: "light dark",
 };
 
 export default async function RootLayout({

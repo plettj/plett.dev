@@ -1,8 +1,8 @@
 import { Author } from "./types";
 
-const author: Author = {
+const AUTHOR: Author = {
   name: "Josiah Plett",
   url: "https://plett.dev",
 };
 
-export { author };
+export { AUTHOR };

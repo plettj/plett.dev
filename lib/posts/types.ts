@@ -5,12 +5,10 @@ export type Post = {
   title: string;
   /** Subtitle for display on the post's page */
   subtitle?: string;
-  /** Short excerpt of the article to display before opening */
+  /** OpenGraph description */
   preview: string;
   /** Keywords of the post, used in OpenGraph metadata */
   tags: string[];
-  /** UNSURE WHAT THIS IS FOR! */
-  toPreview?: boolean;
   /** Original publish date of the post, in UTC format */
   date: string;
   /** Full markdown-formatted content of the post */

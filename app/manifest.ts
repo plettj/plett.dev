@@ -1,3 +1,4 @@
+import { THEME_BACKGROUND, THEME_LIGHT_PRIMARY } from "@/lib/constants";
 import { MetadataRoute } from "next";
 
 // Docs for this file: https://nextjs.org/docs/app/api-reference/file-conventions/metadata/manifest#generate-a-manifest-file
@@ -22,8 +23,8 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
     start_url: "/",
     display: "browser", // The default.
-    background_color: "#FFFFFF",
-    theme_color: "#1C1917",
+    background_color: THEME_BACKGROUND,
+    theme_color: THEME_LIGHT_PRIMARY,
     lang: "en",
     icons: [
       {
