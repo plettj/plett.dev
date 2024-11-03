@@ -13,6 +13,7 @@ export default function InlineLink({
   external?: boolean;
   className?: string;
 }>) {
+  // TODO: This entire component does not need to be a button. Simplify.
   return (
     <Button
       asChild

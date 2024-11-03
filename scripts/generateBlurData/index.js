@@ -10,9 +10,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
  * @returns The new `blurDataURL`.
  */
 async function generateBlurDataURL(imagePath) {
-  const buffer = await sharp(imagePath)
-    .resize(10, 10) // Resize to a small thumbnail for the blur effect
-    .toBuffer();
+  const buffer = await sharp(imagePath).resize(12).toBuffer();
   return `data:image/jpeg;base64,${buffer.toString("base64")}`;
 }
 
@@ -37,8 +35,14 @@ async function addBlurDataURLs() {
     }
   }
 
-  // Print the new array with blurDataURLs added
-  console.log(JSON.stringify(updatedPhotos, null, 2));
+  console.log(
+    "\nconst photos: MasonryImage[] =",
+    JSON.stringify(updatedPhotos, null, 2)
+  );
+  console.log(`\n\n${photos.length} photos successfully processed.\n`);
+  console.log(
+    "You can now paste it into `app/(photography)/photography/content.tsx`.\n"
+  );
 }
 
 const PATH_PHOTOGRAPHY_IMAGES = "/images/photography";

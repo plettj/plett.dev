@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 import { useMeasure } from "react-use";
-import Photo from "../Photo";
+import Photo, { LoadMethod } from "../Photo";
 
 export type MasonryImage = {
   src: string;
@@ -17,7 +17,7 @@ export type MasonryImage = {
 
 type MasonryLayoutProps = {
   images: MasonryImage[];
-  maxColumns?: number;
+  loadMethod?: LoadMethod;
 };
 
 /**
@@ -25,12 +25,12 @@ type MasonryLayoutProps = {
  */
 export default function MasonryLayout({
   images,
-  maxColumns = 3,
+  loadMethod = "border",
 }: MasonryLayoutProps) {
   const [ref, { width }] = useMeasure<HTMLDivElement>();
 
   const w = width ? width : 608;
-  const columns = w > 600 ? maxColumns : w > 400 ? 2 : 1;
+  const columns = w > 600 ? 3 : w > 400 ? 2 : 1;
 
   const columnImages = useMemo(() => {
     const cols = Array(columns)
@@ -52,12 +52,19 @@ export default function MasonryLayout({
   }, [images, columns]);
 
   return (
-    <div ref={ref} className="w-full flex gap-3">
+    <div ref={ref} className="w-full flex gap-3 sm:gap-4">
       {columnImages.map((column, i) => {
         return (
-          <div key={i} className="flex flex-col gap-3 w-full">
+          <div key={i} className="flex flex-col gap-3 sm:gap-4 w-full">
             {column.map((image, j) => {
-              return <Photo key={image.src} image={image} priority={j === 0} />;
+              return (
+                <Photo
+                  key={image.src}
+                  image={image}
+                  priority={j === 0}
+                  loadMethod={loadMethod}
+                />
+              );
             })}
           </div>
         );

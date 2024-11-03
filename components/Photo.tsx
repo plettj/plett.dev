@@ -5,24 +5,26 @@ import { InView } from "react-intersection-observer";
 import { MasonryImage } from "./layouts/MasonryLayout";
 import { cn } from "@/lib/utils";
 
+export type LoadMethod = "border" | "blur";
+
 export default function Photo({
   image,
-  loadMethod = "border",
+  loadMethod,
   priority = false,
 }: {
   image: MasonryImage;
-  loadMethod?: "border" | "blur";
+  loadMethod: LoadMethod;
   priority: boolean;
 }) {
   switch (loadMethod) {
     case "border":
       return (
-        <InView rootMargin="100px" threshold={0}>
+        <InView rootMargin="35%" threshold={0.1} fallbackInView>
           {({ inView, ref }) => (
             <div
               ref={ref}
               className={cn(
-                "border-[1px] relative transition-colors duration-500 w-full",
+                "border-[1px] w-full -m-[1px] relative transition-colors duration-700",
                 inView && "border-transparent"
               )}
               style={{
@@ -31,7 +33,7 @@ export default function Photo({
             >
               <div
                 className={cn(
-                  "group transition-opacity duration-500",
+                  "group transition-opacity duration-700",
                   inView ? "opacity-100" : "opacity-0"
                 )}
               >
@@ -46,7 +48,16 @@ export default function Photo({
         </InView>
       );
     case "blur":
-      return <PhotoContent image={image} priority={priority} inView />;
+      return (
+        <div
+          className="border-[1px] border-transparent w-full -m-[1px]"
+          style={{
+            aspectRatio: `${image.size[0]}/${image.size[1]}`, // To prevent layout shift between this and "border" load methods.
+          }}
+        >
+          <PhotoContent image={image} priority={priority} inView blur />
+        </div>
+      );
   }
 }
 
@@ -57,10 +68,12 @@ function PhotoContent({
   image,
   priority,
   inView,
+  blur,
 }: {
   image: MasonryImage;
   priority: boolean;
   inView: boolean;
+  blur?: boolean;
 }) {
   return (
     <>
@@ -74,8 +87,10 @@ function PhotoContent({
         draggable={false}
         loading={priority ? "eager" : "lazy"}
         className="pointer-events-none" // Prevent tooltips on hover.
-        placeholder="blur" // Never visible; see `root/scripts/generateBlurData/README.md`.
-        blurDataURL={image.blurDataURL} // Never visible; see `root/scripts/generateBlurData/README.md`.
+        {...(blur && {
+          placeholder: "blur", // Never visible; see `root/scripts/generateBlurData/README.md`.
+          blurDataURL: image.blurDataURL, // Never visible; see `root/scripts/generateBlurData/README.md`.
+        })}
       />
       <div
         className={cn(
