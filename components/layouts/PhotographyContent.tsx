@@ -18,7 +18,7 @@ export default function PhotographyContent() {
       </div>
       <div className="w-full max-w-[80ch] mx-auto">
         <p>
-          A nice custom masonry layout, built by me.
+          A nice custom masonry layout, built by me.{" "}
           <InlineLink href="https://github.com/plettj/plett.dev">
             Code
           </InlineLink>
@@ -30,7 +30,10 @@ export default function PhotographyContent() {
               id="loading-mode"
               defaultChecked={loadMethod === "border"}
               onCheckedChange={() => {
-                setLoadMethod(loadMethod === "border" ? "blur" : "border");
+                // Slight delay to allow the switch to animate before reloading images.
+                setTimeout(() => {
+                  setLoadMethod(loadMethod === "border" ? "blur" : "border");
+                }, 150);
               }}
             />
             <Label htmlFor="loading-mode" className="cursor-pointer">
@@ -38,7 +41,7 @@ export default function PhotographyContent() {
             </Label>
           </div>
           {loadMethod === "border" && (
-            <span className="text-muted-foreground font-thin cursor-text">
+            <span className="text-muted-foreground font-thin cursor-text hidden sm:block">
               (scroll to see)
             </span>
           )}

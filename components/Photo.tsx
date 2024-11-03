@@ -4,6 +4,7 @@ import Image from "next/image";
 import { InView } from "react-intersection-observer";
 import { MasonryImage } from "./layouts/MasonryLayout";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 export type LoadMethod = "border" | "blur";
 
@@ -16,6 +17,8 @@ export default function Photo({
   loadMethod: LoadMethod;
   priority: boolean;
 }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   switch (loadMethod) {
     case "border":
       return (
@@ -25,7 +28,7 @@ export default function Photo({
               ref={ref}
               className={cn(
                 "border-[1px] w-full -m-[1px] relative transition-colors duration-700",
-                inView && "border-transparent"
+                inView && isLoaded && "border-transparent"
               )}
               style={{
                 aspectRatio: `${image.size[0]}/${image.size[1]}`, // Tailwind `aspect-[${num}]` fails.
@@ -34,13 +37,14 @@ export default function Photo({
               <div
                 className={cn(
                   "group transition-opacity duration-700",
-                  inView ? "opacity-100" : "opacity-0"
+                  inView && isLoaded ? "opacity-100" : "opacity-0"
                 )}
               >
                 <PhotoContent
                   image={image}
                   priority={priority}
                   inView={inView}
+                  onLoad={() => setIsLoaded(true)}
                 />
               </div>
             </div>
@@ -68,11 +72,13 @@ function PhotoContent({
   image,
   priority,
   inView,
+  onLoad,
   blur,
 }: {
   image: MasonryImage;
   priority: boolean;
   inView: boolean;
+  onLoad?: () => void;
   blur?: boolean;
 }) {
   return (
@@ -91,6 +97,7 @@ function PhotoContent({
           placeholder: "blur", // Never visible; see `root/scripts/generateBlurData/README.md`.
           blurDataURL: image.blurDataURL, // Never visible; see `root/scripts/generateBlurData/README.md`.
         })}
+        onLoad={onLoad}
       />
       <div
         className={cn(
