@@ -18,6 +18,7 @@ export default async function middleware(
     : request.ip ?? "unknown";
   const ip = processIp(rawIp);
 
+  // TODO: Add categories for each individual blog post.
   await incrViews(ip, context, ["global_views"]);
 
   return response;

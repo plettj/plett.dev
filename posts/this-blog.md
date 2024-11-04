@@ -1,9 +1,10 @@
 ---
 title: "How I Made This Blog Site"
-preview: "A custom statically generated blog site tutorial for Next.js"
+preview: "A tutorial for building your custom, search-engine-optimized, statically generated blog site with Next.js."
 date: "2024-10-23T00:54:22Z"
 tags:
   [
+    "main",
     "writing",
     "personal",
     "blog",
