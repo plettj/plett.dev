@@ -9,7 +9,7 @@ export type Post = {
   preview: string;
   /** Keywords of the post, used in OpenGraph metadata */
   tags: string[];
-  /** Original publish date of the post, in UTC format */
+  /** Original publish date of the post, in Date and Time UTC format */
   date: string;
   /** Full markdown-formatted content of the post */
   content: string;

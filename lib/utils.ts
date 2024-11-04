@@ -32,6 +32,9 @@ export function getOGData({
   };
 }
 
+/**
+ * Formats a UTC date and time string to a human-readable date string.
+ */
 export function formatDate(utcDate: string) {
   const date = new Date(utcDate);
 
@@ -40,6 +43,16 @@ export function formatDate(utcDate: string) {
     day: "2-digit",
     year: "numeric",
   });
+}
+
+/**
+ * Formats a `Date` object to the format `YYYY/MM/DD` with customizable separator.
+ */
+export function formatDateAbbr(date: Date, separator: string = "/"): string {
+  const offset = date.getTimezoneOffset();
+  date = new Date(date.getTime() - offset * 60 * 1000);
+  const formatted = date.toISOString().split("T")[0].replaceAll("-", separator);
+  return formatted;
 }
 
 export function addOrdinalSuffix(i: number): string {
@@ -73,16 +86,6 @@ export function processIp(ip: string): string {
   }
 
   return ip;
-}
-
-/**
- * Formats a Javascript date object to the format "YYYY/MM/DD".
- */
-export function formatDateAbbr(date: Date) {
-  const offset = date.getTimezoneOffset();
-  date = new Date(date.getTime() - offset * 60 * 1000);
-  const formatted = date.toISOString().split("T")[0].replaceAll("-", "/");
-  return formatted;
 }
 
 export function isProd(): boolean {
