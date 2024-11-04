@@ -19,7 +19,7 @@ export default function Error({
   return (
     <Container>
       <div className="items-center justify-center text-center">
-        <span className="bg-gradient-to-b from-foreground to-transparent bg-clip-text text-[10rem] font-extrabold leading-none text-transparent">
+        <span className="bg-gradient-to-b from-foreground to-transparent bg-clip-text text-[10rem]/none font-extrabold text-transparent">
           :(
         </span>
         <p className="mt-8 mb-8">Something went wrong in your browser.</p>
