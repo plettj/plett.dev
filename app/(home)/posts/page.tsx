@@ -19,6 +19,8 @@ export const metadata: Metadata = {
 export default async function Writing() {
   const posts = getAllPosts();
 
+  // TODO: Add a filtering option ("Main posts", "Quick posts"), and only show main posts by default.
+
   let currentYear = new Date().getFullYear() + 1;
 
   return (

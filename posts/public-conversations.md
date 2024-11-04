@@ -1,10 +1,11 @@
 ---
 title: "Monasticism, Prostitution, Astrophysics, & Brain Cancer"
 subtitle: "Interesting conversations in public places"
-preview: "Interesting conversations in public places"
+preview: "Usually, random people on plane rides are not open to conversations. But sometimes they are, and I've collected here the four most notable..."
 date: "2023-11-14T03:35:22Z"
 tags:
   [
+    "main",
     "writing",
     "personal",
     "blog",
