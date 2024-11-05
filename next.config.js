@@ -18,6 +18,7 @@ const nextConfig = {
         destination: `${URL_OLD_SITE}${source}`,
         permanent: true,
       })),
+      { source: "/games", destination: "https://plett.fun", permanent: true },
       { source: "/home", destination: "/", permanent: true },
     ];
   },
