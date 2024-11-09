@@ -25,7 +25,7 @@ export default function ProfilePhoto({ src, size }: ProfilePhotoProps) {
   return (
     <div
       className={cn(
-        "h-32 sm:h-full transition-opacity duration-300 grayscale aspect-square",
+        "h-32 sm:h-full transition-opacity duration-300 aspect-square",
         isLoaded ? "opacity-100" : "opacity-0"
       )}
     >
