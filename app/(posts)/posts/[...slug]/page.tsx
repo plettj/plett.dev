@@ -38,7 +38,7 @@ export default async function Post({ params }: Params) {
   const nextPost = currentIndex > 0 ? posts[currentIndex - 1] : undefined;
 
   return (
-    <article className="mt-8">
+    <article className="mt-8 sm:mt-10">
       <PostHeader
         title={post.title}
         subtitle={post.subtitle}

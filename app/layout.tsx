@@ -19,6 +19,11 @@ const fontSans = JetBrains_Mono({
   variable: "--font-sans",
 });
 
+// Other fonts to consider:
+// - Europa Grotesk No. 2 SH
+// - Eloquia Display
+// - IBM Plex Sans
+
 export const metadata: Metadata = {
   title: {
     default: META_TITLE_HOME,

@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-sm leading-relaxed;
+  @apply text-base/relaxed;
 }
 
 .markdown p,
@@ -33,7 +33,7 @@
 }
 
 .markdown code {
-  @apply inline-block rounded bg-muted px-[0.3rem] py-[1px] -my-[1px] font-mono font-medium;
+  @apply inline-block rounded bg-muted px-[0.3rem] font-mono font-medium;
 }
 
 .markdown pre code {
@@ -65,5 +65,5 @@
 }
 
 .markdown h4 {
-  @apply text-sm font-semibold mt-6 mb-4 leading-snug;
+  @apply leading-relaxed font-semibold mt-4 mb-2;
 }

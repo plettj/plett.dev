@@ -14,7 +14,7 @@ export default function NotFound() {
   return (
     <Container>
       <div className="items-center justify-center text-center">
-        <span className="bg-gradient-to-b from-foreground to-transparent bg-clip-text text-[10rem] font-extrabold leading-none text-transparent">
+        <span className="bg-gradient-to-b from-foreground to-transparent bg-clip-text text-[10rem]/none font-extrabold text-transparent">
           404
         </span>
         <p className="mt-4 mb-8">
