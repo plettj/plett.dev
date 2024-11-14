@@ -107,6 +107,44 @@ const professionalItems: ContentListItem[] = [
     ),
   },
   {
+    title: "Data",
+    subtitle: "AI Research with Rogers & UW",
+    year: "2024",
+    children: (
+      <p>
+        I&apos;m the founding developer at{" "}
+        <InlineLink href="https://github.com/5G-Mobile-Healthcare" external>
+          this
+        </InlineLink>{" "}
+        ongoing ECG AI research initiative with{" "}
+        <InlineLink href="https://www.rogers.com/5g/5g-labs" external>
+          Rogers
+        </InlineLink>{" "}
+        &{" "}
+        <InlineLink href="https://uwaterloo.ca/rogers-5g-partnership/" external>
+          UW
+        </InlineLink>
+        . Some of my machine learning work is on{" "}
+        <InlineLink href="https://lichess.ai" external>
+          www.lichess.ai
+        </InlineLink>{" "}
+        (
+        <InlineLink href="https://github.com/plettj/lichess.ai" external>
+          code
+        </InlineLink>
+        ), and I made{" "}
+        <InlineLink href="https://github.com/plettj/queens" external>
+          this
+        </InlineLink>{" "}
+        LinkedIn{" "}
+        <InlineLink href="https://www.linkedin.com/games/queens/" external>
+          Queens
+        </InlineLink>{" "}
+        performance analysis tool.
+      </p>
+    ),
+  },
+  {
     title: "Speaking",
     subtitle: "2000+ live audience members",
     year: "2022",
@@ -362,6 +400,17 @@ const hobbyItems: ContentListItem[] = [
     ),
   },
   {
+    title: "Circus",
+    subtitle: "Juggling, etc",
+    year: "2020",
+    children: (
+      <p>
+        I can juggle, hold my breath for 6 minutes, throw a card 50m, and solve
+        Rubik&apos;s cubes blindfolded.
+      </p>
+    ),
+  },
+  {
     title: "Music",
     subtitle: "Piano, choir, trumpet",
     year: "2017",
@@ -392,7 +441,8 @@ const hobbyItems: ContentListItem[] = [
     year: "2017",
     children: (
       <p>
-        These days I run, climb, play squash, and work out. I used to play{" "}
+        These days I run, climb, play squash and ultimate, and work out. I used
+        to play{" "}
         <InlineLink
           href="https://www.npmjs.com/package/soccer-football"
           external
