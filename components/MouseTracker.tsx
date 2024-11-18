@@ -23,7 +23,6 @@ export const MouseTracker = ({
         const x = e.clientX + offset.x,
           y = e.clientY + offset.y;
         element.current.style.transform = `translate(${x}px, ${y}px)`;
-        element.current.style.visibility = "visible";
       }
     }
     document.addEventListener("mousemove", handler);
@@ -36,7 +35,7 @@ export const MouseTracker = ({
     ? createPortal(
         <div
           className={cn(
-            "fixed pointer-events-none transition-opacity",
+            "fixed w-full pointer-events-none transition-opacity duration-300",
             className
           )}
           ref={element}
