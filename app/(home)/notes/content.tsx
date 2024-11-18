@@ -1,4 +1,5 @@
 import { NotesListItem } from "@/components/layouts/NotesList";
+import { PATH_NOTES } from "@/lib/constants";
 
 export const csItems: NotesListItem[] = [
   {
@@ -7,8 +8,8 @@ export const csItems: NotesListItem[] = [
     year: "2024",
     university: "UW",
     summary:
-      "Efficient algorithms and effective algorithm design techniques. Dynamic programming, graph search and backtrack, NP-completeness, etc.",
-    href: "/notes/c/cs341-notes.pdf",
+      "Efficient algorithms and performant design techniques. Dynamic programming, graph search and backtrack, NP-completeness, etc.",
+    href: `${PATH_NOTES}/cs341-notes.pdf`,
   },
   {
     title: "Operating Systems",
@@ -17,7 +18,7 @@ export const csItems: NotesListItem[] = [
     university: "UW",
     summary:
       "Fundamentals of operating system function, design, and implementation. Processes, threads, concurrency, memory management, file systems, security, etc.",
-    href: "/notes/c/cs350-notes.pdf",
+    href: `${PATH_NOTES}/cs350-notes.pdf`,
   },
   {
     title: "Computer Organization and Design",
@@ -26,7 +27,7 @@ export const csItems: NotesListItem[] = [
     university: "UW",
     summary:
       "Computer organization and performance. Digital logic, assembly, data representation, memory hierarchies, multiprocessors, and processor design.",
-    href: "/notes/c/cs251-notes.pdf",
+    href: `${PATH_NOTES}/cs251-notes.pdf`,
   },
   {
     title: "Data Structures and Data Management",
@@ -35,7 +36,7 @@ export const csItems: NotesListItem[] = [
     university: "UW",
     summary:
       "Data structures, algorithms, and performance analysis. Queues, sorting, dictionaries, trees, and data structures for text processing.",
-    href: "/notes/c/cs240-notes.pdf",
+    href: `${PATH_NOTES}/cs240-notes.pdf`,
   },
   {
     title: "Logic and Computation",
@@ -43,8 +44,8 @@ export const csItems: NotesListItem[] = [
     year: "2022",
     university: "UW",
     summary:
-      "Propositional and predicate logic, formal reasoning, Godel's Incompleteness Theorem, and the limits of computation.",
-    href: "/notes/c/cs245-summary.pdf",
+      "(Incomplete notes) Propositional and predicate logic, formal reasoning, Godel's Incompleteness Theorem, and the limits of computation.",
+    href: `${PATH_NOTES}/cs245-summary.pdf`,
   },
   {
     title: "Object-Oriented Software Development",
@@ -52,8 +53,8 @@ export const csItems: NotesListItem[] = [
     year: "2022",
     university: "UW",
     summary:
-      "Object-oriented programming, design patterns, performance, debuggers, test suites. Entails building a chess engine or similar.",
-    href: "/notes/c/cs246-summary.pdf",
+      "(Incomplete notes) Object-oriented programming, design patterns, performance, debuggers, test suites. Entails building a chess engine or similar.",
+    href: `${PATH_NOTES}/cs246-summary.pdf`,
   },
   {
     title: "Digital Circuits and Systems",
@@ -62,7 +63,7 @@ export const csItems: NotesListItem[] = [
     university: "UW",
     summary:
       "Combinatorial and sequential circuits, boolean algebra and function simplification, hardware description languages, and timing analysis.",
-    href: "/notes/c/ece124-notes.pdf",
+    href: `${PATH_NOTES}/ece124-notes.pdf`,
   },
 ];
 
@@ -74,7 +75,7 @@ export const mathItems: NotesListItem[] = [
     university: "UW",
     summary:
       "Introduction to graph theory and combinatorial analysis. Includes colourings, planarity, binary strings, plane trees, etc.",
-    href: "/notes/c/math239-notes.pdf",
+    href: `${PATH_NOTES}/math239-notes.pdf`,
   },
   {
     title: "Calculus II for Engineers",
@@ -83,7 +84,7 @@ export const mathItems: NotesListItem[] = [
     university: "UW",
     summary:
       "Multivariate calculus, approximation methods, infinite series, coordinate systems, line integrals, Lagrange multipliers, etc.",
-    href: "/notes/c/math119-notes.pdf",
+    href: `${PATH_NOTES}/math119-notes.pdf`,
   },
   {
     title: "Probability",
@@ -92,7 +93,7 @@ export const mathItems: NotesListItem[] = [
     university: "UW",
     summary:
       "Introduction to probability models, the named distributions, discrete and continuous random variables, conditional probability functions, etc.",
-    href: "/notes/c/stat230-notes.pdf",
+    href: `${PATH_NOTES}/stat230-notes.pdf`,
   },
   {
     title: "Calculus I for Engineers",
@@ -101,7 +102,7 @@ export const mathItems: NotesListItem[] = [
     university: "UW",
     summary:
       "Functions including polynomial, exponential, and logarithmic functions. Limits and continuity. Differentiation and integration.",
-    href: "/notes/c/math117-notes.pdf",
+    href: `${PATH_NOTES}/math117-notes.pdf`,
   },
   {
     title: "Linear Algebra for Engineers",
@@ -110,7 +111,7 @@ export const mathItems: NotesListItem[] = [
     university: "UW",
     summary:
       "Linear equations, matrices, determinants, and vector spaces. Eigenvalues, diagonalization, and their applications. Complex numbers.",
-    href: "/notes/c/math115-notes.pdf",
+    href: `${PATH_NOTES}/math115-notes.pdf`,
   },
   {
     title: "Abstract Algebra",
@@ -119,6 +120,6 @@ export const mathItems: NotesListItem[] = [
     university: "UW",
     summary:
       "Proof techniques and the language of mathematics, including integers modulo n, rationals, reals, complex numbers, and polynomials.",
-    href: "/notes/c/math135-full-summary.pdf",
+    href: `${PATH_NOTES}/math135-notes.pdf`,
   },
 ];

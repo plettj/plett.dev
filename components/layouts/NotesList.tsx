@@ -19,30 +19,28 @@ export default function NotesList({ items }: { items: NotesListItem[] }) {
   const [tooltipContent, setTooltipContent] = useState<string | null>(null);
 
   return (
-    <div className="flex flex-col gap-2 items-center w-full cursor-pointer">
+    <div className="w-full flex flex-col gap-2 items-center">
       <MouseTooltip on={hovered}>
         <div>{tooltipContent}</div>
       </MouseTooltip>
       {items.map((item, index) => (
         <div
           key={index}
-          className="group flex justify-between items-center py-2 w-full"
+          className="w-full group flex justify-between items-center py-2"
         >
-          <p
-            className="font-semibold text-balance"
-            onMouseEnter={() => {
-              setTooltipContent(item.summary);
-              setHovered(true);
-            }}
-            onMouseLeave={() => setHovered(false)}
-          >
+          <p className="font-semibold text-balance">
             <Link
               key={index}
               className="underline decoration-dotted hover:decoration-solid font-semibold"
               href={item.href}
               target="_blank"
+              onMouseEnter={() => {
+                setTooltipContent(item.summary);
+                setHovered(true);
+              }}
+              onMouseLeave={() => setHovered(false)}
             >
-              {item.title}{" "}
+              {item.title}
             </Link>
           </p>
           <p className="flex-none text-muted-foreground text-right font-thin decoration-muted-foreground">

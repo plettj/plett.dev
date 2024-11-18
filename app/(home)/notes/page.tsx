@@ -32,8 +32,8 @@ export default function NotesPage() {
           <br />
           <br />
           They are very concise while covering all course content, intended to
-          be used as a starting-point for planning your studies, and a reference
-          sheet during those studies.
+          be used as a starting point for planning your studying, and a
+          reference sheet during those studies.
         </p>
       </div>
       <Disclaimer />
@@ -48,8 +48,8 @@ export default function NotesPage() {
 function Disclaimer() {
   return (
     <Accordion type="single" collapsible className="w-full -my-4 py-0">
-      <AccordionItem value="item-1">
-        <AccordionTrigger>
+      <AccordionItem value="disclaimer">
+        <AccordionTrigger className="decoration-muted-foreground">
           <span className="mr-2 font-semibold text-muted-foreground">
             Disclaimer
           </span>
@@ -59,19 +59,23 @@ function Disclaimer() {
         <AccordionContent>
           <p className="text-muted-foreground">
             Notes are written entirely by me, while attending lectures at the
-            University of Waterloo and the Technical University of Denmark. No
-            monetary compensation was received for these notes. You may use or
-            distribute them provided you attribute me,{" "}
+            <InlineLink href="https://uwaterloo.ca/" external>
+              University of Waterloo
+            </InlineLink>{" "}
+            and the{" "}
+            <InlineLink href="https://www.dtu.dk/" external>
+              Technical University of Denmark
+            </InlineLink>
+            . No monetary compensation was received for these notes. You may use
+            or distribute them provided you attribute me,{" "}
             <InlineLink href={BASE_URL}>Josiah Plett</InlineLink>, and the
             associated university.
             <br />
             <br />I do not intend to infringe on the IP rights of any party, and
-            am happy to honour takedown notices.
+            will honour any takedown requests.
             <br />
             <br />
-            Most of these notes have either been adopted by professors as
-            official material, or accepted as complete. Regardless, they are
-            provided as-is with no guarantee of accuracy.
+            Notes are provided as-is with no guarantee of accuracy.
           </p>
         </AccordionContent>
       </AccordionItem>
