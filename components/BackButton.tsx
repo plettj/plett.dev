@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { Button, ButtonProps } from "./ui/button";
+import { cn } from "@/lib/utils";
 
 export default function BackButton({
   variant = "default",
@@ -11,17 +12,18 @@ export default function BackButton({
   const router = useRouter();
 
   const hasHistory =
-    (typeof window !== "undefined" &&
-      window.history?.length &&
-      window.history.length > 1) ||
-    typeof window === "undefined";
+    typeof window !== "undefined" &&
+    window.history?.length &&
+    window.history.length > 1;
 
-  if (!hasHistory) {
-    return null;
-  }
-
+  // TODO: This component gives a "classname doesn't match" warning whenever there is history.
+  //       Unsure how to solve at the moment.
   return (
-    <Button onClick={router.back} variant={variant}>
+    <Button
+      onClick={router.back}
+      variant={variant}
+      className={cn(hasHistory && "hidden")}
+    >
       Go back
     </Button>
   );
