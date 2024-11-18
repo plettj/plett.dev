@@ -7,10 +7,15 @@ import InlineLink from "../InlineLink";
 
 export type NotesListItem = {
   title: string;
+  // For smaller screens
+  shortTitle: string;
   course: { name: string; href: string };
   year: string;
+  // Abbreviated form
   university: string;
+  // Used for the tooltip
   summary: string;
+  // PDF link
   href: string;
 };
 
@@ -28,21 +33,30 @@ export default function NotesList({ items }: { items: NotesListItem[] }) {
           key={index}
           className="w-full group flex justify-between items-center py-2"
         >
-          <p className="font-semibold text-balance">
-            <Link
-              key={index}
-              className="underline decoration-dotted hover:decoration-solid font-semibold"
-              href={item.href}
-              target="_blank"
-              onMouseEnter={() => {
-                setTooltipContent(item.summary);
-                setHovered(true);
-              }}
-              onMouseLeave={() => setHovered(false)}
-            >
-              {item.title}
-            </Link>
-          </p>
+          <Link
+            className="hidden sm:inline-block underline decoration-dotted hover:decoration-solid font-semibold text-balance"
+            href={item.href}
+            target="_blank"
+            onMouseEnter={() => {
+              setTooltipContent(item.summary);
+              setHovered(true);
+            }}
+            onMouseLeave={() => setHovered(false)}
+          >
+            {item.title}
+          </Link>
+          <Link
+            className="sm:hidden underline decoration-dotted hover:decoration-solid font-semibold text-balance"
+            href={item.href}
+            target="_blank"
+            onMouseEnter={() => {
+              setTooltipContent(item.summary);
+              setHovered(true);
+            }}
+            onMouseLeave={() => setHovered(false)}
+          >
+            {item.shortTitle}
+          </Link>
           <p className="flex-none text-muted-foreground text-right font-thin decoration-muted-foreground">
             <InlineLink href={item.course.href} external>
               {item.course.name}

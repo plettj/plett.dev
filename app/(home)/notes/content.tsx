@@ -4,6 +4,7 @@ import { PATH_NOTES } from "@/lib/constants";
 export const csItems: NotesListItem[] = [
   {
     title: "Algorithms",
+    shortTitle: "Algorithms",
     course: { name: "CS 341", href: "https://uwflow.com/course/cs341" },
     year: "2024",
     university: "UW",
@@ -13,6 +14,7 @@ export const csItems: NotesListItem[] = [
   },
   {
     title: "Operating Systems",
+    shortTitle: "Operating Systems",
     course: { name: "CS 350", href: "https://uwflow.com/course/cs350" },
     year: "2024",
     university: "UW",
@@ -22,6 +24,7 @@ export const csItems: NotesListItem[] = [
   },
   {
     title: "Computer Organization and Design",
+    shortTitle: "Digital Hardware",
     course: { name: "CS 251", href: "https://uwflow.com/course/cs251" },
     year: "2023",
     university: "UW",
@@ -31,6 +34,7 @@ export const csItems: NotesListItem[] = [
   },
   {
     title: "Data Structures and Data Management",
+    shortTitle: "Data Structures",
     course: { name: "CS 240", href: "https://uwflow.com/course/cs240" },
     year: "2023",
     university: "UW",
@@ -40,6 +44,7 @@ export const csItems: NotesListItem[] = [
   },
   {
     title: "Logic and Computation",
+    shortTitle: "Logic and Computation",
     course: { name: "CS 245", href: "https://uwflow.com/course/cs245" },
     year: "2022",
     university: "UW",
@@ -49,6 +54,7 @@ export const csItems: NotesListItem[] = [
   },
   {
     title: "Object-Oriented Software Development",
+    shortTitle: "Methods of OOP",
     course: { name: "CS 246", href: "https://uwflow.com/course/cs246" },
     year: "2022",
     university: "UW",
@@ -58,6 +64,7 @@ export const csItems: NotesListItem[] = [
   },
   {
     title: "Digital Circuits and Systems",
+    shortTitle: "Digital Circuits",
     course: { name: "ECE 124", href: "https://uwflow.com/course/ece124" },
     year: "2022",
     university: "UW",
@@ -70,6 +77,7 @@ export const csItems: NotesListItem[] = [
 export const mathItems: NotesListItem[] = [
   {
     title: "Introduction to Combinatorics",
+    shortTitle: "Combinatorics",
     course: { name: "MATH 239", href: "https://uwflow.com/course/math239" },
     year: "2023",
     university: "UW",
@@ -79,6 +87,7 @@ export const mathItems: NotesListItem[] = [
   },
   {
     title: "Calculus II for Engineers",
+    shortTitle: "Multivariate Calculus",
     course: { name: "MATH 119", href: "https://uwflow.com/course/math119" },
     year: "2022",
     university: "UW",
@@ -88,6 +97,7 @@ export const mathItems: NotesListItem[] = [
   },
   {
     title: "Probability",
+    shortTitle: "Probability",
     course: { name: "STAT 230", href: "https://uwflow.com/course/stat230" },
     year: "2022",
     university: "UW",
@@ -97,6 +107,7 @@ export const mathItems: NotesListItem[] = [
   },
   {
     title: "Calculus I for Engineers",
+    shortTitle: "Calculus I",
     course: { name: "MATH 117", href: "https://uwflow.com/course/math117" },
     year: "2021",
     university: "UW",
@@ -106,6 +117,7 @@ export const mathItems: NotesListItem[] = [
   },
   {
     title: "Linear Algebra for Engineers",
+    shortTitle: "Linear Algebra",
     course: { name: "MATH 115", href: "https://uwflow.com/course/math115" },
     year: "2021",
     university: "UW",
@@ -115,6 +127,7 @@ export const mathItems: NotesListItem[] = [
   },
   {
     title: "Abstract Algebra",
+    shortTitle: "Abstract Algebra",
     course: { name: "MATH 135", href: "https://uwflow.com/course/math135" },
     year: "2021",
     university: "UW",
