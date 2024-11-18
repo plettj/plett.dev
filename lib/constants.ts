@@ -7,6 +7,7 @@ export const BASE_URL = isProd()
 export const PATH_HOME = "/";
 export const PATH_ABOUT = "/about";
 export const PATH_WRITING = "/posts";
+export const PATH_NOTES = "/notes";
 export const PATH_PHOTOGRAPHY = "/photography";
 export const PATH_PHOTOGRAPHY_IMAGES = "/images/photography";
 export const PATH_CV = "/cv";
@@ -24,6 +25,8 @@ export const FALLBACK_TOTAL_VISITORS = 242; // NOTE: Old website had 1080 views 
 export const META_TITLE_HOME = "Josiah Plett";
 export const META_DESCRIPTION_HOME =
   "My personal website, covering my professional interests, hobbies, games, writing, and photography.";
+export const META_DESCRIPTION_NOTES =
+  "Josiah Plett's university course notes. Distribute freely with attribution.";
 
 export const THEME_BACKGROUND = "#FFFFFF";
 export const THEME_LIGHT_PRIMARY = "#1C1917";

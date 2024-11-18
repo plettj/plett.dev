@@ -1,9 +1,9 @@
 import InlineLink from "@/components/InlineLink";
-import { ContentListItem } from "@/components/layouts/ContentList";
+import { AboutListItem } from "@/components/layouts/AboutList";
 import Soccer from "@/components/Soccer";
 import { PATH_PHOTOGRAPHY, PATH_WRITING } from "@/lib/constants";
 
-const professionalItems: ContentListItem[] = [
+export const professionalItems: AboutListItem[] = [
   {
     title: "Startups",
     subtitle: "3x founder",
@@ -221,7 +221,7 @@ const professionalItems: ContentListItem[] = [
   },
 ];
 
-const hobbyItems: ContentListItem[] = [
+export const hobbyItems: AboutListItem[] = [
   {
     title: "Writing",
     subtitle: "For Waterloo's largest publication",
@@ -454,5 +454,3 @@ const hobbyItems: ContentListItem[] = [
     ),
   },
 ];
-
-export { professionalItems, hobbyItems };

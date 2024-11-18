@@ -5,18 +5,18 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-export type ContentListItem = {
+export type AboutListItem = {
   title: string;
   subtitle: string;
   year: string;
   children: React.ReactNode;
 };
 
-export function ContentList({
+export default function AboutList({
   items,
   open = false,
 }: {
-  items: ContentListItem[];
+  items: AboutListItem[];
   open?: boolean;
 }) {
   return (

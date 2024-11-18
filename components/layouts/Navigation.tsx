@@ -7,6 +7,7 @@ import { ThemeToggle } from "../ThemeToggle";
 import {
   PATH_ABOUT,
   PATH_HOME,
+  PATH_NOTES,
   PATH_PHOTOGRAPHY,
   PATH_WRITING,
 } from "@/lib/constants";
@@ -27,6 +28,9 @@ export default function Navigation() {
       </NavButton>
       <NavButton href={PATH_WRITING} active={pathname.includes(PATH_WRITING)}>
         Writing
+      </NavButton>
+      <NavButton href={PATH_NOTES} active={pathname.includes(PATH_NOTES)}>
+        Notes
       </NavButton>
       <NavButton
         href={PATH_PHOTOGRAPHY}
