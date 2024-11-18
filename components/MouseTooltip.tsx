@@ -8,6 +8,7 @@ export default function MouseTooltip({
   on: boolean;
   children: React.ReactNode;
 }) {
+  // TODO: Modify this component so it knows if it's off-screen and puts itself on the bottom.
   return (
     <MouseTracker
       offset={{ x: 0, y: -12 }}

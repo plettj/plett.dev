@@ -37,10 +37,10 @@ export default function NotesPage() {
         </p>
       </div>
       <Disclaimer />
-      <Title>Mathematics</Title>
-      <NotesList items={mathItems} />
       <Title>Computer Science</Title>
       <NotesList items={csItems} />
+      <Title>Mathematics</Title>
+      <NotesList items={mathItems} />
     </div>
   );
 }
