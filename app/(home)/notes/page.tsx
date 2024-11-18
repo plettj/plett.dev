@@ -39,7 +39,7 @@ export default function NotesPage() {
       <Disclaimer />
       <Title>Mathematics</Title>
       <NotesList items={mathItems} />
-      <Title>Hobbies</Title>
+      <Title>Computer Science</Title>
       <NotesList items={csItems} />
     </div>
   );

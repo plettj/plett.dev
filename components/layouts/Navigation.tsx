@@ -29,7 +29,11 @@ export default function Navigation() {
       <NavButton href={PATH_WRITING} active={pathname.includes(PATH_WRITING)}>
         Writing
       </NavButton>
-      <NavButton href={PATH_NOTES} active={pathname.includes(PATH_NOTES)}>
+      <NavButton
+        href={PATH_NOTES}
+        active={pathname.includes(PATH_NOTES)}
+        className="hidden sm:flex"
+      >
         Notes
       </NavButton>
       <NavButton
