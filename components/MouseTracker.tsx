@@ -1,10 +1,10 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-// A TypeScript implementation of https://yoavik.com/snippets/mouse-tracker
+// A Next.js-compatible mouse tracking component, inspired by: https://yoavik.com/snippets/mouse-tracker
 export const MouseTracker = ({
   offset = { x: 0, y: 0 },
   className,
@@ -15,6 +15,7 @@ export const MouseTracker = ({
   children: React.ReactNode;
 }) => {
   const element = useRef<HTMLDivElement | null>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     function handler(e: MouseEvent) {
@@ -29,16 +30,20 @@ export const MouseTracker = ({
     return () => document.removeEventListener("mousemove", handler);
   }, [offset.x, offset.y]);
 
-  // TODO: Majorly broken :/
-  if (typeof document === "undefined") return null;
+  useEffect(() => setMounted(true), []);
 
-  return createPortal(
-    <div
-      className={cn("fixed pointer-events-none transition-opacity", className)}
-      ref={element}
-    >
-      {children}
-    </div>,
-    document.body
-  );
+  return mounted
+    ? createPortal(
+        <div
+          className={cn(
+            "fixed pointer-events-none transition-opacity",
+            className
+          )}
+          ref={element}
+        >
+          {children}
+        </div>,
+        document.body
+      )
+    : null;
 };
