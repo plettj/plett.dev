@@ -14,7 +14,7 @@ import { BASE_URL } from "@/lib/constants";
 export async function incrViews(
   ip: string,
   context: NextFetchEvent,
-  categories: string[]
+  categories: string[],
 ): Promise<boolean> {
   const headersList = headers();
   const host = headersList.get("host");
@@ -44,7 +44,7 @@ export async function incrViews(
       } catch (error) {
         console.error("Failed to increment:", error);
       }
-    })()
+    })(),
   );
 
   return updated;

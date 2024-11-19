@@ -36,13 +36,13 @@ export const MouseTracker = ({
         <div
           className={cn(
             "fixed w-full pointer-events-none transition-opacity duration-300",
-            className
+            className,
           )}
           ref={element}
         >
           {children}
         </div>,
-        document.body
+        document.body,
       )
     : null;
 };

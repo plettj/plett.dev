@@ -18,7 +18,7 @@ export default function InlineLink({
       {...(external ? { rel: "noopener noreferrer", target: "_blank" } : {})}
       className={cn(
         "p-0 h-6 -my-1 text-muted-foreground font-semibold decoration-dotted underline sm:decoration-solid sm:no-underline hover:underline",
-        className
+        className,
       )}
     >
       {children}

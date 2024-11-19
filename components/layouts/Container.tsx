@@ -15,7 +15,7 @@ export default function Container({
     <main
       className={cn(
         "flex flex-col text-sm px-6",
-        fullWidth ? "w-screen sm:px-16" : "w-full max-w-[80ch] sm:px-8"
+        fullWidth ? "w-screen sm:px-16" : "w-full max-w-[80ch] sm:px-8",
       )}
     >
       {!hideNavBar && (
