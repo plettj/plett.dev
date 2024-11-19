@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import MouseTooltip from "../MouseTooltip";
 import Link from "next/link";
 import InlineLink from "../InlineLink";
@@ -20,43 +17,29 @@ export type NotesListItem = {
 };
 
 export default function NotesList({ items }: { items: NotesListItem[] }) {
-  const [hovered, setHovered] = useState(false);
-  const [tooltipContent, setTooltipContent] = useState<string | null>(null);
-
   return (
     <div className="w-full flex flex-col gap-2 items-center">
-      <MouseTooltip on={hovered}>
-        <div>{tooltipContent}</div>
-      </MouseTooltip>
       {items.map((item, index) => (
         <div
           key={index}
           className="w-full group flex justify-between items-center py-2"
         >
-          <Link
-            className="hidden sm:inline-block underline decoration-dotted hover:decoration-solid font-semibold text-balance"
-            href={item.href}
-            target="_blank"
-            onMouseEnter={() => {
-              setTooltipContent(item.summary);
-              setHovered(true);
-            }}
-            onMouseLeave={() => setHovered(false)}
-          >
-            {item.title}
-          </Link>
-          <Link
-            className="sm:hidden underline decoration-dotted hover:decoration-solid font-semibold text-balance"
-            href={item.href}
-            target="_blank"
-            onMouseEnter={() => {
-              setTooltipContent(item.summary);
-              setHovered(true);
-            }}
-            onMouseLeave={() => setHovered(false)}
-          >
-            {item.shortTitle}
-          </Link>
+          <MouseTooltip tooltip={<>{item.summary}</>}>
+            <Link
+              className="hidden sm:inline-block underline decoration-dotted hover:decoration-solid font-semibold text-balance"
+              href={item.href}
+              target="_blank"
+            >
+              {item.title}
+            </Link>
+            <Link
+              className="sm:hidden underline decoration-dotted hover:decoration-solid font-semibold text-balance"
+              href={item.href}
+              target="_blank"
+            >
+              {item.shortTitle}
+            </Link>
+          </MouseTooltip>
           <p className="flex-none text-muted-foreground text-right font-thin decoration-muted-foreground">
             <InlineLink href={item.course.href} external>
               {item.course.name}

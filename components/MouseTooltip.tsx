@@ -1,22 +1,35 @@
-import { cn } from "@/lib/utils";
-import { MouseTracker } from "./MouseTracker";
+"use client";
+
+import Tippy from "@tippyjs/react/headless";
+import { followCursor } from "tippy.js/headless";
 
 export default function MouseTooltip({
-  on,
+  tooltip,
   children,
 }: {
-  on: boolean;
+  tooltip: React.ReactNode;
   children: React.ReactNode;
 }) {
-  // TODO: Modify this component to be made with Tippy, https://www.npmjs.com/package/@tippyjs/react, like https://shud.in's site.
   return (
-    <MouseTracker
-      offset={{ x: 0, y: -12 }}
-      className={cn("opacity-0", on && "opacity-100")}
+    <Tippy
+      render={(attrs) => (
+        <>
+          <div className="size-12 bg-red-500">TESTER SQUARE</div>
+          <div
+            tabIndex={-1}
+            className="max-w-56 border bg-background px-2 py-1.5 text-xs rounded-md"
+            {...attrs}
+          >
+            {tooltip}
+          </div>
+        </>
+      )}
+      animation="fade"
+      followCursor="horizontal"
+      trigger="mouseenter focus"
+      plugins={[followCursor]}
     >
-      <div className="max-w-56 border bg-background px-2 py-1.5 text-xs transform -translate-x-1/2 -translate-y-full rounded-md">
-        {children}
-      </div>
-    </MouseTracker>
+      <>{children}</>
+    </Tippy>
   );
 }
