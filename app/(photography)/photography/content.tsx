@@ -221,7 +221,7 @@ const photos: MasonryImage[] = [
   {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Malmo_Skyline.jpg`,
     alt: "The clean Malmö skyline from the central canal",
-    location: "Copenhagen",
+    location: "Malmö",
     year: "2024",
     size: [1280, 704],
     blurDataURL:

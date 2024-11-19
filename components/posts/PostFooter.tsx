@@ -8,7 +8,7 @@ export default function PostFooter({ nextPost }: { nextPost?: Post }) {
   return (
     <div className="flex justify-between items-center w-full">
       {nextPost ? (
-        <div className="flex items-center h-5 gap-2 mt-2 -mb-1">
+        <div className="flex max-w-full overflow-hidden items-center h-5 gap-2 mt-2 -mb-1">
           <NavButton href={PATH_WRITING} className="pl-0">
             <ArrowLeftIcon /> Back
           </NavButton>

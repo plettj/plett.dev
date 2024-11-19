@@ -1,9 +1,9 @@
 import InlineLink from "@/components/InlineLink";
-import { ContentListItem } from "@/components/layouts/ContentList";
+import { AboutListItem } from "@/components/layouts/AboutList";
 import Soccer from "@/components/Soccer";
-import { PATH_PHOTOGRAPHY, PATH_WRITING } from "@/lib/constants";
+import { PATH_NOTES, PATH_PHOTOGRAPHY, PATH_WRITING } from "@/lib/constants";
 
-const professionalItems: ContentListItem[] = [
+export const professionalItems: AboutListItem[] = [
   {
     title: "Startups",
     subtitle: "3x founder",
@@ -195,8 +195,7 @@ const professionalItems: ContentListItem[] = [
     year: "2016",
     children: (
       <p>
-        I&apos;ve been a formal note-taker for 11 university classes. I also ran
-        my city&apos;s{" "}
+        I ran my city&apos;s{" "}
         <InlineLink href="https://www.colwoodbadminton.ca/" external>
           badminton club
         </InlineLink>{" "}
@@ -215,13 +214,15 @@ const professionalItems: ContentListItem[] = [
         <InlineLink href="https://csclub.uwaterloo.ca/" external>
           UW CSC
         </InlineLink>
-        .
+        . I&apos;ve also written{" "}
+        <InlineLink href={PATH_NOTES}>public notes</InlineLink> for 13
+        university classes.
       </p>
     ),
   },
 ];
 
-const hobbyItems: ContentListItem[] = [
+export const hobbyItems: AboutListItem[] = [
   {
     title: "Writing",
     subtitle: "For Waterloo's largest publication",
@@ -340,7 +341,7 @@ const hobbyItems: ContentListItem[] = [
         >
           this
         </InlineLink>{" "}
-        2012 fold-a-day calendar and soon leading to{" "}
+        2012 fold-a-day calendar and leading to{" "}
         <InlineLink
           href="https://www.amazon.com/Origami-Masters-Bugs-Wars-Changed/dp/1937994104"
           external
@@ -373,14 +374,14 @@ const hobbyItems: ContentListItem[] = [
         <InlineLink href="https://monkeytype.com/" external>
           Monkeytype
         </InlineLink>{" "}
-        is where I train both:{" "}
+        is where I train both my{" "}
         <InlineLink
           href="https://monkeytype.com/profile/Colemak_Mod-DH"
           external
         >
           Colemak profile
-        </InlineLink>
-        ,{" "}
+        </InlineLink>{" "}
+        and{" "}
         <InlineLink href="https://monkeytype.com/profile/plettj" external>
           Qwerty profile
         </InlineLink>
@@ -454,5 +455,3 @@ const hobbyItems: ContentListItem[] = [
     ),
   },
 ];
-
-export { professionalItems, hobbyItems };

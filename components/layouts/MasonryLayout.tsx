@@ -30,7 +30,7 @@ export default function MasonryLayout({
   const [ref, { width }] = useMeasure<HTMLDivElement>();
 
   const w = width ? width : 608;
-  const columns = w > 600 ? 3 : w > 400 ? 2 : 1;
+  const columns = w > 600 ? 3 : w > 320 ? 2 : 1;
 
   const columnImages = useMemo(() => {
     const cols = Array(columns)

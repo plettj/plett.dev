@@ -1,7 +1,7 @@
 import { hobbyItems, professionalItems } from "./content";
 import Title from "@/components/Title";
 import Visitors from "@/components/Visitors";
-import { ContentList } from "@/components/layouts/ContentList";
+import AboutList from "@/components/layouts/AboutList";
 import { BASE_URL, PATH_ABOUT, META_DESCRIPTION_HOME } from "@/lib/constants";
 import { getOGData } from "@/lib/utils";
 import { Metadata } from "next/types";
@@ -24,9 +24,9 @@ export default async function About() {
         <Visitors />
       </div>
       <Title>Professional Interests</Title>
-      <ContentList items={professionalItems} />
+      <AboutList items={professionalItems} />
       <Title>Hobbies</Title>
-      <ContentList items={hobbyItems} />
+      <AboutList items={hobbyItems} />
     </div>
   );
 }

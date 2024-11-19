@@ -51,7 +51,7 @@ export default function ProfilePhoto({ src, size }: ProfilePhotoProps) {
           onLoad={() => setIsLoaded(true)}
           className={cn(
             "absolute inset-0 transition-all duration-200 rounded-full cursor-pointer",
-            isLoaded && activeImage === index ? "opacity-100" : "opacity-0"
+            isLoaded && activeImage === index ? "opacity-100" : "opacity-0",
           )}
         />
       ))}
