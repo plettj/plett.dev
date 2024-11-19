@@ -8,7 +8,7 @@ export const config = {
 
 export default async function middleware(
   request: NextRequest,
-  context: NextFetchEvent
+  context: NextFetchEvent,
 ) {
   const response = NextResponse.next();
 

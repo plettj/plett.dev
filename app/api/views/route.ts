@@ -15,7 +15,7 @@ export async function GET() {
     console.error("Failed to fetch global page views:", error);
     return NextResponse.json(
       { error: "Failed to fetch data" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
