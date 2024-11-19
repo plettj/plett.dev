@@ -2,6 +2,7 @@ import {
   BASE_URL,
   PATH_ABOUT,
   PATH_CV,
+  PATH_NOTES,
   PATH_PHOTOGRAPHY,
   PATH_WRITING,
 } from "@/lib/constants";
@@ -13,13 +14,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes: MetadataRoute.Sitemap = [
     {
       url: `${BASE_URL}`,
-      lastModified: "2024-10-27",
-      changeFrequency: "yearly",
+      lastModified: "2024-11-19",
+      changeFrequency: "monthly",
       priority: 1,
     },
     {
       url: `${BASE_URL}${PATH_ABOUT}`,
-      lastModified: "2024-10-27",
+      lastModified: "2024-11-16",
       changeFrequency: "monthly",
       priority: 0.9,
     },
@@ -30,10 +31,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}${PATH_NOTES}`,
+      lastModified: "2024-11-19",
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
+    {
       url: `${BASE_URL}${PATH_PHOTOGRAPHY}`,
       lastModified: "2024-11-03",
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.6,
     },
     {
       url: `${BASE_URL}${PATH_CV}`,
