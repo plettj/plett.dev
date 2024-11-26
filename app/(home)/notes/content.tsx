@@ -3,13 +3,23 @@ import { PATH_NOTES } from "@/lib/constants";
 
 export const csItems: NotesListItem[] = [
   {
+    title: "Machine Learning and Data Mining",
+    shortTitle: "Machine Learning",
+    course: { name: "02450", href: "https://kurser.dtu.dk/course/02450" },
+    year: "2024",
+    university: "DTU",
+    summary:
+      "Linear regression, PCA, classification, clustering, ensemble methods. Data processing, feature extraction, and association mining.",
+    href: `${PATH_NOTES}/02450-notes.pdf`,
+  },
+  {
     title: "Algorithms",
     shortTitle: "Algorithms",
     course: { name: "CS 341", href: "https://uwflow.com/course/cs341" },
     year: "2024",
     university: "UW",
     summary:
-      "Efficient algorithms and performant design techniques. Dynamic programming, graph search and backtrack, NP-completeness, etc.",
+      "Efficient algorithms and performant design techniques. Dynamic programming, graph search and backtrack, NP-completeness.",
     href: `${PATH_NOTES}/cs341-notes.pdf`,
   },
   {
@@ -29,7 +39,7 @@ export const csItems: NotesListItem[] = [
     year: "2023",
     university: "UW",
     summary:
-      "Computer organization and performance. Digital logic, assembly, data representation, memory hierarchies, multiprocessors, and processor design.",
+      "Computer organization and performance. Digital logic, assembly, data representation, memory hierarchies, multi-processors, and processor design.",
     href: `${PATH_NOTES}/cs251-notes.pdf`,
   },
   {

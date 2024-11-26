@@ -3,12 +3,12 @@ import { incrViews } from "./actions/middleware/views";
 import { processIp } from "./lib/utils";
 
 export const config = {
-  matcher: ["/", "/about", "/posts/:path*"],
+  matcher: ["/", "/notes", "/about", "/photography", "/posts/:path*"],
 };
 
 export default async function middleware(
   request: NextRequest,
-  context: NextFetchEvent,
+  context: NextFetchEvent
 ) {
   const response = NextResponse.next();
 

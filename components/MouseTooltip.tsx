@@ -1,22 +1,18 @@
-import { cn } from "@/lib/utils";
-import { MouseTracker } from "./MouseTracker";
+"use client";
+
+import React from "react";
 
 export default function MouseTooltip({
-  on,
+  tooltip,
   children,
 }: {
-  on: boolean;
+  tooltip: React.ReactNode;
   children: React.ReactNode;
 }) {
-  // TODO: Modify this component to be made with Tippy, https://www.npmjs.com/package/@tippyjs/react, like https://shud.in's site.
   return (
-    <MouseTracker
-      offset={{ x: 0, y: -12 }}
-      className={cn("opacity-0", on && "opacity-100")}
-    >
-      <div className="max-w-56 border bg-background px-2 py-1.5 text-xs transform -translate-x-1/2 -translate-y-full rounded-md">
-        {children}
-      </div>
-    </MouseTracker>
+    <>
+      <div className="hidden">{tooltip}</div>
+      {children}
+    </>
   );
 }
