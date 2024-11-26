@@ -19,7 +19,7 @@ export const csItems: NotesListItem[] = [
     year: "2024",
     university: "UW",
     summary:
-      "Efficient algorithms and performant design techniques. Dynamic programming, graph search and backtrack, NP-completeness, etc.",
+      "Efficient algorithms and performant design techniques. Dynamic programming, graph search and backtrack, NP-completeness.",
     href: `${PATH_NOTES}/cs341-notes.pdf`,
   },
   {
@@ -39,7 +39,7 @@ export const csItems: NotesListItem[] = [
     year: "2023",
     university: "UW",
     summary:
-      "Computer organization and performance. Digital logic, assembly, data representation, memory hierarchies, multiprocessors, and processor design.",
+      "Computer organization and performance. Digital logic, assembly, data representation, memory hierarchies, multi-processors, and processor design.",
     href: `${PATH_NOTES}/cs251-notes.pdf`,
   },
   {
