@@ -401,6 +401,12 @@ export const hobbyItems: AboutListItem[] = [
     ),
   },
   {
+    title: "Felonies",
+    subtitle: "And misdemeanors",
+    year: "2003",
+    children: <p>Haha, gotcha. This is not a hobby of mine.</p>,
+  },
+  {
     title: "Circus",
     subtitle: "Juggling, etc",
     year: "2020",
