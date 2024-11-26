@@ -1,9 +1,13 @@
 "use client";
 
 import {
+  flip,
+  offset,
+  shift,
   useClientPoint,
   useFloating,
   useInteractions,
+  useTransitionStyles,
 } from "@floating-ui/react";
 import Link from "next/link";
 import { useState } from "react";
@@ -26,9 +30,14 @@ export default function NotesItem({
   const [isOpen, setIsOpen] = useState(false);
   const { refs, floatingStyles, context } = useFloating({
     open: isOpen,
+    placement: "top",
+    middleware: [offset(10), shift({ padding: 8 }), flip()],
     onOpenChange: setIsOpen,
   });
-  const clientPoint = useClientPoint(context);
+  const clientPoint = useClientPoint(context, { axis: "x" });
+  const { styles: transitionStyles } = useTransitionStyles(context, {
+    duration: 150,
+  });
   const { getReferenceProps, getFloatingProps } = useInteractions([
     clientPoint,
   ]);
@@ -43,7 +52,6 @@ export default function NotesItem({
     setIsOpen(false);
   };
 
-  // TODO: Extract into a separate component.
   return (
     <div
       key={index}
@@ -78,10 +86,7 @@ export default function NotesItem({
       {isOpen && activeTooltip === index && (
         <div
           ref={refs.setFloating}
-          style={{
-            ...floatingStyles,
-            transform: `${floatingStyles.transform} translateY(-100%) translateY(-12px)`,
-          }}
+          style={{ ...floatingStyles, ...transitionStyles }}
           {...getFloatingProps()}
           className="max-w-64 bg-background border text-xs rounded px-2 py-1.5 pointer-events-none"
         >
