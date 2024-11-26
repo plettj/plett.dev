@@ -32,8 +32,7 @@ export default function NotesPage() {
           <br />
           <br />
           They are very concise while covering all course content, intended to
-          be used as a starting point for planning your studying, and a
-          reference sheet during those studies.
+          be used as an optimal study plan and a reference sheet during studies.
         </p>
       </div>
       <Disclaimer />
@@ -58,7 +57,7 @@ function Disclaimer() {
         </AccordionTrigger>
         <AccordionContent>
           <p className="text-muted-foreground">
-            Notes are written entirely by me, while attending lectures at the
+            Notes are written entirely by me, while attending lectures at the{" "}
             <InlineLink href="https://uwaterloo.ca/" external>
               University of Waterloo
             </InlineLink>{" "}
