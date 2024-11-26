@@ -17,9 +17,11 @@ export default function MouseTooltip({
             {tooltip}
           </div> */
 
+  // 1. Tooltip. https://floating-ui.com/docs/tooltip
+  // 2. Follow mouse. https://floating-ui.com/docs/useclientpoint
   return (
     <>
-      {tooltip}
+      <div className="hidden">{tooltip}</div>
       {children}
     </>
   );

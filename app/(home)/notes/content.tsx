@@ -3,6 +3,16 @@ import { PATH_NOTES } from "@/lib/constants";
 
 export const csItems: NotesListItem[] = [
   {
+    title: "Machine Learning and Data Mining",
+    shortTitle: "Machine Learning",
+    course: { name: "02450", href: "https://kurser.dtu.dk/course/02450" },
+    year: "2024",
+    university: "DTU",
+    summary:
+      "Linear regression, PCA, classification, clustering, ensemble methods. Data processing, feature extraction, and association mining.",
+    href: `${PATH_NOTES}/02450-notes.pdf`,
+  },
+  {
     title: "Algorithms",
     shortTitle: "Algorithms",
     course: { name: "CS 341", href: "https://uwflow.com/course/cs341" },

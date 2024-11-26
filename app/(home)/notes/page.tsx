@@ -58,7 +58,7 @@ function Disclaimer() {
         </AccordionTrigger>
         <AccordionContent>
           <p className="text-muted-foreground">
-            Notes are written entirely by me, while attending lectures at the
+            Notes are written entirely by me, while attending lectures at the{" "}
             <InlineLink href="https://uwaterloo.ca/" external>
               University of Waterloo
             </InlineLink>{" "}
