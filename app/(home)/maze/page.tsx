@@ -1,9 +1,11 @@
 import InlineLink from "@/components/InlineLink";
 import Photo from "@/components/Photo";
-import { BASE_URL, PATH_MAZE } from "@/lib/constants";
+import { BASE_URL, PATH_ABOUT, PATH_MAZE } from "@/lib/constants";
 import { getOGData } from "@/lib/utils";
 import { Metadata } from "next/types";
 import { photo, templateImages } from "./content";
+import NavButton from "@/components/NavButton";
+import { ArrowLeftIcon } from "@radix-ui/react-icons";
 
 export const metadata: Metadata = {
   title: "4D Maze",
@@ -20,11 +22,17 @@ export const metadata: Metadata = {
 export default async function Maze() {
   return (
     <div className="flex flex-col gap-4">
-      <p>This 4-dimensional physical maze was designed from scratch by me.</p>
+      <p>This 4-dimensional maze was designed from scratch by me.</p>
       <p>
-        Each of the 4 template pages represents a pair of cubes, attached on 2
-        surfaces, which are in turn attached to 2 other pairs of cubes, forming
-        a 3D{" "}
+        Each of the 4 template pages represents a pair of cubes (
+        <InlineLink
+          href="https://en.wikipedia.org/wiki/Cube#Construction"
+          external
+        >
+          1 S, 1 T
+        </InlineLink>
+        ), attached on 2 surfaces, which are in turn attached to 2 other pairs
+        of cubes, forming a 3D{" "}
         <InlineLink
           href="https://en.wikipedia.org/wiki/M%C3%B6bius_strip"
           external
@@ -63,6 +71,9 @@ export default async function Maze() {
         <li>Cut them out, according to the mini diagrams on the page.</li>
         <li>Fold and tape the 4D maze together by matching labelled edges.</li>
       </ol>
+      <NavButton href={PATH_ABOUT} className="pl-0 self-start">
+        <ArrowLeftIcon /> About
+      </NavButton>
       <section className="flex justify-center items-center mt-8 mb-4">
         <div className="w-1/2 sm:w-1/3">
           <Photo image={photo} light={false} loadMethod="border" />
