@@ -19,7 +19,5 @@ This repo holds the code to my personal website at [plett.dev](https://plett.dev
 ### License
 
 1. Feel free to use this repository as inspiration.
-2. Please don't copy the code directly.
+2. If cloning, please remove all my personal information before deploying.
 3. Crediting the author is appreciated.
-
-If you are cloning this repository, please remove all my personal information before you deploy.
