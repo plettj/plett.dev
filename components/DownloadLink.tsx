@@ -1,27 +1,32 @@
-import Link from "next/link";
-import { cn } from "@/lib/utils";
+"use client";
 
-export default function InlineLink({
+import { cn } from "@/lib/utils";
+import { saveAs } from "file-saver";
+
+export default function DownloadLink({
   children,
-  href,
-  external = false,
+  filepath,
+  filename,
   className,
 }: Readonly<{
   children: React.ReactNode;
-  href: string;
-  external?: boolean;
+  filepath: string;
+  filename: string;
   className?: string;
 }>) {
+  const saveFile = () => {
+    saveAs(filepath, filename);
+  };
+
   return (
-    <Link
-      href={href}
-      {...(external ? { rel: "noopener noreferrer", target: "_blank" } : {})}
+    <span
+      onClick={saveFile}
       className={cn(
         "p-0 h-6 -my-1 text-muted-foreground font-semibold decoration-dotted underline sm:decoration-solid sm:no-underline hover:underline",
         className
       )}
     >
       {children}
-    </Link>
+    </span>
   );
 }

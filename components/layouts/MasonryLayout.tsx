@@ -12,7 +12,7 @@ export type MasonryImage = {
   /** Image's original size in pixels. [width, height] */
   size: [number, number];
   /** See `[root]/scripts/generateBlurData/README.md` for more information. */
-  blurDataURL: string;
+  blurDataURL?: string;
 };
 
 type MasonryLayoutProps = {
