@@ -26,7 +26,7 @@ export default function BackButton({
     <Button
       onClick={router.back}
       variant={variant}
-      className={cn(hasHistory && "hidden")}
+      className={cn(!hasHistory && "hidden")}
     >
       Go back
     </Button>

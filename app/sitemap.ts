@@ -2,6 +2,7 @@ import {
   BASE_URL,
   PATH_ABOUT,
   PATH_CV,
+  PATH_MAZE,
   PATH_NOTES,
   PATH_PHOTOGRAPHY,
   PATH_WRITING,
@@ -48,6 +49,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: "2024-10-20",
       changeFrequency: "monthly",
       priority: 0.4,
+    },
+    {
+      url: `${BASE_URL}${PATH_MAZE}`,
+      lastModified: "2024-11-28",
+      changeFrequency: "yearly",
+      priority: 0.3,
     },
   ];
 
