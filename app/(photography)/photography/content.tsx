@@ -391,7 +391,7 @@ const photos: MasonryImage[] = [
   // {
   //   src: `${PATH_PHOTOGRAPHY_IMAGES}/Victoria_Sprout_On_Lake.jpg`,
   //   alt: "A sprouting plant hogs the view of Vancouver Island's many hills and lakes",
-  //   location: "Victoria",
+  //   location: "Victoria, Canada",
   //   year: "2020",
   //   size: [4032, 2268],
   //   blurDataURL:
