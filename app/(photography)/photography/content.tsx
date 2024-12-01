@@ -30,13 +30,13 @@ const photos: MasonryImage[] = [
       "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABgL/xAAfEAEAAQQCAwEAAAAAAAAAAAABAgADBRESIQQTMTL/xAAUAQEAAAAAAAAAAAAAAAAAAAAE/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAECITH/2gAMAwEAAhEDEQA/AFWCx2MueLCEnkty72Sej2oaKI2sFh7luE534c5Au9721OIB8Jkm5c5dv39NEpSSSCgPyiQtYuuI/9k=",
   },
   {
-    src: `${PATH_PHOTOGRAPHY_IMAGES}/Louisiana_Art_Museum_Sea_Prints.jpg`,
-    alt: "Three plain prints of the sky and the sea sit silently on a dimly lit wall",
-    location: "Louisiana Art Museum",
+    src: `${PATH_PHOTOGRAPHY_IMAGES}/Paris_Eiffel_Tower.jpg`,
+    alt: "The nighttime Eiffel Tower decorated with the Olympic Rings",
+    location: "Paris",
     year: "2024",
-    size: [2233, 3971],
+    size: [1134, 2048],
     blurDataURL:
-      "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAABAUGB//EACYQAAIBAQYGAwAAAAAAAAAAAAECAwAEBhIhMkEFERMxQlFhkfH/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AK4cDuRPZWAdlkJcKcDeGrb9250jS591ZkWWO0MUcYlJyyPwa0uKR+jrb7oRmbEcz390VJH/2Q==",
+      "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQQH/8QAIxAAAQIFAwUAAAAAAAAAAAAAAQIEAAMFERIhMUEUFVFSgf/EABQBAQAAAAAAAAAAAAAAAAAAAAT/xAAaEQABBQEAAAAAAAAAAAAAAAABAAIDIUET/9oADAMBAAIRAxEAPwDGqV21hSJjFyXkwz79SqSgYq9QLi5x341gA0QXOL2QU8FSFg/RaFnsxYcWC1AWHMUKUrI6nfzARM5ljUvmDRxf/9k=",
   },
   {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Orestad_Street.jpg`,
@@ -48,18 +48,16 @@ const photos: MasonryImage[] = [
       "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABwQG/8QAJhAAAgIABQEJAAAAAAAAAAAAAQIDBAAFBhIhQQcREyIjQlFhof/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAGBEBAAMBAAAAAAAAAAAAAAAAAQARIRL/2gAMAwEAAhEDEQA/AJ9A6xzHLNI5yyLBes1AjxW5CyNF4nl3Ovu6Ecj74wcWLTSzySWLdozMxZya7Elief3Gm7G1Emj85WQBw62N4bnd6fX5wQPNIrsFkcAHuADHFOUDYLFcn//Z",
   },
   {
-    src: `${PATH_PHOTOGRAPHY_IMAGES}/Paris_Eiffel_Tower.jpg`,
-    alt: "The nighttime Eiffel Tower decorated with the Olympic Rings",
-    location: "Paris",
+    src: `${PATH_PHOTOGRAPHY_IMAGES}/Sigriswil_Panorama_Bridge.jpg`,
+    alt: "The extremely fogged Sigriswil Panorama Bridge from the show Crash Landing on You in Interlaken, Switzerland",
+    location: "Sigriswil",
     year: "2024",
-    size: [1134, 2048],
-    blurDataURL:
-      "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQQH/8QAIxAAAQIFAwUAAAAAAAAAAAAAAQIEAAMFERIhMUEUFVFSgf/EABQBAQAAAAAAAAAAAAAAAAAAAAT/xAAaEQABBQEAAAAAAAAAAAAAAAABAAIDIUET/9oADAMBAAIRAxEAPwDGqV21hSJjFyXkwz79SqSgYq9QLi5x341gA0QXOL2QU8FSFg/RaFnsxYcWC1AWHMUKUrI6nfzARM5ljUvmDRxf/9k=",
+    size: [2268, 4032],
   },
   {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Australia_Hiding_Snails.jpg`,
     alt: "Hiding rock snails on an Australian beach",
-    location: "Great Ocean Road",
+    location: "Peterborough, Australia",
     year: "2018",
     size: [1280, 995],
     blurDataURL:
@@ -68,7 +66,7 @@ const photos: MasonryImage[] = [
   {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Australia_Beach_Shell.jpg`,
     alt: "The perfect shell on a perfect sandy beach in Australia",
-    location: "Great Ocean Road",
+    location: "Skenes Creek",
     year: "2018",
     size: [1280, 1755],
     blurDataURL:
@@ -77,7 +75,7 @@ const photos: MasonryImage[] = [
   {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Australia_Beach_Shells.jpg`,
     alt: "Untouched shells arranged in perfect order on an Australian beach",
-    location: "Great Ocean Road",
+    location: "Skenes Creek",
     year: "2018",
     size: [1280, 1734],
     blurDataURL:
@@ -111,8 +109,38 @@ const photos: MasonryImage[] = [
       "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgMH/8QAIBAAAQMEAgMAAAAAAAAAAAAAAQIDBAAFESEHEgYxkf/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8A2+ddLZDmNwpU+KzLc6hDLjgC1diQnA9nJBqpbGTqh3nLTauXuPlKbQVFudklIzpsEfDsU4I3Rkj/2Q==",
   },
   {
+    src: `${PATH_PHOTOGRAPHY_IMAGES}/Louisiana_Art_Museum_Sea_Prints.jpg`,
+    alt: "Three plain prints of the sky and the sea sit silently on a dimly lit wall",
+    location: "Humlebaek, Denmark",
+    year: "2024",
+    size: [2233, 3971],
+    blurDataURL:
+      "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAABAUGB//EACYQAAIBAQYGAwAAAAAAAAAAAAECAwAEBhIhMkEFERMxQlFhkfH/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AK4cDuRPZWAdlkJcKcDeGrb9250jS591ZkWWO0MUcYlJyyPwa0uKR+jrb7oRmbEcz390VJH/2Q==",
+  },
+  {
+    src: `${PATH_PHOTOGRAPHY_IMAGES}/Alsace_Haut-Koenigsbourg_Castle.jpg`,
+    alt: "A hilltop view above the fog of the sprawling French hills from Haut-Koenigsbourg Castle in Alsace",
+    location: "Alsace, France",
+    year: "2024",
+    size: [2863, 1606],
+  },
+  {
+    src: `${PATH_PHOTOGRAPHY_IMAGES}/Lauterbrunnen_Jungfrau_Peak_View.jpg`,
+    alt: "Snow-capped peaks, viewed from the top of Jungfrau in the Swiss Alps at Lauterbrunnen",
+    location: "Lauterbrunnen",
+    year: "2024",
+    size: [4032, 2268],
+  },
+  {
+    src: `${PATH_PHOTOGRAPHY_IMAGES}/Lauterbrunnen_Valley_Fog.jpg`,
+    alt: "The Lauterbrunnen Valley with sun-kissed fog in the Swiss Alps",
+    location: "Lauterbrunnen",
+    year: "2024",
+    size: [2268, 3376],
+  },
+  {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Cube_Flying.jpg`,
-    alt: "A Rubik's cube flying above ",
+    alt: "A Rubik's cube flying above Mount Tolmie in Victoria",
     location: "Victoria",
     year: "2020",
     size: [1280, 1107],
@@ -137,15 +165,15 @@ const photos: MasonryImage[] = [
     blurDataURL:
       "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAUG/8QAIxAAAgICAQIHAAAAAAAAAAAAAQIDBQQRACExEhMiQVGBof/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAGhEAAgIDAAAAAAAAAAAAAAAAAQIAERIhMv/aAAwDAQACEQMRAD8AzVuk9fT4Vaq+HNmlWbJCeryVA6Ake50N/fBNk2bsWCMdnexN3/eCopHlsLNpHZ2M0oJY7JHxyvhIjYcDMqljGpJI79OTLFnKjVVDgrdT/9k=",
   },
-  {
-    src: `${PATH_PHOTOGRAPHY_IMAGES}/Food_Japanese_Curry.jpg`,
-    alt: "Japanese curry on rice, plated artistically",
-    location: "Kitchener-Waterloo",
-    year: "2023",
-    size: [1280, 715],
-    blurDataURL:
-      "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABQf/xAAkEAACAgECBQUAAAAAAAAAAAABAgMRBQAEBhIyUWEHITFBQv/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAXEQADAQAAAAAAAAAAAAAAAAABAhEA/9oADAMBAAIRAxEAPwAXO4fD5GbbZPiDezbaTcgs84mYCMgXyqvuBRsUBZryTqdJm80qgR7nmQClLKLI+r86Y9W40XjWAKigPGrOAOon5J7nTcMEQhjqJOkfkdtBFK2m5uwaQTf/2Q==",
-  },
+  // {
+  //   src: `${PATH_PHOTOGRAPHY_IMAGES}/Food_Japanese_Curry.jpg`,
+  //   alt: "Japanese curry on rice, plated artistically",
+  //   location: "Kitchener-Waterloo",
+  //   year: "2023",
+  //   size: [1280, 715],
+  //   blurDataURL:
+  //     "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABQf/xAAkEAACAgECBQUAAAAAAAAAAAABAgMRBQAEBhIyUWEHITFBQv/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAXEQADAQAAAAAAAAAAAAAAAAABAhEA/9oADAMBAAIRAxEAPwAXO4fD5GbbZPiDezbaTcgs84mYCMgXyqvuBRsUBZryTqdJm80qgR7nmQClLKLI+r86Y9W40XjWAKigPGrOAOon5J7nTcMEQhjqJOkfkdtBFK2m5uwaQTf/2Q==",
+  // },
   {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Food_Moms_Baking.jpg`,
     alt: "Macro shot of macarons, almond melt-away cookies, and other baking",
@@ -154,6 +182,13 @@ const photos: MasonryImage[] = [
     size: [1280, 544],
     blurDataURL:
       "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgQF/8QAIxAAAgEEAQMFAAAAAAAAAAAAAQIDAAQFESEGEkETFEKBsf/EABQBAQAAAAAAAAAAAAAAAAAAAAT/xAAaEQEAAQUAAAAAAAAAAAAAAAABAgADBBET/9oADAMBAAIRAxEAPwDTtbWz9CPF9QGZsoy973SqsaM4Gyg0NADf3qqfb5xeIMhgREOEBthsDx8T+0My15cr1THEtzMI5Ek70DnTaYgbHnQAFJk4UAcACjQxy4dB1ukTzp2nkghX/9k=",
+  },
+  {
+    src: `${PATH_PHOTOGRAPHY_IMAGES}/Ribeauville_Alley.jpg`,
+    alt: "A mild but posh residential alleyway in Ribeauvillé, Alsace",
+    location: "Ribeauvillé",
+    year: "2024",
+    size: [2268, 3818],
   },
   {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Paris_Protesting_Locks.jpg`,
@@ -200,15 +235,15 @@ const photos: MasonryImage[] = [
     blurDataURL:
       "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAgQGB//EACEQAAICAAYDAQAAAAAAAAAAAAECAwQABRESIVEGBzFx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABcRAQADAAAAAAAAAAAAAAAAAAEAESH/2gAMAwEAAhEDEQA/AIp7kNufO7vkTNNfkEiVYksBGryBmAG06aAccc/PnOArZjmgrxBrswOwajcvWHvbMESew66pFGqzrG0oCgCQ9t2f3Gn16dZK8SrXhVQoAAQAAaYNUq7GogGT/9k=",
   },
-  {
-    src: `${PATH_PHOTOGRAPHY_IMAGES}/New_Zealand_Hobbit_Hills.jpg`,
-    alt: "A dragon lantern stands over the original Hobbit Hills in New Zealand",
-    location: "New Zealand",
-    year: "2018",
-    size: [1280, 1280],
-    blurDataURL:
-      "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABwQG/8QAHhAAAwACAgMBAAAAAAAAAAAAAQIDBBEABQYHMRP/xAAUAQEAAAAAAAAAAAAAAAAAAAAE/8QAGREAAgMBAAAAAAAAAAAAAAAAAQIAAzEE/9oADAMBAAIRAxEAPwCrG6vF8u7XNxs+IhGSzXDs82S6u6MzTZvhAKkgEfAdHmLt4t2sbUkeuyiUYrsTJB0eIPr12fvskuzMV/AjZ3o6bibbHibOTGZJY7JUccnQ1ZI0QTULaA2Gf//Z",
-  },
+  // {
+  //   src: `${PATH_PHOTOGRAPHY_IMAGES}/New_Zealand_Hobbit_Hills.jpg`,
+  //   alt: "A dragon lantern stands over the original Hobbit Hills in New Zealand",
+  //   location: "New Zealand",
+  //   year: "2018",
+  //   size: [1280, 1280],
+  //   blurDataURL:
+  //     "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABwQG/8QAHhAAAwACAgMBAAAAAAAAAAAAAQIDBBEABQYHMRP/xAAUAQEAAAAAAAAAAAAAAAAAAAAE/8QAGREAAgMBAAAAAAAAAAAAAAAAAQIAAzEE/9oADAMBAAIRAxEAPwCrG6vF8u7XNxs+IhGSzXDs82S6u6MzTZvhAKkgEfAdHmLt4t2sbUkeuyiUYrsTJB0eIPr12fvskuzMV/AjZ3o6bibbHibOTGZJY7JUccnQ1ZI0QTULaA2Gf//Z",
+  // },
   {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Malmo_Intercity_Tree.jpg`,
     alt: "A tree hidden between buildings at the end of an alley in Malmö",
@@ -255,6 +290,15 @@ const photos: MasonryImage[] = [
       "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAUI/8QAKBAAAQIEAwgDAAAAAAAAAAAAAQIEAAMFERIhgQYTFBUxNEJhk7HR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAXEQADAQAAAAAAAAAAAAAAAAAAAhMR/9oADAMBAAIRAxEAPwBmyb+s1qlzHdXZSaUrHhQAreCak+QtfIdD7EXeTLOfHI0kkj7jL7CpPxKSgPXQQnIJE1VhpeFGqP7986+ZX7FFnwGan//Z",
   },
   {
+    src: `${PATH_PHOTOGRAPHY_IMAGES}/San_Francisco_Google.jpg`,
+    alt: "Roofs converge at many angles at the Google Headquarters in San Francisco",
+    location: "San Francisco",
+    year: "2023",
+    size: [1134, 2048],
+    blurDataURL:
+      "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgEH/8QAIxAAAgEEAAYDAAAAAAAAAAAAAQMCAAQFEQYHEhMhMTJhkf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAXEQADAQAAAAAAAAAAAAAAAAABAhEA/9oADAMBAAIRAxEAPwBMeLsFi8fN9uxlwdmI7S9y6j6H3WfXHNLJd9mgpY6jqBUSY+fVEGJXGwuGRXAMi+AjIRGwDvwDVLWb+cv2kXa0m4FVkA3/2Q==",
+  },
+  {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Australia_Tide_Plants.jpg`,
     alt: "Obscure macro of wobbling tidal plants on an Australian beach",
     location: "Auckland",
@@ -272,33 +316,15 @@ const photos: MasonryImage[] = [
     blurDataURL:
       "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAABAUGB//EACUQAAIBAwMCBwAAAAAAAAAAAAECAwQREgAFIQYTIjJBUXSh0f/EABQBAQAAAAAAAAAAAAAAAAAAAAT/xAAYEQADAQEAAAAAAAAAAAAAAAABAhEAIv/aAAwDAQACEQMRAD8AAnappeooKJqncJIgi5HGSXLxNc5AhSLe44+tWrdM0+RtX7pb5Mn5pZu6KYzIVHceZWZrcsQOCTrS4lHaTgeUemiOzQQ5ahKed//Z",
   },
-  {
-    src: `${PATH_PHOTOGRAPHY_IMAGES}/Paris_Louvre.jpg`,
-    alt: "The iconic Louvre Pyramid from below",
-    location: "Paris",
-    year: "2024",
-    size: [1280, 713],
-    blurDataURL:
-      "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABwUI/8QAIBAAAgIDAAEFAAAAAAAAAAAAAQIDBAAFEQYTMUFCUv/EABQBAQAAAAAAAAAAAAAAAAAAAAH/xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAMAwEAAhEDEQA/AEu35DrqGzjoTThJWIBHOhe+3T8ZZ9SHM823d7U7OzMzOxJJ6SenEfU27B1VMmxMSYU+5/IxHYTL/9k=",
-  },
-  {
-    src: `${PATH_PHOTOGRAPHY_IMAGES}/San_Francisco_Google.jpg`,
-    alt: "Roofs converge at many angles at the Google Headquarters in San Francisco",
-    location: "San Francisco",
-    year: "2023",
-    size: [1134, 2048],
-    blurDataURL:
-      "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgEH/8QAIxAAAgEEAAYDAAAAAAAAAAAAAQMCAAQFEQYHEhMhMTJhkf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAXEQADAQAAAAAAAAAAAAAAAAABAhEA/9oADAMBAAIRAxEAPwBMeLsFi8fN9uxlwdmI7S9y6j6H3WfXHNLJd9mgpY6jqBUSY+fVEGJXGwuGRXAMi+AjIRGwDvwDVLWb+cv2kXa0m4FVkA3/2Q==",
-  },
-  {
-    src: `${PATH_PHOTOGRAPHY_IMAGES}/Victoria_Street_Art.jpg`,
-    alt: "A small abstract canvas in a run-down part of town brings a glimmer of hope",
-    location: "Victoria",
-    year: "2021",
-    size: [1280, 2225],
-    blurDataURL:
-      "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgcI/8QAIxAAAgEDBAEFAAAAAAAAAAAAAQIDBAURAAYHEmEWISJBUf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAATH/2gAMAwEAAhEDEQA/AGW4eOts3D1HdqylKSsZpjIpYCM9AcgA4/T51TNqzU67YtC0zRzQCjhEcnUDuvQYOPrI1j3ky5Vz7gw9bUsD7kGVjn4r50zst/vEVmoI4rtcEjSnjVVWpcAAKMADOnRmP//Z",
-  },
+  // {
+  //   src: `${PATH_PHOTOGRAPHY_IMAGES}/Victoria_Street_Art.jpg`,
+  //   alt: "A small abstract canvas in a run-down part of town brings a glimmer of hope",
+  //   location: "Victoria",
+  //   year: "2021",
+  //   size: [1280, 2225],
+  //   blurDataURL:
+  //     "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgcI/8QAIxAAAgEDBAEFAAAAAAAAAAAAAQIDBAURAAYHEmEWISJBUf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAATH/2gAMAwEAAhEDEQA/AGW4eOts3D1HdqylKSsZpjIpYCM9AcgA4/T51TNqzU67YtC0zRzQCjhEcnUDuvQYOPrI1j3ky5Vz7gw9bUsD7kGVjn4r50zst/vEVmoI4rtcEjSnjVVWpcAAKMADOnRmP//Z",
+  // },
   {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/San_Francisco_Transcendence.jpg`,
     alt: "The Transcendence monument's dark surface reflects American high rises at midday",
@@ -335,15 +361,15 @@ const photos: MasonryImage[] = [
     blurDataURL:
       "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgIE/8QAIhAAAwACAAUFAAAAAAAAAAAAAQIDAAQFBhExQRQhIlFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgX/xAAfEQACAQIHAAAAAAAAAAAAAAABAgQA8AMSITFRYXH/2gAMAwEAAhEDEQA/ABfAdLi99B9qkGZ0r2lITcoVPyUuOxYgEfQzWvLDOoa0XlUjq6TuoVT5A/Bl8wWqm9rhKOo9YR7MR4ODJorzVnVWYgEkjqScS4oUbA+3elUZDiOxj5QQvPdf/9k=",
   },
-  {
-    src: `${PATH_PHOTOGRAPHY_IMAGES}/Victoria_Garden_Walkway.jpg`,
-    alt: "A perfect garden walkway in downtown Victoria",
-    location: "Victoria",
-    year: "2023",
-    size: [1280, 505],
-    blurDataURL:
-      "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQMH/8QAJRAAAQMDAgYDAAAAAAAAAAAAAQIDBAAFERQxBhIhIiRBI1Kh/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABgRAAMBAQAAAAAAAAAAAAAAAAABAxFB/9oADAMBAAIRAxEAPwAKTc5M+Y7GtzGjefKVd5W2lISDnrjc+se6Tak3QNIGohjAHQKQf0jNS4f8uDeWZXzNNBam0OdyUEJyCAdqyNcuTzq8h7f7mgpFrMYfT//Z",
-  },
+  // {
+  //   src: `${PATH_PHOTOGRAPHY_IMAGES}/Victoria_Garden_Walkway.jpg`,
+  //   alt: "A perfect garden walkway in downtown Victoria",
+  //   location: "Victoria",
+  //   year: "2023",
+  //   size: [1280, 505],
+  //   blurDataURL:
+  //     "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQMH/8QAJRAAAQMDAgYDAAAAAAAAAAAAAQIDBAAFERQxBhIhIiRBI1Kh/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABgRAAMBAQAAAAAAAAAAAAAAAAABAxFB/9oADAMBAAIRAxEAPwAKTc5M+Y7GtzGjefKVd5W2lISDnrjc+se6Tak3QNIGohjAHQKQf0jNS4f8uDeWZXzNNBam0OdyUEJyCAdqyNcuTzq8h7f7mgpFrMYfT//Z",
+  // },
   {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Victoria_Hatley_Castle_Japanese_Black_Pine.jpg`,
     alt: "A trimmed Japanese Black Pine is center stage at Hatley Castle's Japanese gardens",
@@ -353,6 +379,24 @@ const photos: MasonryImage[] = [
     blurDataURL:
       "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABgX/xAAkEAACAQMDAwUAAAAAAAAAAAABAgMEBREAEjEGEyEUI0GSof/EABUBAQEAAAAAAAAAAAAAAAAAAAIF/8QAGBEBAAMBAAAAAAAAAAAAAAAAAQACEQP/2gAMAwEAAhEDEQA/ADNys/VlwuVRFNV1zOh7mFcpsjz8IB54/DpLBaqwwRma3VxlKjeQCATjzqtYHZ7jLUOxaf0+3uE5bG7jPOlImlwPcf7HUl7NcyNCs//Z",
   },
+  {
+    src: `${PATH_PHOTOGRAPHY_IMAGES}/Paris_Louvre.jpg`,
+    alt: "The iconic Louvre Pyramid from below",
+    location: "Paris",
+    year: "2024",
+    size: [1280, 713],
+    blurDataURL:
+      "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABwUI/8QAIBAAAgIDAAEFAAAAAAAAAAAAAQIDBAAFEQYTMUFCUv/EABQBAQAAAAAAAAAAAAAAAAAAAAH/xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAMAwEAAhEDEQA/AEu35DrqGzjoTThJWIBHOhe+3T8ZZ9SHM823d7U7OzMzOxJJ6SenEfU27B1VMmxMSYU+5/IxHYTL/9k=",
+  },
+  // {
+  //   src: `${PATH_PHOTOGRAPHY_IMAGES}/Victoria_Sprout_On_Lake.jpg`,
+  //   alt: "A sprouting plant hogs the view of Vancouver Island's many hills and lakes",
+  //   location: "Victoria",
+  //   year: "2020",
+  //   size: [4032, 2268],
+  //   blurDataURL:
+  //     "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQQH/8QAJxAAAQIDBQkAAAAAAAAAAAAAAQIEAAURAwYUIUEHEhMiIzFRcZL/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/8QAGREAAgMBAAAAAAAAAAAAAAAAAAECBCED/9oADAMBAAIRAxEAPwBOSbQ3r9oFYyV8ezHURhVBVPNCrMeotN6ZuSSl/Kt09qtNPqMdswBL2CwAFqRmrU8usKAmgzhOduTWhTrpPD//2Q==",
+  // },
   {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Malmo_Chameleon.jpg`,
     alt: "A chameleon looks us in the eye at the Malmö Natural History Museum",
@@ -370,15 +414,6 @@ const photos: MasonryImage[] = [
     size: [1280, 708],
     blurDataURL:
       "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAwUGB//EACQQAAEDAgQHAAAAAAAAAAAAAAECAwQAEQUSITEGB0FUk8HR/8QAFAEBAAAAAAAAAAAAAAAAAAAABf/EABkRAAIDAQAAAAAAAAAAAAAAAAABAxQxUf/aAAwDAQACEQMRAD8AsnOO1ojtoYwrEFyFR3wFZgkKXcZTYna1/VEa5ozm2kIdwGSXEgJUbjUjfpWOuSpAQCH3QbjXOaWCfL7qR5D9o23J0RqxrUf/2Q==",
-  },
-  {
-    src: `${PATH_PHOTOGRAPHY_IMAGES}/Victoria_Sprout_On_Lake.jpg`,
-    alt: "A sprouting plant hogs the view of Vancouver Island's many hills and lakes",
-    location: "Victoria",
-    year: "2020",
-    size: [4032, 2268],
-    blurDataURL:
-      "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQQH/8QAJxAAAQIDBQkAAAAAAAAAAAAAAQIEAAURAwYUIUEHEhMiIzFRcZL/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/8QAGREAAgMBAAAAAAAAAAAAAAAAAAECBCED/9oADAMBAAIRAxEAPwBOSbQ3r9oFYyV8ezHURhVBVPNCrMeotN6ZuSSl/Kt09qtNPqMdswBL2CwAFqRmrU8usKAmgzhOduTWhTrpPD//2Q==",
   },
 ];
 

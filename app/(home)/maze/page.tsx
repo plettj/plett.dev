@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Josiah's 4-dimensional maze, an original design that you can download and build yourself.",
   openGraph: getOGData({
-    title: "4D MAZE",
+    title: "4D Maze",
     description:
       "Josiah's 4-dimensional maze, an original design that you can download and build yourself.",
     url: `${BASE_URL}${PATH_MAZE}`,
