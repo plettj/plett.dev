@@ -50,7 +50,7 @@ export const professionalItems: AboutListItem[] = [
     year: "2013",
     children: (
       <p>
-        You can find some of the 30+ games I&apos;ve made since age 10 on{" "}
+        You can find most of the 30+ games I&apos;ve made since age 10 on{" "}
         <InlineLink href="https://plett.fun/" external>
           plett.fun
         </InlineLink>

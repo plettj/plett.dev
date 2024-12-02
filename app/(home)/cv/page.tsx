@@ -17,8 +17,11 @@ export default async function CV() {
   return (
     <div className="flex flex-col gap-4">
       <p>
-        Click <InlineLink href={PATH_CV_STATIC}>here</InlineLink> to open my CV
-        in a separate tab.
+        Click{" "}
+        <InlineLink href={PATH_CV_STATIC} external>
+          here
+        </InlineLink>{" "}
+        to open my CV in a separate tab.
       </p>
       <iframe
         className="h-[126vw] max-h-[835px] mt-8 mb-2"
