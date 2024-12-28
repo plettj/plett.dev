@@ -458,7 +458,14 @@ export const hobbyItems: AboutListItem[] = [
     children: (
       <p>
         I can juggle, hold my breath for 6 minutes, throw a card 50m, and solve
-        Rubik&apos;s cubes blindfolded.
+        Rubik&apos;s cubes blindfolded. Also,{" "}
+        <InlineLink
+          href="https://humanbenchmark.com/users/60f396cf0a4755000835ec33"
+          external
+        >
+          human benchmark
+        </InlineLink>{" "}
+        is fun.
       </p>
     ),
   },
