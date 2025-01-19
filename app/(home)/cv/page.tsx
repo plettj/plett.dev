@@ -21,7 +21,7 @@ export default async function CV() {
         <InlineLink href={PATH_CV_STATIC} external>
           here
         </InlineLink>{" "}
-        to open my CV in a separate tab.
+        to open my CV as a PDF.
       </p>
       <iframe
         className="h-[126vw] max-h-[835px] mt-8 mb-2"

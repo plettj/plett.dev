@@ -98,24 +98,15 @@ export const professionalItems: AboutListItem[] = [
         <InlineLink href="https://github.com/plettj/hagnusmiemann" external>
           C++ chess engine
         </InlineLink>{" "}
-        ranked in the top 200 engines worldwide. I also designed{" "}
+        ranked top-200 worldwide. I built{" "}
+        <InlineLink href="https://github.com/plettj/gongo" external>
+          this Go engine
+        </InlineLink>{" "}
+        in Golang, and designed{" "}
         <InlineLink href="https://github.com/Notoh/UnboxTheGoose" external>
           this
         </InlineLink>{" "}
         Rubik&apos;s cube-solving robot and its custom engine.
-        {/* Currently
-        building a{" "}
-        <InlineLink href="https://en.wikipedia.org/wiki/Go_(game)" external>
-          Go
-        </InlineLink>{" "}
-        engine in{" "}
-        <InlineLink
-          href="https://en.wikipedia.org/wiki/Go_(programming_language)"
-          external
-        >
-          Go
-        </InlineLink>
-        .*/}
       </p>
     ),
   },
