@@ -16,7 +16,7 @@ export default function PhotographyContent() {
       <div className="w-full max-w-[140ch] mx-auto pb-8">
         <MasonryLayout images={photos} loadMethod={loadMethod} />
       </div>
-      <div className="w-full max-w-[80ch] mx-auto">
+      <div className="w-full max-w-[72ch] mx-auto">
         <p>
           A nice custom masonry layout, built by me.{" "}
           <InlineLink href="https://github.com/plettj/plett.dev">

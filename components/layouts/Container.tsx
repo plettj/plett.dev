@@ -15,18 +15,18 @@ export default function Container({
     <main
       className={cn(
         "flex flex-col text-sm px-6",
-        fullWidth ? "w-screen sm:px-16" : "w-full max-w-[80ch] sm:px-8",
+        fullWidth ? "w-screen sm:px-16" : "w-full max-w-[80ch] sm:px-8"
       )}
     >
       {!hideNavBar && (
-        <div className="max-w-[80ch] w-full mx-auto">
+        <div className="max-w-[72ch] w-full mx-auto">
           <Navigation />
         </div>
       )}
 
       {children}
 
-      <div className="max-w-[80ch] w-full mx-auto">
+      <div className="max-w-[72ch] w-full mx-auto">
         <Footer />
       </div>
     </main>
