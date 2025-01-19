@@ -1,14 +1,5 @@
-import InlineLink from "@/components/InlineLink";
+import HomeTabs from "@/components/layouts/HomeTabs";
 import ProfilePhoto from "@/components/ProfilePhoto";
-import ResponsiveInlineLink from "@/components/ResponsiveInlineLink";
-import {
-  PATH_ABOUT,
-  PATH_CV,
-  PATH_CV_STATIC,
-  URL_MY_GITHUB,
-  URL_MY_LINKEDIN,
-  PATH_WRITING,
-} from "@/lib/constants";
 
 export default async function Home() {
   return (
@@ -33,44 +24,9 @@ export default async function Home() {
           size={256}
         />
       </div>
+
       <p className="mt-2">Are you...</p>
-      <ul className="ml-6 list-disc [&>li]:mt-2">
-        <li>
-          A <span className="font-semibold dark:font-bold">recruiter?</span> See
-          my{" "}
-          <ResponsiveInlineLink
-            desktopHref={PATH_CV}
-            mobileHref={PATH_CV_STATIC}
-          >
-            CV
-          </ResponsiveInlineLink>
-          ,{" "}
-          <InlineLink href={URL_MY_LINKEDIN} external>
-            LinkedIn
-          </InlineLink>
-          , or{" "}
-          <InlineLink href={URL_MY_GITHUB} external>
-            GitHub
-          </InlineLink>
-          .
-        </li>
-        <li>
-          A <span className="font-semibold dark:font-bold">gamer?</span> Find my
-          games on{" "}
-          <InlineLink href="https://plett.fun/" external>
-            plett.fun
-          </InlineLink>
-          .
-        </li>
-        <li>
-          A <span className="font-semibold dark:font-bold">reader?</span> Check
-          out <InlineLink href={PATH_WRITING}>my writing</InlineLink>.
-        </li>
-        <li>
-          Just exploring? Start with my{" "}
-          <InlineLink href={PATH_ABOUT}>about me</InlineLink> page.
-        </li>
-      </ul>
+      <HomeTabs />
     </div>
   );
 }
