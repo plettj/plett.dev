@@ -1,5 +1,6 @@
 import InlineLink from "@/components/InlineLink";
 import ProfilePhoto from "@/components/ProfilePhoto";
+import ResponsiveInlineLink from "@/components/ResponsiveInlineLink";
 import {
   PATH_ABOUT,
   PATH_CV,
@@ -37,17 +38,12 @@ export default async function Home() {
         <li>
           A <span className="font-semibold dark:font-bold">recruiter?</span> See
           my{" "}
-          {/* Open in a new tab on mobile, and within my website on desktop */}
-          <InlineLink href={PATH_CV} className="hidden md:inline-block">
-            CV
-          </InlineLink>
-          <InlineLink
-            href={PATH_CV_STATIC}
-            className="inline-block md:hidden"
-            external
+          <ResponsiveInlineLink
+            desktopHref={PATH_CV}
+            mobileHref={PATH_CV_STATIC}
           >
             CV
-          </InlineLink>
+          </ResponsiveInlineLink>
           ,{" "}
           <InlineLink href={URL_MY_LINKEDIN} external>
             LinkedIn
