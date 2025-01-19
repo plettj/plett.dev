@@ -10,6 +10,7 @@ import {
   PATH_NOTES,
   PATH_PHOTOGRAPHY,
   PATH_WRITING,
+  URL_MY_GAMES,
 } from "@/lib/constants";
 
 export default function Navigation() {
@@ -23,7 +24,7 @@ export default function Navigation() {
       <NavButton href={PATH_ABOUT} active={pathname === PATH_ABOUT}>
         About
       </NavButton>
-      <NavButton href={"https://plett.fun"} external>
+      <NavButton href={URL_MY_GAMES} external>
         Games <ExternalLinkIcon />
       </NavButton>
       <NavButton href={PATH_WRITING} active={pathname.includes(PATH_WRITING)}>

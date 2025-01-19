@@ -1,5 +1,6 @@
 import HomeTabs from "@/components/layouts/HomeTabs";
 import ProfilePhoto from "@/components/ProfilePhoto";
+import { PATH_PFP_DARK, PATH_PFP_LIGHT } from "@/lib/constants";
 
 export default async function Home() {
   return (
@@ -16,13 +17,7 @@ export default async function Home() {
             2025.
           </p>
         </div>
-        <ProfilePhoto
-          src={[
-            "/images/home/Profile_Light.jpg",
-            "/images/home/Profile_Dark.jpg",
-          ]}
-          size={256}
-        />
+        <ProfilePhoto src={[PATH_PFP_LIGHT, PATH_PFP_DARK]} size={256} />
       </div>
 
       <p className="mt-2">Are you...</p>

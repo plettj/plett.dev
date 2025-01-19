@@ -86,10 +86,7 @@ export const professionalItems: AboutListItem[] = [
           C++ chess engine
         </InlineLink>{" "}
         ranked top-200 worldwide. I built{" "}
-        <InlineLink
-          href="https://github.com/plettj/gongo?tab=readme-ov-file"
-          external
-        >
+        <InlineLink href="https://github.com/plettj/gongo" external>
           this Go engine
         </InlineLink>{" "}
         in Golang, and designed{" "}
