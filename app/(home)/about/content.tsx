@@ -1,7 +1,20 @@
 import InlineLink from "@/components/InlineLink";
 import { AboutListItem } from "@/components/layouts/AboutList";
 import Soccer from "@/components/Soccer";
-import { PATH_NOTES, PATH_PHOTOGRAPHY, PATH_WRITING } from "@/lib/constants";
+import {
+  PATH_MAZE,
+  PATH_NOTES,
+  PATH_PHOTOGRAPHY,
+  PATH_WRITING,
+} from "@/lib/constants";
+import { cn } from "@/lib/utils";
+import { Noto_Sans_Math } from "next/font/google";
+
+const fontMath = Noto_Sans_Math({
+  subsets: ["math"],
+  weight: "400",
+  variable: "--font-math",
+});
 
 export const professionalItems: AboutListItem[] = [
   {
@@ -37,7 +50,7 @@ export const professionalItems: AboutListItem[] = [
     year: "2013",
     children: (
       <p>
-        You can find some of the 30+ games I&apos;ve made since age 10 on{" "}
+        You can find most of the 30+ games I&apos;ve made since age 10 on{" "}
         <InlineLink href="https://plett.fun/" external>
           plett.fun
         </InlineLink>
@@ -352,6 +365,26 @@ export const hobbyItems: AboutListItem[] = [
     ),
   },
   {
+    title: "Puzzles",
+    subtitle: "22 original puzzles",
+    year: "2012",
+    children: (
+      <p>
+        From age 4, I&apos;ve been obsessed with puzzles. I have designed{" "}
+        <InlineLink href="/images/home/Josiahs_Original_Puzzles.png" external>
+          21 puzzles
+        </InlineLink>
+        , including{" "}
+        <InlineLink href="/images/home/Math_Path_Puzzle.jpg" external>
+          <q>MATH PATH</q>
+        </InlineLink>{" "}
+        puzzles which have been used in many classrooms. I also made a truly
+        4-dimensional physical maze:{" "}
+        <InlineLink href={PATH_MAZE}>feature page</InlineLink>.
+      </p>
+    ),
+  },
+  {
     title: "Typing",
     subtitle: "Qwerty and Colemak",
     year: "2021",
@@ -392,13 +425,38 @@ export const hobbyItems: AboutListItem[] = [
     ),
   },
   {
+    title: "Felonies",
+    subtitle: "And misdemeanors",
+    year: "2003",
+    children: (
+      <p>
+        Haha, got ya. Total felony and misdemeanor count:{" "}
+        <InlineLink
+          className={cn(fontMath.className)}
+          href="https://en.wikipedia.org/wiki/Euler%27s_identity"
+          external
+        >
+          e<sup>i⋅π</sup> + 1
+        </InlineLink>
+        .
+      </p>
+    ),
+  },
+  {
     title: "Circus",
     subtitle: "Juggling, etc",
     year: "2020",
     children: (
       <p>
         I can juggle, hold my breath for 6 minutes, throw a card 50m, and solve
-        Rubik&apos;s cubes blindfolded.
+        Rubik&apos;s cubes blindfolded. Also,{" "}
+        <InlineLink
+          href="https://humanbenchmark.com/users/60f396cf0a4755000835ec33"
+          external
+        >
+          human benchmark
+        </InlineLink>{" "}
+        is fun.
       </p>
     ),
   },

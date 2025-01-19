@@ -14,6 +14,8 @@ export const PATH_CV = "/cv";
 export const PATH_CV_STATIC = "/cv/Josiah_Plett_CV_2024.pdf";
 export const PATH_PFP_LIGHT = "/images/home/Profile_Light.jpg";
 export const PATH_PFP_DARK = "/images/home/Profile_Dark.jpg";
+export const PATH_MAZE = "/maze";
+export const PATH_MAZE_IMAGES = "/images/home";
 
 export const URL_MY_OLD_SITE = "https://old.plett.dev";
 export const URL_MY_LINKEDIN = "https://www.linkedin.com/in/josiahplett/";
@@ -29,7 +31,7 @@ export const META_TITLE_HOME = "Josiah Plett";
 export const META_DESCRIPTION_HOME =
   "My personal website, covering my professional interests, hobbies, games, writing, and photography.";
 export const META_DESCRIPTION_NOTES =
-  "Josiah Plett's university course notes. Distribute freely with attribution.";
+  "Josiah Plett's university course notes. Distribute freely, with attribution.";
 
 /* Only used for metadata */
 export const THEME_BACKGROUND = "#FFFFFF";

@@ -15,9 +15,11 @@ export default function Footer() {
         <nav className="flex gap-1 -ml-2">
           <NavButton href={URL_MY_GITHUB} external>
             <GitHubLogoIcon />
+            <span className="sr-only">GitHub</span>
           </NavButton>
           <NavButton href={URL_MY_LINKEDIN} external>
             <LinkedInLogoIcon />
+            <span className="sr-only">LinkedIn</span>
           </NavButton>
           <NavButton href={URL_MY_OLD_SITE} className="hidden sm:flex">
             Old site
