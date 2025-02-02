@@ -16,7 +16,7 @@ import {
 import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 
 export default function WebringIcon() {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const { refs, floatingStyles, context } = useFloating({
     open: isOpen,
@@ -41,7 +41,7 @@ export default function WebringIcon() {
       <NavButton href={"https://cs.uwatering.com/#https://plett.dev"} external>
         <Image
           src={
-            theme === "dark"
+            resolvedTheme === "dark"
               ? "https://cs.uwatering.com/icon.white.svg"
               : "https://cs.uwatering.com/icon.black.svg"
           }

@@ -15,15 +15,15 @@ type ProfilePhotoProps = {
 
 export default function ProfilePhoto({ src, size }: ProfilePhotoProps) {
   const [isLoaded, setIsLoaded] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [activeImage, setActiveImage] = useState(0);
 
   useEffect(() => {
-    setActiveImage(theme === "dark" ? 1 : 0);
-  }, [theme]);
+    setActiveImage(resolvedTheme === "dark" ? 1 : 0);
+  }, [resolvedTheme]);
 
   const handleClick = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
   };
 
   const images = Array.isArray(src) ? src : [src, src];
@@ -51,7 +51,7 @@ export default function ProfilePhoto({ src, size }: ProfilePhotoProps) {
           onLoad={() => setIsLoaded(true)}
           className={cn(
             "absolute inset-0 transition-all duration-200 rounded-full cursor-pointer",
-            isLoaded && activeImage === index ? "opacity-100" : "opacity-0",
+            isLoaded && activeImage === index ? "opacity-100" : "opacity-0"
           )}
         />
       ))}
