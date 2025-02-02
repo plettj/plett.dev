@@ -6,6 +6,7 @@ import {
 } from "@/lib/constants";
 import NavButton from "../NavButton";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import WebringIcon from "../WebringIcon";
 
 export default function Footer() {
   return (
@@ -21,6 +22,7 @@ export default function Footer() {
             <LinkedInLogoIcon />
             <span className="sr-only">LinkedIn</span>
           </NavButton>
+          <WebringIcon />
           <NavButton href={URL_MY_OLD_SITE} className="hidden sm:flex">
             Old site
           </NavButton>
