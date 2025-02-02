@@ -92,7 +92,7 @@ export default async function RootLayout({
       <body className="flex flex-col h-screen items-center overflow-x-hidden scrollbar bg-background font-sans antialiased transition-colors">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           storageKey="theme"
           enableSystem
         >

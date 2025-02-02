@@ -3,11 +3,12 @@
 import { useTheme } from "next-themes";
 import NavButton from "./NavButton";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   autoUpdate,
   flip,
   safePolygon,
+  useClick,
   useFloating,
   useHover,
   useInteractions,
@@ -18,6 +19,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 export default function WebringIcon() {
   const { resolvedTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
+  const isTouchDevice = useRef(false);
   const { refs, floatingStyles, context } = useFloating({
     open: isOpen,
     onOpenChange: setIsOpen,
@@ -34,10 +36,29 @@ export default function WebringIcon() {
     handleClose: safePolygon(),
     delay: { open: 0, close: 200 },
   });
-  const { getReferenceProps, getFloatingProps } = useInteractions([hover]);
+  const click = useClick(context);
+  const { getReferenceProps, getFloatingProps } = useInteractions([
+    hover,
+    click,
+  ]);
+
+  useEffect(() => {
+    isTouchDevice.current = window.matchMedia("(hover: none)").matches;
+  }, []);
+
+  const handleClick = (event: React.MouseEvent) => {
+    if (isTouchDevice.current) {
+      // Prevent navigation on mobile, so we only toggle the tooltip
+      event.preventDefault();
+      setIsOpen((prev) => !prev);
+    }
+  };
 
   return (
-    <div ref={refs.setReference} {...getReferenceProps()}>
+    <div
+      ref={refs.setReference}
+      {...getReferenceProps({ onClick: handleClick })}
+    >
       <NavButton href={"https://cs.uwatering.com/#https://plett.dev"} external>
         <Image
           src={
@@ -61,7 +82,13 @@ export default function WebringIcon() {
           <TooltipNavigateIcon href="https://cs.uwatering.com/#https://plett.dev?nav=prev">
             <ArrowLeftIcon />
           </TooltipNavigateIcon>
-          UW CS Webring
+          <a
+            href="https://cs.uwatering.com/#https://plett.dev"
+            className="inline-block sm:hidden cursor-pointer text-foreground hover:text-muted-foreground"
+          >
+            UW CS Webring
+          </a>
+          <span className="hidden sm:inline-block">UW CS Webring</span>
           <TooltipNavigateIcon href="https://cs.uwatering.com/#https://plett.dev?nav=next">
             <ArrowRightIcon />
           </TooltipNavigateIcon>
