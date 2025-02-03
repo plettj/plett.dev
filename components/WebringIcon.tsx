@@ -1,25 +1,25 @@
 "use client";
 
-import { useTheme } from "next-themes";
-import NavButton from "./NavButton";
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 import {
   autoUpdate,
   flip,
   safePolygon,
-  useClick,
   useFloating,
   useHover,
   useInteractions,
   useTransitionStyles,
 } from "@floating-ui/react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import { useTheme } from "next-themes";
+import Image from "next/image";
+import { useState } from "react";
+import NavButton from "./NavButton";
 
+// TODO: Make this the desktop-only icon, and make one for mobile.
+// TODO: Copy the svg for the lion from Justin's repo and customize the colours.
 export default function WebringIcon() {
   const { resolvedTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
-  const isTouchDevice = useRef(false);
   const { refs, floatingStyles, context } = useFloating({
     open: isOpen,
     onOpenChange: setIsOpen,
@@ -36,29 +36,10 @@ export default function WebringIcon() {
     handleClose: safePolygon(),
     delay: { open: 0, close: 200 },
   });
-  const click = useClick(context);
-  const { getReferenceProps, getFloatingProps } = useInteractions([
-    hover,
-    click,
-  ]);
-
-  useEffect(() => {
-    isTouchDevice.current = window.matchMedia("(hover: none)").matches;
-  }, []);
-
-  const handleClick = (event: React.MouseEvent) => {
-    if (isTouchDevice.current) {
-      // Prevent navigation on mobile, so we only toggle the tooltip
-      event.preventDefault();
-      setIsOpen((prev) => !prev);
-    }
-  };
+  const { getReferenceProps, getFloatingProps } = useInteractions([hover]);
 
   return (
-    <div
-      ref={refs.setReference}
-      {...getReferenceProps({ onClick: handleClick })}
-    >
+    <div ref={refs.setReference} {...getReferenceProps()}>
       <NavButton href={"https://cs.uwatering.com/#https://plett.dev"} external>
         <Image
           src={
