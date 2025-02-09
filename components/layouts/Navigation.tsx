@@ -18,21 +18,34 @@ export default function Navigation() {
 
   return (
     <nav className="flex gap-2 -mx-2 my-10">
-      <NavButton href={PATH_HOME} active={pathname === PATH_HOME}>
+      <NavButton
+        href={PATH_HOME}
+        active={pathname === PATH_HOME}
+        aria-label="Home"
+      >
         J
       </NavButton>
-      <NavButton href={PATH_ABOUT} active={pathname === PATH_ABOUT}>
+      <NavButton
+        href={PATH_ABOUT}
+        active={pathname === PATH_ABOUT}
+        aria-label="About"
+      >
         About
       </NavButton>
-      <NavButton href={URL_MY_GAMES} external>
+      <NavButton href={URL_MY_GAMES} external aria-label="My Games">
         Games <ExternalLinkIcon />
       </NavButton>
-      <NavButton href={PATH_WRITING} active={pathname.includes(PATH_WRITING)}>
+      <NavButton
+        href={PATH_WRITING}
+        active={pathname.includes(PATH_WRITING)}
+        aria-label="Writing"
+      >
         Writing
       </NavButton>
       <NavButton
         href={PATH_NOTES}
         active={pathname.includes(PATH_NOTES)}
+        aria-label="Course Notes"
         className="hidden sm:flex"
       >
         Notes
@@ -40,6 +53,7 @@ export default function Navigation() {
       <NavButton
         href={PATH_PHOTOGRAPHY}
         active={pathname === PATH_PHOTOGRAPHY}
+        aria-label="Photography"
         className="hidden sm:flex"
       >
         Photography

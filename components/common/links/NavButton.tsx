@@ -24,6 +24,7 @@ export default function NavButton({
         className
       )}
       variant="link"
+      role="navigation"
     >
       <Link
         href={href}

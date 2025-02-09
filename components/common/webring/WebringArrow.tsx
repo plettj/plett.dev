@@ -11,6 +11,7 @@ export default function WebringArrow({
       href={`${URL_WEBRING}?nav=${direction}`}
       rel="noopener noreferrer"
       target="_blank"
+      role="link"
       className="cursor-pointer text-foreground hover:text-muted-foreground"
     >
       {direction == "prev" ? <ArrowLeftIcon /> : <ArrowRightIcon />}

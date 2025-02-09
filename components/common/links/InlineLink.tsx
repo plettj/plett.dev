@@ -20,6 +20,7 @@ export default function InlineLink({
         "p-0 h-6 -my-1 text-muted-foreground font-semibold decoration-dotted underline sm:decoration-solid sm:no-underline hover:underline",
         className
       )}
+      role="link"
     >
       {children}
     </Link>

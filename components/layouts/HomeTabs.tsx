@@ -12,7 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 
 export default function HomeTabs() {
   return (
-    <Tabs defaultValue="recruiter" className="w-full">
+    <Tabs defaultValue="recruiter" className="w-full" aria-label="Viewer type">
       <TabsList className="flex justify-center gap-4 mb-4 bg-transparent">
         <TabsTrigger value="recruiter">A recruiter</TabsTrigger>
         <TabsTrigger value="gamer">A gamer</TabsTrigger>
