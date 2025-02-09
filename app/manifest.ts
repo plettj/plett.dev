@@ -22,7 +22,7 @@ export default function manifest(): MetadataRoute.Manifest {
       "travel",
     ],
     start_url: "/",
-    display: "browser", // The default.
+    display: "browser", // Default.
     background_color: THEME_BACKGROUND,
     theme_color: THEME_LIGHT_PRIMARY,
     lang: "en",

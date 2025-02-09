@@ -1,6 +1,6 @@
-import InlineLink from "@/components/InlineLink";
+import Soccer from "@/components/atoms/Soccer";
+import InlineLink from "@/components/common/links/InlineLink";
 import { AboutListItem } from "@/components/layouts/AboutList";
-import Soccer from "@/components/Soccer";
 import {
   PATH_MAZE,
   PATH_NOTES,

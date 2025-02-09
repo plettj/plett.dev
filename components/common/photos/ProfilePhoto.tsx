@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
 import { AUTHOR } from "@/lib/posts/constants";
+import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 type ProfilePhotoProps = {
   /** Either one image, or an array of images for different themes: [light, dark]. */

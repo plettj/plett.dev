@@ -1,4 +1,4 @@
-import { myHumansTxt, HumansTxtContent } from "./constants";
+import { HumansTxtContent, myHumansTxt } from "./constants";
 
 function formatHumansTxt(content: HumansTxtContent): string {
   const sections = [];

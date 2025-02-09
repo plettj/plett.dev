@@ -1,9 +1,5 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import NavButton from "../NavButton";
-import { ExternalLinkIcon } from "@radix-ui/react-icons";
-import { ThemeToggle } from "../ThemeToggle";
 import {
   PATH_ABOUT,
   PATH_HOME,
@@ -12,6 +8,10 @@ import {
   PATH_WRITING,
   URL_MY_GAMES,
 } from "@/lib/constants";
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
+import { usePathname } from "next/navigation";
+import { ThemeToggle } from "../atoms/ThemeToggle";
+import NavButton from "../common/links/NavButton";
 
 export default function Navigation() {
   const pathname = usePathname();

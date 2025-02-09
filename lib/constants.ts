@@ -21,6 +21,7 @@ export const URL_MY_OLD_SITE = "https://old.plett.dev";
 export const URL_MY_LINKEDIN = "https://www.linkedin.com/in/josiahplett/";
 export const URL_MY_GITHUB = "https://github.com/plettj";
 export const URL_MY_GAMES = "https://plett.fun";
+export const URL_WEBRING = `https://cs.uwatering.com/#${BASE_URL}`;
 
 export const COPYRIGHT_STRING = `© ${new Date().getFullYear()} Josiah Plett`;
 
@@ -33,7 +34,8 @@ export const META_DESCRIPTION_HOME =
 export const META_DESCRIPTION_NOTES =
   "Josiah Plett's university course notes. Distribute freely, with attribution.";
 
-/* Only used for metadata */
 export const THEME_BACKGROUND = "#FFFFFF";
 export const THEME_LIGHT_PRIMARY = "#1C1917";
+export const THEME_LIGHT_MUTED = "#78716C";
 export const THEME_DARK_PRIMARY = "#FAFAF9";
+export const THEME_DARK_MUTED = "#A8A29E";

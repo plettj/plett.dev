@@ -1,4 +1,5 @@
 {
+  "typescript.preferences.importModuleSpecifier": "shortest",
   "cSpell.words": [
     "Andermatt",
     "Butchart",

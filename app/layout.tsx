@@ -1,22 +1,24 @@
+import "./globals.css";
+
 import TopLoader from "@/components/layouts/TopLoader";
 import {
   BASE_URL,
-  URL_MY_OLD_SITE,
   META_DESCRIPTION_HOME,
   META_TITLE_HOME,
-  THEME_LIGHT_PRIMARY,
   THEME_DARK_PRIMARY,
+  THEME_LIGHT_PRIMARY,
+  URL_MY_OLD_SITE,
 } from "@/lib/constants";
-import { Metadata, Viewport } from "next/types";
-import { JetBrains_Mono } from "next/font/google";
-import "./globals.css";
+import { AUTHOR } from "@/lib/posts/constants";
 import { cn, getOGData } from "@/lib/utils";
 import { ThemeProvider } from "next-themes";
-import { AUTHOR } from "@/lib/posts/constants";
+import { JetBrains_Mono } from "next/font/google";
+import { Metadata, Viewport } from "next/types";
 
 const fontSans = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap", // https://stackoverflow.com/a/78016250/8360465
 });
 
 // Other fonts to consider:
