@@ -1,6 +1,11 @@
 "use client";
 
-import { THEME_DARK_MUTED, THEME_LIGHT_MUTED } from "@/lib/constants";
+import NavButton from "@/components/NavButton";
+import {
+  THEME_DARK_MUTED,
+  THEME_LIGHT_MUTED,
+  URL_WEBRING,
+} from "@/lib/constants";
 import {
   autoUpdate,
   flip,
@@ -10,11 +15,10 @@ import {
   useInteractions,
   useTransitionStyles,
 } from "@floating-ui/react";
-import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import LionSvg from "./LionSvg";
-import NavButton from "./NavButton";
+import WebringArrow from "./WebringArrow";
 
 export default function WebringIcon() {
   const { theme, resolvedTheme } = useTheme();
@@ -37,7 +41,7 @@ export default function WebringIcon() {
   });
   const { getReferenceProps, getFloatingProps } = useInteractions([hover]);
 
-  // Used to prevent theme rendering mismatch between server and client.
+  // Prevent theme rendering mismatch between server and client.
   useEffect(() => setMounted(true), []);
 
   const iconColor =
@@ -47,7 +51,7 @@ export default function WebringIcon() {
 
   return (
     <div ref={refs.setReference} {...getReferenceProps()}>
-      <NavButton href={"https://cs.uwatering.com/#https://plett.dev"} external>
+      <NavButton href={URL_WEBRING} external>
         {!mounted ? (
           <LionSvg color={THEME_LIGHT_MUTED} />
         ) : (
@@ -61,34 +65,11 @@ export default function WebringIcon() {
           style={{ ...floatingStyles, ...transitionStyles }}
           className="flex gap-2 max-w-64 bg-background text-muted-foreground border text-xs rounded px-2 py-1.5"
         >
-          <TooltipNavigateIcon href="https://cs.uwatering.com/#https://plett.dev?nav=prev">
-            <ArrowLeftIcon />
-          </TooltipNavigateIcon>
+          <WebringArrow direction="prev" />
           <span>UW CS Webring</span>
-          <TooltipNavigateIcon href="https://cs.uwatering.com/#https://plett.dev?nav=next">
-            <ArrowRightIcon />
-          </TooltipNavigateIcon>
+          <WebringArrow direction="next" />
         </span>
       )}
     </div>
-  );
-}
-
-function TooltipNavigateIcon({
-  href,
-  children,
-}: {
-  href: string;
-  children?: React.ReactNode;
-}) {
-  return (
-    <a
-      href={href}
-      rel="noopener noreferrer"
-      target="_blank"
-      className="cursor-pointer text-foreground hover:text-muted-foreground"
-    >
-      {children}
-    </a>
   );
 }

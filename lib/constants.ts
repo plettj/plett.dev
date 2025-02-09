@@ -21,6 +21,7 @@ export const URL_MY_OLD_SITE = "https://old.plett.dev";
 export const URL_MY_LINKEDIN = "https://www.linkedin.com/in/josiahplett/";
 export const URL_MY_GITHUB = "https://github.com/plettj";
 export const URL_MY_GAMES = "https://plett.fun";
+export const URL_WEBRING = `https://cs.uwatering.com/#${BASE_URL}`;
 
 export const COPYRIGHT_STRING = `© ${new Date().getFullYear()} Josiah Plett`;
 
