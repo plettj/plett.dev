@@ -1,5 +1,6 @@
 "use client";
 
+import { THEME_DARK_MUTED, THEME_LIGHT_MUTED } from "@/lib/constants";
 import {
   autoUpdate,
   flip,
@@ -11,14 +12,13 @@ import {
 } from "@floating-ui/react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
-import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import LionSvg from "./LionSvg";
 import NavButton from "./NavButton";
 
-// TODO: Make this the desktop-only icon, and make one for mobile.
-// TODO: Copy the svg for the lion from Justin's repo and customize the colours.
 export default function WebringIcon() {
-  const { resolvedTheme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const { refs, floatingStyles, context } = useFloating({
     open: isOpen,
@@ -30,7 +30,6 @@ export default function WebringIcon() {
   const { styles: transitionStyles } = useTransitionStyles(context, {
     duration: 150,
   });
-
   const hover = useHover(context, {
     move: false,
     handleClose: safePolygon(),
@@ -38,20 +37,22 @@ export default function WebringIcon() {
   });
   const { getReferenceProps, getFloatingProps } = useInteractions([hover]);
 
+  // Used to prevent theme rendering mismatch between server and client.
+  useEffect(() => setMounted(true), []);
+
+  const iconColor =
+    theme === "dark" || resolvedTheme === "dark"
+      ? THEME_DARK_MUTED
+      : THEME_LIGHT_MUTED;
+
   return (
     <div ref={refs.setReference} {...getReferenceProps()}>
       <NavButton href={"https://cs.uwatering.com/#https://plett.dev"} external>
-        <Image
-          src={
-            resolvedTheme === "dark"
-              ? "https://cs.uwatering.com/icon.white.svg"
-              : "https://cs.uwatering.com/icon.black.svg"
-          }
-          height={16}
-          width={16}
-          alt="UW CS Webring"
-          className="opacity-70"
-        />
+        {!mounted ? (
+          <LionSvg color={THEME_LIGHT_MUTED} />
+        ) : (
+          <LionSvg color={iconColor} />
+        )}
       </NavButton>
       {isOpen && (
         <span
@@ -63,13 +64,7 @@ export default function WebringIcon() {
           <TooltipNavigateIcon href="https://cs.uwatering.com/#https://plett.dev?nav=prev">
             <ArrowLeftIcon />
           </TooltipNavigateIcon>
-          <a
-            href="https://cs.uwatering.com/#https://plett.dev"
-            className="inline-block sm:hidden cursor-pointer text-foreground hover:text-muted-foreground"
-          >
-            UW CS Webring
-          </a>
-          <span className="hidden sm:inline-block">UW CS Webring</span>
+          <span>UW CS Webring</span>
           <TooltipNavigateIcon href="https://cs.uwatering.com/#https://plett.dev?nav=next">
             <ArrowRightIcon />
           </TooltipNavigateIcon>

@@ -33,7 +33,8 @@ export const META_DESCRIPTION_HOME =
 export const META_DESCRIPTION_NOTES =
   "Josiah Plett's university course notes. Distribute freely, with attribution.";
 
-/* Only used for metadata */
 export const THEME_BACKGROUND = "#FFFFFF";
 export const THEME_LIGHT_PRIMARY = "#1C1917";
+export const THEME_LIGHT_MUTED = "#78716C";
 export const THEME_DARK_PRIMARY = "#FAFAF9";
+export const THEME_DARK_MUTED = "#A8A29E";
