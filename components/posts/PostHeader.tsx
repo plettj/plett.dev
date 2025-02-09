@@ -1,9 +1,9 @@
-import Image from "next/image";
-import NavButton from "../NavButton";
 import { PATH_WRITING } from "@/lib/constants";
-import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import { formatDate } from "@/lib/utils";
-import { ThemeToggle } from "../ThemeToggle";
+import { ArrowLeftIcon } from "@radix-ui/react-icons";
+import Image from "next/image";
+import { ThemeToggle } from "../atoms/ThemeToggle";
+import NavButton from "../common/links/NavButton";
 
 export default function PostHeader({
   title,

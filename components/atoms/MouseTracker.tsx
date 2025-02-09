@@ -4,7 +4,9 @@ import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-// A Next.js-compatible mouse tracking component, inspired by: https://yoavik.com/snippets/mouse-tracker
+/**
+ * A Next.js-compatible mouse tracking component, inspired by https://yoavik.com/snippets/mouse-tracker
+ */
 export const MouseTracker = ({
   offset = { x: 0, y: 0 },
   className,
@@ -36,13 +38,13 @@ export const MouseTracker = ({
         <div
           className={cn(
             "fixed w-full pointer-events-none transition-opacity duration-300",
-            className,
+            className
           )}
           ref={element}
         >
           {children}
         </div>,
-        document.body,
+        document.body
       )
     : null;
 };

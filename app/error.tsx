@@ -1,6 +1,6 @@
 "use client";
 
-import BackButton from "@/components/BackButton";
+import BackButton from "@/components/common/links/BackButton";
 import Container from "@/components/layouts/Container";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";

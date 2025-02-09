@@ -1,8 +1,8 @@
 "use client";
 
 import useVisitors from "@/hooks/useVisitors";
-import { Skeleton } from "./ui/skeleton";
 import { addOrdinalSuffix } from "@/lib/utils";
+import { Skeleton } from "../ui/skeleton";
 
 export default function Visitors() {
   const { views, isLoading } = useVisitors();

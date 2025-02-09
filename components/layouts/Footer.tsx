@@ -5,7 +5,7 @@ import {
   URL_MY_OLD_SITE,
 } from "@/lib/constants";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import NavButton from "../NavButton";
+import NavButton from "../common/links/NavButton";
 import WebringIcon from "../common/webring/WebringIcon";
 
 export default function Footer() {

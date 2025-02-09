@@ -1,7 +1,7 @@
-import NavButton from "../NavButton";
 import { PATH_WRITING } from "@/lib/constants";
 import { Post } from "@/lib/posts/types";
 import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import NavButton from "../common/links/NavButton";
 import { Separator } from "../ui/separator";
 
 export default function PostFooter({ nextPost }: { nextPost?: Post }) {

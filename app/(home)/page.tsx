@@ -1,5 +1,5 @@
+import ProfilePhoto from "@/components/common/photos/ProfilePhoto";
 import HomeTabs from "@/components/layouts/HomeTabs";
-import ProfilePhoto from "@/components/ProfilePhoto";
 import { PATH_PFP_DARK, PATH_PFP_LIGHT } from "@/lib/constants";
 
 export default async function Home() {

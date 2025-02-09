@@ -11,7 +11,7 @@ import {
 } from "@floating-ui/react";
 import Link from "next/link";
 import { useState } from "react";
-import InlineLink from "../InlineLink";
+import InlineLink from "../common/links/InlineLink";
 import { NotesListItem } from "./NotesList";
 
 type NotesItemProps = {

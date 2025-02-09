@@ -1,12 +1,12 @@
 "use client";
 
 import { photos } from "@/app/(photography)/photography/content";
-import MasonryLayout from "./MasonryLayout";
-import { LoadMethod } from "../Photo";
-import { Switch } from "../ui/switch";
-import { Label } from "../ui/label";
-import InlineLink from "../InlineLink";
 import { useState } from "react";
+import InlineLink from "../common/links/InlineLink";
+import MasonryLayout from "../common/photos/MasonryLayout";
+import { LoadMethod } from "../common/photos/Photo";
+import { Label } from "../ui/label";
+import { Switch } from "../ui/switch";
 
 export default function PhotographyContent() {
   const [loadMethod, setLoadMethod] = useState<LoadMethod>("border");

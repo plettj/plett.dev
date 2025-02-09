@@ -1,10 +1,10 @@
-import { hobbyItems, professionalItems } from "./content";
-import Title from "@/components/Title";
-import Visitors from "@/components/Visitors";
+import Title from "@/components/atoms/Title";
+import Visitors from "@/components/atoms/Visitors";
 import AboutList from "@/components/layouts/AboutList";
-import { BASE_URL, PATH_ABOUT, META_DESCRIPTION_HOME } from "@/lib/constants";
+import { BASE_URL, META_DESCRIPTION_HOME, PATH_ABOUT } from "@/lib/constants";
 import { getOGData } from "@/lib/utils";
 import { Metadata } from "next/types";
+import { hobbyItems, professionalItems } from "./content";
 
 export const metadata: Metadata = {
   title: "About",

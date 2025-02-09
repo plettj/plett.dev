@@ -6,9 +6,9 @@ import {
   URL_MY_GAMES,
   URL_MY_GITHUB,
 } from "@/lib/constants";
-import ResponsiveInlineLink from "../ResponsiveInlineLink";
+import InlineLink from "../common/links/InlineLink";
+import ResponsiveInlineLink from "../common/links/ResponsiveInlineLink";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
-import InlineLink from "../InlineLink";
 
 export default function HomeTabs() {
   return (

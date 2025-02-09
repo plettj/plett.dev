@@ -1,10 +1,10 @@
+import { isSoccer } from "soccer-football";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "./ui/tooltip";
-import { isSoccer } from "soccer-football";
+} from "../ui/tooltip";
 
 export default function Soccer() {
   const soccer = isSoccer(); // Localization utility from a public npm package I made: https://www.npmjs.com/package/soccer-football

@@ -1,7 +1,7 @@
+import PhotographyContent from "@/components/layouts/PhotographyContent";
 import { BASE_URL, PATH_PHOTOGRAPHY } from "@/lib/constants";
 import { getOGData } from "@/lib/utils";
 import { Metadata } from "next/types";
-import PhotographyContent from "@/components/layouts/PhotographyContent";
 
 export const metadata: Metadata = {
   title: "Photography",

@@ -1,11 +1,11 @@
-import InlineLink from "@/components/InlineLink";
-import Photo from "@/components/Photo";
+import InlineLink from "@/components/common/links/InlineLink";
+import NavButton from "@/components/common/links/NavButton";
+import Photo from "@/components/common/photos/Photo";
 import { BASE_URL, PATH_ABOUT, PATH_MAZE } from "@/lib/constants";
 import { getOGData } from "@/lib/utils";
+import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import { Metadata } from "next/types";
 import { photo, templateImages } from "./content";
-import NavButton from "@/components/NavButton";
-import { ArrowLeftIcon } from "@radix-ui/react-icons";
 
 export const metadata: Metadata = {
   title: "4D Maze",

@@ -1,6 +1,5 @@
 "use client";
 
-import NavButton from "@/components/NavButton";
 import {
   THEME_DARK_MUTED,
   THEME_LIGHT_MUTED,
@@ -17,6 +16,7 @@ import {
 } from "@floating-ui/react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import NavButton from "../links/NavButton";
 import LionSvg from "./LionSvg";
 import WebringArrow from "./WebringArrow";
 

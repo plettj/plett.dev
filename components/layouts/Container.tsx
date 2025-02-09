@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import Navigation from "./Navigation";
 import Footer from "./Footer";
+import Navigation from "./Navigation";
 
 export default function Container({
   fullWidth = false,

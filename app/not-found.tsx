@@ -1,7 +1,7 @@
 "use client";
 
-import BackButton from "@/components/BackButton";
-import InlineLink from "@/components/InlineLink";
+import BackButton from "@/components/common/links/BackButton";
+import InlineLink from "@/components/common/links/InlineLink";
 import Container from "@/components/layouts/Container";
 import { Button } from "@/components/ui/button";
 import { PATH_HOME, URL_MY_OLD_SITE } from "@/lib/constants";

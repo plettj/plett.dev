@@ -1,4 +1,4 @@
-import InlineLink from "@/components/InlineLink";
+import InlineLink from "@/components/common/links/InlineLink";
 import { BASE_URL, PATH_CV, PATH_CV_STATIC } from "@/lib/constants";
 import { getOGData } from "@/lib/utils";
 import { Metadata } from "next/types";
