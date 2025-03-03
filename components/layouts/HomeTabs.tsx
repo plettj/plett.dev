@@ -35,9 +35,6 @@ export default function HomeTabs() {
         </p>
       </TabsContent>
       <TabsContent value="recruiter" className="flex flex-col gap-3">
-        <p className="font-medium underline decoration-wavy decoration-1 underline-offset-2">
-          Crash Course
-        </p>
         <p>
           I&apos;ve worked 7 software roles, founded 3 companies, released{" "}
           <InlineLink href={URL_MY_GAMES}>18 games</InlineLink> totalling
@@ -45,10 +42,15 @@ export default function HomeTabs() {
           <InlineLink href="https://www.youtube.com/playlist?list=PLTU_pBLoLfLL_X5FpFCAsvjvgqg0-yD5k">
             3 Guinness World Records
           </InlineLink>
-          , published notes for{" "}
+          , and published notes for{" "}
           <InlineLink href={PATH_NOTES}>14 classes</InlineLink>. Plus some{" "}
           <InlineLink href={PATH_ABOUT}>side quests</InlineLink> like a{" "}
-          <InlineLink href={PATH_MAZE}>physical 4D maze</InlineLink>.
+          <InlineLink href={PATH_MAZE}>physical 4D maze</InlineLink> and a
+          top-200{" "}
+          <InlineLink href="https://github.com/plettj/hagnusmiemann" external>
+            chess engine
+          </InlineLink>
+          .
         </p>
         <p className="mt-6">
           See my{" "}
