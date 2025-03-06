@@ -12,6 +12,9 @@ const config: Config = {
       fontFamily: {
         sans: "var(--font-sans)",
       },
+      screens: {
+        xs: "27.5rem", // https://tailwindcss.com/docs/responsive-design#customizing-your-theme
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
