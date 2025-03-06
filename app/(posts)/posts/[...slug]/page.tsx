@@ -57,10 +57,10 @@ export function generateMetadata({ params }: Params): Metadata {
   if (!post) {
     return {
       title: "Post 404",
-      description: "Post not found",
+      description: "Oops, this link doesn't point to any of my posts. :-]",
       openGraph: getOGData({
         title: "Post 404",
-        description: "Post not found",
+        description: "Oops, this link doesn't point to any of my posts. :-]",
         url: `${BASE_URL}${PATH_WRITING}/${params.slug[0]}`,
       }),
     };

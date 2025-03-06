@@ -28,7 +28,7 @@ export default function PostFooter({ nextPost }: { nextPost?: Post }) {
           <ArrowLeftIcon /> Back to Writing
         </NavButton>
       )}
-      <p className="text-muted-foreground font-thin flex-shrink-0 pr-0 mt-2 -mb-1">
+      <p className="hidden sm:block text-muted-foreground font-thin flex-shrink-0 pr-0 mt-2 -mb-1">
         {COPYRIGHT_STRING}
       </p>
     </div>
