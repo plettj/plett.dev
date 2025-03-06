@@ -1,3 +1,4 @@
+import { TOTAL_COURSE_NOTES } from "@/app/(home)/notes/content";
 import {
   PATH_ABOUT,
   PATH_CV,
@@ -43,21 +44,23 @@ export default function HomeTabs() {
             3 Guinness World Records
           </InlineLink>
           , and published notes for{" "}
-          <InlineLink href={PATH_NOTES}>14 classes</InlineLink>. Plus some{" "}
-          <InlineLink href={PATH_ABOUT}>side quests</InlineLink> like a{" "}
-          <InlineLink href={PATH_MAZE}>physical 4D maze</InlineLink> and a
-          top-200{" "}
+          <InlineLink href={PATH_NOTES}>
+            {TOTAL_COURSE_NOTES} classes
+          </InlineLink>
+          . Plus some <InlineLink href={PATH_ABOUT}>side quests</InlineLink>{" "}
+          like a <InlineLink href={PATH_MAZE}>physical 4D maze</InlineLink> and
+          a top-200{" "}
           <InlineLink href="https://github.com/plettj/hagnusmiemann" external>
             chess engine
           </InlineLink>
           .
         </p>
-        <p className="mt-6">
-          See my{" "}
+        <p>
+          See{" "}
           <InlineLink href={URL_MY_GITHUB} external>
             GitHub
           </InlineLink>
-          , <InlineLink href={URL_MY_LINKEDIN}>LinkedIn</InlineLink>, or{" "}
+          , <InlineLink href={URL_MY_LINKEDIN}>LinkedIn</InlineLink>, or my{" "}
           <ResponsiveInlineLink
             desktopHref={PATH_CV}
             mobileHref={PATH_CV_STATIC}
@@ -66,13 +69,7 @@ export default function HomeTabs() {
           </ResponsiveInlineLink>{" "}
           for more.
         </p>
-        <p>
-          Contact:{" "}
-          <span className="text-muted-foreground">
-            jlplett [at] uwaterloo [dot] ca
-          </span>
-          .
-        </p>
+        <i className="text-muted-foreground">jlplett[at]uwaterloo[dot]ca</i>
       </TabsContent>
     </Tabs>
   );
