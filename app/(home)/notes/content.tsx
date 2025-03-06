@@ -146,3 +146,5 @@ export const mathItems: NotesListItem[] = [
     href: `${PATH_NOTES}/math135-notes.pdf`,
   },
 ];
+
+export const TOTAL_COURSE_NOTES = csItems.length + mathItems.length;

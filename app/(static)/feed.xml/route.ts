@@ -5,8 +5,8 @@ import RSS from "rss";
 
 export async function GET() {
   const feed = new RSS({
-    title: "Josiah Plett's Writing",
-    description: "An RSS feed for Josiah Plett's writing.",
+    title: "Josiah's Writing",
+    description: "Reflective writing, with a bit of programming on the side.",
     generator: "rss for Node",
     feed_url: `${BASE_URL}/feed.xml`,
     site_url: BASE_URL,
