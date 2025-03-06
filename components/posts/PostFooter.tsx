@@ -6,15 +6,21 @@ import { Separator } from "../ui/separator";
 
 export default function PostFooter({ nextPost }: { nextPost?: Post }) {
   return (
-    <div className="flex justify-between items-center w-full">
+    <div className="w-full flex justify-between items-center gap-4">
       {nextPost ? (
         <div className="flex max-w-full overflow-hidden items-center h-5 gap-2 mt-2 -mb-1">
           <NavButton href={PATH_WRITING} className="pl-0">
             <ArrowLeftIcon /> Back
           </NavButton>
           <Separator orientation="vertical" />
-          <NavButton href={`${PATH_WRITING}/${nextPost.slug}`}>
-            {nextPost.title} <ArrowRightIcon />
+          <NavButton
+            href={`${PATH_WRITING}/${nextPost.slug}`}
+            className="flex-1 min-w-0"
+          >
+            <span className="truncate overflow-hidden whitespace-nowrap text-ellipsis">
+              {nextPost.title}
+            </span>
+            <ArrowRightIcon />
           </NavButton>
         </div>
       ) : (
@@ -22,7 +28,7 @@ export default function PostFooter({ nextPost }: { nextPost?: Post }) {
           <ArrowLeftIcon /> Back to Writing
         </NavButton>
       )}
-      <p className="text-muted-foreground font-thin pr-0 mt-2 -mb-1">
+      <p className="text-muted-foreground font-thin flex-shrink-0 pr-0 mt-2 -mb-1">
         {COPYRIGHT_STRING}
       </p>
     </div>
