@@ -24,13 +24,13 @@ I've always felt this was a disingenuous approach to reading. Why can't I just e
 
 🌊 🌊 🌊
 
-Yesterday was my first time surfing, and I didn't really know what I was getting myself into. I mean, I'd been told it was a tricky sport, but I imagined if I just watched what other people were doing and played it safe, surely I'd come out unscathed.
+Yesterday was my first time surfing, and I didn't really know what I was getting myself into. I mean, I'd been told it was a tricky sport, but I imagined if I just watched what other people were doing and played it safe, I'd surely come out unscathed.
 
 On the recommendation of a local, I picked up my clunky rental surfboard and started across the sand to the so-called "easy section" of the shore. Looking out, it didn't seem that bad. A lot of people were on the water already, taking full advantage of the low winds and peaceful waves.
 
 So I started paddling out, and before I knew it, I was ready to try catching a wave. Unfortunately, every time I saw a wave coming, I couldn't turn around fast enough to catch it. I was forced to start looking beyond the nearest wave if I wanted a real shot at riding one.
 
-While I was busy craning my neck to see if there were any good waves out in the distance, I failed to notice the shore start sliding away. The winds were slow, but slow is a heck of a lot more than nothing. Unbeknownst to me, I had already been blown right into the professional section, known to the locals as The Sharks.
+I began craning my neck to see if there were any good waves out in the distance, but in doing so, I was distracted from the essential fact that the shore was sliding away. The winds were slow, but slow is a heck of a lot more than nothing. Unbeknownst to me, I had already been blown right into the professional section, known to the locals as _The Sharks_.
 
 ### Dying
 
@@ -40,7 +40,7 @@ I fought this ocean for hours, trading bites of kelp with gulps of frigid seawat
 
 With legs dripping red, at long last I arrived at the shore, where my wrecked body collapsed on the warm sand, trying to catch a breath. I must've been a real sight, because some dudes with mullets passing asked me if I was alright. They also let me know I had been attempting to surf at the professional-rated waters. How reassuring.
 
-I picked up my rental board and started a dejected trek back to the easy section. As I walked, I got to thinking how the heck this happened. It didn't seem like it was purely because of my beginner status, it was more that I failed to recognize the wind's slow, persistent nudge away from where I began. Had I known how subtle the drift would be, I would've known I should paddle against it.
+I picked up my rental board and started a dejected trek back to the easy section. As I walked, I got to thinking how the heck this happened. It didn't seem like it was purely because of my beginner status, it was more that I failed to recognize the wind's slow, persistent nudging. Had I known how subtle the drift would be, I would've known I should paddle against it.
 
 ### Trying
 
