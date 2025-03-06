@@ -1,5 +1,4 @@
 import {
-  COPYRIGHT_STRING,
   URL_MY_GITHUB,
   URL_MY_LINKEDIN,
   URL_MY_OLD_SITE,
@@ -27,7 +26,13 @@ export default function Footer() {
             Old site
           </NavButton>
         </nav>
-        <p className="text-muted-foreground font-thin">{COPYRIGHT_STRING}</p>
+        <NavButton
+          href="/feed.xml"
+          external
+          className="pr-0 mt-2 -mb-1 font-thin"
+        >
+          RSS
+        </NavButton>
       </section>
     </footer>
   );

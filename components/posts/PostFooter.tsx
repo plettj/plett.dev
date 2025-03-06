@@ -1,4 +1,4 @@
-import { PATH_WRITING } from "@/lib/constants";
+import { COPYRIGHT_STRING, PATH_WRITING } from "@/lib/constants";
 import { Post } from "@/lib/posts/types";
 import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import NavButton from "../common/links/NavButton";
@@ -22,9 +22,9 @@ export default function PostFooter({ nextPost }: { nextPost?: Post }) {
           <ArrowLeftIcon /> Back to Writing
         </NavButton>
       )}
-      <NavButton href="/feed.xml" className="pr-0 mt-2 -mb-1 font-thin">
-        RSS
-      </NavButton>
+      <p className="text-muted-foreground font-thin pr-0 mt-2 -mb-1">
+        {COPYRIGHT_STRING}
+      </p>
     </div>
   );
 }
