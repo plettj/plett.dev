@@ -26,11 +26,7 @@ export default function Footer() {
             Old site
           </NavButton>
         </nav>
-        <NavButton
-          href="/feed.xml"
-          external
-          className="pr-0 mt-2 -mb-1 font-thin"
-        >
+        <NavButton href="/feed.xml" external className="px-0 -ml-2 font-thin">
           RSS
         </NavButton>
       </section>
