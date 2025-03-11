@@ -1,5 +1,4 @@
 import NextTopLoader from "nextjs-toploader";
-import React from "react";
 
 export default function TopLoader() {
   return (

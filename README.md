@@ -2,17 +2,19 @@
 
 This repo holds the code to my personal website at [plett.dev](https://plett.dev).
 
+It is a very polished codebase, following all Next.js best practices and using its features to the fullest.
+
 ### Tech
 
 - Framework: [Next.js](https://nextjs.org/)
 - Hosting: [Vercel](https://vercel.com)
 - Styling: [shadcn/ui](https://ui.shadcn.com/) with [Tailwind CSS](https://tailwindcss.com)
 - Database: [Redis](https://redis.io/) with [Upstash](https://upstash.com/)
-- Design: [Figma](https://figma.com)SSS
+- Design: [Figma](https://figma.com)
 
 ### Features
 
-- Thoroughly tested ARIA compliant and responsive design.
+- Thoroughly tested responsive design and ARIA compliance.
 - Statically generated and search-engine-optimized posts from markdown ([writing](https://plett.dev/posts)).
 - Custom masonry layout with modern image loading ([photography](https://plett.dev/photography)).
 - Mouse-following tooltips ([notes](https://plett.dev/notes)).

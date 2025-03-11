@@ -1,37 +1,32 @@
+import { TOTAL_COURSE_NOTES } from "@/app/(home)/notes/content";
 import {
   PATH_ABOUT,
   PATH_CV,
   PATH_CV_STATIC,
-  PATH_WRITING,
+  PATH_MAZE,
+  PATH_NOTES,
+  PATH_PHOTOGRAPHY,
   URL_MY_GAMES,
   URL_MY_GITHUB,
+  URL_MY_LINKEDIN,
 } from "@/lib/constants";
-import ResponsiveInlineLink from "../ResponsiveInlineLink";
+import InlineLink from "../common/links/InlineLink";
+import ResponsiveInlineLink from "../common/links/ResponsiveInlineLink";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
-import InlineLink from "../InlineLink";
 
 export default function HomeTabs() {
   return (
-    <Tabs defaultValue="recruiter" className="w-full">
-      <TabsList className="flex justify-center gap-4 mb-4 bg-transparent">
-        <TabsTrigger value="recruiter">A recruiter</TabsTrigger>
-        <TabsTrigger value="gamer">A gamer</TabsTrigger>
+    <Tabs defaultValue="exploring" className="w-full" aria-label="Viewer type">
+      <TabsList className="flex h-fit flex-col xs:flex-row justify-center gap-4 mb-4 bg-transparent">
         <TabsTrigger value="exploring">Just exploring</TabsTrigger>
+        <TabsTrigger value="gamer">A gamer</TabsTrigger>
+        <TabsTrigger value="recruiter">A recruiter</TabsTrigger>
       </TabsList>
-      <TabsContent value="recruiter">
+      <TabsContent value="exploring">
         <p>
-          See my{" "}
-          <InlineLink href={URL_MY_GITHUB} external>
-            GitHub
-          </InlineLink>
-          , or read my{" "}
-          <ResponsiveInlineLink
-            desktopHref={PATH_CV}
-            mobileHref={PATH_CV_STATIC}
-          >
-            CV
-          </ResponsiveInlineLink>
-          .
+          Start with my <InlineLink href={PATH_ABOUT}>About</InlineLink> page,
+          or maybe my{" "}
+          <InlineLink href={PATH_PHOTOGRAPHY}>Photography</InlineLink>.
         </p>
       </TabsContent>
       <TabsContent value="gamer">
@@ -40,12 +35,41 @@ export default function HomeTabs() {
           <InlineLink href={URL_MY_GAMES}>plett.fun</InlineLink>.
         </p>
       </TabsContent>
-      <TabsContent value="exploring">
+      <TabsContent value="recruiter" className="flex flex-col gap-3">
         <p>
-          Start with my <InlineLink href={PATH_ABOUT}>about me</InlineLink>{" "}
-          page, or maybe my <InlineLink href={PATH_WRITING}>writing</InlineLink>
+          I&apos;ve worked 7 software roles, founded 3 companies, released{" "}
+          <InlineLink href={URL_MY_GAMES}>18 games</InlineLink> totalling
+          200,000+ players, broken{" "}
+          <InlineLink href="https://www.youtube.com/playlist?list=PLTU_pBLoLfLL_X5FpFCAsvjvgqg0-yD5k">
+            3 Guinness World Records
+          </InlineLink>
+          , and published notes for{" "}
+          <InlineLink href={PATH_NOTES}>
+            {TOTAL_COURSE_NOTES} classes
+          </InlineLink>
+          . Plus some <InlineLink href={PATH_ABOUT}>side quests</InlineLink>{" "}
+          like a <InlineLink href={PATH_MAZE}>physical 4D maze</InlineLink> and
+          a top-200{" "}
+          <InlineLink href="https://github.com/plettj/hagnusmiemann" external>
+            chess engine
+          </InlineLink>
           .
         </p>
+        <p>
+          See{" "}
+          <InlineLink href={URL_MY_GITHUB} external>
+            GitHub
+          </InlineLink>
+          , <InlineLink href={URL_MY_LINKEDIN}>LinkedIn</InlineLink>, or my{" "}
+          <ResponsiveInlineLink
+            desktopHref={PATH_CV}
+            mobileHref={PATH_CV_STATIC}
+          >
+            CV
+          </ResponsiveInlineLink>{" "}
+          for more.
+        </p>
+        <i className="text-muted-foreground">jlplett[at]uwaterloo[dot]ca</i>
       </TabsContent>
     </Tabs>
   );

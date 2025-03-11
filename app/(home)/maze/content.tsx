@@ -1,4 +1,4 @@
-import { MasonryImage } from "@/components/layouts/MasonryLayout";
+import { MasonryImage } from "@/components/common/photos/MasonryLayout";
 import { PATH_MAZE_IMAGES } from "@/lib/constants";
 
 const templateImages: MasonryImage[] = [
@@ -40,4 +40,4 @@ const photo: MasonryImage = {
   size: [986, 986],
 };
 
-export { templateImages, photo };
+export { photo, templateImages };

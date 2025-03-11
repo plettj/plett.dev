@@ -1,17 +1,17 @@
+import Title from "@/components/atoms/Title";
+import InlineLink from "@/components/common/links/InlineLink";
 import NotesList from "@/components/layouts/NotesList";
-import Title from "@/components/Title";
-import { csItems, mathItems } from "./content";
-import { Metadata } from "next/types";
-import { BASE_URL, META_DESCRIPTION_NOTES, PATH_NOTES } from "@/lib/constants";
-import { getOGData } from "@/lib/utils";
-import InlineLink from "@/components/InlineLink";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { BASE_URL, META_DESCRIPTION_NOTES, PATH_NOTES } from "@/lib/constants";
+import { getOGData } from "@/lib/utils";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
+import { Metadata } from "next/types";
+import { csItems, mathItems } from "./content";
 
 export const metadata: Metadata = {
   title: "Course Notes",

@@ -9,7 +9,7 @@ export default function PostPreview({ post }: { post: Post }) {
   });
 
   return (
-    <Link href={`${PATH_WRITING}/${post.slug}`} passHref>
+    <Link href={`${PATH_WRITING}/${post.slug}`} passHref role="navigation">
       <div className="flex justify-between group hover:underline hover:cursor-pointer py-4 -my-4">
         <h1 className="font-semibold dark:font-bold tracking-tight text-balance w-full">
           {post.title}

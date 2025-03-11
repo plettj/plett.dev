@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 import { useMeasure } from "react-use";
-import Photo, { LoadMethod } from "../Photo";
+import Photo, { LoadMethod } from "./Photo";
 
 export type MasonryImage = {
   src: string;

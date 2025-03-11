@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function NavButton({
   children,
@@ -21,9 +21,10 @@ export default function NavButton({
       className={cn(
         "px-2 text-foreground font-semibold",
         !active && "text-muted-foreground",
-        className,
+        className
       )}
       variant="link"
+      role="navigation"
     >
       <Link
         href={href}

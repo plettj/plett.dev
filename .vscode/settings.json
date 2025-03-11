@@ -1,4 +1,5 @@
 {
+  "typescript.preferences.importModuleSpecifier": "shortest",
   "cSpell.words": [
     "Andermatt",
     "Butchart",
@@ -24,6 +25,7 @@
     "Nyhavn",
     "Orestad",
     "Ørestad",
+    "overfit",
     "Ribeauville",
     "Ribeauvillé",
     "shadcn",

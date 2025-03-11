@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import { InView } from "react-intersection-observer";
-import { MasonryImage } from "./layouts/MasonryLayout";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import { useState } from "react";
+import { InView } from "react-intersection-observer";
+import { MasonryImage } from "./MasonryLayout";
 
 export type LoadMethod = "border" | "blur";
 
@@ -12,7 +12,7 @@ type PhotoProps = {
   image: MasonryImage;
   loadMethod: LoadMethod;
   priority?: boolean;
-  /* Whether the text overlay should be light or dark. */
+  /** Whether the text overlay should be light or dark. */
   light?: boolean;
 };
 

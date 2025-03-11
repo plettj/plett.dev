@@ -1,6 +1,6 @@
-import InlineLink from "@/components/InlineLink";
+import Soccer from "@/components/atoms/Soccer";
+import InlineLink from "@/components/common/links/InlineLink";
 import { AboutListItem } from "@/components/layouts/AboutList";
-import Soccer from "@/components/Soccer";
 import {
   PATH_MAZE,
   PATH_NOTES,
@@ -9,6 +9,7 @@ import {
 } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { Noto_Sans_Math } from "next/font/google";
+import { TOTAL_COURSE_NOTES } from "../notes/content";
 
 const fontMath = Noto_Sans_Math({
   subsets: ["math"],
@@ -219,8 +220,8 @@ export const professionalItems: AboutListItem[] = [
           UW CSC
         </InlineLink>
         . I&apos;ve also written{" "}
-        <InlineLink href={PATH_NOTES}>public notes</InlineLink> for 13
-        university classes.
+        <InlineLink href={PATH_NOTES}>public notes</InlineLink> for{" "}
+        {TOTAL_COURSE_NOTES} university classes.
       </p>
     ),
   },

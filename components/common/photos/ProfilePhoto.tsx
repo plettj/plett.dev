@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
 import { AUTHOR } from "@/lib/posts/constants";
+import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 type ProfilePhotoProps = {
   /** Either one image, or an array of images for different themes: [light, dark]. */
@@ -15,15 +15,15 @@ type ProfilePhotoProps = {
 
 export default function ProfilePhoto({ src, size }: ProfilePhotoProps) {
   const [isLoaded, setIsLoaded] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [activeImage, setActiveImage] = useState(0);
 
   useEffect(() => {
-    setActiveImage(theme === "dark" ? 1 : 0);
-  }, [theme]);
+    setActiveImage(resolvedTheme === "dark" ? 1 : 0);
+  }, [resolvedTheme]);
 
   const handleClick = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
   };
 
   const images = Array.isArray(src) ? src : [src, src];
@@ -51,7 +51,7 @@ export default function ProfilePhoto({ src, size }: ProfilePhotoProps) {
           onLoad={() => setIsLoaded(true)}
           className={cn(
             "absolute inset-0 transition-all duration-200 rounded-full cursor-pointer",
-            isLoaded && activeImage === index ? "opacity-100" : "opacity-0",
+            isLoaded && activeImage === index ? "opacity-100" : "opacity-0"
           )}
         />
       ))}

@@ -1,14 +1,14 @@
-import { Metadata } from "next/types";
-import markdownToHtml from "@/lib/posts/markdownToHtml";
+import Navigation from "@/components/layouts/Navigation";
+import PostBody from "@/components/posts/PostBody";
+import PostFooter from "@/components/posts/PostFooter";
+import PostHeader from "@/components/posts/PostHeader";
+import { Code } from "@/components/ui/code";
+import { BASE_URL, PATH_WRITING } from "@/lib/constants";
 import { getAllPosts, getPostBySlugSafely } from "@/lib/posts/api";
 import { AUTHOR } from "@/lib/posts/constants";
-import PostHeader from "@/components/posts/PostHeader";
-import PostBody from "@/components/posts/PostBody";
-import { Code } from "@/components/ui/code";
-import Navigation from "@/components/layouts/Navigation";
-import PostFooter from "@/components/posts/PostFooter";
-import { BASE_URL, PATH_WRITING } from "@/lib/constants";
+import markdownToHtml from "@/lib/posts/markdownToHtml";
 import { getOGData } from "@/lib/utils";
+import { Metadata } from "next/types";
 
 type Params = {
   params: {
@@ -57,10 +57,10 @@ export function generateMetadata({ params }: Params): Metadata {
   if (!post) {
     return {
       title: "Post 404",
-      description: "Post not found",
+      description: "Oops, this link doesn't point to any of my posts. :-]",
       openGraph: getOGData({
         title: "Post 404",
-        description: "Post not found",
+        description: "Oops, this link doesn't point to any of my posts. :-]",
         url: `${BASE_URL}${PATH_WRITING}/${params.slug[0]}`,
       }),
     };

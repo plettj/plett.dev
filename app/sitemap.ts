@@ -12,23 +12,31 @@ import { formatDateAbbr } from "@/lib/utils";
 import { MetadataRoute } from "next";
 import { csItems, mathItems } from "./(home)/notes/content";
 
+/**
+ * The sitemap tells web scrapers, like Google's, about the routes within our application.
+ * Importantly, this includes:
+ *   - their *relative* priority (putting them all at 1 makes crawlers unhappy), and
+ *   - their update frequency.
+ *
+ * More information: https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes: MetadataRoute.Sitemap = [
     {
       url: `${BASE_URL}`,
-      lastModified: "2024-11-19",
+      lastModified: "2025-03-02",
       changeFrequency: "monthly",
       priority: 1,
     },
     {
       url: `${BASE_URL}${PATH_ABOUT}`,
-      lastModified: "2024-11-16",
+      lastModified: "2025-02-13",
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${BASE_URL}${PATH_WRITING}`,
-      lastModified: "2024-11-04",
+      lastModified: "2025-03-02",
       changeFrequency: "weekly",
       priority: 0.8,
     },

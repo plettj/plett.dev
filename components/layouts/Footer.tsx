@@ -1,11 +1,11 @@
 import {
-  COPYRIGHT_STRING,
   URL_MY_GITHUB,
   URL_MY_LINKEDIN,
   URL_MY_OLD_SITE,
 } from "@/lib/constants";
-import NavButton from "../NavButton";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import NavButton from "../common/links/NavButton";
+import WebringIcon from "../common/webring/WebringIcon";
 
 export default function Footer() {
   return (
@@ -21,11 +21,14 @@ export default function Footer() {
             <LinkedInLogoIcon />
             <span className="sr-only">LinkedIn</span>
           </NavButton>
+          <WebringIcon />
           <NavButton href={URL_MY_OLD_SITE} className="hidden sm:flex">
             Old site
           </NavButton>
         </nav>
-        <p className="text-muted-foreground font-thin">{COPYRIGHT_STRING}</p>
+        <NavButton href="/feed.xml" external className="px-0 -ml-2 font-thin">
+          RSS
+        </NavButton>
       </section>
     </footer>
   );
