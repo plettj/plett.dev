@@ -16,7 +16,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 
 export default function HomeTabs() {
   return (
-    <Tabs defaultValue="exploring" className="w-full" aria-label="Viewer type">
+    <Tabs
+      defaultValue="exploring"
+      className="w-full"
+      aria-label="Visitor type"
+      searchParam="visitor"
+    >
       <TabsList className="flex h-fit flex-col xs:flex-row justify-center gap-4 mb-4 bg-transparent">
         <TabsTrigger value="exploring">Just exploring</TabsTrigger>
         <TabsTrigger value="gamer">A gamer</TabsTrigger>
