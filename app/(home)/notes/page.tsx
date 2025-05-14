@@ -35,6 +35,18 @@ export default function NotesPage() {
           be used as an optimal study plan and a reference sheet during studies.
         </p>
       </div>
+
+      <div className="sr-only">
+        <p>University of Waterloo Math and Computer Science course notes.</p>
+        <ul className="sr-only">
+          {{ ...csItems, ...mathItems }.map((item, idx) => (
+            <li key={idx}>
+              {item.course.name}: {item.title} ({item.year})
+            </li>
+          ))}
+        </ul>
+      </div>
+
       <Disclaimer />
       <Title>Computer Science</Title>
       <NotesList items={csItems} />
