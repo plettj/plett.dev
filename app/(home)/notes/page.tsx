@@ -39,7 +39,7 @@ export default function NotesPage() {
       <div className="sr-only">
         <p>University of Waterloo Math and Computer Science course notes.</p>
         <ul className="sr-only">
-          {{ ...csItems, ...mathItems }.map((item, idx) => (
+          {[...csItems, ...mathItems].map((item, idx) => (
             <li key={idx}>
               {item.course.name}: {item.title} ({item.year})
             </li>
