@@ -31,17 +31,17 @@ const myHumansTxt: HumansTxtContent = {
       LinkedIn: "https://www.linkedin.com/in/justin-zwart-08916322b/",
     },
   ],
-  FUN: `          xmc7777777pw
-          vaSGGGGDDJet
-          zyxwwwqYKJet
+  FUN: `           xmc7777777pw
+           vaSGGGGDDJet
+           zyxwwwqYKJet
                 zt1KJet
                 zt1KJet
                 zt1KJet
                 zt1KJet
                 zt1KJet
                 zt1KJet
-    yqjhpw     zt1KJet
-    wcVM7n     zsVIKhv
+    yqjhpw      zt1KJet
+    wcVM7n      zsVIKhv
     yp1DI7ty   n8IITpz
     zzk4NGFPTSMHFN8rx
       zxmc754458cpw

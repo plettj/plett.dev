@@ -183,6 +183,14 @@ const photos: MasonryImage[] = [
       "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABwQG/8QAIxAAAgIBAwMFAAAAAAAAAAAAAQIDBBEABiEFB0ESFjFCUf/EABQBAQAAAAAAAAAAAAAAAAAAAAT/xAAZEQADAQEBAAAAAAAAAAAAAAABAgMAESH/2gAMAwEAAhEDEQA/AK9z7zrVb8XtwFqahWlmngPrJzyFB+BjzjPOtq3cjZSMVAlIBxkwvoe38ip1eAKoUGJeAMeTpCqVKxqwk14SSg+g/NNetWb1sQTmoHF3/9k=",
   },
   {
+    src: `${PATH_PHOTOGRAPHY_IMAGES}/Yosemite_Falls.jpg`,
+    alt: "The picturesque falls wander over a 2-kilometer cliff, lined with snow on a hot summer day.",
+    location: "Yosemite Valley, USA",
+    year: "2025",
+    size: [3216, 2145],
+    blurDataURL: "// TODO: Generate this blur data.",
+  },
+  {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Zurich_Skyline.jpg`,
     alt: "The Zürich cityscape, with its iconic church spires and vast mountain backdrop.",
     location: "Zürich, Switzerland",

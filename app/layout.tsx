@@ -90,8 +90,13 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(fontSans.variable)} suppressHydrationWarning>
-      <body className="flex flex-col h-screen items-center overflow-x-hidden scrollbar bg-background font-sans antialiased transition-colors">
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={cn(
+          fontSans.variable,
+          "flex flex-col h-screen items-center overflow-x-hidden scrollbar bg-background font-sans antialiased transition-colors"
+        )}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
