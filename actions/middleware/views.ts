@@ -1,10 +1,10 @@
 "use server";
 
+import { BASE_URL } from "@/lib/constants";
 import redis from "@/lib/redis";
 import { isProd } from "@/lib/utils";
-import { NextFetchEvent } from "next/server";
 import { headers } from "next/headers";
-import { BASE_URL } from "@/lib/constants";
+import { NextFetchEvent } from "next/server";
 
 /**
  * Middleware to increment the views from a given IP address.
@@ -14,7 +14,7 @@ import { BASE_URL } from "@/lib/constants";
 export async function incrViews(
   ip: string,
   context: NextFetchEvent,
-  categories: string[],
+  categories: string[]
 ): Promise<boolean> {
   const headersList = headers();
   const host = headersList.get("host");
@@ -44,7 +44,7 @@ export async function incrViews(
       } catch (error) {
         console.error("Failed to increment:", error);
       }
-    })(),
+    })()
   );
 
   return updated;

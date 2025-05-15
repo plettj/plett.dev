@@ -26,7 +26,7 @@ export const URL_WEBRING = `https://cs.uwatering.com/#${BASE_URL}`;
 export const COPYRIGHT_STRING = `© ${new Date().getFullYear()} Josiah Plett`;
 
 export const VISITOR_EXPIRATION = 60 * 60 * 24; // Visits are considered unique again after 24 hours.
-export const FALLBACK_TOTAL_VISITORS = 4120; // NOTE: Old website had 1080 unique visits as of 2024-10-28.
+export const FALLBACK_TOTAL_VISITORS = 7370; // NOTE: Old website had 1080 unique visits as of 2024-10-28.
 
 export const META_TITLE_HOME = "Josiah Plett";
 export const META_DESCRIPTION_HOME =
