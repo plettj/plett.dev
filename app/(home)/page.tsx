@@ -1,6 +1,8 @@
 import ProfilePhoto from "@/components/common/photos/ProfilePhoto";
 import HomeTabs from "@/components/layouts/HomeTabs";
+import { TabsTriggerSkeleton } from "@/components/ui/tabs";
 import { PATH_PFP_DARK, PATH_PFP_LIGHT } from "@/lib/constants";
+import { Suspense } from "react";
 
 export default async function Home() {
   return (
@@ -21,7 +23,17 @@ export default async function Home() {
       </div>
 
       <p className="mt-2">Are you...</p>
-      <HomeTabs />
+      <Suspense
+        fallback={
+          <div className="flex h-fit flex-col xs:flex-row items-center justify-center rounded-md bg-transparent p-1 text-muted-foreground">
+            <TabsTriggerSkeleton active>Just exploring</TabsTriggerSkeleton>
+            <TabsTriggerSkeleton>A gamer</TabsTriggerSkeleton>
+            <TabsTriggerSkeleton>A recruiter</TabsTriggerSkeleton>
+          </div>
+        }
+      >
+        <HomeTabs />
+      </Suspense>
     </div>
   );
 }

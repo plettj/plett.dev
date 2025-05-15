@@ -1,10 +1,10 @@
-import { NextResponse } from "next/server";
-import redis from "@/lib/redis";
 import { FALLBACK_TOTAL_VISITORS } from "@/lib/constants";
-import { isProd } from "@/lib/utils";
+import redis from "@/lib/redis";
+import { NextResponse } from "next/server";
 
 export async function GET() {
-  if (!isProd()) {
+  // Never hit Redis during static generation
+  if (process.env.NEXT_PHASE === "phase-production-build") {
     return NextResponse.json({ globalViews: FALLBACK_TOTAL_VISITORS });
   }
 
@@ -15,7 +15,7 @@ export async function GET() {
     console.error("Failed to fetch global page views:", error);
     return NextResponse.json(
       { error: "Failed to fetch data" },
-      { status: 500 },
+      { status: 500 }
     );
   }
 }
