@@ -1,10 +1,13 @@
 import { FALLBACK_TOTAL_VISITORS } from "@/lib/constants";
 import redis from "@/lib/redis";
+import { isProd } from "@/lib/utils";
 import { NextResponse } from "next/server";
 
+// Stop this route from running during build, to prevent failed Redis connections.
+export const dynamic = "force-dynamic";
+
 export async function GET() {
-  // Never hit Redis during static generation
-  if (process.env.NEXT_PHASE === "phase-production-build") {
+  if (!isProd()) {
     return NextResponse.json({ globalViews: FALLBACK_TOTAL_VISITORS });
   }
 
