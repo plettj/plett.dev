@@ -14,9 +14,8 @@ export default async function Home() {
             entrepreneur.
           </p>
           <p>
-            I&apos;m currently pursuing a Bachelor of Computer Science at the
-            University of Waterloo, and looking for my 6th co-op job for Fall
-            2025.
+            I&apos;m wrapping up a Bachelor of Computer Science at the
+            University of Waterloo, looking for Fall 2026 full-time roles.
           </p>
         </div>
         <ProfilePhoto src={[PATH_PFP_LIGHT, PATH_PFP_DARK]} size={256} />

@@ -5,10 +5,10 @@ import { Metadata } from "next/types";
 
 export const metadata: Metadata = {
   title: "CV",
-  description: "Josiah Plett's general technical resume - 2024",
+  description: "Josiah Plett's general technical resume - 2025",
   openGraph: getOGData({
     title: "CV",
-    description: "Josiah Plett's general technical resume - 2024",
+    description: "Josiah Plett's general technical resume - 2025",
     url: `${BASE_URL}${PATH_CV}`,
   }),
 };

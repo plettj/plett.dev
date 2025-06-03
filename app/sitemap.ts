@@ -24,19 +24,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes: MetadataRoute.Sitemap = [
     {
       url: `${BASE_URL}`,
-      lastModified: "2025-03-02",
+      lastModified: "2025-06-05",
       changeFrequency: "monthly",
       priority: 1,
     },
     {
       url: `${BASE_URL}${PATH_ABOUT}`,
-      lastModified: "2025-02-13",
+      lastModified: "2025-06-05",
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${BASE_URL}${PATH_WRITING}`,
-      lastModified: "2025-03-02",
+      lastModified: "2025-05-12",
       changeFrequency: "weekly",
       priority: 0.8,
     },
@@ -48,13 +48,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}${PATH_PHOTOGRAPHY}`,
-      lastModified: "2024-11-03",
+      lastModified: "2025-03-20",
       changeFrequency: "yearly",
       priority: 0.6,
     },
     {
       url: `${BASE_URL}${PATH_CV}`,
-      lastModified: "2024-10-20",
+      lastModified: "2025-06-03",
       changeFrequency: "monthly",
       priority: 0.4,
     },
@@ -81,7 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     routes.push({
       url: `${BASE_URL}${item.href}`,
       lastModified: "2024-11-26",
-      changeFrequency: "never",
+      changeFrequency: "yearly",
       priority: 0.1,
     });
   });

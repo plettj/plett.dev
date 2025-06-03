@@ -42,7 +42,7 @@ export default function HomeTabs() {
       </TabsContent>
       <TabsContent value="recruiter" className="flex flex-col gap-3">
         <p>
-          I&apos;ve worked 7 software roles, founded 3 companies, released{" "}
+          I&apos;ve worked 8 software roles, founded 3 companies, released{" "}
           <InlineLink href={URL_MY_GAMES}>18 games</InlineLink> totalling
           200,000+ players, broken{" "}
           <InlineLink href="https://www.youtube.com/playlist?list=PLTU_pBLoLfLL_X5FpFCAsvjvgqg0-yD5k">
