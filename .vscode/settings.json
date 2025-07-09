@@ -2,11 +2,13 @@
   "typescript.preferences.importModuleSpecifier": "shortest",
   "cSpell.words": [
     "Andermatt",
+    "autoconfirmed",
     "Butchart",
     "cardstock",
     "Colemak",
     "Coolmath",
     "Frederiksborg",
+    "Geng",
     "Grebel",
     "Grundtvig's",
     "Grundtvigs",
@@ -38,6 +40,9 @@
     "tippyjs",
     "tseslint",
     "Unmatching",
-    "upstash"
+    "upstash",
+    "Xuanyi",
+    "Yiheng",
+    "yogourt"
   ]
 }
