@@ -13,7 +13,7 @@ export default function PhotographyContent() {
 
   return (
     <>
-      <div className="w-full max-w-[140ch] mx-auto pb-8">
+      <div className="w-full mx-auto pb-8">
         <MasonryLayout images={photos} loadMethod={loadMethod} />
       </div>
       <div className="w-full max-w-[72ch] mx-auto">
