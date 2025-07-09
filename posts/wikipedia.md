@@ -9,7 +9,7 @@ long: "-80.5469032"
 
 Wikipedia is a free and open encyclopedia that contains roughly the entirety of all human knowledge. Written by the people, for the people, it has carried humanity on its shoulders since the turn of the millenium.
 
-It runs on nothing but goodwill, free time, and more than a touch of OCD.<sup>\[1\]</sup> Yet, in all these years, I've never found an answer to the simple question: "How?"
+It runs on nothing but goodwill, free time, and a touch of OCD.<sup>\[1\]</sup> Yet, in all these years, I've never found an answer to the simple question: "How?"
 
 📜 📜 📜
 
@@ -17,7 +17,7 @@ Some time ago, I was idling on an uninteresting Wikipedia page, and my mouse wan
 
 ### The Instigation
 
-Fast forward a year, and a random niche interest of mine got involved. I was working on a machine learning analysis of [Chess960](https://en.wikipedia.org/wiki/Chess960) games<sup>\[2\]</sup> (a.k.a. Fischer Random, a.k.a. Freestyle Chess), so I was checking the Wikipedia article on it, and I discovered its title was _Fischer Random_, not Chess960 like I would've guessed.
+Fast forward a year, and a random niche interest of mine got involved. I was working on a machine learning analysis of [Chess960](https://en.wikipedia.org/wiki/Chess960) games<sup>\[2\]</sup> (a.k.a. Fischer Random, a.k.a. Freestyle Chess), so I was checking the Wikipedia article on it, and I discovered its title was Fischer Random, not Chess960 like I would've guessed.
 
 I paused for a bit as an unusual thought entered my mind: I actually cared about this name difference. I'll spare you the details, but in short, a small army of other chess variant enjoyers did too, and were actively discussing this problem in a special Fischer Random -> Chess960 name change [talk thread](https://en.wikipedia.org/wiki/Talk:Chess960).
 
@@ -37,7 +37,7 @@ It was so easy. I just hit "Edit," wrote the statistic with a single citation, a
 
 The dopamine hit was crazy. It was basically cocaine.<sup>\[_citation needed_\]</sup> I impulsively opened an incognito tab to check if the change was public; it was.
 
-The open-contribution seed in my mind had officially matured into a deep-rooted giant, and it was in full bloom. I couldn't go more than a day without thinking, "What could I add next?" What about more cool statistics? Or a new article on Mr. Goose's role in Waterloo student life? Maybe I could even revive the long-forgotten (**mathNEWS**)[https://mathnews.uwaterloo.ca/] draft article — now that would be something.
+The open-contribution seed in my mind had officially matured into a deep-rooted oak, and it was in full bloom. I couldn't go more than a day without thinking, "What could I add next?" What about more cool statistics? Or a new article on Mr. Goose's role in Waterloo student life? Maybe I could even revive the long-forgotten (**mathNEWS**)[https://mathnews.uwaterloo.ca/] draft article — now that would be something.
 
 It wasn't just the public permanence of my efforts that hooked me. It was the little things, like receiving tips from senior editors, or finally being an "autoconfirmed user" so I could fix errors as they came up, like the atrocity on the Wikipedia page for [Yogurt](https://en.wikipedia.org/wiki/Yogurt): "Canada has its own spelling, yogourt..."<sup>\[5\]</sup>
 
@@ -45,7 +45,7 @@ My latest contribution has been to spend dozens of hours creating 8-year-old [Xu
 
 📜 📜 📜
 
-Wikipedia is a genius encyclopedia system, a living organism engineered to heal and grow on its own. It throws its seeds far and wide, where they might be planted within anyone who cares about something. All you need is some passion, and sooner or later, you'll be sucked down the wormhole like me.
+Wikipedia is a genius encyclopedia system, a living organism engineered to heal and grow on its own. It throws its seeds far and wide, where they might be planted within anyone who cares about something. All you need is a bit of passion, and sooner or later, you'll be sucked down the wormhole like me.
 
 So, I've got a new addiction. Do I regret it, or worry about it growing? Nope. In fact, I'm proud of it. And I'm proud of Wikipedia, and honestly, the whole wide world.
 
