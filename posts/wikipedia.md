@@ -37,7 +37,7 @@ It was so easy. I just hit "Edit," wrote the statistic with a single citation, a
 
 The dopamine hit was crazy. It was basically cocaine.<sup>\[_citation needed_\]</sup> I impulsively opened an incognito tab to check if the change was public; it was.
 
-The open-contribution seed in my mind had officially matured into a deep-rooted oak, and it was in full bloom. I couldn't go more than a day without thinking, "What could I add next?" What about more cool statistics? Or a new article on Mr. Goose's role in Waterloo student life? Maybe I could even revive the long-forgotten (**mathNEWS**)[https://mathnews.uwaterloo.ca/] draft article — now that would be something.
+The open-contribution seed in my mind had officially matured into a deep-rooted oak, and it was in full bloom. I couldn't go more than a day without thinking, "What could I add next?" What about more cool statistics? Or a new article on Mr. Goose's role in Waterloo student life? Maybe I could even revive the long-forgotten [**mathNEWS**](https://mathnews.uwaterloo.ca/) draft article — now that would be something.
 
 It wasn't just the public permanence of my efforts that hooked me. It was the little things, like receiving tips from senior editors, or finally being an "autoconfirmed user" so I could fix errors as they came up, like the atrocity on the Wikipedia page for [Yogurt](https://en.wikipedia.org/wiki/Yogurt): "Canada has its own spelling, yogourt..."<sup>\[5\]</sup>
 
