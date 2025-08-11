@@ -3,6 +3,36 @@ import { PATH_NOTES } from "@/lib/constants";
 
 export const csItems: NotesListItem[] = [
   {
+    title: "Introduction to Artificial Intelligence",
+    shortTitle: "Artificial Intelligence",
+    course: { name: "CS 486", href: "https://uwflow.com/course/cs486" },
+    year: "2025",
+    university: "UW",
+    summary:
+      "Search, uncertainty estimation, markov decision processes, machine learning, NLP, and deep learning.",
+    href: `${PATH_NOTES}/cs486-notes.pdf`,
+  },
+  {
+    title: "Numerical Computation",
+    shortTitle: "Numerical Computation",
+    course: { name: "CS 370", href: "https://uwflow.com/course/cs370" },
+    year: "2025",
+    university: "UW",
+    summary:
+      "Interpolation and splines, fourier analysis, timestepping with ODEs, numerical linear algebra including Google PageRank, and floating point systems.",
+    href: `${PATH_NOTES}/cs370-notes.pdf`,
+  },
+  {
+    title: "Computer Networks",
+    shortTitle: "Computer Networks",
+    course: { name: "CS 456", href: "https://uwflow.com/course/cs456" },
+    year: "2025",
+    university: "UW",
+    summary:
+      "Network programming, multimedia, security, structure, and management. Application and Transport Layer protocols, routing, and data linking issues.",
+    href: `${PATH_NOTES}/cs456-cheat-sheet.pdf`,
+  },
+  {
     title: "Machine Learning and Data Mining",
     shortTitle: "Machine Learning",
     course: { name: "02450", href: "https://kurser.dtu.dk/course/02450" },
@@ -85,6 +115,16 @@ export const csItems: NotesListItem[] = [
 ];
 
 export const mathItems: NotesListItem[] = [
+  {
+    title: "Statistics",
+    shortTitle: "Statistics",
+    course: { name: "STAT 231", href: "https://uwflow.com/course/stat231" },
+    year: "2025",
+    university: "UW",
+    summary:
+      "Empirical problem solving, maximum likelihood estimates, confidence intervals, Chi-Squared and Student t, Gaussian response models, linear regression, etc.",
+    href: `${PATH_NOTES}/stat231-cheat-sheet.pdf`,
+  },
   {
     title: "Introduction to Combinatorics",
     shortTitle: "Combinatorics",

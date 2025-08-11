@@ -97,7 +97,7 @@ export async function generateStaticParams() {
 
   return posts.map((post) => ({
     params: {
-      slug: post.slug,
+      slug: [post.slug],
     },
   }));
 }
