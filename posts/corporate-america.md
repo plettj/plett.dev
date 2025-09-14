@@ -1,7 +1,7 @@
 ---
 title: "How to Sell your Soul to Corporate America"
 preview: "... sooner than later, Corporate America's attention will fall on you. On that day, you better look as profitable as you can muster..."
-date: "2025-03-02T22:09:56Z"
+date: "2025-09-13T23:19:41Z"
 tags:
   [
     "america",
