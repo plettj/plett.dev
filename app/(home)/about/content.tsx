@@ -130,7 +130,10 @@ export const professionalItems: AboutListItem[] = [
           UW
         </InlineLink>
         . Some of my machine learning work is on{" "}
-        <InlineLink href="https://lichess.ai" external>
+        <InlineLink
+          href="https://web.archive.org/web/20250930042251/https://lichess.ai/"
+          external
+        >
           www.lichess.ai
         </InlineLink>{" "}
         (
@@ -249,7 +252,7 @@ export const hobbyItems: AboutListItem[] = [
     year: "2018",
     children: (
       <p>
-        You can find my amateur photography portfolio{" "}
+        You can find some of my favourite photos{" "}
         <InlineLink href={PATH_PHOTOGRAPHY}>here</InlineLink>.
       </p>
     ),
@@ -275,7 +278,7 @@ export const hobbyItems: AboutListItem[] = [
         >
           top spot
         </InlineLink>{" "}
-        on r/Math for a week.
+        on r/Math.
       </p>
     ),
   },
@@ -285,12 +288,11 @@ export const hobbyItems: AboutListItem[] = [
     year: "2019",
     children: (
       <p>
-        Six months after learning the rules, I qualifed for Canadian nationals.
-        I&apos;m also the{" "}
+        I learned the rules in 2019, and peaked when I won the{" "}
         <InlineLink href="https://lichess.org/swiss/jqpPbyIp" external>
           2021 Victoria Chess Challenge
-        </InlineLink>{" "}
-        champion. I play on{" "}
+        </InlineLink>
+        . I play on{" "}
         <InlineLink href="https://lichess.org/@/plettj" external>
           lichess.org
         </InlineLink>{" "}
@@ -298,7 +300,7 @@ export const hobbyItems: AboutListItem[] = [
         <InlineLink href="https://www.chess.com/member/plettj" external>
           chess.com
         </InlineLink>
-        , hovering around 1950 blitz.
+        , hovering around &#123;<i>your_rating + 1000</i>&#125; elo.
       </p>
     ),
   },
@@ -308,28 +310,19 @@ export const hobbyItems: AboutListItem[] = [
     year: "2009",
     children: (
       <p>
-        I&apos;ve solved a Rubik&apos;s cube in 7.46 seconds, and currently hold
-        3 official{" "}
+        I&apos;ve solved a Rubik&apos;s cube in 7.5 seconds, and currently hold
+        2 official{" "}
         <InlineLink
           href="https://www.youtube.com/playlist?list=PLTU_pBLoLfLL_X5FpFCAsvjvgqg0-yD5k"
           external
         >
           Guinness World Records
         </InlineLink>
-        . They garnered{" "}
-        <InlineLink
-          href="https://vancouverisland.ctvnews.ca/saanich-student-preparing-to-beat-3-guinness-world-records-1.5297653"
-          external
-        >
-          some
+        . I still follow cubing enough to be an{" "}
+        <InlineLink href="https://en.wikipedia.org/wiki/User:Plettj" external>
+          editor
         </InlineLink>{" "}
-        <InlineLink
-          href="https://cheknews.ca/chek-upside-island-teen-hoping-unique-skill-lands-him-in-guiness-book-of-world-records-740982/"
-          external
-        >
-          publicity
-        </InlineLink>
-        .
+        on Yiheng Wang&apos;s wikipedia page.
       </p>
     ),
   },

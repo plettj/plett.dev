@@ -1,17 +1,12 @@
-import { TOTAL_COURSE_NOTES } from "@/app/(home)/notes/content";
 import {
   PATH_ABOUT,
-  PATH_CV,
-  PATH_CV_STATIC,
   PATH_MAZE,
-  PATH_NOTES,
   PATH_PHOTOGRAPHY,
   URL_MY_GAMES,
   URL_MY_GITHUB,
   URL_MY_LINKEDIN,
 } from "@/lib/constants";
 import InlineLink from "../common/links/InlineLink";
-import ResponsiveInlineLink from "../common/links/ResponsiveInlineLink";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 
 export default function HomeTabs() {
@@ -36,43 +31,31 @@ export default function HomeTabs() {
       </TabsContent>
       <TabsContent value="gamer">
         <p>
-          My 18 games are on{" "}
+          All my games are on{" "}
           <InlineLink href={URL_MY_GAMES}>plett.fun</InlineLink>.
         </p>
       </TabsContent>
       <TabsContent value="recruiter" className="flex flex-col gap-3">
         <p>
-          I&apos;ve worked 8 software roles, founded 3 companies, released{" "}
-          <InlineLink href={URL_MY_GAMES}>18 games</InlineLink> totalling
-          200,000+ players, broken{" "}
-          <InlineLink href="https://www.youtube.com/playlist?list=PLTU_pBLoLfLL_X5FpFCAsvjvgqg0-yD5k">
-            3 Guinness World Records
-          </InlineLink>
-          , and published notes for{" "}
-          <InlineLink href={PATH_NOTES}>
-            {TOTAL_COURSE_NOTES} classes
-          </InlineLink>
-          . Plus some <InlineLink href={PATH_ABOUT}>side quests</InlineLink>{" "}
-          like a <InlineLink href={PATH_MAZE}>physical 4D maze</InlineLink> and
-          a top-200{" "}
+          I&apos;m a full-stack web dev who specializes in frontend. Some side
+          quests include{" "}
+          <InlineLink href={PATH_MAZE}>a physical 4D maze</InlineLink>, a
+          top-200{" "}
           <InlineLink href="https://github.com/plettj/hagnusmiemann" external>
             chess engine
+          </InlineLink>
+          , and a few{" "}
+          <InlineLink href="https://www.youtube.com/playlist?list=PLTU_pBLoLfLL_X5FpFCAsvjvgqg0-yD5k">
+            Guinness World Records
           </InlineLink>
           .
         </p>
         <p>
-          See{" "}
+          More on{" "}
           <InlineLink href={URL_MY_GITHUB} external>
             GitHub
-          </InlineLink>
-          , <InlineLink href={URL_MY_LINKEDIN}>LinkedIn</InlineLink>, or my{" "}
-          <ResponsiveInlineLink
-            desktopHref={PATH_CV}
-            mobileHref={PATH_CV_STATIC}
-          >
-            CV
-          </ResponsiveInlineLink>{" "}
-          for more.
+          </InlineLink>{" "}
+          or <InlineLink href={URL_MY_LINKEDIN}>LinkedIn</InlineLink>.
         </p>
         <i className="text-muted-foreground">jlplett[at]uwaterloo[dot]ca</i>
       </TabsContent>
