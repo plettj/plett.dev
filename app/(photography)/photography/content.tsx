@@ -1,6 +1,11 @@
 import { MasonryImage } from "@/components/common/photos/MasonryLayout";
 import { PATH_PHOTOGRAPHY_IMAGES } from "@/lib/constants";
 
+/**
+ * Photography photo data.
+ *
+ * See `scripts/generateBlurData/README.md` for instructions on generating a `blurDataURL` for new images.
+ */
 const photos: MasonryImage[] = [
   {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Copenhagen_Grundtvigs_Church.jpg`,

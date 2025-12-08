@@ -16,4 +16,4 @@ To accomplish this, we generate the static blur data URLs beforehand!
 node scripts/generateBlurData
 ```
 
-3. Copy the generated text, paste it back as your new `photos` component, and use `Ctrl+D` and smart arrow keys to make any necessary edits across many objects.
+3. Copy the generated text, paste it back as your new `photos` component, and make sure to edit it as necessary, eg. changing quotations to backticks so `${VAR}` tags work

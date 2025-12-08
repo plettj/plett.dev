@@ -17,6 +17,13 @@ async function generateBlurDataURL(imagePath) {
 async function addBlurDataURLs() {
   const updatedPhotos = [];
 
+  if (photos.length === 0) {
+    console.log(
+      "No photos found. Paste your photos into the `photos` array in this script and try again."
+    );
+    return;
+  }
+
   for (const photo of photos) {
     const imagePath = path.join(
       __dirname,
@@ -45,16 +52,11 @@ async function addBlurDataURLs() {
   );
 }
 
-const PATH_PHOTOGRAPHY_IMAGES = "/images/photography";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const PATH_PHOTOGRAPHY_IMAGES = "${PATH_PHOTOGRAPHY_IMAGES}";
 
 const photos = [
-  {
-    src: `${PATH_PHOTOGRAPHY_IMAGES}/Yosemite_Valley.jpg`,
-    alt: "Half Dome overlooks the iconic valley of Yosemite National Park",
-    location: "Yosemite Valley, USA",
-    year: "2024",
-    size: [3879, 2178],
-  },
+  // Paste your photos here, with empty "blurDataURL" fields
 ];
 
 addBlurDataURLs();
