@@ -31,8 +31,8 @@ export default function NotesPage() {
           My university course notes.
           <br />
           <br />
-          They are very concise while covering all course content, intended to
-          be used as an optimal study plan and a reference sheet during studies.
+          They are concise while covering all course content, intended to be
+          used either as a reference sheet or study plan.
         </p>
       </div>
 

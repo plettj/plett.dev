@@ -1,7 +1,12 @@
 import InlineLink from "@/components/common/links/InlineLink";
 import NavButton from "@/components/common/links/NavButton";
 import Photo from "@/components/common/photos/Photo";
-import { BASE_URL, PATH_ABOUT, PATH_MAZE } from "@/lib/constants";
+import {
+  BASE_URL,
+  META_DESCRIPTION_MAZE,
+  PATH_ABOUT,
+  PATH_MAZE,
+} from "@/lib/constants";
 import { getOGData } from "@/lib/utils";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import { Metadata } from "next/types";
@@ -9,12 +14,10 @@ import { photo, templateImages } from "./content";
 
 export const metadata: Metadata = {
   title: "4D Maze",
-  description:
-    "Josiah's 4-dimensional maze, an original design that you can download and build yourself.",
+  description: META_DESCRIPTION_MAZE,
   openGraph: getOGData({
     title: "4D Maze",
-    description:
-      "Josiah's 4-dimensional maze, an original design that you can download and build yourself.",
+    description: META_DESCRIPTION_MAZE,
     url: `${BASE_URL}${PATH_MAZE}`,
   }),
 };

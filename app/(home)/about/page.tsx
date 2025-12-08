@@ -20,7 +20,7 @@ export default async function About() {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col sm:flex-row gap-2 justify-between items-center text-center w-full">
-        <p className="mb-1">I enjoy many things.</p>
+        <p className="mb-1">What's the word?</p>
         <Visitors />
       </div>
       <Title>Professional Interests</Title>

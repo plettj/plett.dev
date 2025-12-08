@@ -424,7 +424,7 @@ export const hobbyItems: AboutListItem[] = [
     year: "2003",
     children: (
       <p>
-        Haha, got ya. Total felony and misdemeanor count:{" "}
+        Total felony and misdemeanor count:{" "}
         <InlineLink
           className={cn(fontMath.className)}
           href="https://en.wikipedia.org/wiki/Euler%27s_identity"
@@ -442,7 +442,7 @@ export const hobbyItems: AboutListItem[] = [
     year: "2020",
     children: (
       <p>
-        I can juggle, hold my breath for 6 minutes, throw a card 50m, and solve
+        I can juggle 4 balls, hold my breath for 6 minutes, and solve
         Rubik&apos;s cubes blindfolded. Also,{" "}
         <InlineLink
           href="https://humanbenchmark.com/users/60f396cf0a4755000835ec33"
@@ -485,15 +485,14 @@ export const hobbyItems: AboutListItem[] = [
     year: "2017",
     children: (
       <p>
-        These days I run, climb, play squash and ultimate, and work out. I used
-        to play{" "}
+        These days I mainly run and play disc golf. I used to play squash,{" "}
         <InlineLink
           href="https://www.npmjs.com/package/soccer-football"
           external
         >
           <Soccer />
         </InlineLink>
-        , badminton, and do triathlons. I own a slackline and love to ski.
+        , badminton, and do triathlons. I own a slackline and enjoy skiing.
       </p>
     ),
   },

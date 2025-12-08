@@ -37,14 +37,12 @@ export default function HomeTabs() {
       </TabsContent>
       <TabsContent value="recruiter" className="flex flex-col gap-3">
         <p>
-          I&apos;m a full-stack web dev who specializes in frontend. Some side
-          quests include{" "}
-          <InlineLink href={PATH_MAZE}>a physical 4D maze</InlineLink>, a
-          top-200{" "}
+          I&apos;m a full-stack web developer who specializes in frontend. Some
+          side quests include a 3200 elo{" "}
           <InlineLink href="https://github.com/plettj/hagnusmiemann" external>
             chess engine
           </InlineLink>
-          , and a few{" "}
+          , <InlineLink href={PATH_MAZE}>a 4D maze</InlineLink>, and a few{" "}
           <InlineLink href="https://www.youtube.com/playlist?list=PLTU_pBLoLfLL_X5FpFCAsvjvgqg0-yD5k">
             Guinness World Records
           </InlineLink>

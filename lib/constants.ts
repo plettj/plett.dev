@@ -26,13 +26,16 @@ export const URL_WEBRING = `https://cs.uwatering.com/#${BASE_URL}`;
 export const COPYRIGHT_STRING = `© ${new Date().getFullYear()} Josiah Plett`;
 
 export const VISITOR_EXPIRATION = 60 * 60 * 24; // Visits are considered unique again after 24 hours.
-export const FALLBACK_TOTAL_VISITORS = 7370; // NOTE: Old website had 1080 unique visits as of 2024-10-28.
+export const FALLBACK_TOTAL_VISITORS = 18836;
 
 export const META_TITLE_HOME = "Josiah Plett";
 export const META_DESCRIPTION_HOME =
   "My personal website, covering my professional interests, hobbies, games, writing, and photography.";
 export const META_DESCRIPTION_NOTES =
-  "Josiah Plett's university course notes. Distribute freely, with attribution.";
+  "Josiah's university course notes. Distribute freely, with attribution.";
+export const META_DESCRIPTION_PHOTOGRAPHY = "Some of my favourite photos.";
+export const META_DESCRIPTION_MAZE =
+  "My 4-dimensional maze, an original design you can download and build yourself.";
 
 export const THEME_BACKGROUND = "#FFFFFF";
 export const THEME_LIGHT_PRIMARY = "#1C1917";
