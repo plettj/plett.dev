@@ -53,7 +53,7 @@ async function addBlurDataURLs() {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const PATH_PHOTOGRAPHY_IMAGES = "${PATH_PHOTOGRAPHY_IMAGES}";
+const PATH_PHOTOGRAPHY_IMAGES = "/images/photography";
 
 const photos = [
   // Paste your photos here, with empty "blurDataURL" fields
