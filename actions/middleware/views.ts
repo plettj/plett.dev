@@ -16,7 +16,7 @@ export async function incrViews(
   context: NextFetchEvent,
   categories: string[]
 ): Promise<boolean> {
-  const headersList = headers();
+  const headersList = await headers();
   const host = headersList.get("host");
 
   if (!isProd() || !host || !BASE_URL.includes(host)) {

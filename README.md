@@ -2,7 +2,7 @@
 
 This repo holds the code to my personal website at [plett.dev](https://plett.dev).
 
-It is a very polished codebase, following all Next.js best practices and using its features to the fullest.
+I kept the code simple and tried my best to follow Next.js best practices.
 
 ### Tech
 
@@ -23,8 +23,8 @@ It is a very polished codebase, following all Next.js best practices and using i
 <summary>Developer to-dos</summary>
 <br>
 
-- Refactor the blog posts to support `.mdx` ([resource](https://www.youtube.com/watch?v=34bRv6cQezo))
-- Upgrade to Next.js 15 ([resource](https://nextjs.org/blog/next-15))
+- [x] Solve Next.js security vulnerability by upgrading to Next.js 16 ([resource](https://vercel.com/kb/bulletin/react2shell#how-to-upgrade-for-next.js))
+- [ ] Refactor the blog posts to support `.mdx` ([resource](https://www.youtube.com/watch?v=34bRv6cQezo))
 
 </details>
 

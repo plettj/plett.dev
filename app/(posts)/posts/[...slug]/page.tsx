@@ -11,12 +11,13 @@ import { getOGData } from "@/lib/utils";
 import { Metadata } from "next/types";
 
 type Params = {
-  params: {
+  params: Promise<{
     slug: string[];
-  };
+  }>;
 };
 
-export default async function Post({ params }: Params) {
+export default async function Post(props: Params) {
+  const params = await props.params;
   const post = getPostBySlugSafely(params.slug[0]);
 
   if (!post) {
@@ -51,7 +52,8 @@ export default async function Post({ params }: Params) {
   );
 }
 
-export function generateMetadata({ params }: Params): Metadata {
+export async function generateMetadata(props: Params): Promise<Metadata> {
+  const params = await props.params;
   const post = getPostBySlugSafely(params.slug[0]);
 
   if (!post) {

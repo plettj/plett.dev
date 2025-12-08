@@ -1,4 +1,5 @@
 import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
+import { ipAddress } from "@vercel/functions";
 import { incrViews } from "./actions/middleware/views";
 import { processIp } from "./lib/utils";
 
@@ -6,7 +7,7 @@ export const config = {
   matcher: ["/", "/notes", "/about", "/photography", "/posts/:path*"],
 };
 
-export default async function middleware(
+export default async function proxy(
   request: NextRequest,
   context: NextFetchEvent
 ) {
@@ -15,7 +16,7 @@ export default async function middleware(
   const forwardedIp = request.headers.get("x-forwarded-for");
   const rawIp = forwardedIp
     ? forwardedIp.split(/, /)[0]
-    : request.ip ?? "unknown";
+    : ipAddress(request) ?? "unknown";
   const ip = processIp(rawIp);
 
   // TODO: Add categories for each individual blog post.

@@ -7,7 +7,7 @@ const postsDirectory = join(process.cwd(), "posts");
 
 function filterSlugs(slugs: string[]): string[] {
   return slugs.filter((slug) => {
-    return !slug.toUpperCase().startsWith("DRAFT-");
+    return !/^(DRAFT-|ARCHIVE-)/.test(slug.toUpperCase());
   });
 }
 
@@ -56,7 +56,7 @@ export function getAllPosts(): Post[] {
   const posts = slugs
     .map((slug) => getPostBySlug(slug))
     .sort((post1, post2) =>
-      new Date(post1.date).getTime() > new Date(post2.date).getTime() ? -1 : 1,
+      new Date(post1.date).getTime() > new Date(post2.date).getTime() ? -1 : 1
     );
   return posts;
 }
