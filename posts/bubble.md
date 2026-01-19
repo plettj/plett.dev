@@ -1,6 +1,6 @@
 ---
 title: "The Code Review Economy Built its Foundations on Sand, and It's Grown too Large to Move"
-date: "2025-11-25T05:15:08Z"
+date: "2026-01-18T05:15:08Z"
 preview: 'He walked up to Jeongun''s desk and, as she looked up, placed a key between the two halves of her ergonomic split keyboard. "One expedited code review, please."'
 tags:
   [
