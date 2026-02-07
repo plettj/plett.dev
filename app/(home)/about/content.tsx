@@ -24,11 +24,15 @@ export const professionalItems: AboutListItem[] = [
     year: "2024",
     children: (
       <p>
-        I&apos;ve founded 3 startups, including a new product at{" "}
+        I&apos;m on the founding team at{" "}
+        <InlineLink href="https://www.maxima.ai/" external>
+          Maxima
+        </InlineLink>
+        . Previously, I was CTO of{" "}
         <InlineLink href="https://www.portagelabs.io/" external>
           Portage Labs
         </InlineLink>
-        . The other two failed, but I won{" "}
+        . I&apos;m grateful that I got a taste of failure early: after winning{" "}
         <InlineLink
           href="https://uwaterloo.ca/computer-science/news/computer-science-startup-sheepit-wins-velocity-5k-pitch"
           external
@@ -41,7 +45,7 @@ export const professionalItems: AboutListItem[] = [
         >
           two
         </InlineLink>{" "}
-        competitions and learned a ton; I&apos;ll be back again soon.
+        pitch competitions, my first two ventures went nowhere.
       </p>
     ),
   },
@@ -121,7 +125,7 @@ export const professionalItems: AboutListItem[] = [
         <InlineLink href="https://github.com/5G-Mobile-Healthcare" external>
           this
         </InlineLink>{" "}
-        ongoing ECG AI research initiative with{" "}
+        ECG AI research initiative with{" "}
         <InlineLink href="https://www.rogers.com/5g/5g-labs" external>
           Rogers
         </InlineLink>{" "}
@@ -129,26 +133,23 @@ export const professionalItems: AboutListItem[] = [
         <InlineLink href="https://uwaterloo.ca/rogers-5g-partnership/" external>
           UW
         </InlineLink>
-        . Some of my machine learning work is on{" "}
-        <InlineLink
-          href="https://web.archive.org/web/20250930042251/https://lichess.ai/"
-          external
-        >
+        . I&apos;ve done chess machine learning at{" "}
+        <InlineLink href="https://lichess.ai" external>
           www.lichess.ai
         </InlineLink>{" "}
         (
         <InlineLink href="https://github.com/plettj/lichess.ai" external>
           code
         </InlineLink>
-        ), and I made{" "}
+        ), made a{" "}
+        <InlineLink href="https://github.com/plettj/poker-tracker" external>
+          Poker Hand Tracker
+        </InlineLink>
+        , and a{" "}
         <InlineLink href="https://github.com/plettj/queens" external>
-          this
-        </InlineLink>{" "}
-        LinkedIn{" "}
-        <InlineLink href="https://www.linkedin.com/games/queens/" external>
-          Queens
-        </InlineLink>{" "}
-        performance analysis tool.
+          LinkedIn Queens grapher
+        </InlineLink>
+        .
       </p>
     ),
   },
@@ -189,11 +190,11 @@ export const professionalItems: AboutListItem[] = [
         >
           Math Innovation
         </InlineLink>{" "}
-        series, a{" "}
+        series, and a{" "}
         <InlineLink href="https://uwaterloo.ca/grebel/" external>
           Conrad Grebel
         </InlineLink>{" "}
-        event, 8 middle schools, and more.
+        dinner event, among others.
       </p>
     ),
   },
@@ -222,7 +223,7 @@ export const professionalItems: AboutListItem[] = [
         <InlineLink href="https://csclub.uwaterloo.ca/" external>
           UW CSC
         </InlineLink>
-        . I&apos;ve also written{" "}
+        . I&apos;ve also published{" "}
         <InlineLink href={PATH_NOTES}>public notes</InlineLink> for{" "}
         {TOTAL_COURSE_NOTES} university classes.
       </p>
@@ -288,11 +289,11 @@ export const hobbyItems: AboutListItem[] = [
     year: "2019",
     children: (
       <p>
-        I learned the rules in 2019, and peaked when I won the{" "}
+        I started playing 2019, and peaked when I won the{" "}
         <InlineLink href="https://lichess.org/swiss/jqpPbyIp" external>
           2021 Victoria Chess Challenge
         </InlineLink>
-        . I play on{" "}
+        . Now I just play blitz degenerately on{" "}
         <InlineLink href="https://lichess.org/@/plettj" external>
           lichess.org
         </InlineLink>{" "}
@@ -364,15 +365,15 @@ export const hobbyItems: AboutListItem[] = [
     year: "2012",
     children: (
       <p>
-        From age 4, I&apos;ve been obsessed with puzzles. I have designed{" "}
+        I&apos;ve always been obsessed with puzzles. I have designed{" "}
         <InlineLink href="/images/home/Josiahs_Original_Puzzles.png" external>
-          21 puzzles
+          21 paper puzzles
         </InlineLink>
         , including{" "}
         <InlineLink href="/images/home/Math_Path_Puzzle.jpg" external>
           <q>MATH PATH</q>
         </InlineLink>{" "}
-        puzzles which have been used in many classrooms. I also made a truly
+        puzzles which have been used in many classrooms. I also made a
         4-dimensional physical maze:{" "}
         <InlineLink href={PATH_MAZE}>feature page</InlineLink>.
       </p>
@@ -397,13 +398,13 @@ export const hobbyItems: AboutListItem[] = [
           href="https://monkeytype.com/profile/Colemak_Mod-DH"
           external
         >
-          Colemak profile
+          Colemak
         </InlineLink>{" "}
         and{" "}
         <InlineLink href="https://monkeytype.com/profile/plettj" external>
-          Qwerty profile
-        </InlineLink>
-        . I also built{" "}
+          Qwerty
+        </InlineLink>{" "}
+        typing. I also built{" "}
         <InlineLink href="/images/home/Custom_Keyboard.jpg" external>
           this
         </InlineLink>{" "}
@@ -468,14 +469,10 @@ export const hobbyItems: AboutListItem[] = [
           Youtube
         </InlineLink>
         . I&apos;ve also sang in UW&apos;s{" "}
-        <InlineLink href="https://uwaterloo.ca/music/university-choir" external>
-          University Choir
+        <InlineLink href="https://uwaterloo.ca/music/chamber-choir" external>
+          Chamber Choir
         </InlineLink>
-        , and played Trumpet 1 for{" "}
-        <InlineLink href="https://en.wikipedia.org/wiki/Last_Post" external>
-          The Last Post
-        </InlineLink>{" "}
-        at a Remembrance Day ceremony.
+        , and I played trumpet back in high school.
       </p>
     ),
   },
@@ -485,7 +482,7 @@ export const hobbyItems: AboutListItem[] = [
     year: "2017",
     children: (
       <p>
-        These days I mainly run and play disc golf. I used to play squash,{" "}
+        These days I mainly run, box, and disc golf. I used to play squash,{" "}
         <InlineLink
           href="https://www.npmjs.com/package/soccer-football"
           external
