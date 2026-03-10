@@ -32,7 +32,7 @@ export const professionalItems: AboutListItem[] = [
         <InlineLink href="https://www.portagelabs.io/" external>
           Portage Labs
         </InlineLink>
-        . I&apos;m grateful that I got a taste of failure early: after winning{" "}
+        . In school, I won{" "}
         <InlineLink
           href="https://uwaterloo.ca/computer-science/news/computer-science-startup-sheepit-wins-velocity-5k-pitch"
           external
@@ -45,7 +45,14 @@ export const professionalItems: AboutListItem[] = [
         >
           two
         </InlineLink>{" "}
-        pitch competitions, my first two ventures went nowhere.
+        pitch competitions, before both ventures died. I also served on the{" "}
+        <InlineLink
+          href="https://uwaterloo.ca/school-of-accounting-and-finance/catalogs/student-venture-fund-teams/svf-spring-2025-team"
+          external
+        >
+          Student Venture Fund
+        </InlineLink>
+        .
       </p>
     ),
   },
@@ -289,7 +296,7 @@ export const hobbyItems: AboutListItem[] = [
     year: "2019",
     children: (
       <p>
-        I started playing 2019, and peaked when I won the{" "}
+        I started playing in 2019, and peaked when I won the{" "}
         <InlineLink href="https://lichess.org/swiss/jqpPbyIp" external>
           2021 Victoria Chess Challenge
         </InlineLink>
@@ -461,7 +468,7 @@ export const hobbyItems: AboutListItem[] = [
     year: "2017",
     children: (
       <p>
-        You can find my piano playing on{" "}
+        You can find my mediocre piano playing on{" "}
         <InlineLink
           href="https://www.youtube.com/playlist?list=PLTU_pBLoLfLLW-w9wt5bGvua7yj9hQlnX"
           external

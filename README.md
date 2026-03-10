@@ -24,6 +24,7 @@ I kept the code simple and tried my best to follow Next.js best practices.
 <br>
 
 - [x] Solve Next.js security vulnerability by upgrading to Next.js 16 ([resource](https://vercel.com/kb/bulletin/react2shell#how-to-upgrade-for-next.js))
+- [ ] Improve metadata on all pages using real SEO tools.
 - [ ] Refactor the blog posts to support `.mdx` ([resource](https://www.youtube.com/watch?v=34bRv6cQezo))
 
 </details>
@@ -31,5 +32,5 @@ I kept the code simple and tried my best to follow Next.js best practices.
 ### License
 
 1. Feel free to use this repository as inspiration.
-2. If cloning, please remove all my personal information before deploying.
+2. If cloning, don't forget to change personal information before deploying!
 3. Crediting the author is appreciated.
