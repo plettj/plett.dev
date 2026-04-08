@@ -1,6 +1,6 @@
 import Container from "@/components/layouts/Container";
 
-export default async function PhotographyLayout({
+export default async function RaytracingLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
