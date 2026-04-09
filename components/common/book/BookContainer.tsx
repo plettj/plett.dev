@@ -1,14 +1,20 @@
+import { ChapterData, TOCData } from "./bookTypes";
+import Chapter from "./Chapter";
 import TableOfContents from "./TableOfContents";
 
-export default function BookContainer() {
+export default function BookContainer({
+  toc,
+  content,
+}: {
+  toc: TOCData[];
+  content: ChapterData[];
+}) {
   return (
-    <div className="flex gap-4">
-      <section className="bg-blue-300">
-        <TableOfContents />
-      </section>
-      <section className="flex flex-col text-sm px-6 w-full max-w-[80ch] sm:px-8 bg-red-300">
-        <h1>... put TOC here</h1>
-      </section>
+    <div className="xl:grid xl:grid-cols-[auto_min(80ch,100%)_auto] xl:gap-x-4 flex flex-col">
+      <TableOfContents toc={toc} />
+      {content.map((data) => {
+        return <Chapter data={data} />;
+      })}
     </div>
   );
 }
