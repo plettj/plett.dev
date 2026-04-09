@@ -11,6 +11,7 @@ export const PATH_NOTES = "/notes";
 export const PATH_PHOTOGRAPHY = "/photography";
 export const PATH_PHOTOGRAPHY_IMAGES = "/images/photography";
 export const PATH_RAYTRACING = "/raytracing";
+export const PATH_RAYTRACING_IMAGES = "/images/raytracing";
 export const PATH_CV = "/cv";
 export const PATH_CV_STATIC = "/cv/Josiah_Plett_CV_2025.pdf";
 export const PATH_PFP_LIGHT = "/images/home/Profile_Light.jpg";
