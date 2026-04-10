@@ -1,3 +1,5 @@
+import { NextConfig } from "next";
+
 const URL_OLD_SITE = "https://old.plett.dev";
 
 const redirectPaths = [
@@ -9,8 +11,7 @@ const redirectPaths = [
   "/More/other-stuff",
 ];
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
   async redirects() {
     return [
       ...redirectPaths.map((source) => ({
@@ -20,6 +21,7 @@ const nextConfig = {
       })),
       { source: "/games", destination: "https://plett.fun", permanent: true },
       { source: "/home", destination: "/", permanent: true },
+      { source: "/writing", destination: "/posts", permanent: false },
     ];
   },
 
