@@ -1,7 +1,7 @@
 import { ChapterData, TOCData } from "@/components/common/book/bookTypes";
 import { PATH_RAYTRACING_IMAGES } from "@/lib/constants";
 
-const raytracingTOC: TOCData[] = [
+export const raytracingTOC: TOCData[] = [
   {
     title: "Raytracing in a Nutshell",
     hash: "in-a-nutshell",
@@ -35,7 +35,7 @@ const raytracingTOC: TOCData[] = [
   },
   {
     title: "Intermediate Features",
-    hash: "basics",
+    hash: "intermediate",
     children: [], // BVH, texture mapping, reflection and transmission, path tracing
   },
   {
@@ -63,18 +63,41 @@ export const raytracingBook: ChapterData[] = [
     ),
     images: [
       {
+        src: `${PATH_RAYTRACING_IMAGES}/test2.png`,
+        alt: "A hilltop view above the fog of the sprawling French hills from Haut-Koenigsbourg Castle in Alsace",
+        location: "Shadows",
+        year: "16 samples",
+        size: [4096, 2304],
+      },
+    ],
+  },
+  {
+    title: "A Working Raytracer",
+    hash: "core-features",
+    content: (
+      <>
+        <p>
+          Talking about a working raytracer. This is a longer sentence to test
+          how sentence breaks work and whatever. I do hope it ends up feeling
+          nice and smooth.
+        </p>
+        <p>SECOND paragraph, for testing :).</p>
+      </>
+    ),
+    images: [
+      {
         src: `${PATH_RAYTRACING_IMAGES}/test1.png`,
         alt: "test 1 image",
         location: "Phong Illumination",
         year: "16 samples",
-        size: [512, 512],
+        size: [707, 672],
       },
       {
         src: `${PATH_RAYTRACING_IMAGES}/test2.png`,
         alt: "A hilltop view above the fog of the sprawling French hills from Haut-Koenigsbourg Castle in Alsace",
         location: "Shadows",
         year: "16 samples",
-        size: [512, 512],
+        size: [4096, 2304],
       },
     ],
   },

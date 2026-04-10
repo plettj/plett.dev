@@ -14,18 +14,20 @@ I kept the code simple and tried my best to follow Next.js best practices.
 
 ### Features
 
-- Thoroughly tested responsive design and ARIA compliance.
 - Statically generated and search-engine-optimized posts from markdown ([writing](https://plett.dev/posts)).
+- _In progress:_ Support for book display.
 - Custom masonry layout with modern image loading ([photography](https://plett.dev/photography)).
 - Mouse-following tooltips ([notes](https://plett.dev/notes)).
+- Thoroughly tested responsive design and ARIA compliance.
 
 <details>
 <summary>Developer to-dos</summary>
 <br>
 
 - [x] Solve Next.js security vulnerability by upgrading to Next.js 16 ([resource](https://vercel.com/kb/bulletin/react2shell#how-to-upgrade-for-next.js))
-- [ ] Improve metadata on all pages using real SEO tools.
-- [ ] Refactor the blog posts to support `.mdx` ([resource](https://www.youtube.com/watch?v=34bRv6cQezo))
+- [ ] Allow book contents to be written in markdown, preferably with `.mdx` ([resource](https://www.youtube.com/watch?v=34bRv6cQezo))
+  - [ ] Transition blog posts to `.mdx` as well.
+- [ ] Improve metadata on all pages using SEO tools beyond just metadata and sitemaps.
 
 </details>
 
