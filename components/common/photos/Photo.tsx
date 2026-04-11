@@ -32,8 +32,8 @@ export default function Photo({
             <div
               ref={ref}
               className={cn(
-                "border-[1px] w-full -m-[1px] relative transition-colors duration-700",
-                inView && isLoaded && "border-transparent"
+                "border-[1px] w-full -m-[1px] relative duration-700",
+                inView && isLoaded && "border-transparent",
               )}
               style={{
                 aspectRatio: `${image.size[0]}/${image.size[1]}`, // Tailwind `aspect-[${num}]` fails.
@@ -42,7 +42,7 @@ export default function Photo({
               <div
                 className={cn(
                   "group transition-opacity duration-700",
-                  inView && isLoaded ? "opacity-100" : "opacity-0"
+                  inView && isLoaded ? "opacity-100" : "opacity-0",
                 )}
               >
                 <PhotoContent
@@ -111,7 +111,7 @@ function PhotoContent({
         className={cn(
           "absolute left-0 bottom-0 right-0 flex justify-between font-semibold p-1.5 pr-2 transform transition-all duration-200 opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0",
           light ? "text-white" : "text-black",
-          !inView && "hidden"
+          !inView && "hidden",
         )}
       >
         <p className="font-thin">{image.year}</p>

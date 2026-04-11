@@ -96,7 +96,7 @@ export default async function RootLayout({
       <body
         className={cn(
           fontSans.variable,
-          "flex flex-col h-screen items-center overflow-x-hidden scrollbar bg-background font-sans antialiased transition-colors",
+          "flex flex-col h-screen items-center overflow-x-hidden scrollbar bg-background font-sans antialiased transition-colors scroll-pt-8",
         )}
       >
         <ThemeProvider

@@ -18,18 +18,19 @@ export default function Chapter({
   prefix: string;
   isSubChapter?: boolean;
 }) {
+  const title: string = `${prefix} ${data.title}`;
+
   return (
     <div className="contents">
       <section className="xl:col-start-2 col-auto px-0 sm:px-8 pb-4 flex flex-col items-center">
-        <div className="w-full border-b pb-0.5 mb-4 flex justify-between items-baseline">
+        <div
+          id={data.hash}
+          className="w-full border-b pb-0.5 mb-4 flex justify-between items-baseline"
+        >
           {isSubChapter ? (
-            <h4 id={data.hash} className="text-lg font-bold">
-              {prefix} {data.title}
-            </h4>
+            <h4 className="text-lg font-bold">{title}</h4>
           ) : (
-            <h2 id={data.hash} className="text-2xl font-bold">
-              {prefix} {data.title}
-            </h2>
+            <h2 className="text-2xl font-bold">{title}</h2>
           )}
           {!isSubChapter && (
             <span className="text-muted-foreground opacity-60 font-light">
@@ -38,7 +39,7 @@ export default function Chapter({
           )}
         </div>
         {/* Mini-TOC only on top-level chapters with children */}
-        {!isSubChapter && data.children && (
+        {!isSubChapter && !!data.children?.length && (
           <ChapterTOC chapters={data.children} prefix={prefix} />
         )}
         <div className={cn("w-full mt-0", fontBook.className)}>
@@ -83,7 +84,7 @@ function ChapterTOC({
         <a
           key={child.hash}
           href={`#${child.hash}`}
-          className="text-sm text-muted-foreground hover:text-foreground transition-colors leading-relaxed"
+          className="text-sm text-muted-foreground hover:text-foreground leading-relaxed"
         >
           {prefix}
           {i + 1}. {child.title}
