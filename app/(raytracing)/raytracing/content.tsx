@@ -1,14 +1,14 @@
-import { ChapterData, TOCData } from "@/components/common/book/bookTypes";
+import { ChapterData } from "@/components/common/book/bookTypes";
 import { PATH_RAYTRACING_IMAGES } from "@/lib/constants";
 
-export const raytracingTOC: TOCData[] = [
+const raytracingTOC = [
   {
     title: "Raytracing in a Nutshell",
     hash: "in-a-nutshell",
   },
   {
-    title: "A Working Raytracer",
-    hash: "core-features",
+    title: "The Bare Minimum",
+    hash: "bare-minimum",
     children: [
       {
         title: "Rays and the Camera",
@@ -72,8 +72,8 @@ export const raytracingBook: ChapterData[] = [
     ],
   },
   {
-    title: "A Working Raytracer",
-    hash: "core-features",
+    title: "The Bare Minimum",
+    hash: "bare-minimum",
     content: (
       <>
         <p>
@@ -98,6 +98,71 @@ export const raytracingBook: ChapterData[] = [
         location: "Shadows",
         year: "16 samples",
         size: [4096, 2304],
+      },
+    ],
+    children: [
+      {
+        title: "Rays and the Camera",
+        hash: "rays-and-camera",
+        content: (
+          <>
+            <p>Talk about rays and the camera, I guess!</p>
+          </>
+        ),
+        images: [
+          {
+            src: `${PATH_RAYTRACING_IMAGES}/test2.png`,
+            alt: "A hilltop view above the fog of the sprawling French hills from Haut-Koenigsbourg Castle in Alsace",
+            location: "Shadows",
+            year: "16 samples",
+            size: [4096, 2304],
+          },
+        ],
+      },
+      {
+        title: "Intersecting with Things",
+        hash: "intersecting", // Should include depth testing
+        content: (
+          <>
+            <p>
+              Intersecting with things like spheres, cubes, discs, and torii,
+              and depth testing.
+            </p>
+          </>
+        ),
+      },
+      {
+        title: "Lighting Things Up",
+        hash: "phong-illumination",
+        content: (
+          <>
+            <p>
+              Phong illumination model basics, covering diffuse and specular,
+              and then linking to further resources (PBRT? RTIOW?) like BRDF.
+            </p>
+          </>
+        ),
+      },
+      {
+        title: "Casting Shadows",
+        hash: "shadows",
+        content: (
+          <>
+            <p>
+              Simply expand on the idea that now that we can shoot rays, we can
+              shoot rays <i>from anywhere</i>.
+            </p>
+          </>
+        ),
+        images: [
+          {
+            src: `${PATH_RAYTRACING_IMAGES}/test2.png`,
+            alt: "A hilltop view above the fog of the sprawling French hills from Haut-Koenigsbourg Castle in Alsace",
+            location: "Shadows",
+            year: "16 samples",
+            size: [4096, 2304],
+          },
+        ],
       },
     ],
   },
