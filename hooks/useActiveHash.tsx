@@ -5,29 +5,24 @@ export function useActiveHash(hashes: string[]): string | null {
   const [activeHash, setActiveHash] = useState<string | null>(null);
 
   useEffect(() => {
-    // Extend top margin way up so headings stay intersecting after scrolling past them.
+    const intersecting = new Set<string>();
+
     const observer = new IntersectionObserver(
       (entries) => {
-        // Build a map of which hashes are currently intersecting
-        setActiveHash((prev) => {
-          const intersecting = new Set<string>();
-          // Seed with previous active so it persists until something new wins
-          if (prev) intersecting.add(prev);
-
-          entries.forEach((e) => {
-            const id = e.target.getAttribute("id");
-            if (!id) return;
-            if (e.isIntersecting) intersecting.add(id);
-            else intersecting.delete(id);
-          });
-
-          // Pick the last intersecting heading in DOM order
-          const winner = hashes.findLast((h) => intersecting.has(h));
-          return winner ?? prev;
+        entries.forEach((e) => {
+          const id = e.target.getAttribute("id");
+          if (!id) return;
+          if (e.isIntersecting) intersecting.add(id);
+          else intersecting.delete(id);
         });
+
+        // Last intersecting heading in DOM order should be the one the user is "in."
+        const winner = hashes.findLast((h) => intersecting.has(h));
+        if (winner) setActiveHash(winner);
       },
-      // Once a heading is in the top 40% of the screen, the hash updates.
-      { rootMargin: "0px 0px -40% 0px", threshold: 0 },
+      // 99999px: Current heading could be very high up, so check everything above.
+      // -70%: Bring the bottom edge of the intersection up, so new headings won't activate early.
+      { rootMargin: "99999px 0px -70% 0px", threshold: 0 },
     );
 
     hashes.forEach((hash) => {
