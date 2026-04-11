@@ -26,7 +26,7 @@ export default function Chapter({
       <section className="xl:col-start-2 col-auto px-0 sm:px-8 pb-4 flex flex-col items-center">
         <div
           id={data.hash}
-          className="w-full pt-2 border-b pb-0.5 mb-4 flex justify-between items-baseline"
+          className="w-full pt-2 border-b pb-0.5 flex justify-between items-baseline"
         >
           <SectionHeading
             hash={data.hash}
@@ -86,7 +86,7 @@ function ChapterTOC({
   prefix: string;
 }) {
   return (
-    <nav className="w-full flex flex-col border-b pb-4 mb-4">
+    <nav className="w-full flex flex-col border-b py-4">
       {chapters.map((child, i) => (
         <a
           key={child.hash}
