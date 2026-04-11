@@ -28,10 +28,10 @@ export default function TableOfContents({
                 isActive && "text-foreground",
               )}
             >
-              <span className="font-medium">
+              <span className="font-medium text-balance">
                 {i + 1}. {chapter.title}
               </span>
-              <span className="text-muted-foreground opacity-60 font-light">
+              <span className="text-muted-foreground opacity-60 font-light whitespace-nowrap">
                 7 min
               </span>
             </a>

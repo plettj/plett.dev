@@ -33,7 +33,7 @@ export default function Chapter({
             isSubChapter={isSubChapter}
           />
           {!isSubChapter && (
-            <span className="text-muted-foreground opacity-60 font-light">
+            <span className="text-muted-foreground opacity-60 font-light whitespace-nowrap">
               7 min
             </span>
           )}
@@ -111,7 +111,10 @@ function SectionHeading({
         #
       </span>
       <Heading
-        className={cn("font-bold", isSubChapter ? "text-lg" : "text-2xl")}
+        className={cn(
+          "font-bold text-balance",
+          isSubChapter ? "text-lg" : "text-2xl",
+        )}
       >
         {title}
       </Heading>
