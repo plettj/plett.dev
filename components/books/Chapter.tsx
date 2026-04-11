@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { IBM_Plex_Sans } from "next/font/google";
 import Photo from "../common/photos/Photo";
+import markdownStyles from "../posts/markdown-styles.module.css";
 import { ChapterData } from "./bookTypes";
 
 const fontBook = IBM_Plex_Sans({
@@ -42,7 +43,13 @@ export default function Chapter({
         {!isSubChapter && !!data.children?.length && (
           <ChapterTOC chapters={data.children} prefix={prefix} />
         )}
-        <div className={cn("w-full mt-0", fontBook.className)}>
+        <div
+          className={cn(
+            "w-full mt-0",
+            fontBook.className,
+            markdownStyles["markdown"],
+          )}
+        >
           {data.content}
         </div>
         {/* On thinner devices, render images inline. */}
