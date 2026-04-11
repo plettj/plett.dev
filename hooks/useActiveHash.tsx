@@ -21,8 +21,8 @@ export function useActiveHash(hashes: string[]): string | null {
         if (winner) setActiveHash(winner);
       },
       // 99999px: Current heading could be very high up, so check everything above.
-      // -70%: Bring the bottom edge of the intersection up, so new headings won't activate early.
-      { rootMargin: "99999px 0px -70% 0px", threshold: 0 },
+      // -60%: Bring the bottom edge of the intersection up, so new headings won't activate early.
+      { rootMargin: "99999px 0px -60% 0px", threshold: 0 },
     );
 
     hashes.forEach((hash) => {
