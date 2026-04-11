@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { IBM_Plex_Sans } from "next/font/google";
-import Photo from "../photos/Photo";
+import Photo from "../common/photos/Photo";
 import { ChapterData } from "./bookTypes";
 
 const fontBook = IBM_Plex_Sans({

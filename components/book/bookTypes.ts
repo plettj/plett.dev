@@ -1,4 +1,4 @@
-import { MasonryImage } from "../photos/MasonryLayout";
+import { MasonryImage } from "../common/photos/MasonryLayout";
 
 export type ChapterData = {
   title: string;

@@ -1,4 +1,4 @@
-import { ChapterData } from "@/components/common/book/bookTypes";
+import { ChapterData } from "@/components/book/bookTypes";
 import { PATH_RAYTRACING_IMAGES } from "@/lib/constants";
 
 export const raytracingBook: ChapterData[] = [

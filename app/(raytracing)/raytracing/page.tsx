@@ -1,4 +1,4 @@
-import BookContainer from "@/components/common/book/BookContainer";
+import BookContainer from "@/components/book/BookContainer";
 import {
   BASE_URL,
   META_DESCRIPTION_RAYTRACING,
