@@ -1,4 +1,5 @@
-import BookContainer from "@/components/book/BookContainer";
+import BookContainer from "@/components/books/BookContainer";
+import { parseBook } from "@/lib/book/parseBook";
 import {
   BASE_URL,
   META_DESCRIPTION_RAYTRACING,
@@ -6,18 +7,23 @@ import {
 } from "@/lib/constants";
 import { getOGData } from "@/lib/utils";
 import { Metadata } from "next/types";
+import path from "path";
 import { raytracingBook } from "./content";
 
 export const metadata: Metadata = {
-  title: "Raytracing",
+  title: "Relativistic Raytracing",
   description: META_DESCRIPTION_RAYTRACING,
   openGraph: getOGData({
-    title: "Raytracing",
+    title: "Relativistic Raytracing",
     description: META_DESCRIPTION_RAYTRACING,
     url: `${BASE_URL}${PATH_RAYTRACING}`,
   }),
 };
 
 export default async function Raytracing() {
-  return <BookContainer content={raytracingBook} />;
+  const chapters = await parseBook(
+    path.join(process.cwd(), "books", "raytracing.md"),
+  );
+
+  return <BookContainer content={chapters || raytracingBook} />;
 }

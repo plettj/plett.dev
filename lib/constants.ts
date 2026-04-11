@@ -37,7 +37,7 @@ export const META_DESCRIPTION_NOTES =
   "Josiah's university course notes. Distribute freely, with attribution.";
 export const META_DESCRIPTION_PHOTOGRAPHY = "Some of my favourite photos.";
 export const META_DESCRIPTION_RAYTRACING =
-  "Josiah's page for all things graphics, including a fast relativistic raytracer.";
+  "Relativistic Raytracing: How to Render Black Holes";
 export const META_DESCRIPTION_MAZE =
   "My 4-dimensional maze, an original design you can download and build yourself.";
 
