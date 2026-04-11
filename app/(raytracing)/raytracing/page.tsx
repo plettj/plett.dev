@@ -8,7 +8,6 @@ import {
 import { getOGData } from "@/lib/utils";
 import { Metadata } from "next/types";
 import path from "path";
-import { raytracingBook } from "./content";
 
 export const metadata: Metadata = {
   title: "Relativistic Raytracing",
@@ -25,5 +24,5 @@ export default async function Raytracing() {
     path.join(process.cwd(), "books", "raytracing.md"),
   );
 
-  return <BookContainer content={chapters || raytracingBook} />;
+  return <BookContainer content={chapters} />;
 }
