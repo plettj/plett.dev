@@ -25,13 +25,13 @@ export default function Chapter({
       <section className="xl:col-start-2 col-auto px-0 sm:px-8 pb-4 flex flex-col items-center">
         <div
           id={data.hash}
-          className="w-full border-b pb-0.5 mb-4 flex justify-between items-baseline"
+          className="w-full pt-2 border-b pb-0.5 mb-4 flex justify-between items-baseline"
         >
-          {isSubChapter ? (
-            <h4 className="text-lg font-bold">{title}</h4>
-          ) : (
-            <h2 className="text-2xl font-bold">{title}</h2>
-          )}
+          <SectionHeading
+            hash={data.hash}
+            title={title}
+            isSubChapter={isSubChapter}
+          />
           {!isSubChapter && (
             <span className="text-muted-foreground opacity-60 font-light">
               7 min
@@ -91,5 +91,30 @@ function ChapterTOC({
         </a>
       ))}
     </nav>
+  );
+}
+
+function SectionHeading({
+  hash,
+  title,
+  isSubChapter,
+}: {
+  hash: string;
+  title: string;
+  isSubChapter: boolean;
+}) {
+  const Heading = isSubChapter ? "h4" : "h2";
+
+  return (
+    <a href={`#${hash}`} className="group relative">
+      <span className="hidden sm:block absolute -left-5 top-1/2 -translate-y-1/2 text-muted-foreground opacity-0 group-hover:opacity-60 transition-opacity select-none">
+        #
+      </span>
+      <Heading
+        className={cn("font-bold", isSubChapter ? "text-lg" : "text-2xl")}
+      >
+        {title}
+      </Heading>
+    </a>
   );
 }
