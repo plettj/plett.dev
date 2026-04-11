@@ -20,7 +20,7 @@ const raytracingTOC = [
       },
       {
         title: "Lighting Things Up",
-        hash: "phong-illumination",
+        hash: "illumination",
       },
       {
         title: "Casting Shadows",
@@ -133,7 +133,7 @@ export const raytracingBook: ChapterData[] = [
       },
       {
         title: "Lighting Things Up",
-        hash: "phong-illumination",
+        hash: "illumination",
         content: (
           <>
             <p>
