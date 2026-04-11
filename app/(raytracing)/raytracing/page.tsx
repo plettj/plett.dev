@@ -6,7 +6,7 @@ import {
 } from "@/lib/constants";
 import { getOGData } from "@/lib/utils";
 import { Metadata } from "next/types";
-import { raytracingBook, raytracingTOC } from "./content";
+import { raytracingBook } from "./content";
 
 export const metadata: Metadata = {
   title: "Raytracing",
@@ -19,5 +19,5 @@ export const metadata: Metadata = {
 };
 
 export default async function Raytracing() {
-  return <BookContainer toc={raytracingTOC} content={raytracingBook} />;
+  return <BookContainer content={raytracingBook} />;
 }
