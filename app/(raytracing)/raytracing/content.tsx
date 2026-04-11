@@ -166,4 +166,70 @@ export const raytracingBook: ChapterData[] = [
       },
     ],
   },
+  {
+    title: "More Basic Features",
+    hash: "basics",
+    content: (
+      <>
+        <p>Supersampling, environment maps, multithreading, DOF</p>
+      </>
+    ),
+    children: [
+      {
+        title: "Supersampling",
+        hash: "supersampling",
+        content: (
+          <>
+            <p>
+              Talk about the various types: uniform, random, jittered, adaptive
+              progressive, touch on Sobol sequences.
+            </p>
+          </>
+        ),
+      },
+      {
+        title: "Environment Maps",
+        hash: "environment-maps",
+        content: (
+          <>
+            <p>
+              Environment maps, or skyboxes, are what rays that miss everything
+              hit. Mention how hdr and exr are different from png.
+            </p>
+          </>
+        ),
+      },
+      {
+        title: "Easy Performance Gains",
+        hash: "easy-performance-gains",
+        content: (
+          <>
+            <p>Multithreading</p>
+          </>
+        ),
+      },
+      {
+        title: "Depth of Field Blur",
+        hash: "dof",
+        content: (
+          <>
+            <p>
+              Depth of Field, or Defocus Blur, blah blah blah thin lense
+              approximation.
+            </p>
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    title: "Intermediate Features",
+    hash: "intermediate",
+    content: (
+      <>
+        <p>BVH, texture mapping, reflection and transmission, path tracing</p>
+      </>
+    ),
+    children: [],
+  },
 ];
