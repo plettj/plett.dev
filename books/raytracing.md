@@ -1,36 +1,26 @@
-## What is this book?
+## Introduction
 
-TO BE WRITTEN IN FUTURE!
+> This project was inspired by [this video](https://www.youtube.com/watch?v=8-B6ryuBkCM), and this article is inspired by [Ray Tracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html).
 
-Here's what I want to make clear to my reader in the initial section.
+In my final year of university, I thought it would be fun to render a black hole. Little did I know, the field of computer graphics is a vast ocean of accumulated knowledge, and the rickety little bachelor's degree sailboat I had when I embarked on this journey was in for a rough ride.
 
-1. This is a high-level document, not one that will give you working code at the end. However, you can reference the working code [on github](https://github.com/plettj/raytracer).
-2. It's a short, practical read, for people who are looking for a quick and easy way to get a working knowledge of computer graphics.
-3. Also, there's black holes.
+In this article, I break things down into bite-sized pieces, so **you don't need any technical knowledge**. I want you to enjoy reading this, so I'll avoid deep-diving into technical details, and instead focus on making the high-level concepts intuitively and visually clear. This is a layman's voyage from drawing circles to rendering a black hole.
 
-## Raytracing in a nutshell
+That said, I've made all code used to render these images public [here on GitHub](https://github.com/plettj/raytracer). The code is self-contained, so anyone can download it and generate their own images with essentially zero setup.
 
-Code blocks annotated with two different languages.
+IMAGE 1: Showcase image.
 
-```cpp
-#include <vector>
+## Rendering our first shapes
 
-const int testInt = 1;
-const vector<int> testVector{0.0f};
-```
+In computer graphics, there are two main ways of "rendering," which is a fancy way of saying "turning a 3D scene into a 2D image." They are **Rasterization** and **Ray tracing**.
 
-```ts
-const testInt: int = 1;
-let testArray: int[] = [0];
-```
+**Rasterization** is a rendering model that takes all of the shapes (usually triangles) that make up the 3D scene, and shoving them through a series of math operations involving linear algebra that directly converts them into a 2D image. The problem is, linear algebra is _linear_, and our goal of drawing black holes will need to account for the _bending_ of light as it passes close to a black hole.
 
-Further, there's other things that I need to test, like **bold** and _italics_ and **_bolded italics_**.
+**Ray tracing** will be the rendering model we use. It involves following light rays as they bounce around the shapes in the scene, and into the camera. In contrast to rasterization, ray tracing includes a fairly accurate model of light itself, which allows it both more flexibility, and more potential for realism. The only downside is it is more computationally intensive, so its application is usually limited to static media like CGI in movies, and it's generally avoided in real-time applications like games.
 
-Lastly, I want to try a sub sub heading.
+On our way to black holes, I'll show you the basics of ray tracing, [lighting](#lighting-things-up), [reflection](#reflection-and-transmission), and some cool features like [defocus blur](#depth-of-field-blur), to build your foundational understanding. After these mini-lessons, you'll be equipped to tackle the rendering of black holes.
 
-#### This shouldn't mess with anything.
-
-Voila! And then an image to cap it off, which you should have seen on the right.
+> If you only care about the relativistic ray tracing necessary for black holes, you can jump ahead to [6. Rendering a Black Hole](#rendering-a-black-hole).
 
 <img src="/images/raytracing/test1.png" alt="Test image alt text" width="707" height="672" data-location="Phong Illumination" data-year="16 samples" />
 <img src="/images/raytracing/test2.png" alt="Example image 2" width="4096" height="2304" data-location="Infinite Earths" data-year="16 samples" />
