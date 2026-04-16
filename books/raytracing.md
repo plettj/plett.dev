@@ -1,10 +1,11 @@
 ## Introduction
 
+- [ ] Links should be blue
 - [ ] syntax highlighting
 - [ ] make the code collapsible
 - [ ] make the actual introduction separate and above, and INCLUDE AN INLINE IMAGE showing progression (like phong sphere to black hole)
 
-**WRITING TOODS**
+**WRITING TODOS**
 
 - [ ] ms paint descriptions of stuff (motivate shooting light rays out of our eyes better)
 - [ ] make the introduction a little more attention-grabby, _somehow_. eg. remove "vast ocean" crap
