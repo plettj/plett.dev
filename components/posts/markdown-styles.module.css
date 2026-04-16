@@ -1,3 +1,5 @@
+@reference "../../app/globals.css";
+
 .markdown {
   @apply text-base/relaxed;
 }
@@ -33,7 +35,7 @@
 }
 
 .markdown code {
-  @apply inline-block rounded bg-muted px-[0.3rem] font-mono font-medium;
+  @apply inline-block rounded bg-muted px-[0.3rem] text-sm font-mono font-medium;
 }
 
 .markdown pre code {
