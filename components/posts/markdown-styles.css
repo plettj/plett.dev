@@ -50,12 +50,15 @@
   @apply ml-6 list-decimal;
 }
 
-.markdown blockquote {
-  @apply border-l-[3px] pl-4 italic text-muted-foreground;
+.markdown a {
+  @apply font-medium text-blue-600 dark:text-blue-300 decoration-dotted underline underline-offset-2 sm:decoration-solid sm:no-underline hover:underline;
 }
 
-.markdown a {
-  @apply font-semibold text-muted-foreground decoration-dotted underline sm:decoration-solid sm:no-underline hover:underline;
+.markdown blockquote {
+  @apply border-l-[3px] pl-4 italic text-muted-foreground;
+  a {
+    @apply opacity-75;
+  }
 }
 
 .markdown h2 {

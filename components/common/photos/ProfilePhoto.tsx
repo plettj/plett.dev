@@ -31,7 +31,7 @@ export default function ProfilePhoto({ src, size }: ProfilePhotoProps) {
 
   return (
     <div
-      className="relative border rounded-full overflow-hidden size-36 sm:size-32 aspect-square flex-grow-0 flex-shrink-0"
+      className="relative border rounded-full overflow-hidden size-36 sm:size-32 aspect-square grow-0 shrink-0"
       onClick={handleClick}
     >
       {images.map((imageSrc, index) => (
@@ -51,7 +51,7 @@ export default function ProfilePhoto({ src, size }: ProfilePhotoProps) {
           onLoad={() => setIsLoaded(true)}
           className={cn(
             "absolute inset-0 transition-all duration-200 rounded-full cursor-pointer",
-            isLoaded && activeImage === index ? "opacity-100" : "opacity-0"
+            isLoaded && activeImage === index ? "opacity-100" : "opacity-0",
           )}
         />
       ))}

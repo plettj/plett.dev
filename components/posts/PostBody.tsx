@@ -1,6 +1,7 @@
+import "./posts/markdown-styles.css";
+
 import { cn } from "@/lib/utils";
 import { IBM_Plex_Sans } from "next/font/google";
-import markdownStyles from "./markdown-styles.module.css";
 
 const fontPosts = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -11,10 +12,7 @@ const fontPosts = IBM_Plex_Sans({
 export default function PostBody({ content }: { content: string }) {
   return (
     <div className={cn("w-full", fontPosts.className)}>
-      <div
-        className={markdownStyles["markdown"]}
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
+      <div className="markdown" dangerouslySetInnerHTML={{ __html: content }} />
     </div>
   );
 }
