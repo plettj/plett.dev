@@ -1,6 +1,7 @@
+# Ray-tracing Black Holes from Scratch
+
 ## Introduction
 
-- [ ] Links should be blue
 - [ ] syntax highlighting
 - [ ] make the code collapsible
 - [ ] make the actual introduction separate and above, and INCLUDE AN INLINE IMAGE showing progression (like phong sphere to black hole)
@@ -8,6 +9,7 @@
 **WRITING TODOS**
 
 - [ ] ms paint descriptions of stuff (motivate shooting light rays out of our eyes better)
+- [ ] separate the raytracing basics and motivation into separate sections, and build it up from first principles
 - [ ] make the introduction a little more attention-grabby, _somehow_. eg. remove "vast ocean" crap
 - [ ] when describing raytracing, talk more about like "raytracing is a model based in real-world physics" ie. physically based, and try to use the word "photorealistic"
 
@@ -29,15 +31,17 @@ In computer graphics, there are two main ways of rendering, a.k.a. turning a 3D 
 
 **Rasterization** is a rendering model that takes all of the objects (usually triangles) that make up the 3D scene, and shoving them through a series of math operations involving linear algebra that directly converts them into a 2D image. The problem is, linear algebra is _linear_, and drawing black holes will need to account for non-linear light paths as they bend around black holes.
 
-**Ray Tracing** will be the rendering model we use. It involves following light rays as they bounce around the shapes in the scene, and into the camera. In contrast to rasterization, ray tracing is a fairly accurate model of real light, so while it is more computationally intensive, it allows for more flexibility and realism.
+**Ray Tracing**, on the other hand, is a model based on real-world physics. It involves simulating light rays as they bounce around the shapes in a scene, and into a camera. In contrast to rasterization, ray tracing is a fairly accurate model of real light, capable of producing photorealistic results.
 
-On our way to black holes, I'll show you the basics of ray tracing, [lighting](#lighting-things-up), [reflection](#reflection-and-transmission), and some cool features like [defocus blur](#depth-of-field-blur), to build your foundational understanding. After these mini-lessons, you'll be equipped to tackle the rendering of black holes.
+Because of its foundation in physics, we will be using ray tracing to render our black holes. Before we get there, I'll walk you through the basics of ray tracing, [lighting](#lighting-things-up), [reflection](#reflection-and-transmission), and some cool features like [defocus blur](#depth-of-field-blur), to build your understanding. After these mini-lessons, we'll be equipped to tackle the rendering of black holes.
 
 > If you only care about the relativistic ray tracing necessary for black holes, you can jump ahead to [5. Rendering a Black Hole](#rendering-a-black-hole).
 
 ### Rays and the camera
 
-Ray tracing is the idea of following light rays as they move through a scene. To simulate light efficiently, we tell the computer to send rays _from_ our eyes, rather than looking for rays that come _into_ our eyes. Doing this allows us to ignore all light that would not have reached our eyes or our camera lense. All we need to do is check what each outgoing ray hits: if it hits a blue object, that ray should be blue!
+Ray tracing is the idea of following light rays as they move through a scene.
+
+To simulate light efficiently, we tell the computer to send rays _from_ our eyes, rather than looking for rays that come _into_ our eyes. Doing this allows us to ignore all light that would not have reached our eyes or our camera lense. All we need to do is check what each outgoing ray hits: if it hits a blue object, that ray should be blue!
 
 The idea of sending rays outward is the core of our "raytracer." We send one ray per pixel of our image, and set the colour of that pixel based on what shapes and materials the ray hits in the scene. It's as if we're sampling the light that hits every pixel of the image.
 
