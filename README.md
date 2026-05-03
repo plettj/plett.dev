@@ -31,6 +31,6 @@ I kept the code simple and tried my best to follow Next.js best practices.
 
 ### License
 
-1. Feel free to use this repository as inspiration.
-2. If cloning, don't forget to change personal information before deploying!
-3. Crediting the author is appreciated.
+1. If you intend to copy much of this website, simply fork the repo, and remove all my personal text and files before you deploy.
+2. Drop a star and credit me if you found this repo useful. :-]
+3. Otherwise, enjoy!
