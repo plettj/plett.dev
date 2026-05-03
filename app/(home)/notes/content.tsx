@@ -187,4 +187,18 @@ export const mathItems: NotesListItem[] = [
   },
 ];
 
-export const TOTAL_COURSE_NOTES = csItems.length + mathItems.length;
+export const otherItems: NotesListItem[] = [
+  {
+    title: "Social Cognition",
+    shortTitle: "Social Cognition",
+    course: { name: "PSYCH 353", href: "https://uwflow.com/course/psych353" },
+    year: "2023",
+    university: "UW",
+    summary:
+      "How humans perceive their social world, including: thought representation, stereotype activation and use, controllability of thought processes, etc.",
+    href: `${PATH_NOTES}/psych353-flash-cards.pdf`,
+  },
+];
+
+export const TOTAL_COURSE_NOTES =
+  csItems.length + mathItems.length + otherItems.length;

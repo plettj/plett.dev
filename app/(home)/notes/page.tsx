@@ -11,7 +11,7 @@ import { BASE_URL, META_DESCRIPTION_NOTES, PATH_NOTES } from "@/lib/constants";
 import { getOGData } from "@/lib/utils";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import { Metadata } from "next/types";
-import { csItems, mathItems } from "./content";
+import { csItems, mathItems, otherItems } from "./content";
 
 export const metadata: Metadata = {
   title: "Course Notes",
@@ -37,7 +37,10 @@ export default function NotesPage() {
       </div>
 
       <div className="sr-only">
-        <p>University of Waterloo Math and Computer Science course notes.</p>
+        <p>
+          University of Waterloo Math and Computer Science course notes, plus
+          some other course notes.
+        </p>
         <ul className="sr-only">
           {[...csItems, ...mathItems].map((item, idx) => (
             <li key={idx}>
@@ -52,6 +55,8 @@ export default function NotesPage() {
       <NotesList items={csItems} />
       <Title>Mathematics</Title>
       <NotesList items={mathItems} />
+      <Title>Other</Title>
+      <NotesList items={otherItems} />
     </div>
   );
 }
