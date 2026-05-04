@@ -19,7 +19,7 @@ async function addBlurDataURLs() {
 
   if (photos.length === 0) {
     console.log(
-      "No photos found. Paste your photos into the `photos` array in this script and try again."
+      "No photos found. Paste your photos into the `photos` array in this script and try again.",
     );
     return;
   }
@@ -28,7 +28,7 @@ async function addBlurDataURLs() {
     const imagePath = path.join(
       __dirname,
       "../../public",
-      photo.src.replace("public/", "")
+      photo.src.replace("public/", ""),
     );
 
     try {
@@ -44,11 +44,11 @@ async function addBlurDataURLs() {
 
   console.log(
     "\nconst photos: MasonryImage[] =",
-    JSON.stringify(updatedPhotos, null, 2)
+    JSON.stringify(updatedPhotos, null, 2),
   );
   console.log(`\n\n${photos.length} photos successfully processed.\n`);
   console.log(
-    "You can now paste it into `app/(photography)/photography/content.tsx`.\n"
+    "You can now paste it into `app/(photography)/photography/content.tsx`.\n",
   );
 }
 
@@ -56,7 +56,7 @@ async function addBlurDataURLs() {
 const PATH_PHOTOGRAPHY_IMAGES = "/images/photography";
 
 const photos = [
-  // Paste your photos here, with empty "blurDataURL" fields
+  // *** Paste your photos here, with empty "blurDataURL" fields *** \\
 ];
 
 addBlurDataURLs();

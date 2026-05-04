@@ -98,6 +98,15 @@ const photos: MasonryImage[] = [
       "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIF/8QAIhAAAQQBAgcAAAAAAAAAAAAAAwABAgQRBQYHEiEiMVHB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAYEQADAQEAAAAAAAAAAAAAAAAAAQJRA//aAAwDAQACEQMRAD8AjanFGgUcR2gXGPjvcY4cuW9Zktsm8dHLN5RqXPPXMYN9RE66VpG4nD//2Q==",
   },
   {
+    src: `${PATH_PHOTOGRAPHY_IMAGES}/Lions_Head_Lookout.jpg`,
+    alt: "Peeking through some ferns, a towering cliff bends over crystal water in southern Ontario",
+    location: "Lion's Head Lookout, Canada",
+    year: "2026",
+    size: [3740, 2104],
+    blurDataURL:
+      "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUG/8QAHhAAAgEFAQEBAAAAAAAAAAAAAQIEAAMFESEGIzH/xAAVAQEBAAAAAAAAAAAAAAAAAAABA//EABkRAQEAAwEAAAAAAAAAAAAAAAECAAMEQf/aAAwDAQACEQMRAD8AjeKxkBcnCa5MkNbV0ug6ILtvg50d1W+9BjZPp8ncyEeJCtKPgQxJ2UJXf5wcpSo8MTuhmj3Desomf//Z",
+  },
+  {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Killbear_Sunset_Silhouette.jpg`,
     alt: "A silhouetted voyager looks towards a deep dusk on the rocks of Georgian Bay",
     location: "Killbear, Canada",
@@ -141,6 +150,15 @@ const photos: MasonryImage[] = [
     size: [2268, 3376],
     blurDataURL:
       "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAASAAwDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGB//EACYQAAIBAgQFBQAAAAAAAAAAAAECAwAEBQYRIRIiQWFxExQxMqH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBf/EABsRAAICAwEAAAAAAAAAAAAAAAABAiEEIjER/9oADAMBAAIRAxEAPwCllwT2dxFG+h441kBGmh1HTx8UzSyhVAGKg9zWV4RnTO91aSqYLdoWiCcU4EZ2IIYHUEnbxpUfmPMeYb3Emku55IpFUJwIwUKNTt+mq0cnXZWSXjeyp0UaO3ojmP1HWl1zzSktue9FFDHgz6f/2Q==",
+  },
+  {
+    src: `${PATH_PHOTOGRAPHY_IMAGES}/Eugenia_Falls.jpg`,
+    alt: "The calming presence of the silk-like Eugenia Falls contrasts with the tired, landsliding shrubbery surrounding it",
+    location: "Eugenia Falls, Canada",
+    year: "2026",
+    size: [3552, 1992],
+    blurDataURL:
+      "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAHAAwDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAID/8QAIBAAAgEEAgMBAAAAAAAAAAAAAQIRAAMEBRIxExQhUf/EABUBAQEAAAAAAAAAAAAAAAAAAAIE/8QAGBEBAAMBAAAAAAAAAAAAAAAAAQACAzH/2gAMAwEAAhEDEQA/AMtjszaztdq/F7SvxFy8rFAOTQAoJmR9mYH5V7RLa5PF9tl2oEBVXoSY6pSpdUpUQjez/9k=",
   },
   {
     src: `${PATH_PHOTOGRAPHY_IMAGES}/Alsace_Haut-Koenigsbourg_Castle.jpg`,
