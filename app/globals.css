@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer utilities {
   .scrollbar::-webkit-scrollbar {
@@ -19,9 +19,7 @@
   .scrollbar::-webkit-scrollbar-thumb:hover {
     background: hsla(var(--muted-foreground) / 0.5);
   }
-}
 
-@layer utilities {
   .text-balance {
     text-wrap: balance;
   }
@@ -83,9 +81,24 @@
   }
 }
 
+/*
+  Ensure tailwind v4 has access to my own theme variables (shadcn/ui's, really)
+  without overriding the default tailwind variables.
+*/
+@theme inline {
+  --color-border: hsl(var(--border));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+}
+
 @layer base {
   * {
     @apply border-border;
+  }
+  html {
+    @apply scroll-pt-11 scroll-smooth;
   }
   body {
     @apply bg-background text-foreground underline-offset-4 text-sm;

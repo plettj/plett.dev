@@ -1,0 +1,74 @@
+@reference "../../app/globals.css";
+
+.markdown {
+  @apply text-base/relaxed;
+}
+
+.markdown p,
+.markdown a,
+.markdown ul,
+.markdown ol,
+.markdown pre,
+.markdown blockquote {
+  @apply my-6;
+}
+
+.markdown pre {
+  @apply p-4 bg-muted rounded-lg w-full overflow-x-auto;
+}
+
+.markdown pre::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+.markdown pre::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.markdown pre::-webkit-scrollbar-thumb {
+  @apply rounded-lg;
+  background: hsla(var(--muted-foreground) / 0.25);
+}
+
+.markdown pre::-webkit-scrollbar-thumb:hover {
+  background: hsla(var(--muted-foreground) / 0.5);
+}
+
+.markdown code {
+  @apply inline-block rounded bg-muted px-[0.3rem] text-sm font-mono font-medium;
+}
+
+.markdown pre code {
+  @apply block bg-none p-0 font-normal;
+}
+
+.markdown ul {
+  @apply ml-6 list-disc;
+}
+
+.markdown ol {
+  @apply ml-6 list-decimal;
+}
+
+.markdown a {
+  @apply font-medium text-blue-600 dark:text-blue-300 decoration-dotted underline underline-offset-2 sm:decoration-solid sm:no-underline hover:underline;
+}
+
+.markdown blockquote {
+  @apply border-l-[3px] pl-4 italic text-muted-foreground;
+  a {
+    @apply opacity-75;
+  }
+}
+
+.markdown h2 {
+  @apply text-2xl font-semibold mt-12 pb-1 mb-3 leading-snug border-b tracking-tight;
+}
+
+.markdown h3 {
+  @apply text-xl font-semibold mt-8 mb-4 leading-snug;
+}
+
+.markdown h4 {
+  @apply leading-relaxed font-semibold mt-4 mb-2;
+}

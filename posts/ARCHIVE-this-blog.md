@@ -48,7 +48,7 @@ This is a [Next.js](https://nextjs.org/) site built with [tailwind.css](https://
 
 The next step is using [remark](https://www.npmjs.com/package/remark) to convert our markdown files into HTML. Specifically, [remark-html](https://www.npmjs.com/package/remark-html/v/14.0.1) gets the job done in just one line:
 
-```
+```ts
 const HTML = await remark().use(html).process(MARKDOWN).toString();
 ```
 
@@ -64,13 +64,13 @@ Only three things now need to happen for the posts to be made.
 
 The last technical aspect of our static blog generation is styling the interface. Luckily, [CSS modules](https://nextjs.org/docs/app/building-your-application/styling) and the [`@apply`](https://tailwindcss.com/docs/functions-and-directives#apply) directive make the job easy. After adding our styles to a CSS module and importing it like so, we're off to the races!
 
-```
-import markdownStyles from "./markdown-styles.module.css";
+```tsx
+import "../posts/markdown-styles.css";
 
 export default function PostBody({ content }: { content: string }) {
   return (
     <article
-      className={markdownStyles["markdown"]}
+      className="markdown"
       dangerouslySetInnerHTML={{ __html: content }}
     />
   );

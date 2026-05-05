@@ -2,7 +2,7 @@
 
 This repo holds the code to my personal website at [plett.dev](https://plett.dev).
 
-I kept the code simple and tried my best to follow Next.js best practices.
+I keep the code simple, and I care more about best practices than my sanity.
 
 ### Tech
 
@@ -14,18 +14,19 @@ I kept the code simple and tried my best to follow Next.js best practices.
 
 ### Features
 
-- Thoroughly tested responsive design and ARIA compliance.
-- Statically generated and search-engine-optimized posts from markdown ([writing](https://plett.dev/posts)).
+- Statically generated posts from markdown, with search engine optimization ([writing](https://plett.dev/posts)).
+- Statically generated _books_ from markdown, with a dynamic TOC and responsive layout ([raytracing book](https://plett.dev/raytracing)).
 - Custom masonry layout with modern image loading ([photography](https://plett.dev/photography)).
 - Mouse-following tooltips ([notes](https://plett.dev/notes)).
+- Thoroughly tested responsive design and ARIA compliance.
 
 <details>
 <summary>Developer to-dos</summary>
 <br>
 
 - [x] Solve Next.js security vulnerability by upgrading to Next.js 16 ([resource](https://vercel.com/kb/bulletin/react2shell#how-to-upgrade-for-next.js))
-- [ ] Improve metadata on all pages using real SEO tools.
-- [ ] Refactor the blog posts to support `.mdx` ([resource](https://www.youtube.com/watch?v=34bRv6cQezo))
+- [ ] Allow book contents to be written entirely in markdown.
+- [ ] Improve metadata on all pages using SEO tools beyond just metadata and sitemaps.
 
 </details>
 
