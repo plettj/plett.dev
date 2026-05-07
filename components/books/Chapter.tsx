@@ -36,7 +36,7 @@ export default function Chapter({
           />
           {!isSubChapter && (
             <span className="text-muted-foreground opacity-60 font-light whitespace-nowrap">
-              7 min
+              {data.readingTime} min
             </span>
           )}
         </div>

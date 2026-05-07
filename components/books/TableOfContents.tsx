@@ -32,7 +32,7 @@ export default function TableOfContents({
                 {i + 1}. {chapter.title}
               </span>
               <span className="text-muted-foreground opacity-60 font-light whitespace-nowrap">
-                7 min
+                {chapter.readingTime} min
               </span>
             </a>
           );
