@@ -1,4 +1,4 @@
-import "./posts/markdown-styles.css";
+import "./markdown-styles.css";
 
 import { cn } from "@/lib/utils";
 import { IBM_Plex_Sans } from "next/font/google";

@@ -4,12 +4,13 @@
 
 - [ ] syntax highlighting
 - [ ] make the code collapsible
-- [ ] make the actual introduction separate and above, and INCLUDE AN INLINE IMAGE showing progression (like phong sphere to black hole)
+- [ ] make the actual introduction separate and above
+- [ ] Include an inline image in the primary intro, showing progression (like phong sphere to black hole)
 
 **WRITING TODOS**
 
 - [ ] ms paint descriptions of stuff (motivate shooting light rays out of our eyes better)
-- [ ] separate the raytracing basics and motivation into separate sections, and build it up from first principles
+- [x] separate the raytracing basics and motivation into separate sections, and build it up from first principles
 - [ ] make the introduction a little more attention-grabby, _somehow_. eg. remove "vast ocean" crap
 - [ ] when describing raytracing, talk more about like "raytracing is a model based in real-world physics" ie. physically based, and try to use the word "photorealistic"
 
