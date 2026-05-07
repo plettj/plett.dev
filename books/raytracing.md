@@ -5,9 +5,9 @@
   - [ ] Add syntax highlighting.
 - [ ] On mobile, ensure images are in the correct spot between paragraphs, not clumped at the end.
   - [ ] Remove images from the right column on big screens.
-- [ ] Toss in relevant links throughout (in the form of citations?).
-- [ ] Dynamic reading time estimates.
 - [ ] Connect to my Writing page.
+- [x] Dynamic reading time estimates.
+- [ ] (After writing) Toss in relevant links throughout (in the form of citations?).
 
 # Ray Tracing Black Holes in C++
 

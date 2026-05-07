@@ -4,6 +4,7 @@ import fs from "fs";
 import type { Heading, Html, PhrasingContent, Root, RootContent } from "mdast";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { remark } from "remark";
+import { READING_SPEED_WPM } from "./constants";
 
 export async function parseBook(filePath: string): Promise<ChapterData[]> {
   const raw = fs.readFileSync(filePath, "utf8");
@@ -28,9 +29,15 @@ export async function parseBook(filePath: string): Promise<ChapterData[]> {
                 const subTitle = headingText(sub);
                 const { prose: subProse, images: subImages } =
                   extractImages(subBody);
+                const subTotalWords = countWords(subProse);
+
                 return {
                   title: subTitle,
                   hash: textToSlug(subTitle),
+                  readingTime: Math.max(
+                    1,
+                    Math.round(subTotalWords / READING_SPEED_WPM),
+                  ),
                   content: await compileSection(subProse),
                   images: subImages,
                 } satisfies ChapterData;
@@ -38,9 +45,14 @@ export async function parseBook(filePath: string): Promise<ChapterData[]> {
             )
           : undefined;
 
+      const totalWords =
+        countWords(prose) +
+        subSections.reduce((sum, { body }) => sum + countWords(body), 0);
+
       return {
         title,
         hash: textToSlug(title),
+        readingTime: Math.max(1, Math.round(totalWords / READING_SPEED_WPM)),
         content: await compileSection(prose),
         images,
         ...(children && { children }),
@@ -142,4 +154,9 @@ function extractImages(nodes: RootContent[]): {
   }
 
   return { prose, images };
+}
+
+// Count words across all text in a subtree by stringifying back to markdown.
+function countWords(nodes: RootContent[]): number {
+  return nodesToMarkdown(nodes).trim().split(/\s+/).filter(Boolean).length;
 }

@@ -1,5 +1,5 @@
 import BookContainer from "@/components/books/BookContainer";
-import { parseBook } from "@/lib/book/parseBook";
+import { parseBook } from "@/lib/books/parseBook";
 import {
   BASE_URL,
   META_DESCRIPTION_RAYTRACING,
