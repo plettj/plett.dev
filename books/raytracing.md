@@ -1,52 +1,69 @@
-# Ray-tracing Black Holes from Scratch
+- [ ] Make the actual introduction separate, and above the main titles.
+  - [ ] Include an inline image in the primary intro, showing progression.
+- [ ] Decide if I even want pseudocode at all (it's a lot of work)...
+  - [ ] Make pseudocode collapsible.
+  - [ ] Add syntax highlighting.
+- [ ] On mobile, ensure images are in the correct spot between paragraphs, not clumped at the end.
+  - [ ] Remove images from the right column on big screens.
+- [ ] Toss in relevant links throughout (in the form of citations?).
+- [ ] Dynamic reading time estimates.
+- [ ] Connect to my Writing page.
 
-## Introduction
+# Ray Tracing Black Holes in C++
 
-- [ ] syntax highlighting
-- [ ] make the code collapsible
-- [ ] make the actual introduction separate and above
-- [ ] Include an inline image in the primary intro, showing progression (like phong sphere to black hole)
+In the final few months of my undergraduate degree, I decided I wanted to simulate and render black holes. In the process, I built a C++ graphics engine, and that process is what I'd like to share with you today.
 
-**WRITING TODOS**
+**[FIGURE 0: INLINE IMAGE: PHONG -> BLACK HOLE]**
 
-- [ ] ms paint descriptions of stuff (motivate shooting light rays out of our eyes better)
-- [x] separate the raytracing basics and motivation into separate sections, and build it up from first principles
-- [ ] make the introduction a little more attention-grabby, _somehow_. eg. remove "vast ocean" crap
-- [ ] when describing raytracing, talk more about like "raytracing is a model based in real-world physics" ie. physically based, and try to use the word "photorealistic"
+You don't need any technical knowledge to understand this article, although some programming knowledge couldn't hurt. This is meant as a fun, visual exploration of the high-level concepts involved in computer graphics, so I will focus on making the ideas intuitive while avoiding most technical details.
 
-> This project was inspired by [this video](https://www.youtube.com/watch?v=8-B6ryuBkCM), and this article is inspired by [Ray Tracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html).
+Join me on this layman's voyage from drawing basic circles, through the sea of computer graphics, to eventually rendering black holes.
 
-In my final year of university, I thought it would be fun to render a black hole. Little did I know, the field of computer graphics is a vast ocean of accumulated knowledge, and the rickety little bachelor's degree sailboat I embarked on this journey with was in for a rough ride.
+> I've made all graphics engine code public [here on GitHub](https://github.com/plettj/raytracer). The code is self-contained and purely CPU-based, so anyone can download it and generate their own images with essentially zero setup.
 
-In this article, I break things down into bite-sized pieces, so **you don't need any technical knowledge**. I want you to enjoy your time reading, so I'll avoid deep-diving into technical details, and instead focus on making the high-level concepts intuitively and visually clear. This is a layman's voyage from drawing circles to raytracing a black hole.
+## Introduction to Ray Tracing
 
-That said, I've made all code used to render these images public [here on GitHub](https://github.com/plettj/raytracer). The code is self-contained, so anyone can download it and generate their own images with essentially zero setup.
+### What is Ray Tracing?
 
-IMAGE 1: Showcase image.
+In computer graphics, there are two main ways to draw, or render, 3D worlds onto a 2D screen: **rasterization** and **ray tracing**.
 
-## Drawing our first objects
+**Rasterization** is a rendering model that takes all the objects that make up a 3D scene, and shoves them through a series of math operations that directly converts them to a 2D image. The math involved is linear algebra, but the problem for us is that linear algebra is _linear_, or straight, but black holes actually _curve_ the space around them. So rasterization won't do.
 
-### Introduction to Ray tracing
+**Ray tracing**, on the other hand, is a rendering model based on real-world physics, capable of producing photorealistic images. It does this by simulating rays of light as they bounce around the shapes on a scene, and into a camera, rather than trying to smush the 3D world into two dimensions like rasterization.
 
-In computer graphics, there are two main ways of rendering, a.k.a. turning a 3D scene into a 2D image. They are **Rasterization** and **Ray Tracing**.
+Because of its foundation in physics, we'll be using ray tracing to render our black holes. On our way there, I'll take you through the basics of ray tracing, [lighting](#lighting-things-up), [reflection](#reflection-and-transmission), and features like [defocus blur](#depth-of-field-blur) to build your intuition. After these mini-lessons, we'll finally be equipped to tackle black holes.
 
-**Rasterization** is a rendering model that takes all of the objects (usually triangles) that make up the 3D scene, and shoving them through a series of math operations involving linear algebra that directly converts them into a 2D image. The problem is, linear algebra is _linear_, and drawing black holes will need to account for non-linear light paths as they bend around black holes.
+### How Light is Simulated
 
-**Ray Tracing**, on the other hand, is a model based on real-world physics. It involves simulating light rays as they bounce around the shapes in a scene, and into a camera. In contrast to rasterization, ray tracing is a fairly accurate model of real light, capable of producing photorealistic results.
+Ray tracing is the idea of simulating light, in the form of lines called “rays,” as they move through a scene. So, understanding the basics of how light works is very important.
 
-Because of its foundation in physics, we will be using ray tracing to render our black holes. Before we get there, I'll walk you through the basics of ray tracing, [lighting](#lighting-things-up), [reflection](#reflection-and-transmission), and some cool features like [defocus blur](#depth-of-field-blur), to build your understanding. After these mini-lessons, we'll be equipped to tackle the rendering of black holes.
+In the real world, light emanates from sources like the sun, or a lightbulb. It travels in straight lines until it hits an object, which usually causes it to bounce off and scatter about. Objects have colour because some colours of light are absorbed while others are scattered. A banana looks yellow not because it _is_ yellow, per-se, but because it absorbs any non-yellow light, so when we look at it, only yellow light is bounced into our eyes.
 
-> If you only care about the relativistic ray tracing necessary for black holes, you can jump ahead to [5. Rendering a Black Hole](#rendering-a-black-hole).
+**[FIGURE 1: how light actually bounces around the scene and hits a banana]**
 
-### Rays and the camera
+Humans have known this about light for a while, so when we invented computers and gave them screens, some smart humans thought we could simulate this light behaviour using them. There was just one little issue: computers are really, _really_ slow. At least, compared to physical light.
 
-Ray tracing is the idea of following light rays as they move through a scene.
+Since it's impossible to simulate trillions of light rays hitting octillions of atoms every picosecond, those smart humans had to come up with a way to massively decrease the amount of computing the computers had to do to simulate the rays.
 
-To simulate light efficiently, we tell the computer to send rays _from_ our eyes, rather than looking for rays that come _into_ our eyes. Doing this allows us to ignore all light that would not have reached our eyes or our camera lense. All we need to do is check what each outgoing ray hits: if it hits a blue object, that ray should be blue!
+What they came up with is very simple and elegant. Instead of imagining light coming from light sources, bouncing around, and having a very small chance of landing in our camera lens, why not imagine light coming _out_ of the camera, bouncing around, and eventually hitting a light source? Pretending light travels from the viewer to the source keeps the physics essentially unchanged, while dramatically reducing any waste on light rays that don't arrive at our camera.
 
-The idea of sending rays outward is the core of our "raytracer." We send one ray per pixel of our image, and set the colour of that pixel based on what shapes and materials the ray hits in the scene. It's as if we're sampling the light that hits every pixel of the image.
+**[FIGURE 2: how light bounces around a scene in a ray tracer.]**
 
-I've written some `C++`-like pseudocode setting up this basic raytracer. Don't worry if you don't understand it; it's just here to keep the programmers among you engaged. :-]
+This idea of sending rays out from a camera lens into the world, like probes, is the foundation of our ray tracer. Everything else in this article will build on that core idea.
+
+Let's dive in.
+
+## Drawing our First Objects
+
+### Rays and the Camera
+
+Ray tracing involves following light rays as they move about a 3D scene.
+
+Our camera will be the thing that sends rays outward, in straight lines, and we'll want to check what each outgoing ray hits. For now, if it hits a blue object, that ray should be blue. We will add more features as we go.
+
+Since our camera represents our computer screen, you can think of it as a rectangle made of pixels, just like the screen itself. From each pixel, a ray is sent out into the scene, which bounces around and reports back to the camera the resulting colour. Finally, the camera sets each pixel colour to the colour of the corresponding ray.
+
+I've written some `C++`-like pseudocode setting up this basic ray tracer. Don't worry if you don't understand it; it's just here to keep the programmers among you happy.
 
 ```c++
 using vec3 = number[3];
@@ -57,7 +74,7 @@ struct Ray {
   vec3 origin;
   vec3 direction;
 
-  color color = (0, 0, 0);
+  Color color = (0, 0, 0);
 }
 
 // Produces an image with dimensions "width" and "height."
@@ -90,13 +107,23 @@ image.savePng();
 
 Behold, a black rectangle. For my money, that's the most realistic rendering of a black hole on the internet.
 
-<img src="/images/raytracing/image02-black.png" alt="A pure black rectangle." width="2048" height="1365" data-location="Basic raytracer" data-year="Fig 2." />
+<img src="/images/raytracing/image02-black.png" alt="A pure black rectangle." width="2048" height="1365" data-location="Basic raytracer" data-year="Fig. 3" />
 
-### Intersecting with Things
+### Intersecting with Objects
 
-Intersecting with things like spheres, cubes, discs, and torii, and depth testing.
+It would be nice if there were objects in our world, so we could actually see something. Luckily, that isn't too hard.
 
-<img src="/images/raytracing/test2.png" alt="Example image 2" width="4096" height="2304" data-location="Infinite Earths" data-year="16 samples" />
+Our rays are straight lines represented by numbers, so we can use math — specifically, linear algebra — to calculate if a ray is hitting an object. If we have the equation that represents a sphere, and the equation for our ray, setting them equal to each other will give us all intersections.
+
+_Sphere intersection pseudocode goes here_.
+
+With the sphere intersection points in hand, we can give any rays that hit the sphere a colour. We still don't have a system for lighting, so our sphere will look like a flat circle for the time being.
+
+**[FIGURE 4: Blue sphere]**
+
+Just like there is an equation that represents a sphere, there are equations for cubes, donuts, and many other shapes.
+
+**[FIGURE 5: Blue sphere, purple stretched cube, green torus, teal stellated dodecahedron]**
 
 ### Lighting Things Up
 
@@ -213,3 +240,9 @@ I wrote a few blender python scripts to help with my mesh exporting. One exports
 ### Cloud Compute
 
 TO BE WRITTEN IN FUTURE Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+## Credits
+
+The basis for this project was built as part of University of Waterloo's [CS488: Introduction to Computer Graphics](https://student.cs.uwaterloo.ca/~cs488/index.html) course. The goal of simulating black holes was inspired by [this video](https://www.youtube.com/watch?v=8-B6ryuBkCM), and this article is inspired by [Ray Tracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html).
+
+Special thanks to [Gladimir Baranoski](https://www.npsg.uwaterloo.ca/people/gladimir/) for teaching me most of what this raytracer does. Thank you to [Owen Gallagher](https://owengames.com/) and [Wasay Saeed](https://www.wasaysaeed.com/) for joining me on the wild journey of building a graphics engine. Lastly, thank you to all the generous souls on the internet like [Jacco Bikker](https://www.linkedin.com/in/jacco-bikker-40816b1/) who have worked so hard to put world-class materials at my fingertips.
