@@ -29,11 +29,11 @@ Join me on this layman's voyage from drawing basic circles, through the sea of c
 
 ### What is Ray Tracing?
 
-In computer graphics, there are two main ways to draw, or render, 3D worlds onto a 2D screen: **rasterization** and **ray tracing**.
+In computer graphics, there are two main ways to draw, or render, 3D worlds onto a 2D screen: **rasterization** and **ray tracing**.<aside>TEST details about something.</aside>
 
-**Rasterization** is a rendering model that takes all the objects that make up a 3D scene, and shoves them through a series of math operations that directly converts them to a 2D image. The math involved is linear algebra, but the problem for us is that linear algebra is _linear_, or straight, but black holes actually _curve_ the space around them. So rasterization won't do.
+**Rasterization** is a rendering model that takes all the objects that make up a 3D scene, and shoves them through a series of math operations that directly converts them to a 2D image.<aside>TEST details about another thing.</aside> The math involved is linear algebra, but the problem for us is that linear algebra is _linear_, or straight, but black holes actually _curve_ the space around them. So rasterization won't do.
 
-**Ray tracing**, on the other hand, is a rendering model based on real-world physics, capable of producing photorealistic images. It does this by simulating rays of light as they bounce around the shapes on a scene, and into a camera, rather than trying to smush the 3D world into two dimensions like rasterization.
+**Ray tracing**, on the other hand, is a rendering model based on real-world physics, capable of producing photorealistic images. It does this by simulating rays of light as they bounce around the shapes on a scene, and into a camera, rather than trying to smush the 3D world into two dimensions like rasterization.<aside>TEST details with _markdown_ even, like a [link](https://plett.dev). And some more text, that just keeps on texting, lots more words to test how things are looking.<br /><br />New lines too!</aside>
 
 Because of its foundation in physics, we'll be using ray tracing to render our black holes. On our way there, I'll take you through the basics of ray tracing, [lighting](#lighting-things-up), [reflection](#reflection-and-transmission), and features like [defocus blur](#depth-of-field-blur) to build your intuition. After these mini-lessons, we'll finally be equipped to tackle black holes.
 
