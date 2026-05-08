@@ -31,10 +31,10 @@ I keep the code simple, and I care more about best practices than my sanity.
   - [x] Decide if I even want pseudocode at all (it's a lot of work)...
     - [x] Remove pseudocode from the plan.
   - [x] Gutter citations.
-    - [ ] Ensure they change when the screen gets smaller.
+    - [x] Ensure they change when the screen gets smaller.
   - [ ] On mobile, ensure images are in the correct spot between paragraphs, not clumped at the end.
-    - [ ] Remove images from the right column on big screens.
-  - [ ] Connect to my Writing page.
+    - [x] Remove images from the right column on big screens.
+  - [ ] Show on my Writing page.
   - [x] Dynamic reading time estimates.
   - [ ] (After writing) Toss in relevant links throughout (in the form of citations?).
 - [ ] Improve metadata on all pages by fixing SSG metadata, and using SEO tools beyond metadata and sitemaps.
