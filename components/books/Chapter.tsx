@@ -47,19 +47,12 @@ export default function Chapter({
         <div className={cn("markdown w-full mt-0", fontBook.className)}>
           {data.content}
         </div>
-        {/* On thinner devices, render images inline. */}
-        <div className="flex xl:hidden flex-col gap-2 mt-4 max-w-[40ch]">
+        <div className="flex flex-col gap-2 mt-4 max-w-[40ch]">
           {data.images?.map((image) => (
             <Photo key={image.location} image={image} loadMethod="border" />
           ))}
         </div>
       </section>
-      {/* On wider devices, render images in the right-side gutter. */}
-      <aside className="hidden xl:flex col-start-3 flex-col max-w-[40ch] gap-2 mt-8 pb-4">
-        {data.images?.map((image) => (
-          <Photo key={image.location} image={image} loadMethod="border" />
-        ))}
-      </aside>
 
       {data.children?.map((child, i) => (
         <Chapter

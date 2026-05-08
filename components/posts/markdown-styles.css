@@ -51,7 +51,9 @@
 }
 
 .markdown a {
-  @apply font-medium text-blue-600 dark:text-blue-300 decoration-dotted underline underline-offset-2 sm:decoration-solid sm:no-underline hover:underline;
+  @apply font-medium xl:font-semibold text-blue-600 dark:text-blue-300 underline-offset-2;
+  @apply decoration-dotted underline;
+  @apply sm:decoration-solid sm:no-underline hover:underline;
 }
 
 .markdown blockquote {
@@ -71,4 +73,21 @@
 
 .markdown h4 {
   @apply leading-relaxed font-semibold mt-4 mb-2;
+}
+
+/* Custom styles resulting from <aside> tags, for notes written in the gutter, similar to citations. */
+.markdown .note-marker {
+  @apply text-xs font-semibold mx-[0.3ch] text-blue-600 dark:text-blue-300 cursor-help;
+  @apply underline-offset-2 underline sm:no-underline hover:underline;
+  @apply xl:font-normal xl:text-muted-foreground xl:dark:text-muted-foreground xl:cursor-auto xl:hover:no-underline;
+}
+.markdown .note-number {
+  @apply shrink-0 min-w-5 font-semibold xl:font-normal text-muted-foreground mr-1;
+}
+.markdown .note {
+  @apply text-sm flex gap-0 text-muted-foreground;
+  @apply my-3 py-2.5 px-3.5 bg-muted/50 rounded-lg border-l-2 border-border;
+  @apply xl:mr-[-42ch] xl:float-right xl:clear-right xl:w-full xl:max-w-[37ch] xl:my-0 xl:bg-transparent xl:p-0 xl:border-l-0;
+  /* old styles from the image */
+  /* @apply hidden xl:flex col-start-3 flex-col max-w-[40ch] gap-2 mt-8 pb-4; */
 }

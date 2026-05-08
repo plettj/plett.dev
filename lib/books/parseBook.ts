@@ -25,6 +25,8 @@ export async function parseBook(filePath: string): Promise<BookData> {
     splitByHeading(chapterNodes, 2).map(async ({ heading, body }) => {
       const title = headingText(heading);
       const subSections = splitByHeading(body, 3);
+      // Per-chapter <aside> citation counter. It's an object so it can be passed by reference.
+      const citationCounter = { value: 0 };
 
       // Nodes before the first "### Heading 3" belong to the chapter's own content.
       const chapterBodyEnd =
@@ -32,6 +34,9 @@ export async function parseBook(filePath: string): Promise<BookData> {
           ? body.indexOf(subSections[0].heading)
           : body.length;
       const { prose, images } = extractImages(body.slice(0, chapterBodyEnd));
+
+      // Compile chapter prose first so its asides are processed first.
+      const introContent = await compileSection(prose, citationCounter);
 
       const children =
         subSections.length > 0
@@ -49,7 +54,7 @@ export async function parseBook(filePath: string): Promise<BookData> {
                     1,
                     Math.round(subTotalWords / READING_SPEED_WPM),
                   ),
-                  content: await compileSection(subProse),
+                  content: await compileSection(subProse, citationCounter),
                   images: subImages,
                 } satisfies ChapterData;
               }),
@@ -64,7 +69,7 @@ export async function parseBook(filePath: string): Promise<BookData> {
         title,
         hash: textToSlug(title),
         readingTime: Math.max(1, Math.round(totalWords / READING_SPEED_WPM)),
-        content: await compileSection(prose),
+        content: introContent,
         images,
         ...(children && { children }),
       } satisfies ChapterData;
@@ -75,11 +80,12 @@ export async function parseBook(filePath: string): Promise<BookData> {
   const { prose: introProse, images: introImages } = extractImages(introNodes);
   const totalWords = countWords(introProse) + countWords(chapterNodes);
 
+  const introCounter = { value: 0 };
   const intro: ChapterData = {
     title: frontmatter.title,
     hash: textToSlug(frontmatter.title),
     readingTime: Math.max(1, Math.round(totalWords / READING_SPEED_WPM)),
-    content: await compileSection(introProse),
+    content: await compileSection(introProse, introCounter),
     images: introImages,
     isIntro: true,
   };
@@ -123,16 +129,14 @@ function nodesToMarkdown(nodes: RootContent[]): string {
   return remark().stringify({ type: "root", children: nodes } as Root);
 }
 
-async function compileSection(nodes: RootContent[]): Promise<React.ReactNode> {
+async function compileSection(
+  nodes: RootContent[],
+  citationCounter: { value: number },
+): Promise<React.ReactNode> {
+  const markdown = processAsides(nodesToMarkdown(nodes), citationCounter);
   const { content } = await compileMDX({
-    source: nodesToMarkdown(nodes),
-    options: {
-      mdxOptions: {
-        // TODO: Add rehype-pretty-code for syntax highlighting.
-        // TODO: Add support for citations.
-        rehypePlugins: [],
-      },
-    },
+    source: markdown,
+    options: { mdxOptions: { rehypePlugins: [] } },
   });
   return content;
 }
@@ -171,6 +175,26 @@ function parseImgTag(html: string): MasonryImage | null {
   };
 }
 
+// Replace <aside>...</aside> markdown with auto-numbered marker + note HTML.
+function processAsides(
+  markdown: string,
+  citationCounter: { value: number },
+): string {
+  return markdown.replace(/<aside>([\s\S]*?)<\/aside>/g, (_, content) => {
+    // This operation intentionally modifies the passed value.
+    citationCounter.value += 1;
+
+    const n = citationCounter.value;
+    return (
+      `<sup className="note-marker">${n}</sup>` +
+      `<aside className="note">` +
+      `<span className="note-number">${n}.</span>` +
+      `<span className="note-body">${content.trim()}</span>` +
+      `</aside>`
+    );
+  });
+}
+
 // Separate <img> html nodes from prose; all other nodes pass through untouched
 function extractImages(nodes: RootContent[]): {
   prose: RootContent[];
@@ -193,7 +217,7 @@ function extractImages(nodes: RootContent[]): {
   return { prose, images };
 }
 
-// Count words across all text in a subtree by stringifying back to markdown.
+// Count words in a node tree by serializing back into markdown.
 function countWords(nodes: RootContent[]): number {
   return nodesToMarkdown(nodes).trim().split(/\s+/).filter(Boolean).length;
 }
