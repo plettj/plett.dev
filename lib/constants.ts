@@ -10,6 +10,8 @@ export const PATH_WRITING = "/posts";
 export const PATH_NOTES = "/notes";
 export const PATH_PHOTOGRAPHY = "/photography";
 export const PATH_PHOTOGRAPHY_IMAGES = "/images/photography";
+export const PATH_RAYTRACING = "/raytracing";
+export const PATH_RAYTRACING_IMAGES = "/images/raytracing";
 export const PATH_CV = "/cv";
 export const PATH_CV_STATIC = "/cv/Josiah_Plett_CV_2025.pdf";
 export const PATH_PFP_LIGHT = "/images/home/Profile_Light.jpg";
@@ -34,6 +36,8 @@ export const META_DESCRIPTION_HOME =
 export const META_DESCRIPTION_NOTES =
   "Josiah's university course notes. Distribute freely, with attribution.";
 export const META_DESCRIPTION_PHOTOGRAPHY = "Some of my favourite photos.";
+export const META_DESCRIPTION_RAYTRACING =
+  "Relativistic Raytracing: How to Render Black Holes";
 export const META_DESCRIPTION_MAZE =
   "My 4-dimensional maze, an original design you can download and build yourself.";
 

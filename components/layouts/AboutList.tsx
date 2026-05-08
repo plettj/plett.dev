@@ -28,7 +28,7 @@ export default function AboutList({
     >
       {items.map((item, index) => (
         <AccordionItem key={index} value={`item-${index}`}>
-          <AccordionTrigger className="group py-2 w-full">
+          <AccordionTrigger className="group py-2 w-full cursor-pointer">
             <p className="font-semibold">{item.title}</p>
             <p className="text-muted-foreground text-right text-balance group-hover:underline decoration-muted-foreground">
               {item.subtitle}

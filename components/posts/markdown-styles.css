@@ -1,0 +1,94 @@
+@reference "../../app/globals.css";
+
+.markdown {
+  @apply text-base/relaxed;
+}
+
+.markdown p,
+.markdown a,
+.markdown ul,
+.markdown ol,
+.markdown pre,
+.markdown blockquote {
+  @apply my-6;
+}
+
+.markdown pre {
+  @apply p-4 bg-muted rounded-lg w-full overflow-x-auto;
+}
+
+.markdown pre::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+.markdown pre::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.markdown pre::-webkit-scrollbar-thumb {
+  @apply rounded-lg;
+  background: hsla(var(--muted-foreground) / 0.25);
+}
+
+.markdown pre::-webkit-scrollbar-thumb:hover {
+  background: hsla(var(--muted-foreground) / 0.5);
+}
+
+.markdown code {
+  @apply inline-block rounded bg-muted px-[0.3rem] text-sm font-mono font-medium;
+}
+
+.markdown pre code {
+  @apply block bg-none p-0 font-normal;
+}
+
+.markdown ul {
+  @apply ml-6 list-disc;
+}
+
+.markdown ol {
+  @apply ml-6 list-decimal;
+}
+
+.markdown a,
+.note-markdown a {
+  @apply font-medium xl:font-semibold text-blue-600 dark:text-blue-300 underline-offset-2;
+  @apply decoration-dotted underline;
+  @apply sm:decoration-solid sm:no-underline hover:underline;
+}
+
+.markdown blockquote {
+  @apply border-l-[3px] pl-4 italic text-muted-foreground;
+  a {
+    @apply opacity-75;
+  }
+}
+
+.markdown h2 {
+  @apply text-2xl font-semibold mt-12 pb-1 mb-3 leading-snug border-b tracking-tight;
+}
+
+.markdown h3 {
+  @apply text-xl font-semibold mt-8 mb-4 leading-snug;
+}
+
+.markdown h4 {
+  @apply leading-relaxed font-semibold mt-4 mb-2;
+}
+
+/* Custom styles resulting from <aside> tags, for notes written in the gutter, similar to citations. */
+.markdown .note-marker {
+  @apply text-xs font-semibold;
+  @apply xl:font-normal xl:text-muted-foreground;
+}
+.markdown .note-number {
+  @apply shrink-0 min-w-5 font-semibold xl:font-normal text-muted-foreground mr-1;
+}
+.markdown .note {
+  @apply hidden xl:flex xl:float-right;
+  @apply text-sm text-muted-foreground clear-right gap-0;
+  /* Custom widths so that despite using negative margins for positioning, the size responds to window size. */
+  --w: min(24rem, calc((100vw - 40rem) / 2 - 2rem));
+  width: var(--w);
+  margin-right: calc(-1 * (var(--w) + 2rem));
+}
