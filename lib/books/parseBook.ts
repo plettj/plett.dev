@@ -1,4 +1,8 @@
-import type { BookData, ChapterData } from "@/components/books/bookTypes";
+import type {
+  BookData,
+  ChapterData,
+  InlineNote,
+} from "@/components/books/bookTypes";
 import { MasonryImage } from "@/components/common/photos/MasonryLayout";
 import fs from "fs";
 import matter from "gray-matter";
@@ -27,6 +31,7 @@ export async function parseBook(filePath: string): Promise<BookData> {
       const subSections = splitByHeading(body, 3);
       // Per-chapter <aside> citation counter. It's an object so it can be passed by reference.
       const citationCounter = { value: 0 };
+      const notes: InlineNote[] = [];
 
       // Nodes before the first "### Heading 3" belong to the chapter's own content.
       const chapterBodyEnd =
@@ -36,7 +41,7 @@ export async function parseBook(filePath: string): Promise<BookData> {
       const { prose, images } = extractImages(body.slice(0, chapterBodyEnd));
 
       // Compile chapter prose first so its asides are processed first.
-      const introContent = await compileSection(prose, citationCounter);
+      const firstContent = await compileSection(prose, citationCounter, notes);
 
       const children =
         subSections.length > 0
@@ -46,6 +51,12 @@ export async function parseBook(filePath: string): Promise<BookData> {
                 const { prose: subProse, images: subImages } =
                   extractImages(subBody);
                 const subTotalWords = countWords(subProse);
+                const subNotes: InlineNote[] = [];
+                const subContent = await compileSection(
+                  subProse,
+                  citationCounter,
+                  subNotes,
+                );
 
                 return {
                   title: subTitle,
@@ -54,7 +65,8 @@ export async function parseBook(filePath: string): Promise<BookData> {
                     1,
                     Math.round(subTotalWords / READING_SPEED_WPM),
                   ),
-                  content: await compileSection(subProse, citationCounter),
+                  content: subContent,
+                  notes: subNotes,
                   images: subImages,
                 } satisfies ChapterData;
               }),
@@ -69,7 +81,8 @@ export async function parseBook(filePath: string): Promise<BookData> {
         title,
         hash: textToSlug(title),
         readingTime: Math.max(1, Math.round(totalWords / READING_SPEED_WPM)),
-        content: introContent,
+        content: firstContent,
+        notes,
         images,
         ...(children && { children }),
       } satisfies ChapterData;
@@ -80,12 +93,19 @@ export async function parseBook(filePath: string): Promise<BookData> {
   const { prose: introProse, images: introImages } = extractImages(introNodes);
   const totalWords = countWords(introProse) + countWords(chapterNodes);
 
+  const introNotes: InlineNote[] = [];
   const introCounter = { value: 0 };
+  const introContent = await compileSection(
+    introProse,
+    introCounter,
+    introNotes,
+  );
   const intro: ChapterData = {
     title: frontmatter.title,
     hash: textToSlug(frontmatter.title),
     readingTime: Math.max(1, Math.round(totalWords / READING_SPEED_WPM)),
-    content: await compileSection(introProse, introCounter),
+    content: introContent,
+    notes: introNotes,
     images: introImages,
     isIntro: true,
   };
@@ -132,8 +152,13 @@ function nodesToMarkdown(nodes: RootContent[]): string {
 async function compileSection(
   nodes: RootContent[],
   citationCounter: { value: number },
+  notes: InlineNote[],
 ): Promise<React.ReactNode> {
-  const markdown = processAsides(nodesToMarkdown(nodes), citationCounter);
+  const markdown = await processAsides(
+    nodesToMarkdown(nodes),
+    citationCounter,
+    notes,
+  );
   const { content } = await compileMDX({
     source: markdown,
     options: { mdxOptions: { rehypePlugins: [] } },
@@ -176,23 +201,45 @@ function parseImgTag(html: string): MasonryImage | null {
 }
 
 // Replace <aside>...</aside> markdown with auto-numbered marker + note HTML.
-function processAsides(
+async function processAsides(
   markdown: string,
   citationCounter: { value: number },
-): string {
-  return markdown.replace(/<aside>([\s\S]*?)<\/aside>/g, (_, content) => {
-    // This operation intentionally modifies the passed value.
-    citationCounter.value += 1;
+  notes: InlineNote[],
+): Promise<string> {
+  const capturedNotes: { number: number; rawHtml: string }[] = [];
 
-    const n = citationCounter.value;
-    return (
-      `<sup className="note-marker">${n}</sup>` +
-      `<aside className="note">` +
-      `<span className="note-number">${n}.</span>` +
-      `<span className="note-body">${content.trim()}</span>` +
-      `</aside>`
-    );
-  });
+  const newMarkdown = markdown.replace(
+    /<aside>([\s\S]*?)<\/aside>/g,
+    (_, content) => {
+      // This operation intentionally modifies the passed value.
+      citationCounter.value += 1;
+
+      const n = citationCounter.value;
+      const trimmed = content.trim();
+      capturedNotes.push({ number: n, rawHtml: trimmed });
+      return (
+        `<sup className="note-marker">${n}</sup>` +
+        `<aside className="note">` +
+        `<span className="note-number">${n}.</span>` +
+        `<span className="note-body">${content.trim()}</span>` +
+        `</aside>`
+      );
+    },
+  );
+
+  // Compile each notes' markdown separately, for accordion display on mobile
+  const compiledNotes = await Promise.all(
+    capturedNotes.map(async ({ number, rawHtml }) => {
+      const { content } = await compileMDX({
+        source: rawHtml,
+        options: { mdxOptions: { rehypePlugins: [] } },
+      });
+      return { number, content };
+    }),
+  );
+  notes.push(...compiledNotes);
+
+  return newMarkdown;
 }
 
 // Separate <img> html nodes from prose; all other nodes pass through untouched

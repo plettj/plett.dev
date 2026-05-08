@@ -1,5 +1,10 @@
 import { MasonryImage } from "../common/photos/MasonryLayout";
 
+export type InlineNote = {
+  number: number;
+  content: React.ReactNode;
+};
+
 export type ChapterData = {
   title: string;
   hash: string;
@@ -8,6 +13,7 @@ export type ChapterData = {
   // Image display borrows from my masonry layout setup.
   images?: MasonryImage[];
   children?: ChapterData[];
+  notes?: InlineNote[];
   // Allows styling to set the intro chapter apart from normal chapters.
   isIntro?: boolean;
 };

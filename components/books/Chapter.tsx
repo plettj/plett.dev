@@ -1,5 +1,11 @@
 import "../posts/markdown-styles.css";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 import { IBM_Plex_Sans } from "next/font/google";
 import Photo from "../common/photos/Photo";
@@ -47,6 +53,41 @@ export default function Chapter({
         <div className={cn("markdown w-full mt-0", fontBook.className)}>
           {data.content}
         </div>
+        {!!data.notes?.length && (
+          <Accordion
+            type="single"
+            collapsible
+            className="w-full xl:hidden -mt-1"
+          >
+            <AccordionItem value="notes">
+              <AccordionTrigger className="group py-2 w-full cursor-pointer decoration-1 decoration-dotted underline sm:decoration-solid sm:no-underline">
+                <p className="font-semibold">Notes</p>
+                <p className="font-light text-muted-foreground text-right text-balance decoration-muted-foreground sm:group-hover:underline">
+                  {data.notes.length} note{data.notes.length == 1 ? "" : "s"}
+                </p>
+              </AccordionTrigger>
+              <AccordionContent>
+                <ol className="flex flex-col gap-3 text-muted-foreground py-2">
+                  {data.notes.map((note) => (
+                    <li key={note.number} className="flex gap-1">
+                      <span className="font-semibold shrink-0">
+                        {note.number}.
+                      </span>
+                      <div
+                        className={cn(
+                          "note-markdown w-full mt-0",
+                          fontBook.className,
+                        )}
+                      >
+                        {note.content}
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        )}
         <div className="flex flex-col gap-2 mt-4 max-w-[40ch]">
           {data.images?.map((image) => (
             <Photo key={image.location} image={image} loadMethod="border" />
