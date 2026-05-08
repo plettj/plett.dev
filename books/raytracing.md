@@ -67,55 +67,15 @@ Our camera will be the thing that sends rays outward, in straight lines, and we'
 
 Since our camera represents our computer screen, you can think of it as a rectangle made of pixels, just like the screen itself. From each pixel, a ray is sent out into the scene, which bounces around and reports back to the camera the resulting colour. Finally, the camera sets each pixel colour to the colour of the corresponding ray.
 
-I've written some `C++`-like pseudocode setting up this basic ray tracer. Don't worry if you don't understand it; it's just here to keep the programmers among you happy.
-
-```c++
-using vec3 = number[3];
-using color = number[3];
-
-// Represents a light ray, at "origin" pointing in "direction."
-struct Ray {
-  vec3 origin;
-  vec3 direction;
-
-  Color color = (0, 0, 0);
-}
-
-// Produces an image with dimensions "width" and "height."
-Image renderImage(int width, int height) {
-  const vec3 cameraPosition = (0, 0, 1);
-  const vec3 cameraDirection = (0, 0, -1);
-
-  // Image class for holding pixel colours and saving to png.
-  Image image;
-
-  for (int x = 0; x < width, x++) {
-    for (int y = 0; y < height, y++) {
-      const rayX = cameraPosition[0] + x / width - 0.5;
-      const rayY = cameraPosition[1] + y / height - 0.5;
-
-      Ray ray = new Ray(cameraPosition, cameraDirection);
-
-      // TODO: Does the ray hit anything in the scene??
-
-      image.pixels[y][x] = ray.colour;
-    }
-  }
-
-  return image;
-}
-
-const Image image = renderImage(2048, 1365);
-image.savePng();
-```
-
-Behold, a black rectangle. For my money, that's the most realistic rendering of a black hole on the internet.
+With this, we are able to produce our very first rendered image.
 
 <img src="/images/raytracing/image02-black.png" alt="A pure black rectangle." width="2048" height="1365" data-location="Basic raytracer" data-year="Fig. 3" />
 
+Behold, a black rectangle. For my money, that's the most realistic rendering of a black hole on the internet.
+
 ### Intersecting with Objects
 
-It would be nice if there were objects in our world, so we could actually see something. Luckily, that isn't too hard.
+It would be nice if there were objects in our scene, so we could actually see something. Luckily, that isn't too hard.
 
 Our rays are straight lines represented by numbers, so we can use math — specifically, linear algebra — to calculate if a ray is hitting an object. If we have the equation that represents a sphere, and the equation for our ray, setting them equal to each other will give us all intersections.
 

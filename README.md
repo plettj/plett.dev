@@ -28,9 +28,8 @@ I keep the code simple, and I care more about best practices than my sanity.
 - [x] Allow book contents to be written entirely in markdown.
   - [x] Make the actual introduction separate, and above the main titles.
     - [ ] Include an inline image in the primary intro, showing progression.
-  - [ ] Decide if I even want pseudocode at all (it's a lot of work)...
-    - [ ] Make pseudocode collapsible.
-    - [ ] Add syntax highlighting.
+  - [x] Decide if I even want pseudocode at all (it's a lot of work)...
+    - [x] Remove pseudocode from the plan.
   - [ ] On mobile, ensure images are in the correct spot between paragraphs, not clumped at the end.
     - [ ] Remove images from the right column on big screens.
   - [ ] Connect to my Writing page.
