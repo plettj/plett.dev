@@ -20,9 +20,9 @@ export const metadata: Metadata = {
 };
 
 export default async function Raytracing() {
-  const chapters = await parseBook(
+  const book = await parseBook(
     path.join(process.cwd(), "books", "raytracing.md"),
   );
 
-  return <BookContainer content={chapters} />;
+  return <BookContainer book={book} />;
 }

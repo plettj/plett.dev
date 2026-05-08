@@ -1,17 +1,28 @@
-import type { ChapterData } from "@/components/books/bookTypes";
+import type { BookData, ChapterData } from "@/components/books/bookTypes";
 import { MasonryImage } from "@/components/common/photos/MasonryLayout";
 import fs from "fs";
+import matter from "gray-matter";
 import type { Heading, Html, PhrasingContent, Root, RootContent } from "mdast";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { remark } from "remark";
 import { READING_SPEED_WPM } from "./constants";
 
-export async function parseBook(filePath: string): Promise<ChapterData[]> {
+export async function parseBook(filePath: string): Promise<BookData> {
   const raw = fs.readFileSync(filePath, "utf8");
-  const tree = remark().parse(raw);
+  const { data: frontmatter, content: markdown } = matter(raw);
+  const tree = remark().parse(markdown);
 
-  return Promise.all(
-    splitByHeading(tree.children, 2).map(async ({ heading, body }) => {
+  // Split top-level nodes into intro (before first ##) and chapter nodes.
+  const firstChapter = tree.children.findIndex(
+    (n) => n.type === "heading" && n.depth === 2,
+  );
+  const introNodes =
+    firstChapter === -1 ? tree.children : tree.children.slice(0, firstChapter);
+  const chapterNodes =
+    firstChapter === -1 ? [] : tree.children.slice(firstChapter);
+
+  const chapters = await Promise.all(
+    splitByHeading(chapterNodes, 2).map(async ({ heading, body }) => {
       const title = headingText(heading);
       const subSections = splitByHeading(body, 3);
 
@@ -59,6 +70,32 @@ export async function parseBook(filePath: string): Promise<ChapterData[]> {
       } satisfies ChapterData;
     }),
   );
+
+  // The intro's reading time represents the whole book.
+  const { prose: introProse, images: introImages } = extractImages(introNodes);
+  const totalWords = countWords(introProse) + countWords(chapterNodes);
+
+  const intro: ChapterData = {
+    title: frontmatter.title,
+    hash: textToSlug(frontmatter.title),
+    readingTime: Math.max(1, Math.round(totalWords / READING_SPEED_WPM)),
+    content: await compileSection(introProse),
+    images: introImages,
+    isIntro: true,
+  };
+
+  return {
+    meta: {
+      title: frontmatter.title,
+      preview: frontmatter.preview,
+      date: frontmatter.date,
+      tags: frontmatter.tags ?? [],
+      coverImage: frontmatter.coverImage,
+      ogImage: frontmatter.ogImage,
+    },
+    intro,
+    chapters,
+  };
 }
 
 type HeadedSection = { heading: Heading; body: RootContent[] };

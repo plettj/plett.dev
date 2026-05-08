@@ -25,8 +25,19 @@ I keep the code simple, and I care more about best practices than my sanity.
 <br>
 
 - [x] Solve Next.js security vulnerability by upgrading to Next.js 16 ([resource](https://vercel.com/kb/bulletin/react2shell#how-to-upgrade-for-next.js))
-- [ ] Allow book contents to be written entirely in markdown.
-- [ ] Improve metadata on all pages using SEO tools beyond just metadata and sitemaps.
+- [x] Allow book contents to be written entirely in markdown.
+  - [x] Make the actual introduction separate, and above the main titles.
+    - [ ] Include an inline image in the primary intro, showing progression.
+  - [ ] Decide if I even want pseudocode at all (it's a lot of work)...
+    - [ ] Make pseudocode collapsible.
+    - [ ] Add syntax highlighting.
+  - [ ] On mobile, ensure images are in the correct spot between paragraphs, not clumped at the end.
+    - [ ] Remove images from the right column on big screens.
+  - [ ] Connect to my Writing page.
+  - [x] Dynamic reading time estimates.
+  - [ ] (After writing) Toss in relevant links throughout (in the form of citations?).
+- [ ] Improve metadata on all pages by fixing SSG metadata, and using SEO tools beyond metadata and sitemaps.
+- [ ] Hook up Vercel Analytics and then Use the data to inform my next updates.
 
 </details>
 

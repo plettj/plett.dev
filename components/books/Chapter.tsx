@@ -17,10 +17,10 @@ export default function Chapter({
   isSubChapter = false,
 }: {
   data: ChapterData;
-  prefix: string;
+  prefix?: string;
   isSubChapter?: boolean;
 }) {
-  const title: string = `${prefix} ${data.title}`;
+  const title = prefix ? `${prefix} ${data.title}` : data.title;
 
   return (
     <div className="contents">
@@ -78,7 +78,7 @@ function ChapterTOC({
   prefix,
 }: {
   chapters: ChapterData[];
-  prefix: string;
+  prefix?: string;
 }) {
   return (
     <nav className="w-full flex flex-col border-b py-4">
@@ -88,7 +88,7 @@ function ChapterTOC({
           href={`#${child.hash}`}
           className="text-sm text-muted-foreground hover:text-foreground leading-relaxed"
         >
-          {prefix}
+          {prefix ? prefix : ""}
           {i + 1}. {child.title}
         </a>
       ))}
