@@ -22,11 +22,13 @@ lat: "55.7934747"
 long: "12.5250258"
 ---
 
-This site creates statically generated and search engine optimized posts out of [markdown](https://www.markdownguide.org/getting-started/) files, displays them nicely, and provides a way to [view them all](/posts).
+This site creates statically generated and search engine optimized posts out of [markdown](https://www.markdownguide.org/getting-started/) files, displays them nicely, and provides a way to [view them all](/writing).
 
 Everything from the title to the URL slug to the text content is all part of one markdown file.
 
 Add a file to the `/posts` folder, and a new post is born.
+
+> NEW: The same works for the `/books` folder, with a richer set of features, including automatic table of contents generation, responsively designed citations, and image support.
 
 ### How do we build it?
 

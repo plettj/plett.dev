@@ -1,7 +1,10 @@
 ---
-title: "Ray Tracing Black Holes in C++"
+title: "A Layman's Guide to Ray Tracing (feat. Black Holes)"
+subtitle: ""
 preview: "A layman's voyage through computer graphics, from drawing basic circles to rendering black holes."
 date: "2026-05-07T00:51:48Z"
+readingTime: 35
+coverImage: "idk/what/to/put/here/yet"
 tags:
   [
     "book",
