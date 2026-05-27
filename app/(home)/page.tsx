@@ -14,8 +14,8 @@ export default async function Home() {
             entrepreneur.
           </p>
           <p>
-            I graduate from a Bachelor of Computer Science at the University of
-            Waterloo in 2026.
+            I hold a Bachelor of Computer Science from the University of
+            Waterloo.
           </p>
         </div>
         <ProfilePhoto src={[PATH_PFP_LIGHT, PATH_PFP_DARK]} size={256} />

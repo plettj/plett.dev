@@ -1,4 +1,5 @@
 import PostPreview from "@/components/posts/PostPreview";
+import H1 from "@/components/ui/typography";
 import { BASE_URL, PATH_WRITING } from "@/lib/constants";
 import { getAllPosts } from "@/lib/posts/api";
 import { cn, getOGData } from "@/lib/utils";
@@ -18,13 +19,16 @@ export const metadata: Metadata = {
 
 export default async function Writing() {
   const posts = getAllPosts();
+  // const books = getAllBooks();
 
   // TODO: Add a filtering option ("Main posts", "Quick posts"), and only show main posts by default.
 
   let currentYear = new Date().getFullYear() + 1;
 
   return (
-    <div className="flex flex-col gap-4">
+    <section className="flex flex-col gap-4">
+      <H1>Books</H1>
+      <H1>Posts</H1>
       {posts.map((post) => {
         const postYear = new Date(post.date).getFullYear();
         const showYear = postYear !== currentYear;
@@ -48,6 +52,6 @@ export default async function Writing() {
           </div>
         );
       })}
-    </div>
+    </section>
   );
 }
