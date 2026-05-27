@@ -75,7 +75,7 @@ Behold, a black rectangle. For my money, that's the most realistic rendering of 
 
 ### Intersecting with Objects
 
-It would be nice if there were objects in our scene, so we could actually see something. Luckily, that isn't too hard.
+It would be nice if there were objects in our scene, so something interesting can appear on screen. Luckily, that isn't too hard.
 
 Our rays are straight lines represented by numbers, so we can use math — specifically, linear algebra — to calculate if a ray is hitting an object. If we have the equation that represents a sphere, and the equation for our ray, setting them equal to each other will give us all intersections.
 

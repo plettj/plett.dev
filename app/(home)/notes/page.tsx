@@ -1,4 +1,3 @@
-import Title from "@/components/atoms/Title";
 import InlineLink from "@/components/common/links/InlineLink";
 import NotesList from "@/components/layouts/NotesList";
 import {
@@ -7,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import H1 from "@/components/ui/typography";
 import { BASE_URL, META_DESCRIPTION_NOTES, PATH_NOTES } from "@/lib/constants";
 import { getOGData } from "@/lib/utils";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
@@ -51,9 +51,9 @@ export default function NotesPage() {
       </div>
 
       <Disclaimer />
-      <Title>Computer Science</Title>
+      <H1>Computer Science</H1>
       <NotesList items={csItems} />
-      <Title>Mathematics</Title>
+      <H1>Mathematics</H1>
       <NotesList items={mathItems} />
       <Title>Other</Title>
       <NotesList items={otherItems} />

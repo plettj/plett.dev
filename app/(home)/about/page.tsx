@@ -1,6 +1,6 @@
-import Title from "@/components/atoms/Title";
 import Visitors from "@/components/atoms/Visitors";
 import AboutList from "@/components/layouts/AboutList";
+import H1 from "@/components/ui/typography";
 import { BASE_URL, META_DESCRIPTION_HOME, PATH_ABOUT } from "@/lib/constants";
 import { getOGData } from "@/lib/utils";
 import { Metadata } from "next/types";
@@ -23,9 +23,9 @@ export default async function About() {
         <p className="mb-1">What's the word?</p>
         <Visitors />
       </div>
-      <Title>Professional Interests</Title>
+      <H1>Professional Interests</H1>
       <AboutList items={professionalItems} />
-      <Title>Hobbies</Title>
+      <H1>Hobbies</H1>
       <AboutList items={hobbyItems} />
     </div>
   );
