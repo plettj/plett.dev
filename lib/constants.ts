@@ -6,7 +6,8 @@ export const BASE_URL = isProd()
 
 export const PATH_HOME = "/";
 export const PATH_ABOUT = "/about";
-export const PATH_WRITING = "/posts";
+export const PATH_WRITING_DEPRECATED = "/posts";
+export const PATH_WRITING = "/writing";
 export const PATH_NOTES = "/notes";
 export const PATH_PHOTOGRAPHY = "/photography";
 export const PATH_PHOTOGRAPHY_IMAGES = "/images/photography";

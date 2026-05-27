@@ -1,4 +1,5 @@
 import { NextConfig } from "next";
+import { PATH_WRITING, PATH_WRITING_DEPRECATED } from "./lib/constants";
 
 const URL_OLD_SITE = "https://old.plett.dev";
 
@@ -39,6 +40,10 @@ const nextConfig: NextConfig = {
       {
         source: "/cv/:path*",
         destination: "/cv/:path*",
+      },
+      {
+        source: PATH_WRITING_DEPRECATED,
+        destination: PATH_WRITING,
       },
     ];
   },

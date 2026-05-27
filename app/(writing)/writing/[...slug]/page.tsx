@@ -16,6 +16,7 @@ type Params = {
   }>;
 };
 
+// TODO: Consolidate this to support various types of writing (namely, posts AND books)
 export default async function Post(props: Params) {
   const params = await props.params;
   const post = getPostBySlugSafely(params.slug[0]);

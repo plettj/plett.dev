@@ -14,7 +14,7 @@ I keep the code simple, and I care more about best practices than my sanity.
 
 ### Features
 
-- Statically generated posts from markdown, with search engine optimization ([writing](https://plett.dev/posts)).
+- Statically generated posts from markdown, with search engine optimization ([writing](https://plett.dev/writing)).
 - Statically generated _books_ from markdown, with a dynamic TOC and responsive layout ([raytracing book](https://plett.dev/raytracing)).
 - Custom masonry layout with modern image loading ([photography](https://plett.dev/photography)).
 - Mouse-following tooltips ([notes](https://plett.dev/notes)).
@@ -36,6 +36,7 @@ I keep the code simple, and I care more about best practices than my sanity.
     - [x] Remove images from the right column on big screens.
   - [ ] Show on my Writing page.
   - [x] Dynamic reading time estimates.
+  - [ ] Fix up the Posts & Books display code, and fix old writing->posts redirecting.
   - [ ] (After writing) Toss in relevant links throughout (in the form of citations?).
 - [ ] Improve metadata on all pages by fixing SSG metadata, and using SEO tools beyond metadata and sitemaps.
 - [ ] Hook up Vercel Analytics and then Use the data to inform my next updates.
