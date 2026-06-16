@@ -33,12 +33,7 @@ export default function TableOfContents({
                 isActive && "text-foreground",
               )}
             >
-              <span
-                className={cn(
-                  chapter.isIntro ? "font-thin italic" : "font-medium",
-                  "text-balance",
-                )}
-              >
+              <span className="text-balance">
                 {/* The title chapter is first, and shouldn't contribute to chapter indexing. */}
                 {i > 0 ? `${i}. ` : ""}
                 {chapter.title}

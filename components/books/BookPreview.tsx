@@ -1,5 +1,5 @@
 import { Book } from "@/lib/books/types";
-import { PATH_WRITING } from "@/lib/constants";
+import {} from "@/lib/constants";
 import Link from "next/link";
 
 // TODO: Convert this to a card-based format with images. Use reading time and coverImage.
@@ -10,7 +10,8 @@ export default function BookPreview({ book }: { book: Book }) {
   });
 
   return (
-    <Link href={`${PATH_WRITING}/${book.slug}`} passHref role="navigation">
+    // TODO: Don't hard-code this; card based format should take care of this.
+    <Link href={`/raytracing`} passHref role="navigation">
       <div className="flex justify-between group hover:underline hover:cursor-pointer py-4 -my-4">
         <h1 className="font-semibold dark:font-bold tracking-tight text-balance w-full">
           {book.title}
