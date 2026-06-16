@@ -55,7 +55,7 @@ export default function NotesPage() {
       <NotesList items={csItems} />
       <H1>Mathematics</H1>
       <NotesList items={mathItems} />
-      <Title>Other</Title>
+      <H1>Other</H1>
       <NotesList items={otherItems} />
     </div>
   );
