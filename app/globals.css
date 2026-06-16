@@ -93,6 +93,14 @@
   --color-muted-foreground: hsl(var(--muted-foreground));
 }
 
+/*
+  Custom breakpoints.
+  https://tailwindcss.com/docs/responsive-design#customizing-breakpoints#using-custom-breakpoints
+*/
+@theme {
+  --breakpoint-xs: 27.5rem;
+}
+
 @theme {
   --animate-accordion-up: accordion-up
     var(--tw-animation-duration, var(--tw-duration, 0.2s))

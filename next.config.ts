@@ -22,7 +22,7 @@ const nextConfig: NextConfig = {
       })),
       { source: "/games", destination: "https://plett.fun", permanent: true },
       { source: "/home", destination: "/", permanent: true },
-      { source: "/writing", destination: "/posts", permanent: false },
+      { source: "/posts", destination: "/writing", permanent: true },
     ];
   },
 
