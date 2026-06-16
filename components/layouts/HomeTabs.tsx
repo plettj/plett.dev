@@ -2,6 +2,8 @@ import {
   PATH_ABOUT,
   PATH_MAZE,
   PATH_PHOTOGRAPHY,
+  PATH_RAYTRACING,
+  PATH_WRITING,
   URL_MY_GAMES,
   URL_MY_GITHUB,
   URL_MY_LINKEDIN,
@@ -24,9 +26,10 @@ export default function HomeTabs() {
       </TabsList>
       <TabsContent value="exploring">
         <p>
-          Start with my <InlineLink href={PATH_ABOUT}>About</InlineLink> page,
-          or maybe my{" "}
-          <InlineLink href={PATH_PHOTOGRAPHY}>Photography</InlineLink>.
+          You might like my with my{" "}
+          <InlineLink href={PATH_WRITING}>Writing</InlineLink> or{" "}
+          <InlineLink href={PATH_PHOTOGRAPHY}>Photography</InlineLink>. There's
+          also <InlineLink href={PATH_ABOUT}>About</InlineLink>.
         </p>
       </TabsContent>
       <TabsContent value="gamer">
@@ -38,7 +41,11 @@ export default function HomeTabs() {
       <TabsContent value="recruiter" className="flex flex-col gap-3">
         <p>
           I&apos;m a full-stack web developer who specializes in frontend. Some
-          side quests include a 3200 elo{" "}
+          side quests include an open-source{" "}
+          <InlineLink href="https://github.com/plettj/raytracer" external>
+            relativistic raytracer
+          </InlineLink>{" "}
+          (and <InlineLink href={PATH_RAYTRACING}>book</InlineLink>), a 3200 elo{" "}
           <InlineLink href="https://github.com/plettj/hagnusmiemann" external>
             chess engine
           </InlineLink>

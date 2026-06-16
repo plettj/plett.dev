@@ -5,6 +5,7 @@ import {
   PATH_MAZE,
   PATH_NOTES,
   PATH_PHOTOGRAPHY,
+  PATH_RAYTRACING,
   PATH_WRITING,
 } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -98,19 +99,25 @@ export const professionalItems: AboutListItem[] = [
     year: "2019",
     children: (
       <p>
-        I&apos;ve built a{" "}
-        <InlineLink href="https://github.com/plettj/ts-chess-engine" external>
-          web-based chess engine
-        </InlineLink>
-        , an{" "}
-        <InlineLink href="https://analysisboard.surge.sh/" external>
-          analysis board
-        </InlineLink>
-        , and a{" "}
+        I built a{" "}
+        <InlineLink href="https://github.com/plettj/raytracer" external>
+          C++ graphics engine
+        </InlineLink>{" "}
+        with{" "}
+        <InlineLink href={PATH_RAYTRACING}>relativistic raytracing</InlineLink>.
+        I built a{" "}
         <InlineLink href="https://github.com/plettj/hagnusmiemann" external>
           C++ chess engine
         </InlineLink>{" "}
-        ranked top-200 worldwide. I built{" "}
+        ranked top-200 worldwide, plus a{" "}
+        <InlineLink href="https://github.com/plettj/ts-chess-engine" external>
+          web-based engine
+        </InlineLink>{" "}
+        and{" "}
+        <InlineLink href="https://analysisboard.surge.sh/" external>
+          analysis board
+        </InlineLink>
+        . I built{" "}
         <InlineLink href="https://github.com/plettj/gongo" external>
           this Go engine
         </InlineLink>{" "}
