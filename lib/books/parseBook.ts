@@ -3,10 +3,10 @@ import type {
   ChapterData,
   InlineNote,
 } from "@/components/books/bookTypes";
-import { MasonryImage } from "@/components/common/photos/MasonryLayout";
+import BookImage from "@/components/books/BookImage";
 import fs from "fs";
 import matter from "gray-matter";
-import type { Heading, Html, PhrasingContent, Root, RootContent } from "mdast";
+import type { Heading, PhrasingContent, Root, RootContent } from "mdast";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { remark } from "remark";
 import { READING_SPEED_WPM } from "./constants";
@@ -38,22 +38,20 @@ export async function parseBook(filePath: string): Promise<BookData> {
         subSections.length > 0
           ? body.indexOf(subSections[0].heading)
           : body.length;
-      const { prose, images } = extractImages(body.slice(0, chapterBodyEnd));
+      const chapterBody = body.slice(0, chapterBodyEnd);
 
       // Compile chapter prose first so its asides are processed first.
-      const firstContent = await compileSection(prose, citationCounter, notes);
+      const firstContent = await compileSection(chapterBody, citationCounter, notes);
 
       const children =
         subSections.length > 0
           ? await Promise.all(
               subSections.map(async ({ heading: sub, body: subBody }) => {
                 const subTitle = headingText(sub);
-                const { prose: subProse, images: subImages } =
-                  extractImages(subBody);
-                const subTotalWords = countWords(subProse);
+                const subTotalWords = countWords(subBody);
                 const subNotes: InlineNote[] = [];
                 const subContent = await compileSection(
-                  subProse,
+                  subBody,
                   citationCounter,
                   subNotes,
                 );
@@ -67,14 +65,13 @@ export async function parseBook(filePath: string): Promise<BookData> {
                   ),
                   content: subContent,
                   notes: subNotes,
-                  images: subImages,
                 } satisfies ChapterData;
               }),
             )
           : undefined;
 
       const totalWords =
-        countWords(prose) +
+        countWords(chapterBody) +
         subSections.reduce((sum, { body }) => sum + countWords(body), 0);
 
       return {
@@ -83,20 +80,18 @@ export async function parseBook(filePath: string): Promise<BookData> {
         readingTime: Math.max(1, Math.round(totalWords / READING_SPEED_WPM)),
         content: firstContent,
         notes,
-        images,
         ...(children && { children }),
       } satisfies ChapterData;
     }),
   );
 
   // The intro's reading time represents the whole book.
-  const { prose: introProse, images: introImages } = extractImages(introNodes);
-  const totalWords = countWords(introProse) + countWords(chapterNodes);
+  const totalWords = countWords(introNodes) + countWords(chapterNodes);
 
   const introNotes: InlineNote[] = [];
   const introCounter = { value: 0 };
   const introContent = await compileSection(
-    introProse,
+    introNodes,
     introCounter,
     introNotes,
   );
@@ -106,7 +101,6 @@ export async function parseBook(filePath: string): Promise<BookData> {
     readingTime: Math.max(1, Math.round(totalWords / READING_SPEED_WPM)),
     content: introContent,
     notes: introNotes,
-    images: introImages,
     isIntro: true,
   };
 
@@ -161,6 +155,7 @@ async function compileSection(
   );
   const { content } = await compileMDX({
     source: markdown,
+    components: { BookImage },
     options: { mdxOptions: { rehypePlugins: [] } },
   });
   return content;
@@ -181,23 +176,6 @@ function headingText(node: Heading): string {
     )
     .map((child) => child.value)
     .join("");
-}
-
-// Parse a raw <img> attribute string.
-function parseImgTag(html: string): MasonryImage | null {
-  const attr = (name: string): string =>
-    new RegExp(`${name}="([^"]*)"`, "i").exec(html)?.[1] ?? "";
-
-  const src = attr("src");
-  if (!src) return null;
-
-  return {
-    src,
-    alt: attr("alt"),
-    location: attr("data-location"),
-    year: attr("data-year"),
-    size: [parseInt(attr("width"), 10) || 0, parseInt(attr("height"), 10) || 0],
-  };
 }
 
 // Replace <aside>...</aside> markdown with auto-numbered marker + note HTML.
@@ -240,28 +218,6 @@ async function processAsides(
   notes.push(...compiledNotes);
 
   return newMarkdown;
-}
-
-// Separate <img> html nodes from prose; all other nodes pass through untouched
-function extractImages(nodes: RootContent[]): {
-  prose: RootContent[];
-  images: MasonryImage[];
-} {
-  const prose: RootContent[] = [];
-  const images: MasonryImage[] = [];
-
-  for (const node of nodes) {
-    if (node.type === "html") {
-      const image = parseImgTag((node as Html).value);
-      if (image) {
-        images.push(image);
-        continue;
-      }
-    }
-    prose.push(node);
-  }
-
-  return { prose, images };
 }
 
 // Count words in a node tree by serializing back into markdown.

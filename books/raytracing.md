@@ -76,7 +76,7 @@ Since our camera represents our computer screen, you can think of it as a rectan
 
 With this, we are able to produce our very first rendered image.
 
-<img src="/images/raytracing/image02-black.png" alt="A pure black rectangle." width="2048" height="1365" data-location="Basic raytracer" data-year="Fig. 3" />
+<BookImage src="/images/raytracing/image02-black.png" alt="A pure black rectangle." width="2048" height="1365" location="Basic raytracer" year="Fig. 3" />
 
 Behold, a black rectangle. For my money, that's the most realistic rendering of a black hole on the internet.
 
