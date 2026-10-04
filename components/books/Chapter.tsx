@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 import { IBM_Plex_Sans } from "next/font/google";
-import Photo from "../common/photos/Photo";
 import { ChapterData } from "./bookTypes";
 
 const fontBook = IBM_Plex_Sans({
@@ -88,11 +87,6 @@ export default function Chapter({
             </AccordionItem>
           </Accordion>
         )}
-        <div className="flex flex-col gap-2 mt-4 max-w-[40ch]">
-          {data.images?.map((image) => (
-            <Photo key={image.location} image={image} loadMethod="border" />
-          ))}
-        </div>
       </section>
 
       {data.children?.map((child, i) => (
